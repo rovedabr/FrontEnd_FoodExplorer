@@ -4,6 +4,7 @@ import { Input } from "../../Components/Input"
 import { Button } from "../../Components/Button"
 import { ButtonText } from "../../Components/ButtonText"
 import { Navbar } from "../../Components/NavBar"
+import { Footer } from "../../Components/Footer"
 
 export function SignIn() {
   return (
@@ -30,6 +31,7 @@ export function SignIn() {
           />
         </label>
       </form> 
+      <Footer/>
     </Container>
   )
 }
