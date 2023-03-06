@@ -21,7 +21,7 @@ export function SignIn() {
             title="Criar uma conta"
           />
         <label>
-          Email
+          Email    {/* Não está ficando com margem abaixo */}
           <Input
             placeholder="Exemplo: exemplo@exemplo.com.br"
           />
