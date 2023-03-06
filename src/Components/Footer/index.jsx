@@ -1,11 +1,16 @@
 import { Container } from "./styles";
 import grayLogo from "../../assets/grayLogo.svg"
+import { AiOutlineCopyrightCircle } from "react-icons/ai"
 
-export function Footer() {
+export function Footer( { icon, ...rest}) {
   return (
-    <Container>
-      <img src={grayLogo} alt="Logo do aplciativo na cor cinza" />
-      <p>&copy</p>
+    <Container
+      {...rest}
+    >
+      <img src={grayLogo} alt="Logo do aplicativo na cor cinza" />
+      <div>
+        <span><AiOutlineCopyrightCircle/> 2023 - Todos os direitos reservados.</span>        
+      </div>
     </Container>
   )
 }

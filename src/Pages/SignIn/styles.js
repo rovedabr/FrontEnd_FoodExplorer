@@ -13,7 +13,7 @@ export const Container = styled.div`
   > div {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   > form div:first-child {
