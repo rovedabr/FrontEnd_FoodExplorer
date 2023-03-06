@@ -1,15 +1,17 @@
-import { Container } from "./styles"
-import { Brand } from "../../Components/Brand"
-import { Input } from "../../Components/Input"
-import { Button } from "../../Components/Button"
-import { ButtonText } from "../../Components/ButtonText"
-import { Navbar } from "../../Components/NavBar"
-import { Footer } from "../../Components/Footer"
+import { Container } from "./styles";
+import { Brand } from "../../Components/Brand";
+import { Input } from "../../Components/Input";
+import { Button } from "../../Components/Button";
+import { ButtonText } from "../../Components/ButtonText";
+import { Navbar } from "../../Components/NavBar";
+import { Footer } from "../../Components/Footer";
+import { Header } from "../../Components/Header";
 
 export function SignIn() {
   return (
     <Container>
-      <Navbar/>
+      <Header/>
+      {/* <Navbar/> */}
         <form>        
           <Brand/> 
           <Button>
