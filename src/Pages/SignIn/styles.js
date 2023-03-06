@@ -7,8 +7,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
   background-color: ${({theme}) => theme.DARK.DARK_400};
+  
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
   > form div:first-child {
     width: 100%;
