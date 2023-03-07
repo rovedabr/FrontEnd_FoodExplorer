@@ -24,7 +24,9 @@ export const Form = styled.div`
     width: 31.6rem;
     margin: 15.8rem auto;
 
-    
+    > .brand {
+      margin-bottom: 7.3rem;
+    }
 
     > label span {
       display: block;
@@ -32,7 +34,7 @@ export const Form = styled.div`
 
     }
 
-    > label span{
+    > label {
       font-size: 1.6rem;
       line-height: 1.6rem;
       font-weight: 400;
@@ -43,11 +45,11 @@ export const Form = styled.div`
     }
 
     > input {
-      border: 1px red solid;
+      margin-top: 15rem;
     }
 
     > button {
-      margin: 3.2rem auto 3.2rem auto;
+      margin-bottom: 3.2rem;
     }   
 
   }

@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding: 1.2rem 1.4rem;
+  margin-bottom: 3.2rem;
   gap: 1.4rem;
   
   border-radius: 0.8rem;
@@ -21,7 +21,11 @@ export const Container = styled.div`
     
     background-color: transparent;
     border: none;
+    padding: 1.2rem 1.4rem;
 
+    color: ${({theme})=> theme.LIGHT.LIGHT_500};
+    outline-color: ${({theme}) => theme.COLORS.CAKE_100};
+   
     &::placeholder {
       font-size: 1.6rem;
       line-height: 1.6rem;

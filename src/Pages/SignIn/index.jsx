@@ -8,8 +8,9 @@ export function SignIn() {
   return (
     <Container>
         <Form> 
-
-          <Brand/>      
+          <div className="brand">
+            <Brand/>
+          </div>  
 
           <label>
             <span>Email</span>    {/* Não está ficando com margem abaixo */}
