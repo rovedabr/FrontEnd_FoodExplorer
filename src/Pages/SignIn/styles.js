@@ -50,8 +50,32 @@ export const Form = styled.div`
 
     > button {
       margin-bottom: 3.2rem;
-    }   
+    } 
 
+  }
+
+  @media only screen and (min-width: 768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 60rem;
+    margin: 12rem auto;
+
+    > .brand {
+      transform: scale(1.5);
+      margin-bottom: 15rem;
+    }
+
+    > label input {
+      width: 38rem;
+    }
+
+    > button {
+      width: 38rem;
+      margin-bottom: 3.2rem auto 2.5rem auto;
+    } 
+  
   }
 
 `;
