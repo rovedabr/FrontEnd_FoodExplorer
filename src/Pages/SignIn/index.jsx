@@ -1,35 +1,38 @@
-import { Container } from "./styles";
+import { Container, Form } from "./styles";
 import { Brand } from "../../Components/Brand";
 import { Input } from "../../Components/Input";
 import { Button } from "../../Components/Button";
 import { ButtonText } from "../../Components/ButtonText";
-import { Navbar } from "../../Components/NavBar";
 
 export function SignIn() {
   return (
     <Container>
-     <Navbar/>
-        <form>        
-          <Brand/> 
+        <Form> 
+
+          <Brand/>      
+
           <label>
-            Email    {/* Não está ficando com margem abaixo */}
+            <span>Email</span>    {/* Não está ficando com margem abaixo */}
             <Input
               placeholder="Exemplo: exemplo@exemplo.com.br"
             />
-          </label>
+          </label>            
+     
           <label>
-            Senha
+            <span>Senha</span>
             <Input
               placeholder="No mínimo 6 caracteres"
               />
           </label>
-          <Button>
-            Entrar
-          </Button>
+
+          <Button>Entrar</Button>
+
           <ButtonText
+            id="buttonText"
             title="Criar uma conta"
           />
-        </form> 
+
+        </Form> 
     </Container>
   )
 }

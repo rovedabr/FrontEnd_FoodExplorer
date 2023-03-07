@@ -1,55 +1,55 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-display: grid;
-
-
-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
 
-}
+  background-color: ${({theme}) => theme.DARK.DARK_400};
 
-background-color: ${({theme}) => theme.DARK.DARK_400};
+`;
 
-@media only screen and (min-width: 480px) {
-    width: 480px;
-    height: 100vh;
 
-    display: grid;
-    grid-template-rows: ;
+
+export const Form = styled.div`
+
+  @media only screen and (min-width: 480px) {
+    display: flex;
+    flex-direction: column;
+
+    width: 31.6rem;
+    margin: 15.8rem auto;
+
     
-    > div {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+
+    > label span {
+      display: block;
+      margin-bottom: 0.8rem;
+
     }
-  
-    > form div:first-child {
-      width: 100%;
-      height: 4.4rem;
+
+    > label span{
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      font-weight: 400;
+
+      margin-bottom: 10px;
+
+      color: ${({theme}) => theme.LIGHT.LIGHT_400};
     }
-  
-    > form {
-      width: 31.6rem;
-  
+
+    > input {
       border: 1px red solid;
-  
-      label {  
-        font-size: 1.6rem;
-        line-height: 1.6rem;
-        font-weight: 400;
-  
-        color: ${({theme}) => theme.LIGHT.LIGHT_400}; 
-      }
     }
-    
-  }
 
+    > button {
+      margin: 3.2rem auto 3.2rem auto;
+    }   
+
+  }
 
 `;

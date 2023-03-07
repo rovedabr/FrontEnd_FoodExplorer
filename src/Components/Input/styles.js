@@ -28,10 +28,6 @@ export const Container = styled.div`
       font-weight: 400; 
 
       color: ${({theme})=> theme.LIGHT.LIGHT_500};
-    }
-
-    
+    }    
   }
-
-
 `;
