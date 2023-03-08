@@ -7,10 +7,12 @@ import { ButtonText } from "../../Components/ButtonText";
 export function SignIn() {
   return (
     <Container>
-        <Form> 
+        
           <div className="brand">
             <Brand/>
           </div>  
+
+        <Form> 
 
           <label>
             <span>Email</span>    {/* Não está ficando com margem abaixo */}

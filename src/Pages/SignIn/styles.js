@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {breakpoints}  from "../../Styles/breakpoints"
 
 export const Container = styled.div`
   width: 100%;
@@ -9,73 +10,75 @@ export const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
 
+  margin: 15.8rem auto;
+  
   background-color: ${({theme}) => theme.DARK.DARK_400};
+
+  > .brand {
+  grid-area: brand;
+  margin-bottom: 7.3rem;
+}
 
 `;
 
 
 
 export const Form = styled.div`
+  width: 31.6rem;
+  height: 100%;
 
-  @media only screen and (min-width: 480px) {
-    display: flex;
-    flex-direction: column;
+  grid-area: form;
 
-    width: 31.6rem;
-    margin: 15.8rem auto;
+  > label {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 400;
 
-    > .brand {
-      margin-bottom: 7.3rem;
-    }
+    margin-bottom: 10px;
 
-    > label span {
-      display: block;
-      margin-bottom: 0.8rem;
+    color: ${({theme}) => theme.LIGHT.LIGHT_400};
+  } 
 
-    }
-
-    > label {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
-      font-weight: 400;
-
-      margin-bottom: 10px;
-
-      color: ${({theme}) => theme.LIGHT.LIGHT_400};
-    }
-
-    > input {
-      margin-top: 15rem;
-    }
-
-    > button {
-      margin-bottom: 3.2rem;
-    } 
-
+  > label span {
+    display: block;
+    margin-bottom: 0.8rem;
   }
 
-  @media only screen and (min-width: 768px){
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  > input {
+    margin-top: 15rem;
+  }
 
-    width: 60rem;
-    margin: 12rem auto;
+  > button {
+    margin-bottom: 3.2rem;
+  } 
+//-------------------------------------------------------------
 
-    > .brand {
-      transform: scale(1.5);
-      margin-bottom: 15rem;
-    }
-
-    > label input {
-      width: 38rem;
-    }
-
-    > button {
-      width: 38rem;
-      margin-bottom: 3.2rem auto 2.5rem auto;
-    } 
+@media screen and (min-width:  {({breakpoints}) => breakpoints.deviceScreen.MOBILE}) {
   
+}
+//______________________________________________________________
+@media screen and (min-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 60rem;
+
+  > label input {
+    width: 38rem;
   }
+
+  > button {
+    width: 38rem;
+    margin-bottom: 3.2rem auto 2.5rem auto;
+  } 
+
+}
+
+@media only screen and (min-width: 1200px){
+
+
+  
+}
 
 `;
