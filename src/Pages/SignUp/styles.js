@@ -31,6 +31,11 @@ export const Content = styled.div`
     margin-bottom: 7.3rem;
   }
 
+  > main h1 {
+    display: none;
+    color: red;
+  }
+
   > main .input-wrapper label {
     font-size: 1.6rem;
     line-height: 1.6rem;
@@ -52,6 +57,10 @@ export const Content = styled.div`
     flex-direction: row;
 
     > main h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
       font-size: 3.2rem;
       font-weight: 500;
       line-height: 4.5rem;
@@ -73,11 +82,19 @@ export const Content = styled.div`
 `;
 
 export const Form = styled.div`
-  width: 47.6rem;
-  height: 62.1rem;
+  width: 31.6rem;
+  height: 41.6rem;
+  
+  background: transparent;
 
-  padding: 3.2rem;
+  @media screen and (min-width: 1000px){
+    width: 47.6rem;
+    height: 62.1rem;
+    
+    padding: 3.2rem;
 
-  background-color: ${({theme}) => theme.DARK.DARK_700};
+    background-color: ${({theme}) => theme.DARK.DARK_700};
+
+  }
 `;
 

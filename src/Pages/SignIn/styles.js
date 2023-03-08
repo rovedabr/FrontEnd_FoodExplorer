@@ -1,84 +1,104 @@
 import styled from "styled-components";
-import {breakpoints}  from "../../Styles/breakpoints"
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: flex-start;
-
-  margin: 15.8rem auto;
-  
-  background-color: ${({theme}) => theme.DARK.DARK_400};
-
-  > .brand {
-  grid-area: brand;
-  margin-bottom: 7.3rem;
-}
 
 `;
 
+export const Content = styled.div`
+  width: 100%;
+  height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-export const Form = styled.div`
-  width: 31.6rem;
-  height: 100%;
+  //------------------------------
 
-  grid-area: form;
+  > main h1 {
+    display: none;
+    color: red;
+  }
+  
 
-  > label {
+  //-----------------------------
+
+  > main div .input-wrapper,
+    main div button,
+    main h1 {
+      margin-bottom: 3.2rem;
+    }
+
+  > div:nth-child(1) img {
+    width: 22.8rem;
+    margin-bottom: 7.3rem;
+  }
+
+  > main .input-wrapper label {
     font-size: 1.6rem;
     line-height: 1.6rem;
     font-weight: 400;
 
-    margin-bottom: 10px;
-
     color: ${({theme}) => theme.LIGHT.LIGHT_400};
-  } 
 
-  > label span {
     display: block;
     margin-bottom: 0.8rem;
   }
 
-  > input {
-    margin-top: 15rem;
+  @media screen and (min-width: 1000px){
+    width: 112rem;
+    height: 88rem;
+
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    flex-direction: row;
+
+    > main h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      font-size: 3.2rem;
+      font-weight: 500;
+      line-height: 4.5rem;
+
+      text-align: center;
+
+      color: ${({theme}) => theme.LIGHT.LIGHT_400};
+    }
+    
+    > div:nth-child(1) {
+      width: 32.4rem;
+      margin: 25rem 30.6rem 32rem 0;
+    }
+
+    > div:nth-child(1) img {
+      width: 32.4rem;
+    }
   }
+`;
 
-  > button {
-    margin-bottom: 3.2rem;
-  } 
-//-------------------------------------------------------------
-
-@media screen and (min-width:  {({breakpoints}) => breakpoints.deviceScreen.MOBILE}) {
+export const Form = styled.div`
+  width: 31.6rem;
+  height: 41.6rem;
   
-}
-//______________________________________________________________
-@media screen and (min-width: 768px) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: transparent;
 
-  width: 60rem;
+  @media screen and (min-width: 1000px){
+    width: 47.6rem;
+    height: 62.1rem;
+    
+    padding: 3.2rem;
 
-  > label input {
-    width: 38rem;
+    background-color: ${({theme}) => theme.DARK.DARK_700};
+
   }
-
-  > button {
-    width: 38rem;
-    margin-bottom: 3.2rem auto 2.5rem auto;
-  } 
-
-}
-
-@media only screen and (min-width: 1200px){
-
-
-  
-}
-
 `;
