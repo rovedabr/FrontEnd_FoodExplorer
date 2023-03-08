@@ -1,4 +1,4 @@
-import { Container, BrandForm, Form } from "./styles";
+import { Container, Content, Form } from "./styles";
 import { Brand } from "../../Components/Brand";
 import { Input } from "../../Components/Input";
 import { Button } from "../../Components/Button";
@@ -7,19 +7,14 @@ import { ButtonText } from "../../Components/ButtonText"
 export function SignUp() {
   return(
     <Container>
+      <Content>
+      <Brand/>
+        <main>
+          <Form>
 
-      <main>
-        <BrandForm>
-          <Brand/>
-        </BrandForm>
-
-        <Form>
-
-        </Form>
-      </main>
-
+          </Form>
+        </main>
+      </Content>
     </Container>
-
-
   )
 }

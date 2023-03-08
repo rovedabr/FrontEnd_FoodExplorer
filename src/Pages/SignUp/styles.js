@@ -8,25 +8,34 @@ export const Container = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-
-
-  @media screen and (min-width: 768px) {
-    flex-direction: column;    
-  }
-
-  @media screen and (min-width: 1000px) {
-    flex-direction: row;
-  }
+  justify-content: flex-start;
 
 `;
 
-export const BrandForm = styled.div`
-  width: 32rem;
-  height: 4.8rem;
+export const Content = styled.div`
+  width: 100%;
+  height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  padding: 15.6rem 5.6rem 24.5rem 5.6rem;
+
+  > div:nth-child(1) {
+    width: 22.8rem;
+    margin-bottom: 7.3rem;
+  }
+
+  @media screen and (min-width: 900px){
+    display: flex;
+
+    flex-direction: row;
+
+    padding: 9rem 10rem 11rem 15rem;
+  }
 
   border: 1px red solid;
 `;
@@ -36,6 +45,7 @@ export const Form = styled.div`
   height: 50rem;
 
   border: 1px green solid;
+  /* margin: 9rem 10rem auto auto; */
 
 `;
 
