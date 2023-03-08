@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   width: 100%;
-  height: 2.4rem;
 
   display: flex;
   align-items: center;
@@ -16,5 +15,9 @@ export const Container = styled.button`
   font-weight: 500;
 
   color: ${({theme}) => theme.LIGHT.LIGHT_100};
+
+  > span {
+    padding: 1rem;
+  }
 
 `;

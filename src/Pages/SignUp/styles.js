@@ -47,7 +47,7 @@ export const Content = styled.div`
     margin-bottom: 0.8rem;
   }
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1280px){
     width: 112rem;
     height: 88rem;
 
@@ -86,12 +86,14 @@ export const Form = styled.div`
   height: 41.6rem;
   
   background: transparent;
+  
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1280px){
     width: 47.6rem;
     height: 62.1rem;
     
     padding: 3.2rem;
+    border-radius: 1.6rem;
 
     background-color: ${({theme}) => theme.DARK.DARK_700};
 

@@ -14,6 +14,11 @@ export const Container = styled.div`
   
   border-radius: 0.8rem;
 
+  > svg {
+    margin-left: 1.2rem;
+    color: ${({theme}) => theme.LIGHT.LIGHT_400};
+  }
+
   > input {
     width: 100%;
     height: 100%;

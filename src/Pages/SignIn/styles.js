@@ -20,16 +20,10 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
 
-  //------------------------------
-
   > main h1 {
     display: none;
-    color: red;
   }
   
-
-  //-----------------------------
-
   > main div .input-wrapper,
     main div button,
     main h1 {
@@ -52,7 +46,7 @@ export const Content = styled.div`
     margin-bottom: 0.8rem;
   }
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1280px){
     width: 112rem;
     height: 88rem;
 
@@ -65,7 +59,7 @@ export const Content = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       font-size: 3.2rem;
       font-weight: 500;
       line-height: 4.5rem;
@@ -92,11 +86,12 @@ export const Form = styled.div`
   
   background: transparent;
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1280px){
     width: 47.6rem;
     height: 62.1rem;
     
     padding: 3.2rem;
+    border-radius: 1.6rem;
 
     background-color: ${({theme}) => theme.DARK.DARK_700};
 

@@ -6,7 +6,7 @@ export function ButtonText({ title, ...rest}) {
       type="button"
       {...rest}
     >
-      {title}
+      <span>{title}</span>
     </Container>
   )
 }
