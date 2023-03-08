@@ -22,22 +22,35 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 15.6rem 5.6rem 24.5rem 5.6rem;
 
-  > div:nth-child(1) {
+  > div:nth-child(1) img {
     width: 22.8rem;
     margin-bottom: 7.3rem;
   }
 
-  @media screen and (min-width: 900px){
-    display: flex;
+  @media screen and (min-width: 1000px){
+    width: 112rem;
+    height: 88rem;
 
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
     flex-direction: row;
 
-    padding: 9rem 10rem 11rem 15rem;
+    > div:nth-child(1) {
+      width: 32.4rem;
+      margin: 25rem 30.6rem 32rem 0;
+    }
+
+    > div:nth-child(1) img {
+      width: 32.4rem;
+    }
   }
 
   border: 1px red solid;
+
+
+
 `;
 
 export const Form = styled.div`
