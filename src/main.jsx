@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { AdminMenu } from './Pages/AdminMenu' 
+import { Home } from './Pages/Home' 
 import theme from './Styles/theme'
 import GlobalStyles from "./Styles/global"
 import { ThemeProvider } from 'styled-components'
@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-        <AdminMenu />
+        <Home />
       <GlobalStyles/>
     </ThemeProvider>
   </React.StrictMode>,
