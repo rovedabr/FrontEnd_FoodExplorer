@@ -1,12 +1,12 @@
 import { Container } from "../Menu/styles";
-import { Section } from "../../Components/Section";
-import { Tag } from "../../Components/Tag"
+import { Tag } from "../../Components/Tag";
 
 export function Home() {
   return (
     <Container>
-      <Tag>
-
+      <Tag
+      title="teste"
+      >  
       </Tag>
     </Container>
   )

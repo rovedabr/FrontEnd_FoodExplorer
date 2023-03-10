@@ -9,8 +9,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  border: 1px solid yellow;
-
   > footer {
     width: 42.8rem;
     height: 7.7rem;

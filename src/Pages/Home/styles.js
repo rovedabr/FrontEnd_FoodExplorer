@@ -5,5 +5,12 @@ export const Container = styled.div`
   height: 100vh;
 
   border: 1px solid blue;
+  background-color: yellow;
+  padding: 2rem;
+
+  > div {
+    border: 1px solid red;
+    background-color: red;
+  } 
 
 `
