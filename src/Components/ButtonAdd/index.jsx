@@ -1,12 +1,12 @@
 import { Container } from "./styles";
 
-export function ButtonAdd({ icon: Icon, ...rest}) {
+export function ButtonAdd({ img, ...rest}) {
   return(
     <Container
     type="button"
       {...rest}
     >
-      {Icon}
+      {img}
       <button/>    
     </Container>
   )

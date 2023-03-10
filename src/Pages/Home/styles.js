@@ -8,9 +8,17 @@ export const Container = styled.div`
   background-color: yellow;
   padding: 2rem;
 
-  > button {
-    border: 1px solid red;
-    background-color: red;
+  > div button {
+    width: 3rem;
+  }
+
+  > button img {
+    color: white;
   } 
 
-`
+`;
+
+export const Form = styled.div`
+  width: 31.6rem;
+  height: 67rem;
+`;
