@@ -8,7 +8,7 @@ export const Container = styled.div`
   background-color: yellow;
   padding: 2rem;
 
-  > div {
+  > button {
     border: 1px solid red;
     background-color: red;
   } 
