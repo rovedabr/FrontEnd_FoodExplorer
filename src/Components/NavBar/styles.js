@@ -29,9 +29,9 @@ export const Container = styled.div`
     padding: 0.02rem 0.55rem;
     border-radius: 9.9rem;
 
-    position: fixed;
-    right: 7.5rem;
-    top: 18.5rem;
+    position: relative;
+    right: 1rem;
+    top: -1rem;
 
     z-index: 1;
   }

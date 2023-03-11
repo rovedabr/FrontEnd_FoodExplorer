@@ -18,5 +18,9 @@ font-weight: 400;
 
 color: ${({theme}) => theme.LIGHT.LIGHT_200};
 
+> img {
+  width: 14.4rem;
+}
+
 
 `;

@@ -21,6 +21,11 @@ export const Form = styled.div`
   width: 31.6rem;
   height: 67.7rem;
 
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.5rem 5.6rem 3.4rem;
+
   border: 1px solid green;
 
   > button {
@@ -30,12 +35,13 @@ export const Form = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+ 
 
     appearance: none;
     background-color: transparent;
     border: none;
 
-    margin: 3.7rem auto 1.7rem 5.6rem;
+    margin: 3.7rem auto 1.7rem 0;
     gap: 1.1rem;
 
     font-family: 'Poppins', sans-serif;
@@ -44,6 +50,18 @@ export const Form = styled.div`
     font-weight: 500;
     
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
+  }
+
+  >div img {
+    width: 26.4rem;
+    height: 26.4rem;
+    
+    margin: 1.5rem 2.6rem;
+  }
+
+  > div footer {
+    width: 42.8rem;
+    height: 7.7rem;
   }
 
 
