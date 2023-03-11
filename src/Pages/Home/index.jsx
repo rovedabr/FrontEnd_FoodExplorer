@@ -10,29 +10,43 @@ export function Home() {
   return(
     <Container>
 
-          <Section>
+        <Section> 
           <h2>Refeições</h2>
          <Form>
-           <input 
-              type="image"  
-              src={favoriteIcon} 
-            /> 
-            <Card 
-            > 
+            <Card> 
+              <input 
+                type="image"  
+                src={favoriteIcon} 
+              /> 
   
               <img src={saladaRavanello} alt="" />
               <h2>Salada Ravanello</h2>
               <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
               <strong>R$ 49,97</strong>
-            </Card>
             <Button
               type="button"
-            >
+              >
               Incluir
             </Button>
-
-      </Form>
-     </Section>
+           </Card>
+           <Card> 
+              <input 
+                type="image"  
+                src={favoriteIcon} 
+              /> 
+  
+              <img src={saladaRavanello} alt="" />
+              <h2>Salada Ravanello</h2>
+              <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
+              <strong>R$ 49,97</strong>
+            <Button
+              type="button"
+              >
+              Incluir
+            </Button>
+           </Card>
+          </Form>
+         </Section>
 
     </Container>
   )

@@ -6,44 +6,47 @@ height: 100vh;
 
 border: 1px solid red;
 
-
 `;
 
 export const Form = styled.div`
   width: 30rem;
   height: 46rem;
 
+  display: flex;
+  flex-direction: row;
+  margin-right: 2.7rem;
+
+
   >div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
   }
 
-  > input {
-    position: absolute;
-    right: 0;
-    border: 1px purple solid;
+  >div input {
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 25rem;
+    width: 2.4rem;
+    border: 1px solid green;
   }
-
-  border: 1px solid green;
 
   > div img {
     width: 17.6rem;
     height: 17.6rem;
   }
 
-  div button {
-    display: block;
-    position: relative;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    margin-right: 1.6rem;
-    margin-top: 1.6rem;
-    width: 20px;
-    height: 20px;
+  >div span {
+    text-align: center;
+    margin: 1.5rem 2.4rem;
+  }
 
-    margin: 1px solid yellow;
+  > div button {
+
+    width: 16.2rem;
+    margin-bottom: 2.4rem;
+    margin: 1px solid yellow; 
   }
 `;
