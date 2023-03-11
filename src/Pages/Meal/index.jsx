@@ -9,10 +9,15 @@ export function Meal() {
     <Container>
      <Navbar/>
       <Form>
-        <ButtonText
+        <button
+          title="button"
           icon={caretLeftIcon}
-          title="Voltar"
-        ></ButtonText>
+         >
+          <input
+          type="image"
+          src={caretLeftIcon}
+          ></input>
+          Voltar</button>
 
        <ButtonAddRemove/>
       </Form>

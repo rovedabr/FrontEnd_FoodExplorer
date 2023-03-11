@@ -22,4 +22,29 @@ export const Form = styled.div`
   height: 67.7rem;
 
   border: 1px solid green;
+
+  > button {
+    width: 10.2rem;
+    height: 3.4rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    appearance: none;
+    background-color: transparent;
+    border: none;
+
+    margin: 3.7rem auto 1.7rem 5.6rem;
+    gap: 1.1rem;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    font-weight: 500;
+    
+    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+  }
+
+
 `;
