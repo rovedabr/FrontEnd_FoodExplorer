@@ -6,6 +6,38 @@ export const Container = styled.div`
   
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   
   background-color: ${({theme}) => theme.DARK.DARK_700};
+  
+  padding: 6.4rem 2.8rem 3.2rem 2.8rem;
+
+  > img {
+    width: 2.4rem;
+  }
+
+  > span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+
+    background-color: ${({theme}) => theme.COLORS.TOMATO_100};
+    padding: 0.02rem 0.55rem;
+    border-radius: 9.9rem;
+
+    position: fixed;
+    right: 7.5rem;
+    top: 18.5rem;
+
+    z-index: 1;
+  }
+
+  > div img {
+    width: 16.1rem;
+    height: 2.6rem;
+  }
 `;

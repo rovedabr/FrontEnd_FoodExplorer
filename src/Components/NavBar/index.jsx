@@ -7,13 +7,12 @@ export function Navbar({ icon, ...rest }) {
   return(
     <Container
       {...rest}
-    > 
-      
+    >      
         <img src={menuIcon} alt="Ícone do Menu do aplicativo" />   
         <Brand/>
         <img src={receiptIcon} alt="Ícone do recibo da compra" />
-      
-        {icon}
+        <span>0</span>
+        {icon}    
     </Container>
   )
 }
