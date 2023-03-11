@@ -5,6 +5,7 @@ import favoriteIcon from "../../assets/Icons/Heart.svg"
 import { Section } from "../../Components/Section";
 import { Button } from "../../Components/Button"
 
+
 export function Home() {
   return(
     <Container>
@@ -12,9 +13,13 @@ export function Home() {
           <Section>
           <h2>Refeições</h2>
          <Form>
+           <input 
+              type="image"  
+              src={favoriteIcon} 
+            /> 
             <Card 
             > 
-              <button><img src={favoriteIcon} alt="" /></button>
+  
               <img src={saladaRavanello} alt="" />
               <h2>Salada Ravanello</h2>
               <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
@@ -27,7 +32,7 @@ export function Home() {
             </Button>
 
       </Form>
-          </Section>
+     </Section>
 
     </Container>
   )

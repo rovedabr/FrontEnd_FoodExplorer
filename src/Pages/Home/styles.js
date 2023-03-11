@@ -20,6 +20,11 @@ export const Form = styled.div`
     justify-content: center;
   }
 
+  > input {
+    position: absolute;
+    right: 0;
+    border: 1px purple solid;
+  }
 
   border: 1px solid green;
 

@@ -5,10 +5,10 @@ export function Card({ title, icon, img, children, ...rest }) {
     <Container
       {...rest} 
       >
-        <button
-          type="checkbox"
-          icon={img}
-        ></button> 
+{/*         <input
+          type="checkbox"          
+        >
+        </input> */}
       {img}
       <h2>{title}</h2>
       {children}
