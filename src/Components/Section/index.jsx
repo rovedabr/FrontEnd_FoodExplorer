@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function Section({ title, children, ...rest }) {
+export function Section ({ title, children, ...rest }) {
   return (
     <Container
       {...rest}

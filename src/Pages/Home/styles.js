@@ -29,15 +29,16 @@ export const Form = styled.div`
   }
 
   div button {
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    margin-right: 1.6rem;
+    margin-top: 1.6rem;
     width: 20px;
     height: 20px;
 
     margin: 1px solid yellow;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-
   }
 `;
