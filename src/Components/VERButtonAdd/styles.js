@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-width: 100%;
+width: 27rem;
+height: 27rem;
 
-> button {
-  width: 2rem;
-  background-color: red;
-}
+background-color: black;
 
-> span {
-  background-color: black;
+> button svg {
   color: white;
 }
+
 `;

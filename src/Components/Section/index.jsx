@@ -1,14 +1,12 @@
 import { Container } from "./styles";
 
-export function Section({ title, img, children, tag, ...rest }) {
+export function Section({ title, children, ...rest }) {
   return (
     <Container
       {...rest}
     >
-      {img}
-      {title}
+      <h1>{title}</h1>
       {children}
-      {tag}
     </Container>
 
   )

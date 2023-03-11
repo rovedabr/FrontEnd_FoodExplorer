@@ -1,21 +1,30 @@
-import { Container, Form } from "../Menu/styles";
-import { Tag } from "../../Components/Tag";
-import { ButtonAdd } from "../../Components/ButtonAdd";
-
-import minusIcon from "../../assets/Icons/Minus.svg"
+import { Container, Form } from "./styles";
+import { Card } from "../../Components/Card"
+import saladaRavanello from "../../assets/meals/salada_ravanello.png"
+import favoriteIcon from "../../assets/Icons/Heart.svg"
+import { Section } from "../../Components/Section copy";
 
 export function Home() {
-  return (
+  return(
     <Container>
-      <Form>
+        <Section>
+         {/* <Form>
 
-      </Form>
+        <Card 
+        > 
+          <button
+            type="button"
+            img={favoriteIcon}
+          >
+          </button>         
+          <img src={saladaRavanello} alt="" />
+          <h2>Salada Ravanello</h2>
+          <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
+          <strong>R$ 49,97</strong>
+        </Card>
 
-       <ButtonAdd
-        img={minusIcon}
-        type="button"
-      >
-      </ButtonAdd>
+      </Form> */}
+        </Section>
     </Container>
   )
 }
