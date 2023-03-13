@@ -11,6 +11,7 @@ align-items: center;
 > img {
   width: 19.1rem;
   height: 14.9rem;
+  border: 1px solid yellowgreen;
 }
 
 .description {
@@ -37,16 +38,22 @@ align-items: center;
 }
 
 .backgroundFlavors {
-  width: 37.6rem;
+  width: 100%;
   height: 12rem;
+
+  margin: 5rem;
 
   position: relative;
   top: 1.5rem;
   right: 36rem;
 
-  z-index: -1;
+  z-index: 1;
+  border: 1px solid green;
 
   background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
+
+
 }
+
 
 `;

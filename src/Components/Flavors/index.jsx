@@ -8,10 +8,10 @@ export function Flavors() {
         src={flavors} 
         alt="Imagem de macarrons com frutas vermelhas caindo no ar" 
       />
-      <div className="description">
+{      <div className="description">
         <h1>Sabores inigualáveis</h1>
         <span>Sinta o cuidado do preparo com ingredientes selecionados.</span>
-      </div>
+      </div>}
       <div className="backgroundFlavors"/>  
      </Container>
   )

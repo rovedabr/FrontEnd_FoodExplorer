@@ -5,11 +5,13 @@ export const Container = styled.div`
   border: 1px solid blue;
 
   > h2 {
-    font-size: 3.2rem;
-    line-height: 4.4rem;
+    font-size: 1.8rem;
+    line-height: 1.4rem;
     font-weight: 500;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
+
+    margin: 6.2rem auto 2.4rem 2.4rem;
   }
 
   > span {

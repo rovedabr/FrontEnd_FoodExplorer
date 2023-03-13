@@ -16,6 +16,23 @@ export const Container = styled.div`
     border: 1px solid pink;
   }
 
+  .cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    width: 21rem;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card input {
+    width: 2.4rem;
+    height: 2.2rem;
+  }
+
   @media screen and (min-width: 1280px){
     width: 100%;
     
@@ -27,18 +44,20 @@ export const Container = styled.div`
     > header {
       display: flex;
     }
+
+    > footer {
+      padding: 2.4rem 12.3rem;
+    }
   
   }
 
 `;
 
-
-export const Form = styled.div`
-
-`;
-
-
 export const Content = styled.div`
+  width: 100%;
+
+  overflow-y: auto;
+
 
 `;
 

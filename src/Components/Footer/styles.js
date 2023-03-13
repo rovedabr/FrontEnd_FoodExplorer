@@ -9,6 +9,8 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 
+padding: 2.9rem 2.7rem;
+
 background-color: ${({theme}) => theme.DARK.DARK_600};
 
 font-family: 'DM Sans', sans-serif;
@@ -21,6 +23,5 @@ color: ${({theme}) => theme.LIGHT.LIGHT_200};
 > img {
   width: 14.4rem;
 }
-
 
 `;

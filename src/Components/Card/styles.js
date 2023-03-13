@@ -7,6 +7,26 @@ export const Container = styled.div`
   border: 1px solid ${({theme}) => theme.DARK.DARK_300};
   border-radius: 0.8rem;
 
+  > img {
+    width: 8.8rem;
+    height: 8.8rem;
+
+    margin: 2.4rem 6.1rem 1.2rem;
+  }
+
+  > h2 {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+  }
+
+  
+  > strong {
+    font-size: 1.6rem;
+    line-height: 100%;
+    font-weight: 400;
+  }
+
 
   > button {
     appearance: none;
