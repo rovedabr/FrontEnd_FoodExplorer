@@ -4,11 +4,13 @@ import saladaRavanello from "../../assets/meals/salada_ravanello.png"
 import favoriteIcon from "../../assets/Icons/Heart.svg"
 import { Section } from "../../Components/Section";
 import { Button } from "../../Components/Button"
+import { Header } from "../../Components/Header"
 
 
 export function Home() {
   return(
     <Container>
+      <Header/>
 
         <Section> 
           <h2>Refeições</h2>

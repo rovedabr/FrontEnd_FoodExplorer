@@ -8,9 +8,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  > svg {
-    width: 4.3rem;
-    height: 4.3rem;    
+  > img {
+    width: 19.7rem;
+    height: 3rem;    
   }
 
   > h1 {

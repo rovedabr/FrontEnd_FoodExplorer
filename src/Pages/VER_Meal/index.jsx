@@ -13,6 +13,7 @@ export function Meal() {
   return(
     <Container>
      <Navbar/>
+
       <Form>
         <button
           title="button"
@@ -40,10 +41,10 @@ export function Meal() {
             ></Tag>
           </div>
        <ButtonAddRemove/>
-       <Button/>
       </Form>
-      <Footer/>
 
+       <Button>Voltar</Button>
+      <Footer/>
     </Container>
   )
 }

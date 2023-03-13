@@ -15,6 +15,11 @@ export const Container = styled.div`
     width: 42.8rem;
     height: 11.4rem;
   }
+
+  > footer {
+    width: 42.8rem;
+    height: 7.7rem;
+  }
 `;
 
 export const Form = styled.div`
@@ -24,7 +29,7 @@ export const Form = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 1.5rem 5.6rem 3.4rem;
+  padding: 1.7rem 6rem 3.4rem;
 
   border: 1px solid green;
 
@@ -34,8 +39,7 @@ export const Form = styled.div`
 
     display: flex;
     flex-direction: row;
-    align-items: center;
- 
+    align-items: center; 
 
     appearance: none;
     background-color: transparent;
@@ -58,11 +62,4 @@ export const Form = styled.div`
     
     margin: 1.5rem 2.6rem;
   }
-
-  > div footer {
-    width: 42.8rem;
-    height: 7.7rem;
-  }
-
-
 `;
