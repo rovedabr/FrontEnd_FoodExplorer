@@ -5,12 +5,14 @@ import favoriteIcon from "../../assets/Icons/Heart.svg"
 import { Section } from "../../Components/Section";
 import { Button } from "../../Components/Button"
 import { Header } from "../../Components/Header"
+import { Flavors } from "../../Components/Flavors";
 
 
 export function Home() {
   return(
     <Container>
-      <Header/>
+      <Flavors/>
+{/*       <Header/>
 
         <Section> 
           <h2>Refeições</h2>
@@ -48,7 +50,7 @@ export function Home() {
             </Button>
            </Card>
           </Form>
-         </Section>
+         </Section> */}
 
     </Container>
   )
