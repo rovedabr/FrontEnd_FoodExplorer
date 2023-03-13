@@ -1,6 +1,50 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+
+  > nav {
+    width: 100%;
+    border: 1px red solid;
+    
+    display: flex;
+  }
+
+  > header {
+    display: none;
+    border: 1px solid pink;
+  }
+
+  @media screen and (min-width: 1280px){
+    width: 100%;
+    
+    > nav {
+      border: 1px blue solid;
+      display: none;
+    }
+
+    > header {
+      display: flex;
+    }
+  
+  }
+
+`;
+
+
+export const Form = styled.div`
+
+`;
+
+
+export const Content = styled.div`
+
+`;
+
+
+
+/* export const Container = styled.div`
 width: 100%;
 height: 100vh;
 
@@ -49,4 +93,4 @@ export const Form = styled.div`
     margin-bottom: 2.4rem;
     margin: 1px solid yellow; 
   }
-`;
+`; */

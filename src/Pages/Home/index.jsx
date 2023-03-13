@@ -1,4 +1,20 @@
-import { Container, Form } from "./styles";
+import { Container, Form, Content } from "./styles"
+import { Navbar } from "../../Components/NavBar"
+import { Header } from "../../Components/Header"
+
+export function Home() {
+  return (
+    <Container>
+        <Navbar/>
+        <Header/>
+
+    </Container>
+  )
+}
+
+
+
+/* import { Container, Form } from "./styles";
 import { Card } from "../../Components/Card"
 import saladaRavanello from "../../assets/meals/salada_ravanello.png"
 import favoriteIcon from "../../assets/Icons/Heart.svg"
@@ -6,13 +22,13 @@ import { Section } from "../../Components/Section";
 import { Button } from "../../Components/Button"
 import { Header } from "../../Components/Header"
 import { Flavors } from "../../Components/Flavors";
-
+import { Navbar } from "../../Components/NavBar"
 
 export function Home() {
   return(
     <Container>
+      <Navbar/>
       <Flavors/>
-{/*       <Header/>
 
         <Section> 
           <h2>Refeições</h2>
@@ -22,7 +38,6 @@ export function Home() {
                 type="image"  
                 src={favoriteIcon} 
               /> 
-  
               <img src={saladaRavanello} alt="" />
               <h2>Salada Ravanello</h2>
               <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
@@ -50,8 +65,8 @@ export function Home() {
             </Button>
            </Card>
           </Form>
-         </Section> */}
+         </Section>
 
     </Container>
   )
-}
+} */

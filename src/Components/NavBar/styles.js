@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.nav`
   width: 100%;
   height: 11.4rem;
   
