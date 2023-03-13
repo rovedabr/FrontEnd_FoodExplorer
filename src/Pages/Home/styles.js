@@ -26,6 +26,11 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: column;
+    margin-right: 1.6rem;
+  }
+
+  .card:nth-child(1) {
+    margin-left: 2.4rem;
   }
 
   .card input {

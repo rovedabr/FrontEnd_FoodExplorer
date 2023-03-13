@@ -3,9 +3,22 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   background-color: ${({theme}) => theme.DARK.DARK_200};
   border: 1px solid ${({theme}) => theme.DARK.DARK_300};
   border-radius: 0.8rem;
+
+  padding: 2.4rem;
+
+  > input {
+    position: relative;
+    top: -3rem;
+    right: -8rem;
+  }
 
   > img {
     width: 8.8rem;
@@ -18,6 +31,8 @@ export const Container = styled.div`
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 500;
+
+    text-align: center;
   }
 
   
@@ -25,13 +40,17 @@ export const Container = styled.div`
     font-size: 1.6rem;
     line-height: 100%;
     font-weight: 400;
+
+    text-align: center;
   }
 
 
   > button {
     appearance: none;
     border: none;
-    background-color: red;
+    background-color: ${({theme})=> theme.COLORS.TOMATO_100};
+
+    margin-top: 1.6rem;
 }
 
   > button img {
@@ -58,6 +77,8 @@ export const Container = styled.div`
     font-weight: 400;
       
     margin-bottom: 1.5rem;
+
+    text-align: center;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   }

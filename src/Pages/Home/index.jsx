@@ -8,6 +8,7 @@ import { Card } from "../../Components/Card"
 import favoriteIcon from "../../assets/Icons/Heart.svg"
 import saladaRavanello from "../../assets/meals/salada_ravanello.png"
 import { Button } from "../../Components/Button"
+import { ButtonAddRemove } from "../../Components/ButtonAddRemove"
 
 export function Home() {
   return (
@@ -21,7 +22,7 @@ export function Home() {
         >
           <div className="cards">
             <Card className="card"> 
-                <input 
+                <input
                   type="image"  
                   src={favoriteIcon} 
                 /> 
@@ -29,6 +30,7 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
@@ -37,7 +39,7 @@ export function Home() {
             </Card>
 
             <Card className="card"> 
-                <input 
+                <input
                   type="image"  
                   src={favoriteIcon} 
                 /> 
@@ -52,7 +54,7 @@ export function Home() {
               </Button>
             </Card>
             <Card className="card"> 
-                <input 
+                <input
                   type="image"  
                   src={favoriteIcon} 
                 /> 
@@ -60,6 +62,7 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
@@ -76,7 +79,7 @@ export function Home() {
         >
           <div className="cards">
             <Card className="card"> 
-                <input 
+                <input
                   type="image"  
                   src={favoriteIcon} 
                 /> 
@@ -92,7 +95,7 @@ export function Home() {
             </Card>
 
             <Card className="card"> 
-                <input 
+                <input
                   type="image"  
                   src={favoriteIcon} 
                 /> 
@@ -100,6 +103,7 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
@@ -107,7 +111,7 @@ export function Home() {
               </Button>
             </Card>
             <Card className="card"> 
-                <input 
+                <input
                   type="image"  
                   src={favoriteIcon} 
                 /> 
@@ -115,6 +119,7 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
@@ -140,6 +145,7 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
@@ -156,6 +162,7 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
@@ -171,6 +178,7 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
