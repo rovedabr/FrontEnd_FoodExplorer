@@ -9,7 +9,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 3.2rem;
   gap: 1.4rem;
   
   border-radius: 0.8rem;
