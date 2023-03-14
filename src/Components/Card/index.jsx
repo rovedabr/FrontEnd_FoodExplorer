@@ -5,10 +5,11 @@ export function Card({ title, icon, img, children, ...rest }) {
     <Container
       {...rest} 
       >
-
-      {img}
-      <h2>{title}</h2>
-      {children}
+        <div>
+          {img}
+          <h2>{title}</h2>
+          {children}
+        </div>
     </Container>
 
   )
