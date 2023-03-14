@@ -19,6 +19,8 @@ export const Container = styled.div`
   .cards {
     display: flex;
     flex-direction: row;
+    
+    overflow-x: auto;
   }
 
   .card {

@@ -16,6 +16,8 @@ export function Home() {
        <Navbar/>
        <Header/>
       <Content>
+{/*--------------------------------------------------------*/}  
+      <Flavors/>
 {/*--------------------------------------------------------*/}           
         <Section
           title="Refeições"
@@ -47,12 +49,14 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
                 Incluir
               </Button>
             </Card>
+
             <Card className="card"> 
                 <input
                   type="image"  
@@ -78,7 +82,7 @@ export function Home() {
           title="Pratos principais"
         >
           <div className="cards">
-            <Card className="card"> 
+          <Card className="card"> 
                 <input
                   type="image"  
                   src={favoriteIcon} 
@@ -87,12 +91,14 @@ export function Home() {
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
                 <strong>R$ 49,97</strong>
+              <ButtonAddRemove/>  
               <Button
                 type="button"
                 >
                 Incluir
               </Button>
             </Card>
+
 
             <Card className="card"> 
                 <input
