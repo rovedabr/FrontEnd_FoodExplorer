@@ -9,7 +9,7 @@ justify-content: flex-start;
 align-items: center;
 
 
->.content img {
+> img {
   width: 19.1rem;
   height: 14.9rem;
 
@@ -20,29 +20,27 @@ align-items: center;
   left: 0.6rem;
   top: 12.9rem;
 
-  border: 1px solid yellowgreen;
-
 }
 
-> .content .description {
+>.backgroundFlavors .description {
   width: 20rem;
-  
+
+  position: relative;
   text-align: justify;
-  margin: 3.6rem 0.8rem 2.2rem -1rem;
-  z-index: 1;
+  margin: 3.6rem auto 2.2rem 18.9rem;
 }
 
->.content .description h1, span {
+>.backgroundFlavors .description h1, span {
   color: ${({theme}) => theme.LIGHT.LIGHT_300};
 }
 
->.content  .description h1 {
+>.backgroundFlavors .description h1 {
   font-size: 1.8rem;
   line-height: 2.5rem;
   font-weight: 600;
 }
 
->.content  .description span {
+> .description span {
   font-size: 1.2;
   line-height: 1.7rem;
   font-weight: 400;
@@ -61,31 +59,70 @@ align-items: center;
   content: "";
 
   z-index: -1;
-  border: 1px solid green;
-
   background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-
 }
 
-@media screen and (min-width: 1280px){
+  @media screen and (min-width: 768px){
 
-  >.content img {
-  width: 65.6rem;
-  height: 41.2rem;
-  
+  > img {
+    width: 33rem;
+    height: 20rem;  
+  }
 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: absolute;
-  left: 5.4rem;
-  top: 13.8rem;
+  >.backgroundFlavors{
+    height: 17rem;
+  }
 
-  border: 1px solid yellowgreen;
+  >.backgroundFlavors .description {
+    width: 35rem;
 
+    margin: 5.6rem auto 9.2rem 35em;
+  }
+
+  >.backgroundFlavors .description h1 {
+    font-size: 2.5rem;
+  }
+
+  >.backgroundFlavors .description span {
+    font-size: 1.4;
+  }
 }
 
+  @media screen and (min-width: 1280px){
+
+    > img {
+    width: 65.6rem;
+    height: 41.2rem;  
+
+    left: 5.4rem;
+    top: 13.8rem;
+
+    background-size: cover;
+  }
+
+  .backgroundFlavors {
+    width: 100%;
+    height: 26rem;
+
+    margin: 16.4rem 12.4rem 0 12.4rem;
+  }
+
+  >.backgroundFlavors .description {
+    width: 42rem;
+
+    margin: 8.8rem auto 9.2rem 67em;
+  }
+
+  >.backgroundFlavors .description h1 {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    font-weight: 500;
+  }
+
+  >.backgroundFlavors .description span {
+    font-size: 1.6;
+    line-height: 1.6rem;
+    font-weight: 400;
+  }
 }
-
-
 `;
