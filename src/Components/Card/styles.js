@@ -31,6 +31,22 @@ export const Container = styled.div`
     height: 8.8rem;
   }
 
+  > div h2 {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+  }
+
+  > div p {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+
+    color: ${({theme}) => theme.COLORS.CAKE_200};
+  }
+
 
 
 

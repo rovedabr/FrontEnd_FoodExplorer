@@ -31,4 +31,5 @@ justify-content: center;
 
   margin: 0 2.4rem;
 }
+
 `;
