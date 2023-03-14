@@ -10,6 +10,7 @@ export function Card({ title, icon, img, children, ...rest }) {
           <h2>{title}</h2>
           {children}
         </div>
+
     </Container>
 
   )
