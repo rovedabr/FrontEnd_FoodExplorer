@@ -4,6 +4,11 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
   > nav {
     width: 100%;
     border: 1px red solid;
@@ -16,15 +21,18 @@ export const Container = styled.div`
     border: 1px solid pink;
   }
 
+  > footer {
+    padding: 2.4rem 12.3rem;
+  }
+
   .cards {
     display: flex;
     flex-direction: row;
-    
-    overflow-x: auto;
   }
 
   .card {
     width: 21rem;
+    height: 29.2rem;
 
     display: flex;
     flex-direction: column;
@@ -35,12 +43,14 @@ export const Container = styled.div`
     margin-left: 2.4rem;
   }
 
-  .card input {
+/*   .card input {
     width: 2.4rem;
     height: 2.2rem;
-  }
 
-  @media screen and (min-width: 1280px){
+    z-index: 1;
+  } */
+`
+/*   @media screen and (min-width: 1280px){
     width: 100%;
     
     > nav {
@@ -50,24 +60,16 @@ export const Container = styled.div`
 
     > header {
       display: flex;
-    }
-
-    > footer {
-      padding: 2.4rem 12.3rem;
-    }
-  
+    }  
   }
-
-`;
+`; */
 
 export const Content = styled.div`
   width: 100%;
-
-  overflow-y: auto;
-
-
-`;
-
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
 
 
 /* export const Container = styled.div`

@@ -15,19 +15,20 @@ export function Home() {
     <Container>
        <Navbar/>
        <Header/>
-      <Content>
 {/*--------------------------------------------------------*/}  
       <Flavors/>
 {/*--------------------------------------------------------*/}           
+      <Content>
         <Section
           title="Refeições"
         >
+ {/* ------------------------------------------------------ */}         
           <div className="cards">
             <Card className="card"> 
-                <input
+{/*                 <input
                   type="image"  
                   src={favoriteIcon} 
-                /> 
+                />    */}             
                 <img src={saladaRavanello} alt="" />
                 <h2>Salada Ravanello</h2>
                 <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
@@ -38,163 +39,11 @@ export function Home() {
                 >
                 Incluir
               </Button>
-            </Card>
-
-            <Card className="card"> 
-                <input
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-
-            <Card className="card"> 
-                <input
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-
-          </div>
-
-        </Section>
-{/*--------------------------------------------------------*/}         
-        <Section
-          title="Pratos principais"
-        >
-          <div className="cards">
-          <Card className="card"> 
-                <input
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-
-
-            <Card className="card"> 
-                <input
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-            <Card className="card"> 
-                <input
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-
+            </Card>            
           </div>
 
         </Section>
 
-{/*--------------------------------------------------------*/}    
-        <Section
-          title="Bebidas"
-        >
-          <div className="cards">
-            <Card className="card"> 
-                <input 
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-
-            <Card className="card"> 
-                <input 
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-            <Card className="card"> 
-                <input 
-                  type="image"  
-                  src={favoriteIcon} 
-                /> 
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>
-
-          </div>
-
-        </Section>
       
       </Content>
       <Footer/> 

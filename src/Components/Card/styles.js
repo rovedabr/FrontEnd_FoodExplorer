@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 21rem;
 
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@ export const Container = styled.div`
   border-radius: 0.8rem;
 
   padding: 2.4rem;
+  border: 1px red solid;
 
   > input {
     position: relative;
@@ -24,7 +25,9 @@ export const Container = styled.div`
     width: 8.8rem;
     height: 8.8rem;
 
-    margin: 2.4rem 6.1rem 1.2rem;
+    align-items: center;
+
+    margin-bottom: 1.2rem;
   }
 
   > h2 {
@@ -71,16 +74,7 @@ export const Container = styled.div`
   }
 
   > span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-    font-weight: 400;
-      
-    margin-bottom: 1.5rem;
-
-    text-align: center;
-
-    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+    display: none;
   }
 
   > strong {
@@ -94,6 +88,23 @@ export const Container = styled.div`
     color: ${({theme}) => theme.COLORS.CAKE_200};
   }
 
+  @media screen and (min-width: 1280px){
+
+    > span {
+      display: flex;
+
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      font-weight: 400;
+        
+      margin-bottom: 1.5rem;
+
+      text-align: center;
+
+      color: ${({theme}) => theme.LIGHT.LIGHT_300};
+    }
+  
+  }
 
 `;
 
