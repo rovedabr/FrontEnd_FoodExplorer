@@ -12,7 +12,6 @@ export const Container = styled.div`
   
   border: 1px solid ${({theme}) => theme.DARK.DARK_300};
   border-radius: 0.8rem;
-  padding: 1.2rem 2.4rem;
   gap: 1.2rem;
 
   > input {

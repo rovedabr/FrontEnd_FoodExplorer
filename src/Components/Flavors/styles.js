@@ -92,10 +92,12 @@ align-items: center;
 
     > img {
     width: 65.6rem;
-    height: 41.2rem;  
+    height: 41.2rem;
+    
+    position: relative;
 
-    left: 5.4rem;
-    top: 13.8rem;
+    left: -120rem;
+    top: .8rem;
 
     background-size: cover;
   }

@@ -9,41 +9,50 @@ export const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
 
+  overflow-y: auto;
+
+  > div .cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
   > nav {
     width: 100%;
-    border: 1px red solid;
-    
+  
     display: flex;
   }
 
   > header {
     display: none;
-    border: 1px solid pink;
   }
 
   > footer {
-    padding: 2.4rem 12.3rem;
+    width: 100%;
+    height: 7.7rem;
   }
 
   @media screen and (min-width: 1280px){
 
-  > nav {
-    display: none;
-  }
+    > nav {
+      display: none;
+    }
 
-  > header {
-    display: flex;
-    border: 1px solid pink;
-  }
+    > header {
+      display: flex;
+    }
+
+    > div h2 {
+      font-size: 3.2rem;
+      line-height: 4.4rem;
+    }
 
   }
-
-`
+`;
 
 export const ContentCard = styled.div`
-
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 
   > input {
     width: 2.5rem;
@@ -54,7 +63,7 @@ justify-content: center;
     left: 20rem;
   }
 
-  >div {
+  > div {
     width: 21rem;
     height: 29.2rem;
   }
@@ -63,11 +72,13 @@ justify-content: center;
     display: none;
   }
 
-  @media screen and (min-width: 1280px){
+  @media screen and (min-width: 1280px){    
 
     > div {
       width: 30.4rem;
       height: 46.2rem;
+
+      gap: 1.5rem;
     }
 
     > input {
@@ -107,7 +118,8 @@ justify-content: center;
       justify-content: center;
       align-items: center;
 
-      margin: 0 4.8rem 0 4.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     > div .buttons div {

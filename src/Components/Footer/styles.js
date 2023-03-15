@@ -8,8 +8,8 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-
-padding: 2.9rem 2.7rem;
+padding-left: clamp(2rem, 1rem + 1vw, 2.4rem);
+padding-right: clamp(10rem, 2rem + 1vw, 12.3rem);
 
 background-color: ${({theme}) => theme.DARK.DARK_600};
 
@@ -23,5 +23,10 @@ color: ${({theme}) => theme.LIGHT.LIGHT_200};
 > img {
   width: 14.4rem;
 }
+
+@media screen and (min-width: 1280px){
+  padding: 2.4rem 12.3rem;  
+}
+
 
 `;
