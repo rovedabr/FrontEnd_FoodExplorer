@@ -5,32 +5,41 @@ width: 100%;
 
 display: flex;
 flex-direction: row;
-justify-content: flex-start;
 align-items: center;
+justify-content: flex-start;
 
-
-> img {
-  width: 19.1rem;
-  height: 14.9rem;
+.backgroundFlavors {
+  width: 100%;
+  height: 12rem;
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  position: absolute;
-  left: 0.6rem;
-  top: 12.9rem;
 
+  margin: 4.4rem 1.6rem auto 3rem;
+
+  background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
+  z-index: -1;
+}
+
+> .backgroundFlavors img {
+  width: 19.1rem;
+  height: 14.9rem;
+
+  margin: 1px solid blue;
+  position: relative;
+  bottom: 3rem;
+
+  z-index: 1;
 }
 
 >.backgroundFlavors .description {
-  width: 20rem;
+  width: clamp(15rem, 50%, 20rem);
+  margin: 2.5rem 0.8rem auto 0.5rem;
 
-  position: relative;
   text-align: justify;
-  margin: 3.6rem auto 2.2rem 18.9rem;
 }
 
->.backgroundFlavors .description h1, span {
+> .backgroundFlavors .description h1, span {
   color: ${({theme}) => theme.LIGHT.LIGHT_300};
 }
 
@@ -41,30 +50,15 @@ align-items: center;
 }
 
 > .description span {
-  font-size: 1.2;
+  font-size: clamp(0.5rem, 50%, 1.2rem);
   line-height: 1.7rem;
   font-weight: 400;
 }
 
-.backgroundFlavors {
-  width: 100%;
-  height: 12rem;
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-  margin: 4.4rem 1.6rem 0 3rem;
-
-  content: "";
-
-  z-index: -1;
-  background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-}
 
   @media screen and (min-width: 768px){
 
-  > img {
+  >.backgroundFlavors img {
     width: 33rem;
     height: 20rem;  
   }
@@ -76,7 +70,7 @@ align-items: center;
   >.backgroundFlavors .description {
     width: 35rem;
 
-    margin: 5.6rem auto 9.2rem 35em;
+    margin: 5.6rem auto 9.2rem 0;
   }
 
   >.backgroundFlavors .description h1 {
@@ -90,29 +84,25 @@ align-items: center;
 
   @media screen and (min-width: 1280px){
 
-    > img {
+    > .backgroundFlavors img {
     width: 65.6rem;
     height: 41.2rem;
-    
-    position: relative;
-
-    left: -120rem;
-    top: .8rem;
 
     background-size: cover;
+    top: -15rem;
   }
 
   .backgroundFlavors {
     width: 100%;
     height: 26rem;
 
-    margin: 16.4rem 12.4rem 0 12.4rem;
+    margin: 16.4rem 12.4rem auto 7rem;
   }
 
   >.backgroundFlavors .description {
     width: 42rem;
 
-    margin: 8.8rem auto 9.2rem 67em;
+    margin: 8.8rem auto 9.2rem 0;
   }
 
   >.backgroundFlavors .description h1 {

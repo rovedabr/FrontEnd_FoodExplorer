@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
 
-  border: 1px solid blue;
-
   > h2 {
     font-size: 1.8rem;
     line-height: 1.4rem;
