@@ -4,15 +4,13 @@ export function Card({ title, icon: Icon, input, img, children, ...rest }) {
   return (
     <Container
       {...rest} 
-      >
-        {Icon}
-        <>
-          <div id="icon">{input}</div>
+      >          
+         <div id="card"> 
+          {input}
           {img}
-          <h2>{title}</h2>
+          <h2>{title}{img}</h2>
           {children}
-        </div>
-
+        </div>    
     </Container>
 
   )

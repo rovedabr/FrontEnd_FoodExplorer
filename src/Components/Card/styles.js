@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-
+  height: 100vh;
   
   display: flex;
   flex-direction: column;
@@ -10,16 +10,15 @@ export const Container = styled.div`
   justify-content: center;
 
   > div input:nth-child(2) {
-    border: 1px solid red;
-  }
+    width: 2.4rem;
+    height: 2.2rem;
 
-  > div input:nth-child(2) {
-    display: flex;
     position: absolute;
-    left: 0;
+    left: 53rem;
+    top: 1rem;
   }
   
-  > div {
+  > #card {
     width: 21rem;
     height: 29.2rem;
 
@@ -36,12 +35,10 @@ export const Container = styled.div`
     gap: 1.2rem;
   }
 
-  > div img {
-    width: 8.8rem;
-    height: 8.8rem;
-  }
-
-  > div h2 {
+  > #card h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 500;
@@ -49,12 +46,54 @@ export const Container = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   }
 
-  > div p {
+  > #card p {
+    display: none;
+  }
+
+  > #card span {
     font-size: 1.6rem;
     line-height: 1.6rem;
     font-weight: 400;
 
     color: ${({theme}) => theme.COLORS.CAKE_200};
+  }
+
+  @media screen and (min-width: 1280px){
+
+  > #card img {
+    width: 17.6rem;
+    height: 17.6rem;
+  }
+
+  > #card h2 {
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    font-weight: 700;
+  }
+
+  > #card p {
+    width: 25.6rem;
+    display: flex;
+
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_400};
+  }
+
+  > #card span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    border: 1px solid green;
+
+    color: ${({theme}) => theme.COLORS.CAKE_200};
+  }
+
+
   }
 
 
