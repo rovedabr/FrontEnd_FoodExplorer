@@ -9,11 +9,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
-  > div {
+    
+  > main {
     width: 42.8rem;
     height: 11.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 1.7rem 6rem 3.4rem;
   }
 
   > footer {
@@ -26,12 +34,9 @@ export const Form = styled.div`
   width: 31.6rem;
   height: 67.7rem;
 
-  display: flex;
-  flex-direction: column;
-
-  padding: 1.7rem 6rem 3.4rem;
-
+  
   border: 1px solid green;
+
 
   > button {
     width: 10.2rem;
@@ -56,10 +61,53 @@ export const Form = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   }
 
-  >div img {
+  > div img {
     width: 26.4rem;
     height: 26.4rem;
     
     margin: 1.5rem 2.6rem;
+  }
+
+  > div h2, span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    color: white;
+  }
+
+  > div h2 {
+    font-size: 2.7rem;
+    line-height: 3.7rem;
+    font-weight: 500;
+  }
+
+  > div span {
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+  }
+
+  > .tags {
+    width: 31.6rem;
+    height: 20rem;
+
+    border: 1px solid pink;
+
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2.4rem;
+    gap: 2.4rem;
+  }
+
+  > .buttons {
+    display: flex;
+    flex-direction: row;
   }
 `;

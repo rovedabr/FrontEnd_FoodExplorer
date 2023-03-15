@@ -12,39 +12,59 @@ import { Footer } from "../../Components/Footer"
 export function Meal() {
   return(
     <Container>
+
      <Navbar/>
 
+    <main>
       <Form>
         <button
           title="button"
           icon={caretLeftIcon}
          >
           <input
-          type="image"
-          src={caretLeftIcon}
+            type="image"
+            src={caretLeftIcon}
           ></input>
-          Voltar</button>
+          Voltar
+        </button>
 
           <Section
           >
             <img 
               src={saladaRavanello} 
             />
-            <h1>Salada Ravanello</h1>
-            <p>abanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>           
+            <h2>Salada Ravanello</h2>
+            <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</span>           
           </Section> 
+
           <div className="tags">
             <Tag
               title="alface"
-            ></Tag>                      <Tag
+            />
+            <Tag                    
               title="cebola"
-            ></Tag>
+            />
+            <Tag                 
+              title="pão naan"
+            />
+            <Tag
+              title="pepino"
+            />
+            <Tag                    
+              title="rabanete"
+            />
+            <Tag                 
+              title="tomate"
+            />            
           </div>
-       <ButtonAddRemove/>
-      </Form>
 
-       <Button>Voltar</Button>
-      <Footer/>
+          <div className="buttons">
+            <ButtonAddRemove/>
+            <Button></Button>
+          </div>
+
+        </Form>
+      </main> 
     </Container>
   )
 }
