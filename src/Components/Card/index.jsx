@@ -1,11 +1,13 @@
 import { Container } from "./styles";
 
-export function Card({ title, icon, img, children, ...rest }) {
+export function Card({ title, icon: Icon, input, img, children, ...rest }) {
   return (
     <Container
       {...rest} 
       >
-        <div>
+        {Icon}
+        <>
+          <div id="icon">{input}</div>
           {img}
           <h2>{title}</h2>
           {children}

@@ -8,6 +8,16 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  > div input:nth-child(2) {
+    border: 1px solid red;
+  }
+
+  > div input:nth-child(2) {
+    display: flex;
+    position: absolute;
+    left: 0;
+  }
   
   > div {
     width: 21rem;
