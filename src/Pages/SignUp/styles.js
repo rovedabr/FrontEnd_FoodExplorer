@@ -92,10 +92,13 @@ export const Form = styled.div`
     width: 47.6rem;
     height: 62.1rem;
     
-    padding: 3.2rem;
+    padding: 2.4rem;
     border-radius: 1.6rem;
+    gap: 1.5rem;
 
     background-color: ${({theme}) => theme.DARK.DARK_700};
+
+
 
   }
 `;

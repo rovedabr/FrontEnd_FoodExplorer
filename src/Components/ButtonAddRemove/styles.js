@@ -29,7 +29,7 @@ justify-content: center;
 
   color: ${({theme}) => theme.LIGHT.LIGHT_300};
 
-  margin: 0 2.4rem;
+  margin: 0 1.4rem;
 }
 
 `;

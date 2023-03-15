@@ -15,8 +15,7 @@ export function ButtonAddRemove({ icon: Icon,  ...rest}) {
         type="image" 
         id="remove"
         src={plusIcon}
-      />
-      
+      />      
     </Container>
   )
 }
