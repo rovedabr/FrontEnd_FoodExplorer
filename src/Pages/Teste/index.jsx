@@ -1,15 +1,14 @@
 import { Card } from "../../Components/Card";
-import { Container, Content } from "./styles";
+import { Container, ContentCard } from "./styles";
 import saladaRavanello from "../../assets/meals/salada_ravanello.png"
 import { ButtonAddRemove } from "../../Components/ButtonAddRemove";
 import { Button } from "../../Components/Button";
 import favoriteIcon from "../../assets/Icons/Heart.svg"
-import careRightIcon from "../../assets/Icons/CaretRight.svg"
 
 export function Teste() {
   return (
     <Container>
-      <Content>
+      <ContentCard>
             <input type="image" src={favoriteIcon}/>
           <Card>
             <img src={saladaRavanello} alt="Imagem do prato de comida" />
@@ -21,7 +20,7 @@ export function Teste() {
               <Button>incluir</Button>
             </div>
         </Card>
-      </Content>
+      </ContentCard>
     </Container>
   )
 }

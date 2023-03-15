@@ -1,4 +1,4 @@
-import { Container, Content } from "./styles"
+import { Container, ContentCard } from "./styles"
 import { Navbar } from "../../Components/NavBar"
 import { Header } from "../../Components/Header"
 import { Footer } from "../../Components/Footer"
@@ -17,95 +17,27 @@ export function Home() {
        <Header/>
 {/*--------------------------------------------------------*/}  
       <Flavors/>
-{/*--------------------------------------------------------*/}           
-      <Content>
-        <Section
-          title="Refeições"
-        >
- {/* ------------------------------------------------------ */}         
-          <div className="cards">
-            <Card className="card"> 
-{/*                 <input
-                  type="image"  
-                  src={favoriteIcon} 
-                />    */}             
-                <img src={saladaRavanello} alt="" />
-                <h2>Salada Ravanello</h2>
-                <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-                <strong>R$ 49,97</strong>
-              <ButtonAddRemove/>  
-              <Button
-                type="button"
-                >
-                Incluir
-              </Button>
-            </Card>            
-          </div>
+{/*--------------------------------------------------------*/} 
+    <Section
+      title="Refeições"
+    >
+      <ContentCard>
+              <input type="image" src={favoriteIcon}/>
+            <Card>
+              <img src={saladaRavanello} alt="Imagem do prato de comida" />
+              <h2>Salada Ravanello &gt;</h2>
+              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
+              <span>R$ 49,97</span>
+              <div className="buttons">
+                <ButtonAddRemove/>
+                <Button>incluir</Button>
+              </div>
+          </Card>
+        </ContentCard>
 
-        </Section>
-
-      
-      </Content>
+    </Section>
+{/*--------------------------------------------------------*/}
       <Footer/> 
     </Container>
   )
 }
-
-
-
-/* import { Container, Form } from "./styles";
-import { Card } from "../../Components/Card"
-import saladaRavanello from "../../assets/meals/salada_ravanello.png"
-import favoriteIcon from "../../assets/Icons/Heart.svg"
-import { Section } from "../../Components/Section";
-import { Button } from "../../Components/Button"
-import { Header } from "../../Components/Header"
-import { Flavors } from "../../Components/Flavors";
-import { Navbar } from "../../Components/NavBar"
-
-export function Home() {
-  return(
-    <Container>
-      <Navbar/>
-      <Flavors/>
-
-        <Section> 
-          <h2>Refeições</h2>
-         <Form>
-            <Card> 
-              <input 
-                type="image"  
-                src={favoriteIcon} 
-              /> 
-              <img src={saladaRavanello} alt="" />
-              <h2>Salada Ravanello</h2>
-              <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-              <strong>R$ 49,97</strong>
-            <Button
-              type="button"
-              >
-              Incluir
-            </Button>
-           </Card>
-           <Card> 
-              <input 
-                type="image"  
-                src={favoriteIcon} 
-              /> 
-  
-              <img src={saladaRavanello} alt="" />
-              <h2>Salada Ravanello</h2>
-              <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</span>
-              <strong>R$ 49,97</strong>
-            <Button
-              type="button"
-              >
-              Incluir
-            </Button>
-           </Card>
-          </Form>
-         </Section>
-
-    </Container>
-  )
-} */

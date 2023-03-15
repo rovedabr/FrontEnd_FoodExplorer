@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: center;
   `;
 
-  export const Content = styled.div`
+  export const ContentCard = styled.div`
 
   display: flex;
   justify-content: center;
