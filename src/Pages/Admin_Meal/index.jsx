@@ -1,7 +1,7 @@
 import { Container, Form } from "./styles";
 
-import { Navbar } from "../../Components/NavBar"
-import { Header } from "../../Components/Header"
+import { AdminNavbar } from "../../Components/Admin_NavBar"
+import { AdminHeader } from "../../Components/Admin_Header"
 import { Footer } from "../../Components/Footer"
 import { Tag } from "../../Components/Tag"
 import { Button } from "../../Components/Button";
@@ -14,8 +14,8 @@ import saladaRavanello from "../../assets/meals/salada_ravanello.png"
 export function AdminMeal() {
   return(
     <Container>
-     <Navbar/>
-     <Header/>
+     <AdminNavbar/>
+     <AdminHeader/>
 
       <main>
         <Form>
