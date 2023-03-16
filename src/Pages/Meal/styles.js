@@ -35,7 +35,6 @@ export const Container = styled.div`
     > header {
       display: flex;
     }
-
   }
 
 `;
@@ -102,7 +101,7 @@ export const Form = styled.div`
     font-weight: 400;
   }
 
-  > .tags {
+  >#menu .content .tags {
     width: 31.6rem;
     height: 10rem;
 
@@ -119,20 +118,81 @@ export const Form = styled.div`
     margin: 2.4rem auto 4.5rem;
   }
 
-  > .buttons {
+  >#menu .content .buttons {
     display: flex;
     flex-direction: row;
   }
 
-  .buttons button img {
+  >#menu .content .buttons button img {
     width: 1.8rem;
     height: 1.5rem;
 
     margin: 0;
   }
 
-  .buttons button {
+  >#menu .content .buttons button {
     font-size: 0.9rem;
     line-height: 1.7rem;
+  }
+
+  @media screen and (min-width: 1280px){
+    width: 100%;
+    
+    > button {
+      position: relative;
+      left: 15.4rem;
+    }
+
+    > #menu {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    > #menu img {
+      width: 39rem;
+      height: 39rem;
+      margin: 10rem 4.7rem auto 12rem;
+    }
+
+    > #menu .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    > #menu .content .mealData {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+   > #menu .content .mealData h2 {
+      font-size: 4rem;
+      line-height: 5.6rem;
+      font-weight: 500;
+
+      text-align: left;
+    }
+
+    > #menu .content .mealData span {
+      font-size: 2.4rem;
+      line-height: 3.3rem;
+      font-weight: 400;
+
+      text-align: left;
+    }
+
+    > #menu .content .tags {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+
+      margin: 0;
+    }
+
   }
 `;
