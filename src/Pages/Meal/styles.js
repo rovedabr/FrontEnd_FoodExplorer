@@ -4,12 +4,19 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  border: 1px solid blue;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  > main {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 
   > nav {
@@ -39,7 +46,7 @@ export const Form = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   margin: 1.7rem 5.2rem 3.3rem 5.2rem;
 
