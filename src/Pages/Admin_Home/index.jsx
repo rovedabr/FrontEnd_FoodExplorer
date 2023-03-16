@@ -1,6 +1,6 @@
 import { Container, ContentCard } from "./styles"
-import { Navbar } from "../../Components/NavBar"
-import { Header } from "../../Components/Header"
+import { AdminNavbar } from "../../Components/Admin_NavBar"
+import { AdminHeader } from "../../Components/Admin_Header"
 import { Footer } from "../../Components/Footer"
 import { Flavors } from "../../Components/Flavors"
 import { Section } from "../../Components/Section"
@@ -27,8 +27,8 @@ import pomoBourboun from "../../assets/meals/pomo_Bourbon.png"
 export function AdminHome() {
   return (
     <Container>
-       <Navbar/>
-       <Header/>
+       <AdminNavbar/>
+       <AdminHeader/>
 {/*--------------------------------------------------------*/}  
       <Flavors/>
 {/*--Refeições --------------------------------------------*/} 

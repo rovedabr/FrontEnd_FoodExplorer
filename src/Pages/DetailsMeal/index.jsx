@@ -11,7 +11,7 @@ import receiptIcon from "../../assets/Icons/Receipt.svg"
 import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
 import saladaRavanello from "../../assets/meals/salada_ravanello.png"
 
-export function Meal() {
+export function DetailsMeal() {
   return(
     <Container>
      <Navbar/>
