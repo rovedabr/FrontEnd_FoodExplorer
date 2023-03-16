@@ -1,70 +1,60 @@
 import { Container, Form } from "./styles";
-import { ButtonAddRemove } from "../../Components/ButtonAddRemove";
+
 import { Navbar } from "../../Components/NavBar"
-import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
-import saladaRavanello from "../../assets/meals/salada_ravanello.png"
-import { Section } from "../../Components/Section";
-import { Card } from "../../Components/Card";
+import { Header } from "../../Components/Header"
+import { Footer } from "../../Components/Footer"
 import { Tag } from "../../Components/Tag"
 import { Button } from "../../Components/Button";
-import { Footer } from "../../Components/Footer"
+import { ButtonAddRemove } from "../../Components/ButtonAddRemove";
+
+import receiptIcon from "../../assets/Icons/Receipt.svg"
+import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
+import saladaRavanello from "../../assets/meals/salada_ravanello.png"
 
 export function Meal() {
   return(
     <Container>
-
      <Navbar/>
+     <Header/>
 
-    <main>
-      <Form>
-        <button
-          title="button"
-          icon={caretLeftIcon}
-         >
-          <input
-            type="image"
-            src={caretLeftIcon}
-          ></input>
-          Voltar
-        </button>
-
-          <Section
+      <main>
+        <Form>
+          <button
+            title="button"
+            icon={caretLeftIcon}
           >
-            <img 
-              src={saladaRavanello} 
-            />
-            <h2>Salada Ravanello</h2>
-            <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</span>           
-          </Section> 
+            <input
+              type="image"
+              src={caretLeftIcon}
+            ></input>
+            Voltar
+          </button>
 
-          <div className="tags">
-            <Tag
-              title="alface"
-            />
-            <Tag                    
-              title="cebola"
-            />
-            <Tag                 
-              title="pão naan"
-            />
-            <Tag
-              title="pepino"
-            />
-            <Tag                    
-              title="rabanete"
-            />
-            <Tag                 
-              title="tomate"
-            />            
-          </div>
+            <div
+            >
+              <img 
+                src={saladaRavanello} 
+              />
+              <h2>Salada Ravanello</h2>
+              <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</span>           
+            </div> 
 
-          <div className="buttons">
-            <ButtonAddRemove/>
-            <Button></Button>
-          </div>
+            <div className="tags">
+              <Tag title="alface"></Tag>
+              <Tag title="cebola"></Tag>
+              <Tag title="pão naan"></Tag>
+              <Tag title="pepino"></Tag>
+              <Tag title="rabanete"></Tag>
+              <Tag title="tomate"></Tag>
+            </div>
 
-        </Form>
-      </main> 
+            <div className="buttons">
+              <ButtonAddRemove/>
+              <Button><img src={receiptIcon} alt="" /> pedir ∙ R$ 25,00</Button>
+            </div>
+          </Form>
+        </main> 
+        <Footer/>
     </Container>
   )
 }

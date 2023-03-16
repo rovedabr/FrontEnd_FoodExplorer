@@ -8,35 +8,40 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
 
-    
-  > main {
-    width: 42.8rem;
-    height: 11.4rem;
 
+  > nav {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    padding: 1.7rem 6rem 3.4rem;
   }
 
-  > footer {
-    width: 42.8rem;
-    height: 7.7rem;
+  > header {
+    display: none;
   }
+
+  @media screen and (min-width: 1280px){
+    > nav {
+      display: none;
+    }
+
+    > header {
+      display: flex;
+    }
+
+  }
+
 `;
 
 export const Form = styled.div`
   width: 31.6rem;
   height: 67.7rem;
 
-  
-  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  margin: 1.7rem 5.2rem 3.3rem 5.2rem;
 
   > button {
     width: 10.2rem;
@@ -44,13 +49,13 @@ export const Form = styled.div`
 
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
 
     appearance: none;
     background-color: transparent;
     border: none;
 
-    margin: 3.7rem auto 1.7rem 0;
+    margin-top: 1.5rem;
     gap: 1.1rem;
 
     font-family: 'Poppins', sans-serif;
@@ -75,7 +80,7 @@ export const Form = styled.div`
     justify-content: center;
     
     text-align: center;
-    color: white;
+    color: ${({theme}) => theme.LIGHT.LIGHT_300};
   }
 
   > div h2 {
@@ -92,22 +97,35 @@ export const Form = styled.div`
 
   > .tags {
     width: 31.6rem;
-    height: 20rem;
-
-    border: 1px solid pink;
+    height: 10rem;
 
     text-align: center;
 
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-    padding: 2.4rem;
     gap: 2.4rem;
+
+    margin: 2.4rem auto 4.5rem;
   }
 
   > .buttons {
     display: flex;
     flex-direction: row;
+  }
+
+  .buttons button img {
+    width: 1.8rem;
+    height: 1.5rem;
+
+    margin: 0;
+  }
+
+  .buttons button {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
   }
 `;
