@@ -117,8 +117,9 @@ export const Form = styled.div`
     width: 100%;
     
     > button {
-      position: relative;
-      left: 15.4rem;
+      display: flex;
+      margin-top: 3.2rem;
+      margin-left: 15.4rem;
     }
 
     > #menu {

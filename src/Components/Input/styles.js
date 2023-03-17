@@ -13,6 +13,10 @@ export const Container = styled.div`
   
   border-radius: 0.8rem;
 
+  > label {
+    display: block;
+  }
+
   > svg {
     margin-left: 1.2rem;
     color: ${({theme}) => theme.LIGHT.LIGHT_400};
