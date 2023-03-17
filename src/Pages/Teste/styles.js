@@ -9,12 +9,12 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  .note {
+  .note-wrapper {
     width: 36.4rem;
     height: 17.2rem;
   }
 
-  > .note label {
+  > .note-wrapper label {
     display: block;
 
     font-size: 1.6rem;
@@ -23,6 +23,11 @@ export const Container = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_400};
 
     margin-bottom: 1.6rem;
+  }
+
+  > button {
+    width: 20rem;
+    border: 1px solid blue;
   }
   
 `;
