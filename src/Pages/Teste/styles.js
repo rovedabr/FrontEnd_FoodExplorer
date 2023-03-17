@@ -26,9 +26,9 @@ export const Container = styled.div`
   }
 
   > button {
-    width: 20rem;
-    border: 1px solid blue;
+    width: 10.2rem;
   }
+
   
 `;
 
