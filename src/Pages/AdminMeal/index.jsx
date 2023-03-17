@@ -5,7 +5,7 @@ import { AdminHeader } from "../../Components/Admin_Header"
 import { Footer } from "../../Components/Footer"
 import { Tag } from "../../Components/Tag"
 import { Button } from "../../Components/Button";
-import { ButtonAddRemove } from "../../Components/ButtonAddRemove";
+import { ButtonBack } from "../../Components/ButtonBack";
 
 import receiptIcon from "../../assets/Icons/Receipt.svg"
 import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
@@ -19,16 +19,9 @@ export function AdminMeal() {
 
       <main>
         <Form>
-          <button
-            title="button"
-            icon={caretLeftIcon}
-          >
-            <input
-              type="image"
-              src={caretLeftIcon}
-            ></input>
-            Voltar
-          </button>
+          <ButtonBack
+            title="Voltar"
+          />
 
             <div id="menu">
                 <img 

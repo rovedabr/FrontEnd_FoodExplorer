@@ -50,26 +50,11 @@ export const Form = styled.div`
   margin: 1.7rem 5.2rem 3.3rem 5.2rem;
 
   > button {
-    width: 10.2rem;
-    height: 3.4rem;
-
     display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    appearance: none;
-    background-color: transparent;
-    border: none;
-
     margin-top: 1.5rem;
-    gap: 1.1rem;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.4rem;
-    line-height: 3.4rem;
-    font-weight: 500;
-    
-    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   > div img {
