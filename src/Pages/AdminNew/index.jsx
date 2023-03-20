@@ -8,6 +8,8 @@ import { Select } from "../../Components/Select"
 import { FiUpload} from "react-icons/fi"
 import { FiChevronDown } from "react-icons/fi"
 import { NoteItem } from "../../Components/NoteItem"
+import { TextArea } from "../../Components/TextArea"
+import { Button } from "../../Components/Button"
 
 export function New() {
   return (
@@ -26,11 +28,23 @@ export function New() {
         <div className="Ingredients">
           <label htmlFor="noteItem">Ingredientes</label>
           <div>
-            <NoteItem isNew value="teste"></NoteItem>
-            <NoteItem value="rabanete"></NoteItem>     
+            <NoteItem isNew  value="teste"></NoteItem>
+            <NoteItem value="rabanete"></NoteItem> 
+            <NoteItem isNew value="batata"></NoteItem>        
           </div>
-        </div>Ingredients
-      
+        </div>
+
+        <InputLabel label="Preço" placeholder="R$ 00,00"></InputLabel>
+        <label htmlFor="textArea">Descrição</label>
+        <TextArea
+          rows="100"
+          placeholder="A salada Caesar é uma opção refrescante para o verão"
+        ></TextArea>
+
+        <div className="buttons">
+          <Button>Excluir prato</Button>
+          <Button>Salvar alterações</Button>
+         </div>
 
 {/*         <label htmlFor="uploadImage">Imagem do prato</label>
         <Input

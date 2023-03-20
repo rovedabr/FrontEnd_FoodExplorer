@@ -37,7 +37,6 @@ export const Form = styled.div`
   }
 
   > .Ingredients div {
-    width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -61,6 +60,36 @@ export const Form = styled.div`
 
     display: block;
     margin-bottom: 1.6rem;
+  }
+
+  > label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_400};
+  }
+
+  > .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+  }
+
+  > .buttons button:first-child {
+    background-color: ${({theme}) => theme.DARK.DARK_800};
+    margin-right: 3.2rem;
+  }
+
+  > .buttons button:nth-child(2) {
+    background-color: ${({theme}) => theme.COLORS.TOMATO_400};
   }
 
 

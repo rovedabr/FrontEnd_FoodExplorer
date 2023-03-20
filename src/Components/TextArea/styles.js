@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.textarea`
   width: 100%;
+  height: 17rem;
 
   background-color: ${({theme}) => theme.DARK.DARK_800};
   border-radius: 0.8rem;
@@ -17,6 +18,11 @@ export const Container = styled.textarea`
   &::placeholder {
     color: ${({theme}) => theme.LIGHT.LIGHT_500};
   }
+
+  > label {
+  margin-bottom: 1.6rem;
+  color: ${({theme}) => theme.LIGHT.LIGHT_400};
+}
 
 
 `;

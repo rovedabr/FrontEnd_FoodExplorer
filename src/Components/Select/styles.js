@@ -13,11 +13,6 @@ line-height: 1.6rem;
 font-weight: 400;
 
 
-> label {
-  margin-bottom: 1.6rem;
-  color: ${({theme}) => theme.LIGHT.LIGHT_400};
-}
-
 >div {
   width: 100%;
 

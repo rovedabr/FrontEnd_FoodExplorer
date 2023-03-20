@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: fit-content;
 
   display: flex;
   flex-direction: row;
@@ -10,8 +10,11 @@ export const Container = styled.div`
 
   border-radius: 0.8rem;
   padding: 0.8;
+  background-color: ${({theme, isNew}) => isNew ? "red" : "blue"};
+  color: ${({theme, isNew}) => isNew ? "red" : "blue"};
 
-  background-color: ${({ theme, isNew }) => isNew ? "transparent" : theme.LIGHT.LIGHT_600 };
+  /* color: ${({theme, isNew}) => isNew ? theme.LIGHT.LIGHT_500 : theme.LIGHT.LIGHT_100}; */
+  /* background-color: ${({ theme, isNew }) => isNew ? `transparent` : theme.LIGHT.LIGHT_600}; */
 
   border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.LIGHT.LIGHT_500}`: `1px solid ${theme.LIGHT.LIGHT_600}`};
 
@@ -23,22 +26,29 @@ export const Container = styled.div`
   }
 
   > .button-delete {
-    color: ${({theme}) => theme.LIGHT.LIGHT_100}
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
   }
 
   > .button-add {
-    color: ${({theme}) => theme.LIGHT.LIGHT_500}
+    color: ${({theme}) => theme.LIGHT.LIGHT_500};
   }
 
   > input {
-    height: 100%;
-    height: 3.2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    padding: 1rem 1.6rem;
-    gap: 1.6rem;
+    padding: 0.8rem;
+
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight:400;
+    text-align: center;
 
     background: transparent;
-    /* border: none; */
+    border: none;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_100};
   }
