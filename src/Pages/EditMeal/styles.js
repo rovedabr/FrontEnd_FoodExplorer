@@ -12,13 +12,12 @@ export const Form = styled.div`
   width: 36.4rem;
   height: 92.3rem;
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: flex-start; */
 
   margin: 1.1rem 3.2rem 5.3rem 3.2rem;
-  gap: 2.4rem;
 
   > button {
     display: flex;
@@ -28,12 +27,12 @@ export const Form = styled.div`
     margin-bottom: 2.4rem;
   }
 
-  > div {
+  > .form1, .form2, .description {
     width: 100%;
-    display: flex;
     flex-direction: column;
-    gap: 2.4rem;
-    }
+    justify-content: center;
+    align-items: center;
+  }
 
   > h2 {
     font-size: 3.2rem;
@@ -43,42 +42,35 @@ export const Form = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   }
 
-
-  > div .Ingredients div {
-
+  > .form2 .ingredients {
     display: flex;
-    flex-direction: row;
+
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 
     border-radius: 0.8rem;
     padding: 0.4rem 0.8rem;
     background-color: ${({theme}) => theme.DARK.DARK_800};
-
   }
 
-  > div .Ingredients label {
+  > .form2 .ingredients div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  > .form1 label,
+    .form2 label,
+    .description label  {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6rem;
     font-weight: 400;
+    margin-top: 2.4rem;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_400};
-
+    
     display: block;
-    margin-bottom: 1.6rem;
-  }
-
-
-  > div label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    font-weight: 400;
-
-    color: ${({theme}) => theme.LIGHT.LIGHT_400};
-
     margin-bottom: 1.6rem;
   }
 
@@ -105,16 +97,35 @@ export const Form = styled.div`
 
   @media screen and (min-width: 780px){
     width: 50rem;
+
+    > .form2 .ingredients div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
   }
   
   @media screen and (min-width: 1280px){
     width: 112rem;
-    gap: 3.2rem;
+
     margin-block: 3.2rem;
 
-    >.form1, .form2 {
+
+    > .form1,
+      .form2 {
       display: flex;
       flex-direction: row;
+    }
+
+    > .form2 label:first-child   {
+      display: flex;
+      flex-direction: column;
+      border: 1px red solid;
+    }
+
+    > .form2 #price {
+      width: 25rem;
     }
 
     > .form1 button {
@@ -122,31 +133,27 @@ export const Form = styled.div`
     }
 
     > .form1 input {
-      width: 48rem;
+      width: 46.3rem;
+      margin-right: 3.2rem;
     }
 
     > .form1 select {
       width: 36.4rem;
     }
 
-    > .form2 .Ingredients{
+    > .form2 .ingredients .description{
       width: 84rem;
-      border: 1px red solid;
     }
 
-    > .form2 .Ingredients div{
-      width: 20rem;
-    }
 
-    > .form2 input {
-      width: 25rem;
-    }
+
 
     > .buttons {
       display: flex;
       flex-direction: row;
       align-items: flex-end;
       justify-content: flex-end;
+      margin-top: 3.2rem;
     }
 
     > .buttons button {

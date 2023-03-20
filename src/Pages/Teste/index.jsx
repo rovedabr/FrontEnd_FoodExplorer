@@ -10,6 +10,10 @@ export function Teste() {
     <Container>
       <NoteItem value="batata" isNew></NoteItem>
       <NoteItem value="abacaxi" ></NoteItem>
+      <NoteItem value="batata" isNew></NoteItem>
+      <NoteItem value="abacaxi" ></NoteItem>
+      <NoteItem value="batata" isNew></NoteItem>
+      <NoteItem value="abacaxi" ></NoteItem>
 
     </Container>
   )

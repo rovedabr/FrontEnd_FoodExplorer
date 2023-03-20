@@ -27,18 +27,16 @@ export function EditMeal() {
         </div>
 
         <div className="form2">
-          <div className="Ingredients">
             <label htmlFor="noteItem">Ingredientes</label>
-            <div>
+          <div className="ingredients">
               <NoteItem isNew  value="alface"></NoteItem>
               <NoteItem value="rabanete"></NoteItem> 
               <NoteItem value="batata"></NoteItem>        
-            </div>
           </div>
-          <InputLabel label="Preço" placeholder="R$ 00,00"></InputLabel>
+          <InputLabel id="price" label="Preço" placeholder="R$ 00,00"></InputLabel>
         </div>
 
-        <div className="Description">
+        <div className="description">
           <label htmlFor="textArea">Descrição</label>
           <TextArea
             rows="100"
