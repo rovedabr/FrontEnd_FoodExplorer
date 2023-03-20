@@ -17,7 +17,7 @@ export const Form = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
 
-  padding: 1.1rem 3.2rem 5.3rem 3.2rem;
+  margin: 1.1rem 3.2rem 5.3rem 3.2rem;
   gap: 2.4rem;
 
   > button {
@@ -62,6 +62,7 @@ export const Form = styled.div`
     margin-bottom: 1.6rem;
   }
 
+
   > label {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
@@ -94,4 +95,4 @@ export const Form = styled.div`
 
 
 
-`
+`;

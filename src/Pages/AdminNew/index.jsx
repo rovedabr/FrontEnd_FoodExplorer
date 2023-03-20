@@ -1,15 +1,14 @@
 import { Container, Form } from "./styles"
 import { AdminNavbar } from "../../Components/Admin_NavBar"
-import { Input } from "../../Components/Input"
 import { ButtonBack } from "../../Components/ButtonBack"
 import { InputLabel } from "../../Components/InputLabel"
 import { ButtonUpload } from "../../Components/ButtonUpload"
 import { Select } from "../../Components/Select"
 import { FiUpload} from "react-icons/fi"
-import { FiChevronDown } from "react-icons/fi"
 import { NoteItem } from "../../Components/NoteItem"
 import { TextArea } from "../../Components/TextArea"
 import { Button } from "../../Components/Button"
+import { Footer } from "../../Components/Footer"
 
 export function New() {
   return (
@@ -44,28 +43,9 @@ export function New() {
         <div className="buttons">
           <Button>Excluir prato</Button>
           <Button>Salvar alterações</Button>
-         </div>
-
-{/*         <label htmlFor="uploadImage">Imagem do prato</label>
-        <Input
-          type="file"
-          id="uploadImage"
-          placeholder="Selecione imagem"
-        ></Input>
-
-        <label 
-          htmlFor="name"
-        >
-          Nome
-        </label><Input
-          id="name"
-          placeholder="Ex.: Salada Ceasar"
-        ></Input>
- */}
-
-
-
+        </div>
       </Form>
+      <Footer/>
     </Container>
   )
 }
