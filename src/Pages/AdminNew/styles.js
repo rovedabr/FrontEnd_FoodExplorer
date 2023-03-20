@@ -36,7 +36,22 @@ export const Form = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   }
 
-  > label {
+  > .Ingredients div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    border-radius: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    background-color: ${({theme}) => theme.DARK.DARK_800};
+
+  }
+
+  > .Ingredients label {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6rem;
@@ -48,17 +63,6 @@ export const Form = styled.div`
     margin-bottom: 1.6rem;
   }
 
-  > div select {
-    display: flex;
-    flex-direction: row;
-  }
 
-  > div select svg {
-    fill: white;
-    display: flex;
-    flex-direction: row;
-
-    border: 1px blue solid;
-}
 
 `

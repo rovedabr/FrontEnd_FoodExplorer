@@ -7,6 +7,7 @@ import { ButtonUpload } from "../../Components/ButtonUpload"
 import { Select } from "../../Components/Select"
 import { FiUpload} from "react-icons/fi"
 import { FiChevronDown } from "react-icons/fi"
+import { NoteItem } from "../../Components/NoteItem"
 
 export function New() {
   return (
@@ -21,6 +22,15 @@ export function New() {
         <ButtonUpload label="Imagem do prato" icon={FiUpload} title="Selecione imagem para alterá-la" ></ButtonUpload>
         <InputLabel label="Nome" placeholder="Ex.: Salada Ceasar"></InputLabel>
         <Select label="Categoria" placeholder="Selecione uma categoria" ></Select>
+
+        <div className="Ingredients">
+          <label htmlFor="noteItem">Ingredientes</label>
+          <div>
+            <NoteItem isNew value="teste"></NoteItem>
+            <NoteItem value="rabanete"></NoteItem>     
+          </div>
+        </div>Ingredients
+      
 
 {/*         <label htmlFor="uploadImage">Imagem do prato</label>
         <Input
