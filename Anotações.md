@@ -9,14 +9,14 @@
 5. Tags
 6. Seções dos prato -->
 
-7. Ajustar margens e paddings
+<!-- 7. Ajustar margens e paddings
 
 8. Criar o layout:
 - Mobile
 - Tablet
 - Desktop
 
-9. Criação das Páginas
+9. Criação das Páginas -->
 
 10. Ajustar mudança dos Modos:
 - Light
@@ -24,3 +24,7 @@
 
 11. Arrumar o Header
 - Margens e espaçamentos
+
+12. Arrumar a mudança da cor das Tags (Página AdminNew)
+
+13. Inserir swiper na página de Pratos (Meals)

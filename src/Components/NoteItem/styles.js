@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: fit-content;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
@@ -10,15 +10,14 @@ export const Container = styled.div`
 
   border-radius: 0.8rem;
   padding: 0.8;
-  background-color: ${({theme, isNew}) => isNew ? "red" : "blue"};
-  color: ${({theme, isNew}) => isNew ? "red" : "blue"};
 
-  /* color: ${({theme, isNew}) => isNew ? theme.LIGHT.LIGHT_500 : theme.LIGHT.LIGHT_100}; */
-  /* background-color: ${({ theme, isNew }) => isNew ? `transparent` : theme.LIGHT.LIGHT_600}; */
+  color: ${({ theme, isNew }) => isNew ? theme.LIGHT.LIGHT_500 : theme.LIGHT.LIGHT_100};
+  background-color: ${({ theme, isNew }) => isNew ? `transparent` : theme.LIGHT.LIGHT_600};
 
   border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.LIGHT.LIGHT_500}`: `1px solid ${theme.LIGHT.LIGHT_600}`};
 
   >  button {
+    width: fit-content;
     appearance: none;
     border: none;
 
@@ -34,13 +33,14 @@ export const Container = styled.div`
   }
 
   > input {
-    width: 50%;
+    width: fit-content;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    padding: 0.8rem;
+    padding: 0.1rem;
 
     font-size: 1.6rem;
     line-height: 1.6rem;
