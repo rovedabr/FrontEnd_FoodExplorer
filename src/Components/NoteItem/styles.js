@@ -1,55 +1,48 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
-  width: 100%;
+width: 100%;
+display: flex;
+flex-direction: row;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+background-color: ${({theme}) => theme.DARK.DARK_800};
+padding: 0.8rem;
 
+> input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+
+  color: ${({theme, isNew}) => isNew ? theme.LIGHT.LIGHT_500 : theme.LIGHT.LIGHT_100};
+
+  padding: 1rem 1.6rem;
   border-radius: 0.8rem;
-  padding: 0.8;
 
-  color: ${({ theme, isNew }) => isNew ? theme.LIGHT.LIGHT_500 : theme.LIGHT.LIGHT_100};
-  background-color: ${({ theme, isNew }) => isNew ? `transparent` : theme.LIGHT.LIGHT_600};
+  background-color: ${({theme, isNew}) => isNew ? 'transparent' : theme.LIGHT.LIGHT_600};
 
-  border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.LIGHT.LIGHT_500}`: `1px solid ${theme.LIGHT.LIGHT_600}`};
+  border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.LIGHT.LIGHT_500}` : `1px solid ${theme.LIGHT.LIGHT_600}`};
 
-  >  button {
-    width: fit-content;
-    appearance: none;
-    border: none;
+  gap: 1.6rem;
+}
 
-    background: transparent;
-  }
+> button {
+  appearance: none;
+  background: transparent;
+  border: none;
+  
+  font-size: 2.4rem;
+  position: relative;
+  right: 5rem
+}
 
-  > .button-delete {
-    color: ${({theme}) => theme.LIGHT.LIGHT_100};
-  }
+> .button-add {
+  color: ${({theme}) => theme.LIGHT.LIGHT_500};
+}
 
-  > .button-add {
-    color: ${({theme}) => theme.LIGHT.LIGHT_500};
-  }
+> .button-delete {
+ color: ${({theme}) => theme.LIGHT.LIGHT_100};
+}
 
-  > input {
-    width: fit-content;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0.1rem;
-
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    font-weight:400;
-    text-align: center;
-
-    background: transparent;
-    border: none;
-
-    color: ${({theme}) => theme.LIGHT.LIGHT_100};
-  }
 `

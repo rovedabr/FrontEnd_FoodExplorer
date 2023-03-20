@@ -10,7 +10,7 @@ import { TextArea } from "../../Components/TextArea"
 import { Button } from "../../Components/Button"
 import { Footer } from "../../Components/Footer"
 
-export function New() {
+export function EditMeal() {
   return (
     <Container>
         <AdminNavbar/>      
@@ -18,32 +18,39 @@ export function New() {
         <ButtonBack
           title="Voltar"
         />
-        <h2>Novo prato</h2>
+        <h2>Editar prato</h2>
 
-        <ButtonUpload label="Imagem do prato" icon={FiUpload} title="Selecione imagem para alterá-la" ></ButtonUpload>
-        <InputLabel label="Nome" placeholder="Ex.: Salada Ceasar"></InputLabel>
-        <Select label="Categoria" placeholder="Selecione uma categoria" ></Select>
-
-        <div className="Ingredients">
-          <label htmlFor="noteItem">Ingredientes</label>
-          <div>
-            <NoteItem isNew  value="teste"></NoteItem>
-            <NoteItem value="rabanete"></NoteItem> 
-            <NoteItem isNew value="batata"></NoteItem>        
-          </div>
+        <div className="form1">
+          <ButtonUpload label="Imagem do prato" icon={FiUpload} title="Selecione imagem para alterá-la" ></ButtonUpload>
+          <InputLabel label="Nome" placeholder="Ex.: Salada Ceasar"></InputLabel>
+          <Select label="Categoria" placeholder="Selecione uma categoria" ></Select>
         </div>
 
-        <InputLabel label="Preço" placeholder="R$ 00,00"></InputLabel>
-        <label htmlFor="textArea">Descrição</label>
-        <TextArea
-          rows="100"
-          placeholder="A salada Caesar é uma opção refrescante para o verão"
-        ></TextArea>
+        <div className="form2">
+          <div className="Ingredients">
+            <label htmlFor="noteItem">Ingredientes</label>
+            <div>
+              <NoteItem isNew  value="alface"></NoteItem>
+              <NoteItem value="rabanete"></NoteItem> 
+              <NoteItem value="batata"></NoteItem>        
+            </div>
+          </div>
+          <InputLabel label="Preço" placeholder="R$ 00,00"></InputLabel>
+        </div>
+
+        <div className="Description">
+          <label htmlFor="textArea">Descrição</label>
+          <TextArea
+            rows="100"
+            placeholder="A salada Caesar é uma opção refrescante para o verão"
+          ></TextArea>
+        </div>
 
         <div className="buttons">
           <Button>Excluir prato</Button>
           <Button>Salvar alterações</Button>
         </div>
+
       </Form>
       <Footer/>
     </Container>

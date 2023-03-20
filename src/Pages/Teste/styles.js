@@ -5,29 +5,9 @@ export const Container = styled.div`
   height: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  .note-wrapper {
-    width: 36.4rem;
-    height: 17.2rem;
-  }
-
-  > .note-wrapper label {
-    display: block;
-
-    font-size: 1.6rem;
-    line-height: 100%;
-    font-weight: 400;
-    color: ${({theme}) => theme.LIGHT.LIGHT_400};
-
-    margin-bottom: 1.6rem;
-  }
-
-  > button {
-    width: 10.2rem;
-  }
 
   
 `;
