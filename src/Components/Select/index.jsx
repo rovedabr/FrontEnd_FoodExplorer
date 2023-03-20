@@ -1,16 +1,16 @@
 import { Container } from "./styles";
-import { FiChevronDown } from "react-icons/fi"
 
-export function Select({ label, value, category, icon:Icon, ...rest}) {
+export function Select({ label, value, category, placeholder, icon:Icon, ...rest}) {
   return(
     <Container {...rest}>
-        <label htmlFor={category}>{label}</label>        
-        <select name="Food" id={category} Icon={FiChevronDown}>
-          <option value="meal">Refeições</option>
-          <option value="dessert">Sobremesas</option>
-          <option value="drink">Bebidas</option>
-          <div></div>                    
-        </select>
+        <label htmlFor={category}>{label}</label>
+        <div>
+          <select name="Food" id={category}>
+            <option value="meal">Refeições</option>
+            <option value="dessert">Sobremesas</option>
+            <option value="drink">Bebidas</option>              
+          </select>
+        </div>
     </Container>
   )
 }

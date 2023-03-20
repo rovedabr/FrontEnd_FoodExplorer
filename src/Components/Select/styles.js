@@ -13,21 +13,32 @@ line-height: 1.6rem;
 font-weight: 400;
 
 
-
 > label {
   margin-bottom: 1.6rem;
   color: ${({theme}) => theme.LIGHT.LIGHT_400};
 }
 
-> select {
+>div {
+  width: 100%;
+
+  background-color: ${({theme}) => theme.DARK.DARK_800};
+  border-radius: 0.8rem;
+}
+
+> div select {
+  width: 95%;
   height: 4.8rem;
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 400;
   
-  appearance: none;
   border: none;
   border-radius: 0.8rem;
 
@@ -35,13 +46,6 @@ font-weight: 400;
   background-color: ${({theme}) => theme.DARK.DARK_800};
   color: ${({theme}) => theme.LIGHT.LIGHT_500};
 
-  &::placeholder {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
-      font-weight: 400; 
-
-      color: ${({theme})=> theme.LIGHT.LIGHT_500};
-    }    
 }
 
 `;

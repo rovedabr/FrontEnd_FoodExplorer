@@ -48,4 +48,17 @@ export const Form = styled.div`
     margin-bottom: 1.6rem;
   }
 
+  > div select {
+    display: flex;
+    flex-direction: row;
+  }
+
+  > div select svg {
+    fill: white;
+    display: flex;
+    flex-direction: row;
+
+    border: 1px blue solid;
+}
+
 `

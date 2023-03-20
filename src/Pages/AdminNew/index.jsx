@@ -20,7 +20,7 @@ export function New() {
 
         <ButtonUpload label="Imagem do prato" icon={FiUpload} title="Selecione imagem para alterá-la" ></ButtonUpload>
         <InputLabel label="Nome" placeholder="Ex.: Salada Ceasar"></InputLabel>
-        <Select label="Categoria" icon={FiChevronDown}></Select>
+        <Select label="Categoria" placeholder="Selecione uma categoria" ></Select>
 
 {/*         <label htmlFor="uploadImage">Imagem do prato</label>
         <Input
