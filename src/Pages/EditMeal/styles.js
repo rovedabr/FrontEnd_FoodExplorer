@@ -7,6 +7,24 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  > nav {
+    display: flex;
+  }
+
+  > header {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px){
+    > nav {
+    display: none;
+  }
+
+  > header {
+    display: flex;
+  }
+  }
 `;
 
 export const Form = styled.div`
@@ -31,6 +49,9 @@ export const Form = styled.div`
   }
 
   > .form2 .ingredients {
+    width: 100%;
+    min-height: clamp(4.8rem, 1rem + 1vh, 15rem);
+
     display: flex;
     flex-wrap: wrap;
 
@@ -94,24 +115,20 @@ export const Form = styled.div`
   
   @media screen and (min-width: 1280px){
     width: 112rem;
+    height: 100vh;
 
     margin-block: 3.2rem;
 
 
+
+
     > .form1,
-      .form2 {
+      .form2,
+      .ingredients {
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-direction: row;
-    }
-
-    > .form2 label:first-child   {
-      display: flex;
-      flex-direction: column;
-      border: 1px red solid;
-    }
-
-    > .form2 #price {
-      width: 25rem;
     }
 
     > .form1 button {
@@ -127,12 +144,41 @@ export const Form = styled.div`
       width: 36.4rem;
     }
 
-    > .form2 .ingredients .description{
-      width: 84rem;
+    > .form2 {
+      display: flex;
+      justify-content: space-between;
     }
 
+    > .form2 .dish {
+      display: flex;
+      flex-direction: column;
+    }
 
+    > .form2 .dish div {
+      margin: 0;
+    }
 
+    > .form2 .ingredients {
+      width: 84rem;
+
+      justify-content: left;
+      gap: 1.6rem;
+    }
+
+    > .form2 .ingredients div {
+      width: 15rem;  
+      padding: 0;
+    }
+
+    > .form2 #price {
+      width: 25rem;
+    }
+
+    > .form2 .ingredients button {
+      width: 1.5rem; 
+      
+      font-size: 3.6rem;
+    }
 
     > .buttons {
       display: flex;

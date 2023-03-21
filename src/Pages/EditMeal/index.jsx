@@ -9,11 +9,13 @@ import { NoteItem } from "../../Components/NoteItem"
 import { TextArea } from "../../Components/TextArea"
 import { Button } from "../../Components/Button"
 import { Footer } from "../../Components/Footer"
+import { AdminHeader } from "../../Components/AdminHeader"
 
 export function EditMeal() {
   return (
     <Container>
-        <AdminNavbar/>      
+        <AdminNavbar/>
+        <AdminHeader/>      
       <Form>
         <ButtonBack
           title="Voltar"
@@ -27,11 +29,13 @@ export function EditMeal() {
         </div>
 
         <div className="form2">
-            <label htmlFor="noteItem">Ingredientes</label>
-          <div className="ingredients">
-              <NoteItem isNew  value="alface"></NoteItem>
-              <NoteItem value="rabanete"></NoteItem> 
-              <NoteItem value="batata"></NoteItem>        
+          <div className="dish">
+              <label htmlFor="noteItem">Ingredientes</label>
+            <div className="ingredients">
+                <NoteItem isNew  value="alface"></NoteItem>
+                <NoteItem value="rabanete"></NoteItem> 
+                <NoteItem value="batata"></NoteItem>                      
+            </div>
           </div>
           <InputLabel id="price" label="Preço" placeholder="R$ 00,00"></InputLabel>
         </div>
