@@ -14,18 +14,14 @@ export function Header() {
           icon={HiMagnifyingGlass}
           type="text"
           placeholder="Busque por pratos ou ingredientes"
-        />     
-
-
-
+        /> 
       <Button
         icon={receiptIcon}
         type="button"
       >Pedidos
-       <span>(0)</span>
-      </Button>        
-      
-      <img src={logout} alt="" />
+        <span>(0)</span>
+      </Button>       
+      <img src={logout} alt="Botão de sair"/>
     </Container>
   )
 };

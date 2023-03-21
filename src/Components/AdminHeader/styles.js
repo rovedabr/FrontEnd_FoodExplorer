@@ -9,7 +9,8 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  padding: 3.2rem 12.3rem;
+  padding: 2.4rem 12rem;
+  gap: 3.2rem;
 
   background-color: ${({theme}) => theme.DARK.DARK_600};
 
@@ -18,18 +19,17 @@ export const Container = styled.header`
   }
 
   > div input {
-    width: 58.1rem;
+    width: 58rem;
     height: 4.8rem;
 
-    padding: 1.2rem;
+    /* padding: 1.2rem 3.2rem; */
   }
 
   > button {
-    width: 30rem;
+    width: 40rem;
     height: 4.8rem;
 
-    margin-left: 3.2rem;
-    margin-right: 3.2rem;
+    padding: 1.2rem 3.2rem;
   }
 
 `

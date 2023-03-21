@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import { AdminBrand } from "../Admin_Brand";
+import { AdminBrand } from "../AdminBrand";
 import menuIcon from "../../assets/Icons/menu.svg"
 
 export function AdminNavbar({ icon, ...rest }) {

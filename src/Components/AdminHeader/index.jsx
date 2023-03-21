@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import { AdminBrand } from "../Admin_Brand";
+import { AdminBrand } from "../AdminBrand";
 import { Input } from "../Input";
 import { Button } from "../Button";
 import logout from "../../assets/Icons/Logout.svg"

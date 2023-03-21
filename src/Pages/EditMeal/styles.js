@@ -8,6 +8,25 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+
+  > main #buttonBack {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+
+    margin-bottom: 2.4rem;
+    margin-top: 1.1rem;
+  }
+
+  > main h2 {
+    font-size: 3.2rem;
+    line-height: 4.5rem;
+    font-weight: 500;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+  }
+
+
   > nav {
     display: flex;
   }
@@ -17,6 +36,14 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: 1280px){
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    > main {
+      padding: 4rem 12.5rem 11.6rem 12.3rem;
+    }
+
     > nav {
     display: none;
   }
@@ -24,29 +51,30 @@ export const Container = styled.div`
   > header {
     display: flex;
   }
-  }
-`;
 
-export const Form = styled.div`
-  width: 36.4rem;
-
-  margin: 1.1rem 3.2rem 5.3rem 3.2rem;
-
-  > button {
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-
+  > main #buttonBack {
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 2.4rem;
   }
 
-  > h2 {
+  > main h2 {
     font-size: 3.2rem;
     line-height: 4.5rem;
     font-weight: 500;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
+
+    margin-bottom: 3.2rem;
   }
+  }
+`;
+
+export const Form = styled.div`
+  width: 36.4rem;
+  height: 100vh;
+
+  margin: 1.1rem 3.2rem 5.3rem 3.2rem;
 
   > .form2 .ingredients {
     width: 100%;
@@ -115,12 +143,9 @@ export const Form = styled.div`
   
   @media screen and (min-width: 1280px){
     width: 112rem;
-    height: 100vh;
+    height: 50.8rem;
 
-    margin-block: 3.2rem;
-
-
-
+    margin: 0;
 
     > .form1,
       .form2,
