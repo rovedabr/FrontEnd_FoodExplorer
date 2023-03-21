@@ -6,16 +6,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Form = styled.div`
   width: 36.4rem;
-  height: 92.3rem;
-
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start; */
 
   margin: 1.1rem 3.2rem 5.3rem 3.2rem;
 
@@ -25,13 +20,6 @@ export const Form = styled.div`
     justify-content: left;
 
     margin-bottom: 2.4rem;
-  }
-
-  > .form1, .form2, .description {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   > h2 {
@@ -44,9 +32,7 @@ export const Form = styled.div`
 
   > .form2 .ingredients {
     display: flex;
-
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 
     border-radius: 0.8rem;
     padding: 0.4rem 0.8rem;
@@ -54,9 +40,7 @@ export const Form = styled.div`
   }
 
   > .form2 .ingredients div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 40%;
   }
 
   > .form1 label,
@@ -84,6 +68,8 @@ export const Form = styled.div`
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 500;
+
+    margin-top: 2.4rem;
   }
 
   > .buttons button:first-child {
