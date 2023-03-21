@@ -21,8 +21,6 @@ export const Container = styled.header`
   > div input {
     width: 58rem;
     height: 4.8rem;
-
-    /* padding: 1.2rem 3.2rem; */
   }
 
   > button {
