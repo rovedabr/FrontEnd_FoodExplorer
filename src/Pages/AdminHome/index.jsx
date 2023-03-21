@@ -1,6 +1,6 @@
 import { Container, ContentCard } from "./styles"
-import { AdminNavbar } from "../../Components/Admin_NavBar"
-import { AdminHeader } from "../../Components/Admin_Header"
+import { AdminNavbar } from "../../Components/AdminNavBar"
+import { AdminHeader } from "../../Components/AdminHeader"
 import { Footer } from "../../Components/Footer"
 import { Flavors } from "../../Components/Flavors"
 import { Section } from "../../Components/Section"

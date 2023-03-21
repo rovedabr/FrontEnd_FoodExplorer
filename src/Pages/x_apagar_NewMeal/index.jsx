@@ -1,5 +1,5 @@
 import { Container, Form } from "./styles"
-import { AdminNavbar } from "../../Components/Admin_NavBar"
+import { AdminNavbar } from "../../Components/AdminNavBar"
 import { ButtonBack } from "../../Components/ButtonBack"
 import { InputLabel } from "../../Components/InputLabel"
 import { ButtonUpload } from "../../Components/ButtonUpload"

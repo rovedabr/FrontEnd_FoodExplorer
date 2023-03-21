@@ -25,10 +25,13 @@ import teAutunno from "../../assets/meals/te_d_Autunno.png"
 import pomoBourboun from "../../assets/meals/pomo_Bourbon.png"
 
 export function Home() {
+
+  const admin = true
+
   return (
     <Container>
-       <Navbar/>
-       <Header/>
+    <Navbar/>
+    <Header/>
 {/*--------------------------------------------------------*/}  
       <Flavors/>
 {/*--Refeições --------------------------------------------*/} 
