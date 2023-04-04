@@ -9,8 +9,8 @@ export const Container = styled.div`
   justify-content: center;
 
   > img {
-    width: 19.7rem;
-    height: 3rem;    
+    width: 32.4rem;
+    height: 4.8rem;    
   }
 
   > h1 {

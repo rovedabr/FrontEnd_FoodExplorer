@@ -7,7 +7,11 @@ import { ThemeProvider } from 'styled-components'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}> N 
+    
+        
+    
+    
         <SignUp />
       <GlobalStyles/>
     </ThemeProvider>
