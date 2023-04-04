@@ -1,9 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
-
 import { Container, ContentCard } from "./styles"
 import { Navbar } from "../../Components/NavBar"
 import { Header } from "../../Components/Header"
@@ -34,16 +28,6 @@ export function Home() {
 
   const admin = true
 
-//  var swiper = new Swiper(".carroussel", {
-//     slidesPerView: 5,
-//     spaceBetween: 10,
-//     loop: true,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
-
   return (
     <Container>
     <Navbar/>
@@ -55,16 +39,7 @@ export function Home() {
       title="Refeições"
     >
       <div className="cards">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          loop={true}
-          navigation={true}
-          modules={[Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-          <ContentCard>
+        <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
               <img src={saladaRavanello} alt="Imagem do prato de comida" />
@@ -77,25 +52,7 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
 
-          <SwiperSlide>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={saladaRavanello} alt="Imagem do prato de comida" />
-              <h2>Salada Ravanello &gt;</h2>
-              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-              <span>R$ 49,97</span>
-              <div className="buttons">
-                <ButtonAddRemove/>
-                <Button>incluir</Button>
-              </div>
-            </Card>
-          </ContentCard>
-          </SwiperSlide>
-
-          <SwiperSlide>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -109,9 +66,7 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
 
-          <SwiperSlide>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -125,9 +80,7 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
 
-          <SwiperSlide>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -141,16 +94,6 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
-
-
-        </Swiper>
-
-
-
-
-
-
       </div>
     </Section>
 {/*--------------------------------------------------------*/}
