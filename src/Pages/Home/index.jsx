@@ -4,14 +4,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
-import { Container, ContentCard } from "./styles"
+import { AiOutlineHeart } from "react-icons/ai"
+
+import { Container } from "./styles"
 import { Navbar } from "../../Components/NavBar"
 import { Header } from "../../Components/Header"
 import { Footer } from "../../Components/Footer"
 import { Flavors } from "../../Components/Flavors"
 import { Section } from "../../Components/Section"
 import { Card } from "../../Components/Card"
-import favoriteIcon from "../../assets/Icons/Heart.svg"
+
 import { Button } from "../../Components/Button"
 import { ButtonAddRemove } from "../../Components/ButtonAddRemove"
 
@@ -55,15 +57,7 @@ export function Home() {
       title="Refeições"
     >
       <div className="cards">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          loop={true}
-          navigation={true}
-          modules={[Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
+          {/* <Carrousel>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -77,9 +71,9 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
+          </Carrousel>
 
-          <SwiperSlide>
+          <Carrousel>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -93,9 +87,9 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
+          </Carrousel>
 
-          <SwiperSlide>
+          <Carrousel>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -109,9 +103,9 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
+          </Carrousel>
 
-          <SwiperSlide>
+          <Carrousel>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -125,9 +119,9 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-          </SwiperSlide>
+          </Carrousel>
 
-          <SwiperSlide>
+          <Carrousel>
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -141,7 +135,114 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
+          </Carrousel> */}
+
+
+     
+        <Swiper
+          breakpoints = {{
+            480:  {
+              width: 480,
+              slidesPerView: 1.8,
+              spaceBetween:1
+            },
+            768: {
+              width: 768,
+              slidesPerView: 2.5,
+              spaceBetween:2
+            },
+            1280: {
+              width: 1280,
+              slidesPerView: 4.5,
+              spaceBetween:2
+            }
+          }}
+          // spaceBetween={0}
+          loop={true}
+          navigation={true}
+          modules={[Navigation]}
+          className="Swiper"
+        >
+          <SwiperSlide>
+   
+            <Card
+              icon={AiOutlineHeart}
+            >
+              <img src={saladaRavanello} alt="Imagem do prato de comida" />
+              <h2>Salada Ravanello &gt;</h2>
+              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
+              <span>R$ 49,97</span>
+              <div className="buttons">
+                <ButtonAddRemove/>
+                <Button>incluir</Button>
+              </div>
+            </Card>
+ 
           </SwiperSlide>
+
+{/*           <SwiperSlide>
+          <ContentCard>
+              <input type="image" src={favoriteIcon}/>
+            <Card>
+              <img src={saladaRavanello} alt="Imagem do prato de comida" />
+              <h2>Salada Ravanello &gt;</h2>
+              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
+              <span>R$ 49,97</span>
+              <div className="buttons">
+                <ButtonAddRemove/>
+                <Button>incluir</Button>
+              </div>
+            </Card>
+          </ContentCard>
+          </SwiperSlide> */}
+
+{/*           <SwiperSlide>
+          <ContentCard>
+              <input type="image" src={favoriteIcon}/>
+            <Card>
+              <img src={spaguettiGambe} alt="Imagem do prato de comida" />
+              <h2>Spaguetti Gambe &gt;</h2>
+              <p>Massa fresca com camarões e pesto.</p>
+              <span>R$ 79,97</span>
+              <div className="buttons">
+                <ButtonAddRemove/>
+                <Button>incluir</Button>
+              </div>
+            </Card>
+          </ContentCard>
+          </SwiperSlide> */}
+
+{/*           <SwiperSlide>
+          <ContentCard>
+              <input type="image" src={favoriteIcon}/>
+            <Card>
+              <img src={torradasParma} alt="Imagem do prato de comida" />
+              <h2>Torradas de Parma &gt;</h2>
+              <p>Presunto de parma e rúcula em um pão com fermentação natural.</p>
+              <span>R$ 25,97</span>
+              <div className="buttons">
+                <ButtonAddRemove/>
+                <Button>incluir</Button>
+              </div>
+            </Card>
+          </ContentCard>
+          </SwiperSlide> */}
+
+{/*           <SwiperSlide>
+          <ContentCard>
+              <input type="image" src={favoriteIcon}/>
+            <Card>
+              <img src={saladaMolla} alt="Imagem do prato de comida" />
+              <h2>Salada Molla &gt;</h2>
+              <p>Massa fresca com camarões e pesto. </p>
+              <span>R$ 79,97</span>
+              <div className="buttons">
+                <ButtonAddRemove/>
+                <Button>incluir</Button>
+              </div>
+            </Card>
+          </ContentCard>
+          </SwiperSlide> */}
 
 
         </Swiper>
@@ -159,7 +260,7 @@ export function Home() {
       title="Sobremesas"
     >
       <div className="cards">
-        <ContentCard>
+{/*         <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
               <img src={prugnaPie} alt="Imagem do prato de sobremesa" />
@@ -185,9 +286,9 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
+          </ContentCard> */}
 
-          <ContentCard>
+{/*           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
               <img src={macarrons} alt="Imagem do prato de sobremesa" />
@@ -200,8 +301,8 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-
-          <ContentCard>
+ */}
+{/*           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
               <img src={boloDamasco} alt="Imagem do prato de sobremesa" />
@@ -213,7 +314,7 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
+          </ContentCard> */}
       </div>
     </Section>
 {/*--------------------------------------------------------*/}
@@ -223,7 +324,7 @@ export function Home() {
       title="Bebidas"
     >
       <div className="cards">
-        <ContentCard>
+{/*         <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
               <img src={expresso} alt="Imagem da bebida" />
@@ -235,9 +336,9 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
+          </ContentCard> */}
 
-          <ContentCard>
+{/*           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
               <img src={sucoMaracuja} alt="Imagem da bebida" />
@@ -249,8 +350,8 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
-
+          </ContentCard> */}
+{/* 
           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
@@ -264,8 +365,8 @@ export function Home() {
               </div>
             </Card>
           </ContentCard>
-
-          <ContentCard>
+ */}
+{/*           <ContentCard>
               <input type="image" src={favoriteIcon}/>
             <Card>
               <img src={pomoBourboun} alt="Imagem da bebida" />
@@ -277,7 +378,7 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
+          </ContentCard> */}
       </div>
     </Section>
 {/*--------------------------------------------------------*/}

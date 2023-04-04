@@ -10,51 +10,45 @@ export const Container = styled.div`
   align-items: center;  
 
   overflow-y: auto;
+`
 
-  > div {
+/*   > div {
     display: flex;
     flex-direction: row;
   }
 
-  > .swiper-cards {
-    position: relative;
-
+  > .carrousel {
     border: 1px solid blue;
     margin: 0;
-
   }
 
-
-
-
-
-`;
-
-export const ContentCard = styled.div`
-  display: flex;
-  justify-content: center;
-
-  > input {
-    width: 2.5rem;
-    height: 2.5rem;
-
-    position: relative;
-    top: 1rem;
-    left: 20rem;
+  > .carrousel .card svg {
+    border: 1px solid green;
+    color: white;
   }
 
-  > div {
+  > .carrousel .card {
     width: 21rem;
     height: 29.2rem;
 
-    margin: 1rem;
-    /* border: 1px solid blue; */
+    padding: 2.4rem;
+
+    border: 1px solid red;  
   }
 
-  > div p {
-    display: none;
-  }
+  @media screen and (min-width: 1280px) {
+    > .carrousel .card {
+      width: 25.6rem;
+      height: 44rem;
+    }
+  } */
 
-`;
+
+
+
+
+
+
+
 
 
