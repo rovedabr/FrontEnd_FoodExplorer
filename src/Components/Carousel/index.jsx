@@ -1,4 +1,4 @@
-import { Container } from './styles'
+import { Container, Content } from './styles'
 import React from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -11,19 +11,20 @@ export function Carousel({ children, ...rest }) {
 
   return (
     <Container>
-      <Swiper 
-        className="Carousel"        
-        modules={[ Navigation, Pagination]}
-        navigation={true} 
-        pagination={{clickable:true}} 
-        direction='horizontal' 
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}     
-      >
-        <SwiperSlide>{children}</SwiperSlide>
-        </Swiper>
-
+      <Content>
+        <Swiper 
+          className="Carousel"        
+          modules={[ Navigation, Pagination]}
+          navigation={true} 
+          pagination={{clickable:true}} 
+          direction='horizontal' 
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}     
+        >
+          <SwiperSlide>{children}</SwiperSlide>
+          </Swiper>
+      </Content>
     </Container>
 
   )
