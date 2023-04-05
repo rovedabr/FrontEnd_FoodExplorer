@@ -13,16 +13,16 @@ export const Container = styled.div`
     align-items: center;
   }
 
-  .swiper-button-lock {
+  /* .swiper-button-lock {
     display: flex;
-  }
+  } */
   
   .swiper-button-next,
   .swiper-button-prev {
     width: 10rem;
     height: 51rem;
 
-    border: 1px solid blue;
+    border: 1px solid blue; //! apagar esta linha
     margin: -26rem -2rem;
     
     color: ${({ theme }) => theme.LIGHT.LIGHT_100};

@@ -44,31 +44,36 @@ export function Home() {
 {/*--------------------------------------------------------*/}  
       <Flavors/>
 {/*--Refeições --------------------------------------------*/} 
-    <Section
+    <Section className="mainMeal"
       title="Refeições"
     >
        <Swiper
         className="Carousel"        
-        slidesPerView={1}
+        slidesPerView={1.6}
         spaceBetween={10}
         loop={true}
         navigation={true}
         mousewheel={true}
         modules={[Navigation]}
-        breakpoints={{
-          480: {
-            slidesPerView: 1.9,
-            spaceBetween: 20
+        breakpoints={{          
+          480: { // when window width is >= 640px
+            width: 480,
+            slidesPerView: 2.1,
+            spaceBetween: 15
+          },          
+          768: { // when window width is >= 768px
+            width: 768,
+            slidesPerView: 3.2,
+            spaceBetween: 25
           },
-          768: {
+          1280: { // when window width is >= 768px
+            width: 1280,
             slidesPerView: 4,
-            spaceBetween: 40
+            spaceBetween: 35
           },
-          1280: {
-            slidesPerView: 4.5,
-            spaceBetween: 180
-          }
-        }}  
+          
+        }}
+
       >
         <SwiperSlide>
           <Card

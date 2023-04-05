@@ -7,8 +7,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
   overflow-y: auto;
 
    > nav {
@@ -20,6 +18,11 @@ export const Container = styled.div`
     display: none;
   }
 
+  .mainMeal {
+    width: 100%;
+    padding-left: 2.4rem;
+  }
+
   .swiper-slide {
     width: 100%;
     display: flex;
@@ -27,21 +30,29 @@ export const Container = styled.div`
     align-items: center;
   }
 
-  .swiper-button-lock {
-    display: flex;
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
-  
+
+  > footer {
+    width: 100%;
+    height: 7.7rem;
+  }
+
+  @media screen and (min-width: 768px) {
+  .swiper-wrapper {
+    width: 768px;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     width: 10rem;
     height: 51rem;
-
-    border: 1px solid blue;
     margin: -26rem -2rem;
-    
-    color: ${({ theme }) => theme.LIGHT.LIGHT_100};
-    font-weight: bolder;
 
+    display: flex;
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
   }
 
   .swiper-button-next:hover,
@@ -51,21 +62,17 @@ export const Container = styled.div`
   }
 
   .swiper-button-prev {
-    background: linear-gradient(90deg, rgba(0, 10, 15, 0.272541) 0%, #000A0F 100%)
+    background: linear-gradient(to right, rgba(0,10,15,1) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,0) 100%)
   }
 
   .swiper-button-next {
-    background: linear-gradient(90deg, rgba(0, 10, 15, 0.272541) 0%, #000A0F 100%);
+    background: linear-gradient(to right, rgba(0,10,15,0) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,1) 100%);
   }
+}
 
-  > footer {
-    width: 100%;
-    height: 7.7rem;
-  }
+@media screen and (min-width: 1280px) {
 
-/*   @media screen and (min-width: 1280px){
-
-    > nav {
+  > nav {
       display: none;
     }
 
@@ -73,10 +80,36 @@ export const Container = styled.div`
       display: flex;
     }
 
-    > div h2 {
+     > div h2 {
       font-size: 3.2rem;
       line-height: 4.4rem;
-    }
+    } 
 
-  } */
+    .mainMeal {
+    width: 100%;
+    height: 100%;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .swiper-wrapper {
+    width: 1280px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 10rem;
+    height: 51rem;
+    margin: -26rem -2rem;
+    
+    color: ${({ theme }) => theme.LIGHT.LIGHT_100};
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    transition: all .3s ease-in-out; 
+    transform: scale(1.1);
+  }
+}
+
 `;
