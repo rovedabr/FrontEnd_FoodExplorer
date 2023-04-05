@@ -1,10 +1,11 @@
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
-
+import React from "react";
 import { AiOutlineHeart } from "react-icons/ai"
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from "swiper";
+
+import 'swiper/css/navigation'
+import 'swiper/css'
 
 import { Container } from "./styles"
 import { Navbar } from "../../Components/NavBar"
@@ -36,16 +37,6 @@ export function Home() {
 
   const admin = true
 
-//  var swiper = new Swiper(".carroussel", {
-//     slidesPerView: 5,
-//     spaceBetween: 10,
-//     loop: true,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
-
   return (
     <Container>
     <Navbar/>
@@ -56,11 +47,33 @@ export function Home() {
     <Section
       title="Refeições"
     >
-      <div className="cards">
-          {/* <Carrousel>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+       <Swiper
+        className="Carousel"        
+        slidesPerView={1}
+        spaceBetween={10}
+        loop={true}
+        navigation={true}
+        mousewheel={true}
+        modules={[Navigation]}
+        breakpoints={{
+          480: {
+            slidesPerView: 1.9,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40
+          },
+          1280: {
+            slidesPerView: 4.5,
+            spaceBetween: 180
+          }
+        }}  
+      >
+        <SwiperSlide>
+          <Card
+            icon={AiOutlineHeart}
+          >
               <img src={saladaRavanello} alt="Imagem do prato de comida" />
               <h2>Salada Ravanello &gt;</h2>
               <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
@@ -69,190 +82,54 @@ export function Home() {
                 <ButtonAddRemove/>
                 <Button>incluir</Button>
               </div>
-            </Card>
-          </ContentCard>
-          </Carrousel>
+          </Card>
+        </SwiperSlide>
 
-          <Carrousel>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={saladaRavanello} alt="Imagem do prato de comida" />
-              <h2>Salada Ravanello &gt;</h2>
-              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-              <span>R$ 49,97</span>
-              <div className="buttons">
+        <SwiperSlide>
+                <Card
+                icon={AiOutlineHeart}
+                >
+                  <img src={torradasParma} alt="Imagem do prato de comida" />
+                  <h2>Torradas de Parma &gt;</h2>
+                  <p>Presunto de parma e rúcula em um pão com fermentação natural.</p>
+                  <span>R$ 25,97</span>
+                  <div className="buttons">
                 <ButtonAddRemove/>
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
-          </Carrousel>
+            </SwiperSlide> 
 
-          <Carrousel>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={spaguettiGambe} alt="Imagem do prato de comida" />
-              <h2>Spaguetti Gambe &gt;</h2>
-              <p>Massa fresca com camarões e pesto.</p>
-              <span>R$ 79,97</span>
-              <div className="buttons">
+            <SwiperSlide>
+                <Card
+                icon={AiOutlineHeart}
+                >
+                  <img src={saladaMolla} alt="Imagem do prato de comida" />
+                  <h2>Salada Molla &gt;</h2>
+                  <p>Massa fresca com camarões e pesto. </p>
+                  <span>R$ 79,97</span>
+                  <div className="buttons">
                 <ButtonAddRemove/>
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
-          </Carrousel>
+            </SwiperSlide>
 
-          <Carrousel>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={torradasParma} alt="Imagem do prato de comida" />
-              <h2>Torradas de Parma &gt;</h2>
-              <p>Presunto de parma e rúcula em um pão com fermentação natural.</p>
-              <span>R$ 25,97</span>
-              <div className="buttons">
+            <SwiperSlide>
+                <Card
+                icon={AiOutlineHeart}
+                >
+                  <img src={saladaRavanello} alt="Imagem do prato de comida" />
+                  <h2>Salada Ravanello &gt;</h2>
+                  <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
+                  <span>R$ 49,97</span>
+                  <div className="buttons">
                 <ButtonAddRemove/>
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
-          </Carrousel>
-
-          <Carrousel>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={saladaMolla} alt="Imagem do prato de comida" />
-              <h2>Salada Molla &gt;</h2>
-              <p>Massa fresca com camarões e pesto. </p>
-              <span>R$ 79,97</span>
-              <div className="buttons">
-                <ButtonAddRemove/>
-                <Button>incluir</Button>
-              </div>
-            </Card>
-          </ContentCard>
-          </Carrousel> */}
-
-
-     
-        <Swiper
-          breakpoints = {{
-            480:  {
-              width: 480,
-              slidesPerView: 1.8,
-              spaceBetween:1
-            },
-            768: {
-              width: 768,
-              slidesPerView: 2.5,
-              spaceBetween:2
-            },
-            1280: {
-              width: 1280,
-              slidesPerView: 4.5,
-              spaceBetween:2
-            }
-          }}
-          // spaceBetween={0}
-          loop={true}
-          navigation={true}
-          modules={[Navigation]}
-          className="Swiper"
-        >
-          <SwiperSlide>
-   
-            <Card
-              icon={AiOutlineHeart}
-            >
-              <img src={saladaRavanello} alt="Imagem do prato de comida" />
-              <h2>Salada Ravanello &gt;</h2>
-              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-              <span>R$ 49,97</span>
-              <div className="buttons">
-                <ButtonAddRemove/>
-                <Button>incluir</Button>
-              </div>
-            </Card>
- 
-          </SwiperSlide>
-
-{/*           <SwiperSlide>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={saladaRavanello} alt="Imagem do prato de comida" />
-              <h2>Salada Ravanello &gt;</h2>
-              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-              <span>R$ 49,97</span>
-              <div className="buttons">
-                <ButtonAddRemove/>
-                <Button>incluir</Button>
-              </div>
-            </Card>
-          </ContentCard>
-          </SwiperSlide> */}
-
-{/*           <SwiperSlide>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={spaguettiGambe} alt="Imagem do prato de comida" />
-              <h2>Spaguetti Gambe &gt;</h2>
-              <p>Massa fresca com camarões e pesto.</p>
-              <span>R$ 79,97</span>
-              <div className="buttons">
-                <ButtonAddRemove/>
-                <Button>incluir</Button>
-              </div>
-            </Card>
-          </ContentCard>
-          </SwiperSlide> */}
-
-{/*           <SwiperSlide>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={torradasParma} alt="Imagem do prato de comida" />
-              <h2>Torradas de Parma &gt;</h2>
-              <p>Presunto de parma e rúcula em um pão com fermentação natural.</p>
-              <span>R$ 25,97</span>
-              <div className="buttons">
-                <ButtonAddRemove/>
-                <Button>incluir</Button>
-              </div>
-            </Card>
-          </ContentCard>
-          </SwiperSlide> */}
-
-{/*           <SwiperSlide>
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
-              <img src={saladaMolla} alt="Imagem do prato de comida" />
-              <h2>Salada Molla &gt;</h2>
-              <p>Massa fresca com camarões e pesto. </p>
-              <span>R$ 79,97</span>
-              <div className="buttons">
-                <ButtonAddRemove/>
-                <Button>incluir</Button>
-              </div>
-            </Card>
-          </ContentCard>
-          </SwiperSlide> */}
-
-
+            </SwiperSlide>           
         </Swiper>
-
-
-
-
-
-
-      </div>
     </Section>
 {/*--------------------------------------------------------*/}
 {/*--Sobremesas--------------------------------------------*/} 
