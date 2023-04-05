@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content:center;
+  border: 1px red solid;
 
   > svg {
       position: relative;
@@ -36,11 +37,13 @@ export const Container = styled.div`
     width: 21rem;
     height: 29.2rem;
 
+    border: 1px solid blue;
+
     padding: 2.4rem;
 
     background-color: ${({theme}) => theme.DARK.DARK_200};
-
-    border: 1px solid ${({theme}) => theme.DARK.DARK_300};
+/* 
+    border: 1px solid ${({theme}) => theme.DARK.DARK_300}; */
     border-radius: 0.8rem;
 
     display: flex;
