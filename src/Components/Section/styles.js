@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
 
-  > h2 {
-    font-size: 1.8rem;
-    line-height: 1.4rem;
+  > h1 {  //!verificar aqui - remover borda verde
+    font-size: 3.2rem;
+    line-height: 4.4rem;
     font-weight: 500;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};

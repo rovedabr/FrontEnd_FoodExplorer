@@ -13,10 +13,7 @@ export const Container = styled.div`
     align-items: center;
   }
 
-  /* .swiper-button-lock {
-    display: flex;
-  } */
-  
+
   .swiper-button-next,
   .swiper-button-prev {
     width: 10rem;

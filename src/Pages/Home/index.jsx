@@ -3,19 +3,17 @@ import { AiOutlineHeart } from "react-icons/ai"
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from "swiper";
-
 import 'swiper/css/navigation'
 import 'swiper/css'
 
 import { Container } from "./styles"
-import { Navbar } from "../../Components/NavBar"
+import { Card } from "../../Components/Card"
 import { Header } from "../../Components/Header"
 import { Footer } from "../../Components/Footer"
+import { Navbar } from "../../Components/NavBar"
+import { Button } from "../../Components/Button"
 import { Flavors } from "../../Components/Flavors"
 import { Section } from "../../Components/Section"
-import { Card } from "../../Components/Card"
-
-import { Button } from "../../Components/Button"
 import { ButtonAddRemove } from "../../Components/ButtonAddRemove"
 
 import saladaRavanello from "../../assets/meals/saladaRavanello.png"
@@ -23,15 +21,15 @@ import spaguettiGambe from "../../assets/meals/spaguettiGambe.png"
 import torradasParma from "../../assets/meals/TorradasParma.png"
 import saladaMolla from "../../assets/meals/saladaMolla.png"
 
-import prugnaPie from "../../assets/meals/prugnaPie.png"
 import peachyPastrie from "../../assets/meals/peachyPastrie.png"
-import macarrons from "../../assets/meals/macarrons.png"
 import boloDamasco from "../../assets/meals/boloDamasco.png"
+import prugnaPie from "../../assets/meals/prugnaPie.png"
+import macarrons from "../../assets/meals/macarrons.png"
 
-import expresso from "../../assets/meals/cafeExpresso.png"
 import sucoMaracuja from "../../assets/meals/SucoMaracuja.png"
-import teAutunno from "../../assets/meals/teAutunno.png"
 import pomoBourboun from "../../assets/meals/pomoBourbon.png"
+import expresso from "../../assets/meals/cafeExpresso.png"
+import teAutunno from "../../assets/meals/teAutunno.png"
 
 export function Home() {
 
@@ -70,10 +68,8 @@ export function Home() {
             width: 1280,
             slidesPerView: 4,
             spaceBetween: 35
-          },
-          
+          },          
         }}
-
       >
         <SwiperSlide>
           <Card
@@ -133,7 +129,21 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-            </SwiperSlide>           
+            </SwiperSlide> 
+            <SwiperSlide>
+          <Card
+            icon={AiOutlineHeart}
+          >
+              <img src={saladaRavanello} alt="Imagem do prato de comida" />
+              <h2>Salada Ravanello &gt;</h2>
+              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
+              <span>R$ 49,97</span>
+              <div className="buttons">
+                <ButtonAddRemove/>
+                <Button>incluir</Button>
+              </div>
+          </Card>
+        </SwiperSlide>          
         </Swiper>
     </Section>
 {/*--------------------------------------------------------*/}

@@ -5,7 +5,7 @@ export function Section ({ title, children, ...rest }) {
     <Container
       {...rest}
     >
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       {children}
     </Container>
 
