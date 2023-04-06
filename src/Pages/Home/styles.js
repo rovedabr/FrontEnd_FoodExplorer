@@ -80,9 +80,10 @@ export const Container = styled.div`
       display: flex;
     }
 
-   .mainMeal h2 {  //!Verificar tamanho da fonte
+   .mainMeal h2 {
+      font-weight : 700;
       font-size: 2.2rem;
-      line-height: 4.4rem;
+      line-height: 3.4rem;
     } 
 
     .mainMeal {

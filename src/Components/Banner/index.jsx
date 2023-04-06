@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 import flavors from "../../assets/Flavors.png"
 
-export function Flavors() {
+export function Banner() {
   return (
     <Container>
         

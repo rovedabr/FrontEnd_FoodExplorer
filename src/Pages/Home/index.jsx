@@ -12,7 +12,7 @@ import { Header } from "../../Components/Header"
 import { Footer } from "../../Components/Footer"
 import { Navbar } from "../../Components/NavBar"
 import { Button } from "../../Components/Button"
-import { Flavors } from "../../Components/Flavors"
+import { Banner } from "../../Components/Banner"
 import { Section } from "../../Components/Section"
 import { ButtonAddRemove } from "../../Components/ButtonAddRemove"
 
@@ -39,10 +39,11 @@ export function Home() {
     <Container>
     <Navbar/>
     <Header/>
-{/*--------------------------------------------------------*/}  
-      <Flavors/>
-{/*--Refeições --------------------------------------------*/} 
-    <Section className="mainMeal"
+  
+    <Banner/>
+//*--------------------------------------------------------
+    <Section 
+      className="mainMeal"
       title="Refeições"
     >
        <Swiper
@@ -54,17 +55,17 @@ export function Home() {
         mousewheel={true}
         modules={[Navigation]}
         breakpoints={{          
-          480: { // when window width is >= 640px
+          480: { 
             width: 480,
             slidesPerView: 2.1,
             spaceBetween: 15
           },          
-          768: { // when window width is >= 768px
+          768: { 
             width: 768,
             slidesPerView: 3.2,
             spaceBetween: 25
           },
-          1280: { // when window width is >= 768px
+          1280: { 
             width: 1280,
             slidesPerView: 4,
             spaceBetween: 35
@@ -146,15 +147,41 @@ export function Home() {
         </SwiperSlide>          
         </Swiper>
     </Section>
-{/*--------------------------------------------------------*/}
-{/*--Sobremesas--------------------------------------------*/} 
-<Section
+//*--------------------------------------------------------
+    <Section
+      className="mainMeal"
       title="Sobremesas"
     >
-      <div className="cards">
-{/*         <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+      <Swiper
+        className="Carousel"        
+        slidesPerView={1.6}
+        spaceBetween={10}
+        loop={true}
+        navigation={true}
+        mousewheel={true}
+        modules={[Navigation]}
+        breakpoints={{          
+          480: { 
+            width: 480,
+            slidesPerView: 2.1,
+            spaceBetween: 15
+          },          
+          768: { 
+            width: 768,
+            slidesPerView: 3.2,
+            spaceBetween: 25
+          },
+          1280: { 
+            width: 1280,
+            slidesPerView: 4,
+            spaceBetween: 35
+          },          
+        }}
+      >     
+         <SwiperSlide>
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={prugnaPie} alt="Imagem do prato de sobremesa" />
               <h2>Prugna Pie &gt;</h2>
               <p>Torta de ameixa com massa amanteigada, polvilho em açúcar.</p>
@@ -164,11 +191,11 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
-
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={peachyPastrie} alt="Imagem do prato de sobremesa" />
               <h2>Peachy pastrie &gt;</h2>
               <p>Delicioso folheado de pêssego com folhas de hortelã.</p>
@@ -178,11 +205,11 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard> */}
-
-{/*           <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={macarrons} alt="Imagem do prato de sobremesa" />
               <h2>Macarons &gt;</h2>
               <p>Farinha de amêndoas, manteiga, claras e açúcar.</p>
@@ -191,12 +218,12 @@ export function Home() {
                 <ButtonAddRemove/>
                 <Button>incluir</Button>
               </div>
-            </Card>
-          </ContentCard>
- */}
-{/*           <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+            </Card>           
+          </SwiperSlide>
+           <SwiperSlide>              
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={boloDamasco} alt="Imagem do prato de sobremesa" />
               <h2>Bolo de Damasco &gt;</h2>
               <p>Damascos frescos em uma massa sem glúten. </p>
@@ -206,19 +233,45 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard> */}
-      </div>
-    </Section>
-{/*--------------------------------------------------------*/}
+          </SwiperSlide> 
+        </Swiper>
 
-{/*--Bebidas-----------------------------------------------*/} 
-<Section
+    </Section>
+//*--------------------------------------------------------
+    <Section
+      className="mainMeal"
       title="Bebidas"
     >
-      <div className="cards">
-{/*         <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+      <Swiper
+        className="Carousel"        
+        slidesPerView={1.6}
+        spaceBetween={10}
+        loop={true}
+        navigation={true}
+        mousewheel={true}
+        modules={[Navigation]}
+        breakpoints={{          
+          480: { 
+            width: 480,
+            slidesPerView: 2.1,
+            spaceBetween: 15
+          },          
+          768: { 
+            width: 768,
+            slidesPerView: 3.2,
+            spaceBetween: 25
+          },
+          1280: { 
+            width: 1280,
+            slidesPerView: 4,
+            spaceBetween: 35
+          },          
+        }}
+      >
+        <SwiperSlide>
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={expresso} alt="Imagem da bebida" />
               <h2>Expresso &gt;</h2>
               <p>Café cremoso feito na temperatura e pressões perfeitas.</p>
@@ -228,11 +281,12 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard> */}
+          </SwiperSlide> 
 
-{/*           <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+          <SwiperSlide>
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={sucoMaracuja} alt="Imagem da bebida" />
               <h2>Suco de maracujá &gt;</h2>
               <p>Suco de maracujá gelado, cremoso, docinho..</p>
@@ -242,11 +296,12 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard> */}
-{/* 
-          <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={teAutunno} alt="Imagem da bebida" />
               <h2>Tè d'autunno  &gt;</h2>
               <p>Chá de anis, canela e limão. Sinta o outono italiano.</p>
@@ -256,11 +311,11 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard>
- */}
-{/*           <ContentCard>
-              <input type="image" src={favoriteIcon}/>
-            <Card>
+          </SwiperSlide>
+           <SwiperSlide>
+            <Card
+              icon={AiOutlineHeart}
+            >
               <img src={pomoBourboun} alt="Imagem da bebida" />
               <h2>Pomo bourbon &gt;</h2>
               <p>Maçã, whisky, canela. On the rocks. </p>
@@ -270,8 +325,8 @@ export function Home() {
                 <Button>incluir</Button>
               </div>
             </Card>
-          </ContentCard> */}
-      </div>
+          </SwiperSlide>
+      </Swiper>
     </Section>
 {/*--------------------------------------------------------*/}
       <Footer/> 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
 
-  > h1 {  //!verificar aqui - remover borda verde
+  > h1 { 
     font-size: 3.2rem;
     line-height: 4.4rem;
     font-weight: 500;
