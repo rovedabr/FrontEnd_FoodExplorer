@@ -1,9 +1,9 @@
 import { Container, MenuBar, Form } from "./styles";
-import { Footer } from "../../Components/Footer";
+import { Footer } from "../../components/Footer";
 import closeIcon from "../../assets/Icons/close.svg"
-import { Input } from "../../Components/Input"
+import { Input } from "../../components/Input"
 import { HiMagnifyingGlass } from "react-icons/hi2"
-import { ButtonText } from "../../Components/ButtonText"
+import { ButtonText } from "../../components/ButtonText"
 
 export function Menu() {
   return (

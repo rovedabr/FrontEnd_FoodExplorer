@@ -1,20 +1,21 @@
 import React from "react";
-import { AiOutlineHeart } from "react-icons/ai"
+import { TbPencil } from "react-icons/tb"
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from "swiper";
 import 'swiper/css/navigation'
 import 'swiper/css'
 
+import { AdminHeader } from "../../components/AdminHeader"
+import { AdminNavbar } from "../../components/AdminNavBar"
+
 import { Container } from "./styles"
-import { Card } from "../../Components/Card"
-import { Header } from "../../Components/Header"
-import { Footer } from "../../Components/Footer"
-import { Navbar } from "../../Components/NavBar"
-import { Button } from "../../Components/Button"
-import { Banner } from "../../Components/Banner"
-import { Section } from "../../Components/Section"
-import { ButtonAddRemove } from "../../Components/ButtonAddRemove"
+import { Card } from "../../components/Card"
+import { Footer } from "../../components/Footer"
+import { Button } from "../../components/Button"
+import { Banner } from "../../components/Banner"
+import { Section } from "../../components/Section"
+import { ButtonAddRemove } from "../../components/ButtonAddRemove"
 
 import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 import spaguettiGambe from "../../assets/meals/spaguettiGambe.png"
@@ -31,14 +32,14 @@ import pomoBourboun from "../../assets/meals/pomoBourbon.png"
 import expresso from "../../assets/meals/cafeExpresso.png"
 import teAutunno from "../../assets/meals/teAutunno.png"
 
-export function Home() {
+export function AdminHome() {
 
   const admin = true
 
   return (
     <Container>
-    <Navbar/>
-    <Header/>
+    <AdminNavbar/>
+    <AdminHeader/>
   
     <Banner/>
 //*--------------------------------------------------------
@@ -74,7 +75,7 @@ export function Home() {
       >
         <SwiperSlide>
           <Card
-            icon={AiOutlineHeart}
+            icon={TbPencil}
           >
               <img src={saladaRavanello} alt="Imagem do prato de comida" />
               <h2>Salada Ravanello &gt;</h2>
@@ -89,7 +90,7 @@ export function Home() {
 
         <SwiperSlide>
                 <Card
-                icon={AiOutlineHeart}
+                icon={TbPencil}
                 >
                   <img src={torradasParma} alt="Imagem do prato de comida" />
                   <h2>Torradas de Parma &gt;</h2>
@@ -104,7 +105,7 @@ export function Home() {
 
             <SwiperSlide>
                 <Card
-                icon={AiOutlineHeart}
+                icon={TbPencil}
                 >
                   <img src={saladaMolla} alt="Imagem do prato de comida" />
                   <h2>Salada Molla &gt;</h2>
@@ -119,7 +120,7 @@ export function Home() {
 
             <SwiperSlide>
                 <Card
-                icon={AiOutlineHeart}
+                icon={TbPencil}
                 >
                   <img src={saladaRavanello} alt="Imagem do prato de comida" />
                   <h2>Salada Ravanello &gt;</h2>
@@ -133,7 +134,7 @@ export function Home() {
             </SwiperSlide> 
             <SwiperSlide>
           <Card
-            icon={AiOutlineHeart}
+            icon={TbPencil}
           >
               <img src={saladaRavanello} alt="Imagem do prato de comida" />
               <h2>Salada Ravanello &gt;</h2>
@@ -180,7 +181,7 @@ export function Home() {
       >     
          <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={prugnaPie} alt="Imagem do prato de sobremesa" />
               <h2>Prugna Pie &gt;</h2>
@@ -194,7 +195,7 @@ export function Home() {
           </SwiperSlide>
           <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={peachyPastrie} alt="Imagem do prato de sobremesa" />
               <h2>Peachy pastrie &gt;</h2>
@@ -208,7 +209,7 @@ export function Home() {
           </SwiperSlide>
           <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={macarrons} alt="Imagem do prato de sobremesa" />
               <h2>Macarons &gt;</h2>
@@ -222,7 +223,7 @@ export function Home() {
           </SwiperSlide>
            <SwiperSlide>              
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={boloDamasco} alt="Imagem do prato de sobremesa" />
               <h2>Bolo de Damasco &gt;</h2>
@@ -270,7 +271,7 @@ export function Home() {
       >
         <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={expresso} alt="Imagem da bebida" />
               <h2>Expresso &gt;</h2>
@@ -285,7 +286,7 @@ export function Home() {
 
           <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={sucoMaracuja} alt="Imagem da bebida" />
               <h2>Suco de maracujá &gt;</h2>
@@ -300,7 +301,7 @@ export function Home() {
 
           <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={teAutunno} alt="Imagem da bebida" />
               <h2>Tè d'autunno  &gt;</h2>
@@ -314,7 +315,7 @@ export function Home() {
           </SwiperSlide>
            <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
+              icon={TbPencil}
             >
               <img src={pomoBourboun} alt="Imagem da bebida" />
               <h2>Pomo bourbon &gt;</h2>

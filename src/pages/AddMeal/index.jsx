@@ -1,17 +1,17 @@
 import { Container, Form } from "./styles"
-import { AdminNavbar } from "../../Components/AdminNavBar"
-import { ButtonBack } from "../../Components/ButtonBack"
-import { InputLabel } from "../../Components/InputLabel"
-import { ButtonUpload } from "../../Components/ButtonUpload"
-import { Select } from "../../Components/Select"
+import { AdminNavbar } from "../../components/AdminNavBar"
+import { ButtonBack } from "../../components/ButtonBack"
+import { InputLabel } from "../../components/InputLabel"
+import { ButtonUpload } from "../../components/ButtonUpload"
+import { Select } from "../../components/Select"
 import { FiUpload} from "react-icons/fi"
-import { NoteItem } from "../../Components/NoteItem"
-import { TextArea } from "../../Components/TextArea"
-import { Button } from "../../Components/Button"
-import { Footer } from "../../Components/Footer"
-import { AdminHeader } from "../../Components/AdminHeader"
+import { NoteItem } from "../../components/NoteItem"
+import { TextArea } from "../../components/TextArea"
+import { Button } from "../../components/Button"
+import { Footer } from "../../components/Footer"
+import { AdminHeader } from "../../components/AdminHeader"
 
-export function EditMeal() {
+export function AddMeal() {
   return (
     <Container>
         <AdminNavbar/>
@@ -21,7 +21,7 @@ export function EditMeal() {
               id="buttonBack"
               title="Voltar"
             />
-            <h2>Editar prato</h2>
+            <h2>Adicionar prato</h2>
           <Form>
             <div className="form1">
               <ButtonUpload label="Imagem do prato" icon={FiUpload} title="Selecione imagem para alterá-la" ></ButtonUpload>
@@ -50,7 +50,6 @@ export function EditMeal() {
             </div>
 
             <div className="buttons">
-              <Button>Excluir prato</Button>
               <Button>Salvar alterações</Button>
             </div>
 

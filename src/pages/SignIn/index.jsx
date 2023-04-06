@@ -1,28 +1,22 @@
 import { Container, Content, Form } from "./styles";
-import { Brand } from "../../Components/Brand";
-import { Input } from "../../Components/Input";
-import { Button } from "../../Components/Button";
-import { ButtonText } from "../../Components/ButtonText"
+import { Brand } from "../../components/Brand";
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText"
 
-export function SignUp() {
+export function SignIn() {
   return(
     <Container>
       <Content>
       <Brand/>
         <main>
           <Form>
-            <h1>Crie sua conta</h1>
+            <h1>Faça login</h1>
             <div className="input-wrapper">
               <label>Seu Nome</label>
               <Input
                 placeholder="Exemplo: Maria da Silva"
               ></Input>
-            </div>
-            <div className="input-wrapper">
-              <label>Email</label>
-              <Input
-                placeholder="Exemplo: exemplo@exemplo.com.br"
-              ></Input>  
             </div>
             <div className="input-wrapper">
              <label>Senha</label>
@@ -31,14 +25,12 @@ export function SignUp() {
               ></Input>
             </div>
 
-            <Button>Criar conta</Button>
+            <Button>Entrar</Button>
             
             <ButtonText
               title="Já tenho uma conta"
             >              
             </ButtonText>
-
-
           </Form>
         </main>
       </Content>

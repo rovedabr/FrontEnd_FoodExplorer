@@ -1,12 +1,12 @@
 import { Container, Form } from "./styles";
 
-import { Navbar } from "../../Components/NavBar"
-import { Header } from "../../Components/Header"
-import { Footer } from "../../Components/Footer"
-import { Tag } from "../../Components/Tag"
-import { Button } from "../../Components/Button";
-import { ButtonAddRemove } from "../../Components/ButtonAddRemove";
-import { ButtonBack } from "../../Components/ButtonBack";
+import { Navbar } from "../../components/NavBar"
+import { Header } from "../../components/Header"
+import { Footer } from "../../components/Footer"
+import { Tag } from "../../components/Tag"
+import { Button } from "../../components/Button";
+import { ButtonAddRemove } from "../../components/ButtonAddRemove";
+import { ButtonBack } from "../../components/ButtonBack";
 
 import receiptIcon from "../../assets/Icons/Receipt.svg"
 import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
@@ -43,6 +43,7 @@ export function MealDetails() {
                     <Tag title="pepino"></Tag>
                     <Tag title="rabanete"></Tag>
                     <Tag title="tomate"></Tag>
+                    <Tag title="tomate com agrião"></Tag>
                   </div>
 
                   <div className="buttons">
