@@ -5,7 +5,6 @@ export function Brand({ img, name, ...rest}) {
   return(
     <Container>
       <img src={brand} alt="Logo da aplicação" />
-      <span>name</span>
     </Container>
   )
 }

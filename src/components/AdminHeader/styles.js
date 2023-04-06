@@ -7,12 +7,18 @@ export const Container = styled.header`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  background-color: ${({theme}) => theme.DARK.DARK_600};
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   padding: 2.4rem 12.3rem;
   gap: 3.2rem;
-
-  background-color: ${({theme}) => theme.DARK.DARK_600};
 
   > div input {
     width: 58rem;

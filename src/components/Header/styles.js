@@ -5,14 +5,21 @@ export const Container = styled.header`
   height: 9.6rem;
 
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-
-  padding: 2.4rem 12.3rem;
-  gap: 3.2rem;
+  justify-content: center;
 
   background-color: ${({theme}) => theme.DARK.DARK_600};
+  `;
+
+  export const Content = styled.div`
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3.2rem;
+  padding: 2.4rem 12.3rem;
 
   > div input {
     width: 58rem;
@@ -21,8 +28,8 @@ export const Container = styled.header`
     justify-content: center;
   }
 
-  > div.newMeal {
-    width: 2.1rem;
+  > button {
+    width: 21rem;
   }
 
   >.logout {

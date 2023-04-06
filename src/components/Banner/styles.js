@@ -34,7 +34,7 @@ justify-content: flex-start;
 
 >.backgroundFlavors .description {
   width: clamp(15rem, 50%, 20rem);
-  margin: 2.5rem 0.8rem auto 0.5rem;
+  margin: .5rem 0.8rem auto 0.5rem;
 
   text-align: justify;
 }
@@ -55,6 +55,12 @@ justify-content: flex-start;
   font-weight: 400;
 }
 
+@media screen and (min-width: 425px){
+  >.backgroundFlavors .description {
+
+    margin: 3.6rem 0.8rem auto 0.5rem;
+  }
+}
 
   @media screen and (min-width: 768px){
 

@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container, Content } from "./styles";
 import { AdminBrand } from "../AdminBrand";
 import { Input } from "../Input";
 import { Button } from "../Button";
@@ -9,30 +9,30 @@ import receiptIcon from "../../assets/Icons/Receipt.svg"
 export function AdminHeader() {
   return(
     <Container>
-      <AdminBrand
-        className="brand"
-      />
+      <Content>
+        <AdminBrand
+          className="brand"
+        />
 
-      <Input
-        icon={HiMagnifyingGlass}
-        type="text"
-        placeholder="Busque por pratos ou ingredientes"
-      />
-        
-      <Button
-         type="button"
-         className="newMeal"
-      >
-        Novo prato
-      </Button> 
+        <Input
+          icon={HiMagnifyingGlass}
+          type="text"
+          placeholder="Busque por pratos ou ingredientes"
+        />
+          
+        <Button
+          type="button"
+          className="newMeal"
+        >
+          Novo prato
+        </Button> 
 
-      <button
-        className="logout"
-      >
-        <img src={logout} alt="" />
-      </button>      
-      
-      
+        <button
+          className="logout"
+        >
+          <img src={logout} alt="" />
+        </button>     
+      </Content>    
     </Container>
   )
 };

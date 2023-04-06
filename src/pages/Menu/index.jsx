@@ -1,9 +1,11 @@
 import { Container, MenuBar, Form } from "./styles";
-import { Footer } from "../../components/Footer";
-import closeIcon from "../../assets/Icons/close.svg"
+
 import { Input } from "../../components/Input"
-import { HiMagnifyingGlass } from "react-icons/hi2"
+import { Footer } from "../../components/Footer";
 import { ButtonText } from "../../components/ButtonText"
+
+import closeIcon from "../../assets/Icons/close.svg"
+import { HiMagnifyingGlass } from "react-icons/hi2"
 
 export function Menu() {
   return (
@@ -22,6 +24,7 @@ export function Menu() {
         </Input>
         
         <ButtonText //! inserir a função de sair
+          
           title="Sair"
         />
     

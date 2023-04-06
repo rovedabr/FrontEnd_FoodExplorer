@@ -34,6 +34,11 @@ export const Container = styled.div`
     color: ${({theme}) => theme.COLORS.CAKE_200};
   }
 
+  > span:hover {
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
+  }
+
   @media screen and (min-width: 1280px) {
     display: flex;
     flex-direction: column;
@@ -42,5 +47,6 @@ export const Container = styled.div`
       position: relative;
       top: -1rem;
   }
+}
 
 `;
