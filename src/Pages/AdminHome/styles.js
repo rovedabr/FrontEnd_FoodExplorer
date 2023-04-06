@@ -7,17 +7,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-
   overflow-y: auto;
 
-  > div .cards {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-  }
-
-  > nav {
+   > nav {
     width: 100%;  
     display: flex;
   }
@@ -26,122 +18,99 @@ export const Container = styled.div`
     display: none;
   }
 
+  .mainMeal {
+    width: 100%;
+    padding-left: 2.4rem;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
   > footer {
     width: 100%;
     height: 7.7rem;
   }
 
-  @media screen and (min-width: 1280px){
+  @media screen and (min-width: 768px) {
+  .swiper-wrapper {
+    width: 768px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 10rem;
+    height: 51rem;
+    margin: -26rem -2rem;
+
+    display: flex;
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    transition: all .3s ease-in-out; 
+    transform: scale(1.1);
+  }
+
+  .swiper-button-prev {
+    background: linear-gradient(to right, rgba(0,10,15,1) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,0) 100%)
+  }
+
+  .swiper-button-next {
+    background: linear-gradient(to right, rgba(0,10,15,0) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,1) 100%);
+  }
+}
+
+  @media screen and (min-width: 1280px) {
 
     > nav {
-      display: none;
+    display: none;
     }
 
     > header {
       display: flex;
     }
 
-    > div h2 {
-      font-size: 3.2rem;
-      line-height: 4.4rem;
-    }
-
-  }
-`;
-
-export const ContentCard = styled.div`
-  display: flex;
-  justify-content: center;
-
-  > input {
-    width: 2.5rem;
-    height: 2.5rem;
-
-    position: relative;
-    top: 1rem;
-    left: 20rem;
-  }
-
-  > div {
-    width: 21rem;
-    height: 29.2rem;
-  }
-
-  > div p {
-    display: none;
-  }
-
-  @media screen and (min-width: 1280px){    
-
-    > div {
-      width: 30.4rem;
-      height: 46.2rem;
-
-      gap: 1.5rem;
-    }
-
-    > input {
-      width: 2.5rem;
-      height: 2.5rem;
-
-      position: relative;
-      top: 1rem;
-      left: 29.4rem;
-    }
-
-    > div img {
-      width: 17.6rem;
-      height: 17.6rem;
-    }
-
-    > div h2 {
-      font-size: 2.4rem;
+    .mainMeal h2 {
+      font-weight : 700;
+      font-size: 2.2rem;
       line-height: 3.4rem;
+    } 
+
+    .mainMeal {
+      width: 100%;
+      height: 100%;
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
     }
 
-    > div p {
-      display: flex;      
+    .swiper-wrapper {
+      width: 1280px;
     }
 
-    > div span {
-      font-size: 3.2rem;
-      line-height: 5.1rem;
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 10rem;
+      height: 51rem;
+      margin: -26rem -2rem;
+      
+      color: ${({ theme }) => theme.LIGHT.LIGHT_100};
     }
 
-    > div .buttons {
-      width: 20.8rem;
-      height: 4.8rem;
-
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    > div .buttons div {
-     width: 10rem;
-
-      span {
-        font-size: 2rem;
-        line-height: 3.2rem;
-        font-weight: 700;
-      }
-
-      input {
-        width: 2.4rem;
-        height: 2.4rem;
-      }
-    }
-
-    > div .buttons button {
-      width: 9rem;
-      height: 4.8rem;
-
-      margin-top: 0;
-      margin-left: 1.6rem;
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      transition: all .3s ease-in-out; 
+      transform: scale(1.1);
     }
   }
+
 `;

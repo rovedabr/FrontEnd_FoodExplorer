@@ -10,7 +10,7 @@ import { ButtonBack } from "../../Components/ButtonBack";
 
 import receiptIcon from "../../assets/Icons/Receipt.svg"
 import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
-import saladaRavanello from "../../assets/meals/salada_ravanello.png"
+import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 
 export function MealDetails() {
   return(
@@ -47,7 +47,7 @@ export function MealDetails() {
 
                   <div className="buttons">
                     <ButtonAddRemove/>
-                    <Button><img src={receiptIcon} alt="" /> pedir ∙ R$ 25,00</Button>
+                    <Button> incluir ∙ R$ 25,00</Button>
                   </div>
 
                 </div>

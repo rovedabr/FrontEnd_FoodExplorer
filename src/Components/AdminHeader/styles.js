@@ -9,25 +9,28 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  padding: 2.4rem 12rem;
+  padding: 2.4rem 12.3rem;
   gap: 3.2rem;
 
   background-color: ${({theme}) => theme.DARK.DARK_600};
 
-  > img {
-    margin: 0  3.2rem 0 12.3rem;
-  }
-
   > div input {
     width: 58rem;
     height: 4.8rem;
+    align-items: center;
+    justify-content: center;
   }
 
-  > button {
-    width: 40rem;
+  > div.newMeal {
+    width: 2.1rem;
     height: 4.8rem;
 
-    padding: 1.2rem 3.2rem;
+    padding: 1.2rem 6.8rem;
+  }
+
+  >.logout {
+    border: none;
+    background: transparent;
   }
 
 `

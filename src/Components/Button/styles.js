@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   width: 100%;
-  height: 4.8rem;
+  height: 5.6rem;
 
   display: flex;
   flex-direction: row;

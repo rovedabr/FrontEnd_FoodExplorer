@@ -5,8 +5,10 @@ export const Container = styled.div`
  
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+
+  gap: 0.8rem;
 
   > img {
     width: 19.7rem;
@@ -24,17 +26,21 @@ export const Container = styled.div`
   }
 
   > span {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    margin-left: 0.8rem;
-
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     line-height: 160%;
     font-weight: 400;
 
     color: ${({theme}) => theme.COLORS.CAKE_200};
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      position: relative;
+      top: -1rem;
   }
 
 `;

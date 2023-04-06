@@ -9,20 +9,30 @@ import receiptIcon from "../../assets/Icons/Receipt.svg"
 export function AdminHeader() {
   return(
     <Container>
-        <AdminBrand/>
-        <Input
-          icon={HiMagnifyingGlass}
-          type="text"
-          placeholder="Busque por pratos ou ingredientes"
-        />
+      <AdminBrand
+        className="brand"
+      />
+
+      <Input
+        icon={HiMagnifyingGlass}
+        type="text"
+        placeholder="Busque por pratos ou ingredientes"
+      />
         
       <Button
          type="button"
+         className="newMeal"
       >
         Novo prato
-      </Button>        
+      </Button> 
+
+      <button
+        className="logout"
+      >
+        <img src={logout} alt="" />
+      </button>      
       
-      <img src={logout} alt="" />
+      
     </Container>
   )
 };

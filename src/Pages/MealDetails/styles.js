@@ -131,8 +131,8 @@ export const Form = styled.div`
   }
 
   >#menu .content .buttons button {
-    font-size: 0.9rem;
-    line-height: 1.7rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
 
   @media screen and (min-width: 1280px){

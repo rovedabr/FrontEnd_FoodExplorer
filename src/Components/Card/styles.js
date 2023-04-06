@@ -7,24 +7,24 @@ export const Container = styled.div`
   justify-content:center;
 
   > svg {
-      position: relative;
-      right: -8rem;
-      top: 3.5rem;
-      color: ${({ theme }) => theme.LIGHT.LIGHT_100};
+    position: relative;
+    right: -8rem;
+    top: 3.5rem;
+    color: ${({ theme }) => theme.LIGHT.LIGHT_100};
 
-      z-index: 1;
-    }
+    z-index: 1;
+  }
   
   @media screen and (min-width: 1280px) {
 
-  > svg {
-    width : 3.4rem;
-    height: 3.4rem;
+    > svg {
+      width : 3.4rem;
+      height: 3.4rem;
 
-    position: relative;
-    right: -12.5rem;
-    top: 4rem; 
-  }
+      position: relative;
+      right: -12.5rem;
+      top: 4rem; 
+    }
 
   }  
 
@@ -99,7 +99,6 @@ export const Container = styled.div`
     justify-content: center;
 
     gap: 1.2rem;
-    border: 1px solid green;
 
     > img {
       width: 17rem;
@@ -131,7 +130,7 @@ export const Container = styled.div`
       height: 4.8rem;
       display: flex;
       flex-direction: row;
-      align-itens: center;
+      align-items: center;
 
       gap: 1.6rem;
     }
