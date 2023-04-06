@@ -20,7 +20,7 @@ h1, p, input, label {
   font-family: 'Roboto', sans-serif;
 }
 
-button, h2, span {
+button, h2, span, a {
   font-family: 'Poppins', sans-serif;
 }
 

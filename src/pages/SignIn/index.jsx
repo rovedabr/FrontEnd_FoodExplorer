@@ -1,8 +1,11 @@
 import { Container, Content, Form } from "./styles";
+
+import { Link } from "react-router-dom";
+
+import { ButtonText } from "../../components/ButtonText"
+import { Button } from "../../components/Button";
 import { Brand } from "../../components/Brand";
 import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
-import { ButtonText } from "../../components/ButtonText"
 
 export function SignIn() {
   return(
@@ -27,10 +30,8 @@ export function SignIn() {
 
             <Button>Entrar</Button>
             
-            <ButtonText
-              title="Já tenho uma conta"
-            >              
-            </ButtonText>
+            <Link to="/register"> Criar uma conta </Link>  
+                  
           </Form>
         </main>
       </Content>

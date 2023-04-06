@@ -27,7 +27,8 @@ export const Content = styled.div`
     }
 
   > div:nth-child(1) img {
-    width: 22.8rem;
+    width: 27.8rem;
+    height: 4.4rem;
     margin-bottom: 7.3rem;
   }
 
@@ -77,6 +78,7 @@ export const Content = styled.div`
 
     > div:nth-child(1) img {
       width: 32.4rem;
+      height: 4.8rem;
     }
   }
 `;
@@ -86,7 +88,21 @@ export const Form = styled.div`
   height: 41.6rem;
   
   background: transparent;
-  
+
+   > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+
+    margin-top: 3.2rem;
+  }
 
   @media screen and (min-width: 1280px){
     width: 47.6rem;
@@ -97,9 +113,6 @@ export const Form = styled.div`
     gap: 1.5rem;
 
     background-color: ${({theme}) => theme.DARK.DARK_700};
-
-
-
   }
 `;
 

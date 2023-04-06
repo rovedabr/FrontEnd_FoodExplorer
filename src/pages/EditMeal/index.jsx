@@ -18,6 +18,7 @@ export function EditMeal() {
         <AdminHeader/> 
         <main>
             <ButtonBack
+              to="/"
               id="buttonBack"
               title="Voltar"
             />

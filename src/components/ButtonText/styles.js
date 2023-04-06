@@ -7,10 +7,13 @@ export const Container = styled.button`
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  text-decoration: none;
   
   background: transparent;
   border: none;
 
+  font-size: 1.4rem;
   line-height: 2.4rem;
   font-weight: 500;
 

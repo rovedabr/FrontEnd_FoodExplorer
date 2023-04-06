@@ -49,7 +49,7 @@ export const Form = styled.div`
 
   margin: 1.7rem 5.2rem 3.3rem 5.2rem;
 
-  > button {
+  > a {
     width: 10.2rem;
     height: 3.4rem;
 

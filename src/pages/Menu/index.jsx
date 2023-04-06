@@ -21,7 +21,7 @@ export function Menu() {
         >          
         </Input>
         
-        <ButtonText
+        <ButtonText //! inserir a função de sair
           title="Sair"
         />
     

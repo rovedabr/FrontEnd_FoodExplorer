@@ -1,6 +1,7 @@
 import { Container, Content, Form } from "./styles";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Brand } from "../../components/Brand";
 import { Input } from "../../components/Input";
@@ -49,12 +50,8 @@ export function SignUp() {
             </div>
 
             <Button onClick={handleSignUp} >Criar conta</Button>
-            
-            <ButtonText
-              title="Já tenho uma conta"
-            >              
-            </ButtonText>
-
+                        
+            <Link to="/" >Já tenho uma conta</Link>
 
           </Form>
         </main>

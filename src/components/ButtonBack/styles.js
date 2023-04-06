@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Container = styled.button`
+export const Container = styled(Link)`
   width: 100%;
 
   display: flex;
@@ -11,11 +12,11 @@ export const Container = styled.button`
   font-size: 2.4rem;
   line-height: 3.3rem;
   font-weight: 500;
+  text-decoration: none;
 
   color: ${({theme}) => theme.LIGHT.LIGHT_300};
 
   background: transparent;
-  border: none;
 
   >img  {
     width: 1.2rem;
