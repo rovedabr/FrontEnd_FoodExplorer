@@ -19,8 +19,9 @@ export function Header() {
         /> 
       <Button        
         type="button"
+        title="Pedidos"
       >
-        <img src={receiptIcon} alt="" />
+        <img src={receiptIcon} alt="" /> //!fazer aparecer o ícone de recebido e os dados de pedido
         Pedidos
         <span>(0)</span>
       </Button>       

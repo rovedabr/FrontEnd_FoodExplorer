@@ -117,7 +117,7 @@ justify-content: flex-start;
     font-weight: 500;
   }
 
-  >.backgroundFlavors .description span {
+  > .backgroundFlavors .description span {
     font-size: 1.6;
     line-height: 1.6rem;
     font-weight: 400;

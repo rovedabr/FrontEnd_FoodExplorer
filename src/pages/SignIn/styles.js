@@ -110,7 +110,7 @@ export const Form = styled.div`
     width: 47.6rem;
     height: 62.1rem;
     
-    padding: 3.2rem;
+    padding: 6.4rem;
     border-radius: 1.6rem;
 
     background-color: ${({theme}) => theme.DARK.DARK_700};
