@@ -1,7 +1,8 @@
 import { Container, Content, Form } from "./styles";
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { api } from "../../services/api";
 
 import { Brand } from "../../components/Brand";
 import { Input } from "../../components/Input";
@@ -13,8 +14,25 @@ export function SignUp() {
   const [ email, setEmail ] = useState("");
   const [ password, setPassword ] = useState("");
 
-  function handleSignUp() {
+  const navigate = useNavigate();
 
+  function handleSignUp() {
+    if (!name || !email || !password) {
+      return alert("Preencha todos os campos para criar a conta!")
+    }
+
+    api.post("/users", { name, email, password })
+    .then(() => {
+      alert("Conta criada com sucesso!")
+      navigate("/")
+    })
+    .catch(error => {
+      if (error.response) {
+        alert(error.response.data.message);
+      } else {
+        alert("Não foi possível cadastrar a conta!")
+      }
+    });
   }
 
   return(

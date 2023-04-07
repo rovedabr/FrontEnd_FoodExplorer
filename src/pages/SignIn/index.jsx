@@ -16,9 +16,9 @@ export function SignIn() {
           <Form>
             <h1>Faça login</h1>
             <div className="input-wrapper">
-              <label>Seu Nome</label>
+              <label>Email</label>
               <Input
-                placeholder="Exemplo: Maria da Silva"
+                placeholder="Exemplo: exemplo@exemplo.com.br"
               ></Input>
             </div>
             <div className="input-wrapper">
