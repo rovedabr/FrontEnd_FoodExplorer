@@ -84,7 +84,7 @@ justify-content: flex-start;
   }
 
   >.backgroundFlavors .description span {
-    font-size: 1.4;
+    font-size: 1.4rem
   }
 }
 
@@ -106,19 +106,22 @@ justify-content: flex-start;
   }
 
   >.backgroundFlavors .description {
-    width: 42rem;
+    width: 60rem;
 
     margin: 8.8rem auto 9.2rem 0;
   }
 
   >.backgroundFlavors .description h1 {
-    font-size: 4rem;
+    font-size: 5.3rem;
     line-height: 5.6rem;
     font-weight: 500;
+
+    margin-bottom: 0.8rem;
   }
 
   > .backgroundFlavors .description span {
-    font-size: 1.6;
+    width: 100%;
+    font-size: 1.6rem;
     line-height: 1.6rem;
     font-weight: 400;
   }
