@@ -6,6 +6,7 @@ export function Button({ type, title,...rest }) {
       type="button"
       {...rest}     
     >
+      {title}
     </Container>
   )
 }
