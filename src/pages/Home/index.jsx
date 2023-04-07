@@ -82,7 +82,7 @@ export function Home() {
               <span>R$ 49,97</span>
               <div className="buttons">
                 <ButtonAddRemove/>
-                <Button>incluir</Button>
+                <Button title="incluir"/>
               </div>
           </Card>
         </SwiperSlide>

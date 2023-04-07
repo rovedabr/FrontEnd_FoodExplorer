@@ -4,7 +4,7 @@ export function Button({ type, title,...rest }) {
   return(
     <Container
       type="button"
-      {...rest}     
+      {...rest} 
     >
       {title}
     </Container>

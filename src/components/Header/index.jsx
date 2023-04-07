@@ -1,7 +1,7 @@
 import { Container, Content } from "./styles";
-import { Brand } from "../Brand";
+import  brand from "../../assets/brand.png"
 import { Input } from "../Input";
-import { Button } from "../Button";
+
 import logout from "../../assets/Icons/Logout.svg"
 import { HiMagnifyingGlass } from "react-icons/hi2"
 import receiptIcon from "../../assets/Icons/Receipt.svg"
@@ -11,21 +11,25 @@ export function Header() {
   return(
     <Container>
       <Content>
-        <Brand/>
+        <div className="brand">
+          <img src={brand} alt="Logo da empresa Food Explorer" />
+        </div>
+        
         <Input
           icon={HiMagnifyingGlass}
           type="text"
           placeholder="Busque por pratos ou ingredientes"
         /> 
-      <Button        
-        type="button"
-        title="Pedidos"
-      >
-        <img src={receiptIcon} alt="" /> //!fazer aparecer o ícone de recebido e os dados de pedido
-        Pedidos
-        <span>(0)</span>
-      </Button>       
-      <img src={logout} alt="Botão de sair"/>
+
+        <button className="order">
+          <img src={receiptIcon} alt="" /> 
+          <h3>Pedidos</h3>
+          <span>(0)</span>
+        </button>
+
+      <button className="logout">
+        <img src={logout} alt="Botão de sair"/>
+      </button>       
 
       </Content>
     </Container>
