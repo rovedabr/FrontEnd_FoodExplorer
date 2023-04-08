@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function ButtonUpload({ fileImage, label, title, placeholder, icon:Icon, ...rest}) {
+export function ButtonUpload({ label, title, icon:Icon, ...rest}) {
   return(
     <Container {...rest}>
         <label htmlFor={fileImage}>{label}</label>        

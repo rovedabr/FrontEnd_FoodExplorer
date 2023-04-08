@@ -7,7 +7,7 @@ import 'swiper/css/navigation'
 import 'swiper/css'
 
 import { AdminHeader } from "../../components/AdminHeader"
-import { AdminNavbar } from "../../components/AdminNavBar"
+import { AdminNavbar } from "../../components/AdminNavbar"
 
 import { Container } from "./styles"
 import { Card } from "../../components/Card"

@@ -1,52 +1,65 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: fit-content;
  
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 
-  gap: 0.8rem;
-
-  > img {
-    width: 19.7rem;
-    height: 3rem;    
+  > div {
+    display: flex;
+    flex-direction: row;
   }
 
-  > h1 {
-    font-size: 3.7rem;
+  >div img {
+    width: 2.5rem;
+    height: 2.5rem;
+    
+    margin-right: .8rem;
+  }
+
+  >div h1 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
     font-weight: 700;
-    line-height: 4.4rem;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_100};
-
-    margin-left: 1.1rem;
   }
 
-  > span {
-    font-family: 'Roboto', sans-serif;
+  > p {
     font-size: 1.2rem;
-    line-height: 160%;
+    line-height: 1.9rem;
     font-weight: 400;
 
     color: ${({theme}) => theme.COLORS.CAKE_200};
+    margin-left: 0.8rem;
   }
 
-  > span:hover {
-    transform: scale(1.3);
-    transition: 0.5s ease-in-out;
-  }
-
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1280px){
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+  
+    >div img {
+      width: 4.94rem;
+      height: 4.75rem;
+      
+      margin-right: 1.9rem;
+    }
 
-    > span {
+    >div h1 {
+      font-size: 4.2rem;
+      line-height: 4.9rem;
+      font-weight: 700;
+
+      color: ${({theme}) => theme.LIGHT.LIGHT_100};
+    }  
+
+    > p {
       position: relative;
-      top: -1rem;
+      top: -.5rem;
+    }
   }
-}
-
 `;

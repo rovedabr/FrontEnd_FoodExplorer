@@ -1,13 +1,17 @@
 import { Container, Content } from "./styles";
-import  brand from "../../assets/brand.png"
 import { Input } from "../Input";
 
+import { useAuth } from "../../hooks/auth"
+
+import  brand from "../../assets/brand.png"
 import logout from "../../assets/Icons/Logout.svg"
 import { HiMagnifyingGlass } from "react-icons/hi2"
 import receiptIcon from "../../assets/Icons/Receipt.svg"
 
 
 export function Header() {
+  const { signOut } = useAuth();
+
   return(
     <Container>
       <Content>
@@ -27,7 +31,7 @@ export function Header() {
           <span>(0)</span>
         </button>
 
-      <button className="logout">
+      <button className="logout" onClick={signOut}>
         <img src={logout} alt="Botão de sair"/>
       </button>       
 

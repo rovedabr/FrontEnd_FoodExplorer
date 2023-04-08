@@ -1,11 +1,14 @@
 import { Container } from "./styles";
-import brand from "../../assets/brand.png"
+import logo from "../../assets/logo.svg"
 
 export function AdminBrand({ img, name, ...rest}) {
-  return(
+  return(   
     <Container>
-      <img src={brand} alt="Logo da aplicação" />
-      <span>admin</span>
+      <div>
+        <img src={logo} alt="Logo da aplicação" />
+        <h1>food explorer</h1>
+      </div>
+      <p>admin</p>
     </Container>
   )
 }

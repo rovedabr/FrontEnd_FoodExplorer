@@ -1,7 +1,9 @@
 import { Container, Content } from "./styles";
-import { AdminBrand } from "../AdminBrand";
+
 import { Input } from "../Input";
 import { Button } from "../Button";
+
+import brand from "../../assets/brand.png"
 import logout from "../../assets/Icons/Logout.svg"
 import { HiMagnifyingGlass } from "react-icons/hi2"
 import receiptIcon from "../../assets/Icons/Receipt.svg"
@@ -10,9 +12,11 @@ export function AdminHeader() {
   return(
     <Container>
       <Content>
-        <AdminBrand
-          className="brand"
-        />
+        
+        <div className="brand">
+          <img src={brand} alt="" />
+          <span>admin</span>
+        </div>
 
         <Input
           icon={HiMagnifyingGlass}
@@ -21,6 +25,7 @@ export function AdminHeader() {
         />
           
         <Button
+          title="Novo prato"
           type="button"
           className="newMeal"
         >

@@ -1,10 +1,13 @@
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai"
 
+
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from "swiper";
 import 'swiper/css/navigation'
 import 'swiper/css'
+
 
 import { Container } from "./styles"
 import { Card } from "../../components/Card"
@@ -33,10 +36,9 @@ import teAutunno from "../../assets/meals/teAutunno.png"
 
 export function Home() {
 
-  const admin = true
-
   return (
-    <Container>
+ <Container>
+
     <Navbar/>
     <Header/>
   

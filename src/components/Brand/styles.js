@@ -1,26 +1,40 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
- 
+  width: fit-content;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 
   > img {
-    width: 32.4rem;
-    height: 4.8rem;    
+    width: 2.5rem;
+    height: 2.5rem;
+    
+    margin-right: .8rem;
   }
 
   > h1 {
-    font-size: 3.7rem;
+    font-size: 2.1rem;
+    line-height: 2.4rem;
     font-weight: 700;
-    line-height: 4.4rem;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_100};
+  }
 
-    margin-left: 1.1rem;
+  @media screen and (min-width: 1280px){
+    > img {
+      width: 4.9rem;
+      height: 4.7rem;
+      
+      margin-right: 1.9rem;
+    }
+
+  > h1 {
+      font-size: 4.2rem;
+      line-height: 4.9rem;
+    }
   }
 
 `;

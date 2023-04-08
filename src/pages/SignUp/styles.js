@@ -26,10 +26,21 @@ export const Content = styled.div`
       margin-bottom: 3.2rem;
     }
 
-  > div:nth-child(1) img {
+    > div:nth-child(1) {
     width: 27.8rem;
     height: 4.4rem;
+
     margin-bottom: 7.3rem;
+  }
+
+  > div:nth-child(1) img {
+    width: 4.3rem;
+    height: 4.3rem;
+  }
+
+  > div:nth-child(1) h1 {
+    font-size: 3.7rem;
+    line-height: 4.3rem;
   }
 
   > main h1 {
@@ -71,14 +82,27 @@ export const Content = styled.div`
       color: ${({theme}) => theme.LIGHT.LIGHT_400};
     }
     
+   
     > div:nth-child(1) {
       width: 32.4rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
       margin: 25rem 30.6rem 32rem 0;
     }
 
     > div:nth-child(1) img {
-      width: 32.4rem;
+      width: 4.9rem;
       height: 4.8rem;
+
+      margin-right: 1.9rem;
+    }
+
+    > div:nth-child(1) h1 {
+      font-size: 4.2rem;
+      line-height: 4.9rem;
     }
   }
 `;

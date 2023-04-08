@@ -20,6 +20,29 @@ export const Content = styled.div`
   padding: 2.4rem 12.3rem;
   gap: 3.2rem;
 
+  > .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  > .brand img{
+    width: 27.6rem;
+    height: 4rem;
+  }
+
+  > .brand span {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    font-weight: 400;
+
+    position: relative;
+    top: -.5rem;
+
+    color: ${({theme}) => theme.COLORS.CAKE_200};
+
+  }
+
   > div input {
     width: 58rem;
     height: 4.8rem;
