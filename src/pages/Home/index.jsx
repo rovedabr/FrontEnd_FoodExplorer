@@ -1,8 +1,6 @@
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai"
 
-
-
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from "swiper";
 import 'swiper/css/navigation'
@@ -52,7 +50,7 @@ export function Home() {
         className="Carousel"        
         slidesPerView={1.6}
         spaceBetween={10}
-        loop={true}
+        loop={false}
         navigation={true}
         mousewheel={true}
         modules={[Navigation]}
@@ -158,7 +156,7 @@ export function Home() {
         className="Carousel"        
         slidesPerView={1.6}
         spaceBetween={10}
-        loop={true}
+        loop={false}
         navigation={true}
         mousewheel={true}
         modules={[Navigation]}
@@ -248,7 +246,7 @@ export function Home() {
         className="Carousel"        
         slidesPerView={1.6}
         spaceBetween={10}
-        loop={true}
+        loop={false}
         navigation={true}
         mousewheel={true}
         modules={[Navigation]}
