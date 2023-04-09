@@ -1,10 +1,10 @@
 import { Container } from "./styles";
-import { AdminHeader} from "../../components/AdminHeader";
+import { Checkbox } from "../../components/Checkbox"
 
 export function Teste() {
   return (
     <Container>
-      <AdminHeader/>
+      <Checkbox/>
     </Container>
   )
 }

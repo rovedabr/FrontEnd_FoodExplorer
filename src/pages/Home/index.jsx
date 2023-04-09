@@ -1,5 +1,9 @@
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
+import { TbPencil } from "react-icons/tb"
+
+import heart from "../../assets/Icons/heart.svg"
+import pencil from "../../assets/Icons/pencil.svg"
 
 import { useAuth } from "../../hooks/auth";
 
@@ -39,11 +43,11 @@ import teAutunno from "../../assets/meals/teAutunno.png"
 export function Home() {
   const { user } = useAuth();
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
+
   return (
     <Container>
       { isAdmin === 1 ? <AdminNavbar/> : <Navbar/> }
-      { isAdmin === 1 ? <AdminHeader/> : <Header/>}   
-      
+      { isAdmin === 1 ? <AdminHeader/> : <Header/> }
     
       <Banner/>
   //*--------------------------------------------------------
@@ -79,8 +83,11 @@ export function Home() {
         >
           <SwiperSlide>
             <Card
-              icon={AiOutlineHeart}
-            >
+            // icon={isAdmin === 1 ? heart : pencil}
+              // {isAdmin ===1 ? icon={TbPencil}:  icon={AiOutlineHeart}}
+            > 
+                <input type="image" src={heart} alt="" />
+                {/* <input type="checkbox" name="" id="" img={AiOutlineHeart}/> */}
                 <img src={saladaRavanello} alt="Imagem do prato de comida" />
                 <h2>Salada Ravanello &gt;</h2>
                 <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
@@ -91,7 +98,7 @@ export function Home() {
                 </div>
             </Card>
           </SwiperSlide>
-
+{/* 
           <SwiperSlide>
                   <Card
                   icon={AiOutlineHeart}
@@ -149,7 +156,7 @@ export function Home() {
                   <Button>incluir</Button>
                 </div>
             </Card>
-          </SwiperSlide>          
+          </SwiperSlide>   */}        
           </Swiper>
       </Section>
   //*--------------------------------------------------------

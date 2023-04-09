@@ -4,12 +4,10 @@ export function Card({ title, icon: Icon, input, img, children, ...rest }) {
   return (
     <Container
        {...rest} 
-      > 
-          <div className="cardIcon">
-            {input}
-          </div>
+      >
+          {input}
           {Icon && <Icon size={24} />}        
-        <Content>          
+        <Content>
           {img}
           <h2>{title}</h2>
           {children}
