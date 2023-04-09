@@ -1,6 +1,4 @@
 import React from "react";
-import { AiOutlineHeart } from "react-icons/ai";
-import { TbPencil } from "react-icons/tb"
 
 import heart from "../../assets/Icons/heart.svg"
 import pencil from "../../assets/Icons/pencil.svg"
@@ -82,81 +80,31 @@ export function Home() {
           }}
         >
           <SwiperSlide>
-            <Card
-            // icon={isAdmin === 1 ? heart : pencil}
-              // {isAdmin ===1 ? icon={TbPencil}:  icon={AiOutlineHeart}}
-            > 
-                <input type="image" src={heart} alt="" />
-                {/* <input type="checkbox" name="" id="" img={AiOutlineHeart}/> */}
-                <img src={saladaRavanello} alt="Imagem do prato de comida" />
-                <h2>Salada Ravanello &gt;</h2>
-                <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-                <span>R$ 49,97</span>
+            <Card>   
+              { isAdmin === 1 ? 
+                <input 
+                  type="image" 
+                  src={pencil} 
+                  alt="ícone de um lápis" 
+                />  :
+                <input 
+                  type="image" 
+                  src={heart} 
+                  alt="ícone de um coração" 
+                />
+              }
+              <img src={saladaRavanello} alt="Imagem do prato de comida" />
+              <h2>Salada Ravanello &gt;</h2>
+              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
+              <span>R$ 49,97</span>
+              { isAdmin === 1 ? <div className="hide"></div> :
                 <div className="buttons">
                   <ButtonAddRemove/>
                   <Button title="incluir"/>
-                </div>
+                </div>          
+              }
             </Card>
-          </SwiperSlide>
-{/* 
-          <SwiperSlide>
-                  <Card
-                  icon={AiOutlineHeart}
-                  >
-                    <img src={torradasParma} alt="Imagem do prato de comida" />
-                    <h2>Torradas de Parma &gt;</h2>
-                    <p>Presunto de parma e rúcula em um pão com fermentação natural.</p>
-                    <span>R$ 25,97</span>
-                    <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-              </SwiperSlide> 
-
-              <SwiperSlide>
-                  <Card
-                  icon={AiOutlineHeart}
-                  >
-                    <img src={saladaMolla} alt="Imagem do prato de comida" />
-                    <h2>Salada Molla &gt;</h2>
-                    <p>Massa fresca com camarões e pesto. </p>
-                    <span>R$ 79,97</span>
-                    <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                  <Card
-                  icon={AiOutlineHeart}
-                  >
-                    <img src={saladaRavanello} alt="Imagem do prato de comida" />
-                    <h2>Salada Ravanello &gt;</h2>
-                    <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-                    <span>R$ 49,97</span>
-                    <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-              </SwiperSlide> 
-              <SwiperSlide>
-            <Card
-              icon={AiOutlineHeart}
-            >
-                <img src={saladaRavanello} alt="Imagem do prato de comida" />
-                <h2>Salada Ravanello &gt;</h2>
-                <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-                <span>R$ 49,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-            </Card>
-          </SwiperSlide>   */}        
+          </SwiperSlide>         
           </Swiper>
       </Section>
   //*--------------------------------------------------------
@@ -191,9 +139,19 @@ export function Home() {
           }}
         >     
           <SwiperSlide>
-              <Card
-                icon={AiOutlineHeart}
-              >
+            <Card>   
+                { isAdmin === 1 ? 
+                  <input 
+                    type="image" 
+                    src={pencil} 
+                    alt="ícone de um lápis" 
+                  />  :
+                  <input 
+                    type="image" 
+                    src={heart} 
+                    alt="ícone de um coração" 
+                  />
+                }
                 <img src={prugnaPie} alt="Imagem do prato de sobremesa" />
                 <h2>Prugna Pie &gt;</h2>
                 <p>Torta de ameixa com massa amanteigada, polvilho em açúcar.</p>
@@ -203,50 +161,8 @@ export function Home() {
                   <Button>incluir</Button>
                 </div>
               </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                icon={AiOutlineHeart}
-              >
-                <img src={peachyPastrie} alt="Imagem do prato de sobremesa" />
-                <h2>Peachy pastrie &gt;</h2>
-                <p>Delicioso folheado de pêssego com folhas de hortelã.</p>
-                <span>R$ 32,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                icon={AiOutlineHeart}
-              >
-                <img src={macarrons} alt="Imagem do prato de sobremesa" />
-                <h2>Macarons &gt;</h2>
-                <p>Farinha de amêndoas, manteiga, claras e açúcar.</p>
-                <span>R$ 79,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>           
-            </SwiperSlide>
-            <SwiperSlide>              
-              <Card
-                icon={AiOutlineHeart}
-              >
-                <img src={boloDamasco} alt="Imagem do prato de sobremesa" />
-                <h2>Bolo de Damasco &gt;</h2>
-                <p>Damascos frescos em uma massa sem glúten. </p>
-                <span>R$ 19,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-            </SwiperSlide> 
-          </Swiper>
+          </SwiperSlide>
+        </Swiper>
 
       </Section>
   //*--------------------------------------------------------
@@ -280,64 +196,55 @@ export function Home() {
             },          
           }}
         >
-          <SwiperSlide>
-              <Card
-                icon={AiOutlineHeart}
-              >
-                <img src={expresso} alt="Imagem da bebida" />
-                <h2>Expresso &gt;</h2>
-                <p>Café cremoso feito na temperatura e pressões perfeitas.</p>
-                <span>R$ 15,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-            </SwiperSlide> 
+        <SwiperSlide>
+          <Card>   
+            { isAdmin === 1 ? 
+              <input 
+                type="image" 
+                src={pencil} 
+                alt="ícone de um lápis" 
+              />  :
+              <input 
+                type="image" 
+                src={heart} 
+                alt="ícone de um coração" 
+              />
+            }
+            <img src={expresso} alt="Imagem da bebida" />
+            <h2>Expresso &gt;</h2>
+            <p>Café cremoso feito na temperatura e pressões perfeitas.</p>
+            <span>R$ 15,97</span>
+            <div className="buttons">
+              <ButtonAddRemove/>
+              <Button>incluir</Button>
+            </div>
+          </Card>
+        </SwiperSlide> 
 
-            <SwiperSlide>
-              <Card
-                icon={AiOutlineHeart}
-              >
-                <img src={sucoMaracuja} alt="Imagem da bebida" />
-                <h2>Suco de maracujá &gt;</h2>
-                <p>Suco de maracujá gelado, cremoso, docinho..</p>
-                <span>R$ 13,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Card
-                icon={AiOutlineHeart}
-              >
-                <img src={teAutunno} alt="Imagem da bebida" />
-                <h2>Tè d'autunno  &gt;</h2>
-                <p>Chá de anis, canela e limão. Sinta o outono italiano.</p>
-                <span>R$ 19,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                icon={AiOutlineHeart}
-              >
-                <img src={pomoBourboun} alt="Imagem da bebida" />
-                <h2>Pomo bourbon &gt;</h2>
-                <p>Maçã, whisky, canela. On the rocks. </p>
-                <span>R$ 79,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
-              </Card>
-            </SwiperSlide>
+        <SwiperSlide>
+          <Card>   
+            { isAdmin === 1 ? 
+              <input 
+                type="image" 
+                src={pencil} 
+                alt="ícone de um lápis" 
+              />  :
+              <input 
+                type="image" 
+                src={heart} 
+                alt="ícone de um coração" 
+              />
+            }
+            <img src={sucoMaracuja} alt="Imagem da bebida" />
+            <h2>Suco de maracujá &gt;</h2>
+            <p>Suco de maracujá gelado, cremoso, docinho..</p>
+            <span>R$ 13,97</span>
+            <div className="buttons">
+              <ButtonAddRemove/>
+              <Button>incluir</Button>
+            </div>
+          </Card>
+        </SwiperSlide>
         </Swiper>
       </Section>
   {/*--------------------------------------------------------*/}

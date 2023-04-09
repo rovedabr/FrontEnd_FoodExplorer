@@ -6,8 +6,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content:center;
 
-  border: 1px solid blue;
-
   > svg {
     position: relative;
     right: -8rem;
@@ -18,9 +16,13 @@ export const Container = styled.div`
   }
 
   > div input:nth-child(2) {
+    width: 2.4rem;
+    height: 2.2rem;
+
     position: relative;
     right: -8.5rem;
     top: -.3rem;
+    
     color: ${({ theme }) => theme.LIGHT.LIGHT_100};
 
     z-index: 1;

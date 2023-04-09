@@ -18,6 +18,13 @@ export const Container = styled.div`
     display: none;
   }
 
+  > div .hide {
+    width: 20rem;
+    height: 4.8rem;
+
+    border: 1px solid blue;
+  }
+
   .mainMeal {
     width: 100%;
     padding-left: 2.4rem;
@@ -34,6 +41,8 @@ export const Container = styled.div`
   .swiper-button-prev {
     display: none;
   }
+
+
 
   > footer {
     width: 100%;
@@ -80,10 +89,19 @@ export const Container = styled.div`
       display: flex;
     }
 
+    > div .hide {
+      width: 20rem;
+      height: 48rem;
+      border-bottom: 4.6rem;
+
+      border: 1px solid blue;
+    }
+
    .mainMeal h2 {
       font-weight : 700;
       font-size: 2.2rem;
       line-height: 3.4rem;
+      border: 2px solid green;
     } 
 
     .mainMeal {
