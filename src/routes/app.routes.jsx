@@ -20,6 +20,7 @@ export function AppRoutes() {
 
       <Route path="/adminhome" element={<AdminHome/>} />
       <Route path="/adminmenu" element={<AdminMenu/>} />
+
     </Routes>
   )
 }

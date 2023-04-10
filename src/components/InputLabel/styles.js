@@ -24,9 +24,14 @@ font-weight: 400;
   border: none;
   border-radius: 0.8rem;
 
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  color: ${({theme}) => theme.LIGHT.LIGHT_300};
+
   padding: 1.2rem 3.2rem;
   background-color: ${({theme}) => theme.DARK.DARK_800};
-  color: ${({theme}) => theme.LIGHT.LIGHT_500};
 
   &::placeholder {
       font-size: 1.6rem;

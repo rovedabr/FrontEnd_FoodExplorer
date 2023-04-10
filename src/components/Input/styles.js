@@ -12,6 +12,7 @@ export const Container = styled.div`
   gap: 1.4rem;
   
   border-radius: 0.8rem;
+  color: ${({theme}) => theme.LIGHT.LIGHT_300};
 
   > label {
     display: block;
@@ -30,7 +31,10 @@ export const Container = styled.div`
     border: none;
     padding: 1.2rem 1.4rem;
 
-    color: ${({theme})=> theme.LIGHT.LIGHT_500};
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 400; 
+    color: ${({theme})=> theme.LIGHT.LIGHT_300};
     outline-color: ${({theme}) => theme.COLORS.CAKE_100};
    
     &::placeholder {

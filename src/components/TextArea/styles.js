@@ -13,6 +13,7 @@ export const Container = styled.textarea`
   line-height: 1.6rem;
   font-weight: 400;
   text-align: justify;
+  color: ${({theme}) => theme.LIGHT.LIGHT_300};
 
 
   &::placeholder {
