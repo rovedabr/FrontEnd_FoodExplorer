@@ -8,7 +8,7 @@ import { ButtonText } from "../../components/ButtonText"
 
 import closeIcon from "../../assets/Icons/close.svg"
 import { HiMagnifyingGlass } from "react-icons/hi2"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export function Menu() {
@@ -22,7 +22,7 @@ export function Menu() {
   }
 
   function newMeal() {
-    return navigate("/addmeal")
+    return navigate("/newmeal")
   }
   
   return (

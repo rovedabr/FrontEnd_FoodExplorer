@@ -107,7 +107,8 @@ export function AddMeal() {
                 type="file"
                 title="Selecione imagem para alterá-la" 
                 src={image}
-                onChange={handleImage}
+                onChange={e => setImage(e.target.value)}
+                onClick={handleImage}
               /> 
               
               <InputLabel 

@@ -51,13 +51,13 @@ export function EditMeal() {
             </div>
 
             <div className="buttons">
-              <Button>Excluir prato</Button>
-              <Button>Salvar alterações</Button>
+              <Button title="Excluir prato"></Button>
+              <Button title="Salvar alterações"></Button>
             </div>
 
           </Form>
         </main>     
-      <Footer/>
+        <Footer/>
     </Container>
   )
 }

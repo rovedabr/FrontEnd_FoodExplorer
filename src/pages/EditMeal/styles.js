@@ -8,6 +8,20 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  > main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.4rem;
+
+    overflow-y: auto;
+  }
+
+/*   > main::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+  } 
+ */
 
   > main #buttonBack {
     display: flex;
@@ -16,6 +30,7 @@ export const Container = styled.div`
 
     margin-bottom: 2.4rem;
     margin-top: 1.1rem;
+
   }
 
   > main h2 {
@@ -126,8 +141,18 @@ export const Form = styled.div`
     margin-right: 3.2rem;
   }
 
+  > .buttons button:first-child:hover {
+    background-color: ${({theme}) => theme.LIGHT.LIGHT_700};
+    transition: background-color 0.5s;
+  }
+
   > .buttons button:nth-child(2) {
     background-color: ${({theme}) => theme.COLORS.TOMATO_400};
+  }
+
+  > .buttons button:nth-child(2):hover {
+    background-color: ${({theme}) => theme.COLORS.TOMATO_300};
+    transition: background-color 0.5s;
   }
 
   @media screen and (min-width: 780px){

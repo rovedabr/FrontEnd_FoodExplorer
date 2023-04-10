@@ -36,8 +36,8 @@ font-weight: 400;
   color: ${({theme}) => theme.LIGHT.LIGHT_400};
 }
 
-> label div input {
-  display: none;
+> label div input { //!verificar aqui para aparecer o nome da imagem
+  display: flex;
 }
 `;
 
