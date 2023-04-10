@@ -125,6 +125,11 @@ export const Form = styled.div`
     background-color: ${({theme}) => theme.COLORS.TOMATO_400};
   }
 
+  > .buttons button:hover {
+    background-color: ${({theme}) => theme.COLORS.TOMATO_300};
+    transition: background-color 0.5s;
+  }
+
   @media screen and (min-width: 780px){
     width: 50rem;
 
@@ -146,14 +151,17 @@ export const Form = styled.div`
       .form2,
       .ingredients {
       display: flex;
-      align-items: center;
+
       justify-content: center;
       flex-direction: row;
     }
-
-    > .form1 button {
+/* 
+    > .form1 input[type-file] {
       width: 23rem;
-    }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    } */
 
     > .form1 input {
       width: 46.3rem;

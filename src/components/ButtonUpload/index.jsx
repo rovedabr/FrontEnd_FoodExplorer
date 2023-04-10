@@ -4,7 +4,7 @@ export function ButtonUpload({ label, title, input, fileImage, icon:Icon, ...res
   return(
     <Container {...rest}>
         <label htmlFor={fileImage}>
-          {label}
+          <p>{label}</p>
             <div>
               {Icon && <Icon size={24}/>}{title}
               <input 

@@ -23,6 +23,7 @@ export function AddMeal() {
 
   const [ title, setTitle ] = useState("");
   const [ image, setImage ] = useState(null);
+  const [imageFile, setImageFile ] = useState("")
   const [ price, setPrice ] = useState("");
   const [ category, setCategory ] = useState("")
   const [ description, setDescription ] = useState("");
@@ -40,24 +41,48 @@ export function AddMeal() {
 
   function handleImage(event) {
     const file = event.target.file[0]
+    setImageFile(file)
     const imagePreview = URL.createObjectURL(file)
     setImage(imagePreview)
   }
 
 
   async function handleNewMeal() {
-    if(!title || !category || !ingredients || !description || !image) {
-      alert("Preencha todos os campos!")
+    if (newIngredient) {
+      return alert("Você deixou um ingrediente preenchido sem adicionar, clique (+) para adicionar ou remova o mesmo para continuar.")
+    }
+
+    if (!title) {
+      return alert("Preencha o nome do prato.")
+    }
+
+    if (!category) {
+      return alert("Selecione uma categoria.")
+    }
+
+    if (!ingredients) {
+      return alert("adicione os ingredientes do prato")
     } else {
       const fileUploadForm = new FormData()
       fileUploadForm.append("image", image)
 
       await api.post("/meals", {
         title,
+        image,
         category,
         description,
         price,
         ingredients
+      })
+      .then(() => {
+        alert("Prato inserido com sucesso!")
+      })
+      .catch(error => {
+        if (error.response) {
+          alert(error.response.data.message);
+        } else {
+          alert("Não foi possível cadastrar o prato!")
+        }
       })
     }
   }
@@ -76,15 +101,6 @@ export function AddMeal() {
             <h2>Adicionar prato</h2>
           <Form>
             <div className="form1">
-              {/* <label>
-                Imagem do prato
-                <div>
-                <input type="file" id="imageUpload" icon={FiUpload} placeholder="teste"></input>
-
-                </div>
-              </label>            */}
-
-
               <ButtonUpload 
                 label="Imagem do prato" 
                 icon={FiUpload} 
@@ -99,7 +115,15 @@ export function AddMeal() {
                 placeholder="Ex.: Salada Ceasar"
                 onChange={e => setTitle(e.target.value)}
               />
-              <Select label="Categoria" placeholder="Selecione uma categoria" />
+              <Select 
+                label="Categoria" 
+                placeholder="Selecione uma categoria" 
+                onChange={e => setCategory(e.target.value)}
+              >  
+                <option value="meals" >Refeições</option>
+                <option value="deserts">Sobremesas</option>
+                <option value="drinks">Bebidas</option>               
+              </Select>
             </div>
 
             <div className="form2">
