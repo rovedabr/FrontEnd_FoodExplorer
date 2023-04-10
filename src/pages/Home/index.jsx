@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import heart from "../../assets/Icons/heart.svg"
 import pencil from "../../assets/Icons/pencil.svg"
@@ -41,6 +42,12 @@ import teAutunno from "../../assets/meals/teAutunno.png"
 export function Home() {
   const { user } = useAuth();
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
+
+  const navigate = useNavigate();
+
+  function editMeal() {
+    return navigate("/editmeal")
+  }
 
   return (
     <Container>
@@ -85,7 +92,8 @@ export function Home() {
                 <input 
                   type="image" 
                   src={pencil} 
-                  alt="ícone de um lápis" 
+                  alt="ícone de um lápis"
+                  onClick={editMeal} 
                 />  :
                 <input 
                   type="image" 
@@ -156,10 +164,12 @@ export function Home() {
                 <h2>Prugna Pie &gt;</h2>
                 <p>Torta de ameixa com massa amanteigada, polvilho em açúcar.</p>
                 <span>R$ 79,97</span>
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button>incluir</Button>
-                </div>
+                { isAdmin === 1 ? <div className="hide"></div> :
+                  <div className="buttons">
+                    <ButtonAddRemove/>
+                    <Button title="incluir"/>
+                  </div>          
+                 }
               </Card>
           </SwiperSlide>
         </Swiper>
@@ -214,10 +224,12 @@ export function Home() {
             <h2>Expresso &gt;</h2>
             <p>Café cremoso feito na temperatura e pressões perfeitas.</p>
             <span>R$ 15,97</span>
-            <div className="buttons">
-              <ButtonAddRemove/>
-              <Button>incluir</Button>
-            </div>
+            { isAdmin === 1 ? <div className="hide"></div> :
+                <div className="buttons">
+                  <ButtonAddRemove/>
+                  <Button title="incluir"/>
+                </div>          
+              }
           </Card>
         </SwiperSlide> 
 
@@ -239,10 +251,12 @@ export function Home() {
             <h2>Suco de maracujá &gt;</h2>
             <p>Suco de maracujá gelado, cremoso, docinho..</p>
             <span>R$ 13,97</span>
-            <div className="buttons">
-              <ButtonAddRemove/>
-              <Button>incluir</Button>
-            </div>
+            { isAdmin === 1 ? <div className="hide"></div> :
+                <div className="buttons">
+                  <ButtonAddRemove/>
+                  <Button title="incluir"/>
+                </div>          
+              }
           </Card>
         </SwiperSlide>
         </Swiper>

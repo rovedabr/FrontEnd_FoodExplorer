@@ -7,7 +7,7 @@ export function Navbar({ img, ...rest }) {
   return(    
     <Container>
       <Form>
-        <img src={menuIcon} alt="Ícone do Menu do aplicativo" />   
+        <input src={menuIcon} alt="Ícone do Menu do aplicativo" />   
         <Brand/>
         <div className="receipt">
           <img src={receiptIcon} alt="Ícone do recibo da compra" />

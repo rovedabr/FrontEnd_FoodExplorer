@@ -44,8 +44,8 @@ export function AddMeal() {
     setImageFile(file)
     const imagePreview = URL.createObjectURL(file)
     setImage(imagePreview)
+    console.log(imagePreview) //!verificar aqui
   }
-
 
   async function handleNewMeal() {
     if (newIngredient) {
@@ -63,12 +63,12 @@ export function AddMeal() {
     if (!ingredients) {
       return alert("adicione os ingredientes do prato")
     } else {
-      const fileUploadForm = new FormData()
-      fileUploadForm.append("image", image)
+      const imageUpload = new FormData()
+      imageUpload.append("image", image)
 
       await api.post("/meals", {
         title,
-        image,
+        image: imageUpload,
         category,
         description,
         price,
@@ -96,7 +96,7 @@ export function AddMeal() {
             <ButtonBack
               id="buttonBack"
               title="Voltar"
-              onClick={navigate("/")}
+              to="/"
             />
             <h2>Adicionar prato</h2>
           <Form>

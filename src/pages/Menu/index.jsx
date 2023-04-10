@@ -1,5 +1,7 @@
 import { Container, MenuBar, Form } from "./styles";
 
+import { useAuth } from "../../hooks/auth"
+
 import { Input } from "../../components/Input"
 import { Footer } from "../../components/Footer";
 import { ButtonText } from "../../components/ButtonText"
@@ -7,7 +9,10 @@ import { ButtonText } from "../../components/ButtonText"
 import closeIcon from "../../assets/Icons/close.svg"
 import { HiMagnifyingGlass } from "react-icons/hi2"
 
+
 export function Menu() {
+  const { signOut } = useAuth();
+  
   return (
     <Container>
       <MenuBar>
@@ -23,9 +28,10 @@ export function Menu() {
         >          
         </Input>
         
-        <ButtonText //! inserir a função de sair
-          
+        <ButtonText
+          type="button"
           title="Sair"
+          onClick={signOut}
         />
     
       </Form>

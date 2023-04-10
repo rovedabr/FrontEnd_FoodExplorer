@@ -19,10 +19,9 @@ export const Container = styled.div`
   }
 
   > div .hide {
-    width: 20rem;
-    height: 4.8rem;
-
-    border: 1px solid blue;
+    width: 10rem;
+    height: 4rem;
+    margin-bottom: 6rem;
   }
 
   .mainMeal {
@@ -41,8 +40,6 @@ export const Container = styled.div`
   .swiper-button-prev {
     display: none;
   }
-
-
 
   > footer {
     width: 100%;
@@ -91,10 +88,8 @@ export const Container = styled.div`
 
     > div .hide {
       width: 20rem;
-      height: 48rem;
-      border-bottom: 4.6rem;
-
-      border: 1px solid blue;
+      height: 4rem;
+      margin-bottom: 4.6rem;
     }
 
    .mainMeal h2 {

@@ -1,5 +1,5 @@
 import { Container, Content } from "./styles";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/auth"
 import { api } from "../../services/api"
 
@@ -15,6 +15,10 @@ import receiptIcon from "../../assets/Icons/Receipt.svg"
 export function AdminHeader() {
   const { signOut } = useAuth();
   const navigate = useNavigate();
+
+  function addNewMeal() {
+    return navigate("/addmeal")
+  }
 
   return(
     <Container>
@@ -34,7 +38,7 @@ export function AdminHeader() {
           title="Novo prato"
           type="button"
           className="addMeal"
-          onClick={navigate("/addmeal")}
+          onClick={addNewMeal}
         >
           Novo prato
         </Button> 
