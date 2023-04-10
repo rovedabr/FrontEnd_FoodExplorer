@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
 
   > footer {
-    width: 42.8rem;
+    width: 100%;
     height: 7.7rem;
 
     padding: 2.7rem;
@@ -23,7 +23,7 @@ export const Container = styled.div`
 `;
 
 export const MenuBar = styled.div`
-  width: 42.8rem;
+  width: 100%;
   height: 11.4rem;
 
   display: flex;
@@ -33,12 +33,14 @@ export const MenuBar = styled.div`
 
   background-color: ${({theme}) => theme.DARK.DARK_700};
 
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.1rem;
-  line-height: 2.5rem;
-  font-weight: 400;
-
-  color: ${({theme}) => theme.LIGHT.LIGHT_100};
+  > div span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+  
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+  }
 
   > div {
     width: 37.2rem;
@@ -52,7 +54,7 @@ export const MenuBar = styled.div`
     padding: 5.6rem 2.8rem 2.4rem 2.8rem;
   }
 
-  > div img {
+  > div input {
     width: 1.8rem;
     height: 1.8rem;
     margin-right: 1.6rem;
@@ -60,12 +62,12 @@ export const MenuBar = styled.div`
 `;
 
 export const Form = styled.div`
-  width: 42.8rem;
+  width: 90%;
   height: 117.7rem;
 
   padding: 3.6rem 2.8rem 1.4rem 2.8rem;
 
-  > button {
+  > button, a {
     display: flex;
     justify-content: flex-start;
 

@@ -8,16 +8,33 @@ import { ButtonText } from "../../components/ButtonText"
 
 import closeIcon from "../../assets/Icons/close.svg"
 import { HiMagnifyingGlass } from "react-icons/hi2"
+import { useNavigate } from "react-router-dom";
 
 
 export function Menu() {
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
+  const navigate = useNavigate();
+
+  const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true) 
+
+  function handleMenu() {
+    return navigate("/")
+  }
+
+  function newMeal() {
+    return navigate("/addmeal")
+  }
   
   return (
     <Container>
       <MenuBar>
         <div>
-          <img src={closeIcon} alt="ícone do botão fechar" />
+          <input 
+            type="image" 
+            src={closeIcon} 
+            alt="ícone do botão fechar" 
+            onClick={handleMenu}
+          />
           <span>Menu</span>
         </div>
       </MenuBar>
@@ -27,13 +44,21 @@ export function Menu() {
           placeholder="Busque por pratos ou ingredientes"
         >          
         </Input>
+        {
+          isAdmin === 1 ? 
+          <ButtonText
+            type="button"
+            title="Novo Prato"
+            onClick={newMeal}
+          /> 
+          : <div></div>
+        }
         
         <ButtonText
           type="button"
           title="Sair"
           onClick={signOut}
-        />
-    
+        />    
       </Form>
       <Footer>
 
