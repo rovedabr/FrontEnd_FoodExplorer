@@ -15,7 +15,7 @@ font-weight: 400;
 
 > label {
   margin-bottom: 1.6rem;
-  color: ${({theme}) => theme.LIGHT.LIGHT_400};
+  color: ${({theme}) => theme.LIGHT.LIGHT_400};  
 }
 
 > input {

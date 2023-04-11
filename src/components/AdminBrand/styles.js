@@ -20,7 +20,7 @@ export const Container = styled.div`
     margin-right: .8rem;
   }
 
-  >div h1 {
+  > div h1 {
     font-size: 2.1rem;
     line-height: 2.4rem;
     font-weight: 700;

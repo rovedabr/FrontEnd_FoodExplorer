@@ -6,6 +6,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content:center;
 
+  border: 1px solid ${({theme}) => theme.DARK.DARK_300};
+  border-radius: 0.8rem;
+
   > svg {
     position: relative;
     right: -8rem;

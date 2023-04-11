@@ -20,6 +20,10 @@ font-weight: 400;
   border-radius: 0.8rem;
 }
 
+> label {
+  margin-bottom: 1.6rem;
+}
+
 > div select {
   width: 95%;
   height: 4.8rem;

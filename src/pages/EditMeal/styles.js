@@ -119,7 +119,12 @@ export const Form = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_400};
     
     display: block;
-    margin-bottom: 1.6rem;
+
+  }
+
+  > .form2 div label,
+    .description label {
+      margin-bottom: 1.6rem;
   }
 
   > .buttons {
