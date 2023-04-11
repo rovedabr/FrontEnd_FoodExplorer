@@ -21,6 +21,7 @@ export function MealDetails() {
       <main>
         <Form>
           <ButtonBack
+            type="button"
             to="/"
             title="Voltar"
           />

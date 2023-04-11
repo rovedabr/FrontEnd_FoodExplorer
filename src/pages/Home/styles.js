@@ -96,7 +96,6 @@ export const Container = styled.div`
       font-weight : 700;
       font-size: 2.2rem;
       line-height: 3.4rem;
-      border: 2px solid green;
     } 
 
     .mainMeal {

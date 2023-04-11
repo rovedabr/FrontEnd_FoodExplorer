@@ -64,6 +64,17 @@ export const Container = styled.div`
       width: 8.8rem;
       height: 8.8rem;
     }
+    
+    > a {
+      text-decoration: none;
+      color: ${({theme}) => theme.LIGHT.LIGHT_300};
+    }
+
+    > a:hover {
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+      color: ${({theme}) => theme.COLORS.CAKE_200};
+    }
 
     > h2 {
       font-size: 1.4rem;

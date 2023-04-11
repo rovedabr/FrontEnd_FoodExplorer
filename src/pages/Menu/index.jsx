@@ -18,13 +18,9 @@ export function Menu() {
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true) 
 
   function handleMenu() {
-    return navigate("/")
+    return navigate(-1)
   }
-
-  function newMeal() {
-    return navigate("/newmeal")
-  }
-  
+ 
   return (
     <Container>
       <MenuBar>
@@ -40,6 +36,7 @@ export function Menu() {
       </MenuBar>
       <Form>
         <Input
+          type="text"
           icon={HiMagnifyingGlass}
           placeholder="Busque por pratos ou ingredientes"
         >          
@@ -49,7 +46,7 @@ export function Menu() {
           <ButtonText
             type="button"
             title="Novo Prato"
-            onClick={newMeal}
+            onClick={navigate("/addmeal")}
           /> 
           : <div></div>
         }

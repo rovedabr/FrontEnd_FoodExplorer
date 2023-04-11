@@ -12,6 +12,8 @@ font-size: 1.6rem;
 line-height: 1.6rem;
 font-weight: 400;
 
+margin-right: 3.2rem;
+
 > label div {
   height: 4.8rem;
 
@@ -21,6 +23,8 @@ font-weight: 400;
   justify-content: center;
   gap: 0.8rem;
 
+  text-align: center;
+
   appearance: none;
   border-radius: 0.8rem;
 
@@ -29,15 +33,21 @@ font-weight: 400;
   color: ${({theme}) => theme.LIGHT.LIGHT_500};
 }
 
-
 > label  p {
   display: block;
   margin-bottom: 1.6rem;
   color: ${({theme}) => theme.LIGHT.LIGHT_400};
 }
 
-> label div input { //!verificar aqui para aparecer o nome da imagem
-  display: flex;
+> label div input { 
+  display: none;
+}
+
+> label div input::before {
+  border-color: blue;
+}
+> label div input:hover {
+  border-color: blue;
 }
 `;
 

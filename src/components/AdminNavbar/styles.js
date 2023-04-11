@@ -29,7 +29,6 @@ export const Form = styled.div`
   }
 
   > .receipt {
-    display: none;
     width: 2.6rem;
     display: flex;
     flex-direction: row;
