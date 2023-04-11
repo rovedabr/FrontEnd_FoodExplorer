@@ -1,9 +1,9 @@
 import { Container, Form } from "./styles";
 
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 import { useState } from "react";
-import { useAuth } from "../../hooks/auth";
 
 import { FiUpload} from "react-icons/fi"
 
