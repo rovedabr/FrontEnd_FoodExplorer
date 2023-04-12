@@ -1,6 +1,7 @@
 import { Container, Form } from "./styles";
 import { useState, useEffect } from "react";
 import { useAuth } from "../../hooks/auth";
+import { useParams } from "react-router-dom";
 
 import { Navbar } from "../../components/NavBar"
 import { Header } from "../../components/Header"
@@ -15,8 +16,11 @@ import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
 import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 
 export function MealDetails() {
-  const { user } = userAuth()
+  const { user } = useAuth()
 
+  const meal_id = useParams()
+
+  console.log(meal_id)
 
 
   useEffect(() => {
