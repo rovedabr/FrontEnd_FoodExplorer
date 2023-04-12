@@ -9,6 +9,8 @@ export const Container = styled.div`
   border: 1px solid ${({theme}) => theme.DARK.DARK_300};
   border-radius: 0.8rem;
 
+  margin-right: 1.6em;
+
   > svg {
     position: relative;
     right: -8rem;
@@ -33,6 +35,8 @@ export const Container = styled.div`
 
   
   @media screen and (min-width: 1280px) {
+
+    margin-right: 2.7rem;
 
     > div input:nth-child(2)  {
       width : 3.4rem;
@@ -66,6 +70,7 @@ export const Container = styled.div`
     > img {
       width: 8.8rem;
       height: 8.8rem;
+      border: 1px solid green;
     }
     
     > a {

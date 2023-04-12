@@ -1,6 +1,6 @@
 import { Container, Content } from "./styles";
 
-export function Card({ title, icon: Icon, input, img, children, ...rest }) {
+export function Card({ title, icon: Icon, input, img,image, children, ...rest }) {
   return (
     <Container
        {...rest} 
@@ -9,7 +9,8 @@ export function Card({ title, icon: Icon, input, img, children, ...rest }) {
             {input}
           </div>
           {Icon && <Icon size={24} />}        
-        <Content>          
+        <Content
+        >          
           {img}
           <h2>{title}</h2>
           {children}
@@ -19,3 +20,4 @@ export function Card({ title, icon: Icon, input, img, children, ...rest }) {
   )
 
 }
+

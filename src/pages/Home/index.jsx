@@ -24,6 +24,7 @@ import { Button } from "../../components/Button"
 import { Banner } from "../../components/Banner"
 import { Section } from "../../components/Section"
 import { ButtonAddRemove } from "../../components/ButtonAddRemove"
+import { Carousel } from "../../components/Carousel";
 
 import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 import spaguettiGambe from "../../assets/meals/spaguettiGambe.png"
@@ -53,9 +54,13 @@ export function Home() {
 
   useEffect(() => {
     async function fetchMeals() {
-      const response = await api.get(`/meals?title`)
-      setMeals(response.data)
-      console.log(response.data)
+      try {
+        const response = await api.get(`/meals`)
+        setMeals(response.data)
+        console.log(response.data)
+      } catch (error) {
+        alert("Não foi possível buscar as informações")
+      }
     }
     fetchMeals();
   }, [])
@@ -67,213 +72,99 @@ export function Home() {
     
       <Banner/>
   //*--------------------------------------------------------
-      <Section 
-        className="mainMeal"
-        title="Refeições"
-      >
-        <Swiper
-          className="Carousel"        
-          slidesPerView={1.6}
-          spaceBetween={10}
-          loop={false}
-          navigation={true}
-          mousewheel={true}
-          modules={[Navigation]}
-          breakpoints={{          
-            480: { 
-              width: 480,
-              slidesPerView: 2.1,
-              spaceBetween: 15
-            },          
-            768: { 
-              width: 768,
-              slidesPerView: 3.2,
-              spaceBetween: 25
-            },
-            1280: { 
-              width: 1280,
-              slidesPerView: 4,
-              spaceBetween: 35
-            },          
-          }}
-        >
-          <SwiperSlide>
-            {meals.map(meal => 
-              (<Card
-                key={String(meal.id)}
-                id={meal.id}
-                title={meal.title}
-              />
-              ))
-            }
-{/* 
-          { isAdmin === 1 ? 
-                <input 
-                  type="image" 
-                  src={pencil} 
-                  alt="ícone de um lápis"
-                  onClick={editMeal} 
-                />  :
-                <input 
-                  type="image" 
-                  src={heart} 
-                  alt="ícone de um coração" 
-                />
-              }
-              {
-              meals.map( meal => (
-                key={meal.id}
-
-              ))
-                <img src={saladaRavanello} alt="Imagem do prato de comida" />
-                <Link
-                
-                >
-                  <h2>Salada Ravanello &gt;</h2>
-                </Link> 
-
-                <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-                <span>R$ 49,97</span>
-              }
-              { isAdmin === 1 ? <div className="hide"></div> :
-                <div className="buttons">
-                  <ButtonAddRemove/>
-                  <Button title="incluir"/>
-                </div>          
-              }  */}
-           
-          </SwiperSlide>         
-          </Swiper>
-      </Section>
+    <Section
+      className="mainMeal"
+      title="Refeições"
+    >
+        <Carousel>     //!if category    
+          {
+            meals.map( meal => (
+              <Card key={String(meal.id)} > 
+                { isAdmin === 1 ? 
+                    <input type="image" src={pencil} alt="ícone de um lápis"/>  
+                  : 
+                    <input type="image" src={heart} alt="ícone de um coração" />
+                }                                
+                <img src={meal.image} alt="Imagem do prato" />  
+                <Link><h2>{meal.title} &gt;</h2></Link>
+                <p>{meal.description}</p>
+                <span>{meal.price}</span>    
+                { isAdmin === 1 ? 
+                    <div className="hide"></div> 
+                  :
+                    <div className="buttons">
+                      <ButtonAddRemove/>
+                      <Button title="incluir"/>
+                    </div>          
+                } 
+              </Card>               
+            ))
+          } 
+        </Carousel>
+    </Section>
   //*--------------------------------------------------------
-      <Section
+    <Section
         className="mainMeal"
         title="Sobremesas"
       >
-        <Swiper
-          className="Carousel"        
-          slidesPerView={1.6}
-          spaceBetween={10}
-          loop={false}
-          navigation={true}
-          mousewheel={true}
-          modules={[Navigation]}
-          breakpoints={{          
-            480: { 
-              width: 480,
-              slidesPerView: 2.1,
-              spaceBetween: 15
-            },          
-            768: { 
-              width: 768,
-              slidesPerView: 3.2,
-              spaceBetween: 25
-            },
-            1280: { 
-              width: 1280,
-              slidesPerView: 4,
-              spaceBetween: 35
-            },          
-          }}
-        >     
-          <SwiperSlide>
-            <Card>   
+        <Carousel>     //!if category    
+          {
+            meals.map( meal => (
+              <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                  <input 
-                    type="image" 
-                    src={pencil} 
-                    alt="ícone de um lápis" 
-                  />  :
-                  <input 
-                    type="image" 
-                    src={heart} 
-                    alt="ícone de um coração" 
-                  />
-                }
-                <img src={prugnaPie} alt="Imagem do prato de sobremesa" />
-                <Link
-              
-                >
-                  <h2>Prugna Pie &gt;</h2>
-                </Link>
-
-                <p>Torta de ameixa com massa amanteigada, polvilho em açúcar.</p>
-                <span>R$ 79,97</span>
-                { isAdmin === 1 ? <div className="hide"></div> :
-                  <div className="buttons">
-                    <ButtonAddRemove/>
-                    <Button title="incluir"/>
-                  </div>          
-                 }
-              </Card>
-          </SwiperSlide>
-        </Swiper>
-
-      </Section>
+                    <input type="image" src={pencil} alt="ícone de um lápis"/>  
+                  : 
+                    <input type="image" src={heart} alt="ícone de um coração" />
+                }                                
+                <img src={meal.image} alt="Imagem do prato" />  
+                <Link><h2>{meal.title} &gt;</h2></Link>
+                <p>{meal.description}</p>
+                <span>{meal.price}</span>    
+                { isAdmin === 1 ? 
+                    <div className="hide"></div> 
+                  :
+                    <div className="buttons">
+                      <ButtonAddRemove/>
+                      <Button title="incluir"/>
+                    </div>          
+                } 
+              </Card>               
+            ))
+          } 
+        </Carousel>
+    </Section>
+  {/*--------------------------------------------------------*/}
   //*--------------------------------------------------------
-      <Section
+    <Section
         className="mainMeal"
         title="Bebidas"
       >
-        <Swiper
-          className="Carousel"        
-          slidesPerView={1.6}
-          spaceBetween={10}
-          loop={false}
-          navigation={true}
-          mousewheel={true}
-          modules={[Navigation]}
-          breakpoints={{          
-            480: { 
-              width: 480,
-              slidesPerView: 2.1,
-              spaceBetween: 15
-            },          
-            768: { 
-              width: 768,
-              slidesPerView: 3.2,
-              spaceBetween: 25
-            },
-            1280: { 
-              width: 1280,
-              slidesPerView: 4,
-              spaceBetween: 35
-            },          
-          }}
-        >
-          <SwiperSlide>
-            <Card>   
-              { isAdmin === 1 ? 
-                <input 
-                  type="image" 
-                  src={pencil} 
-                  alt="ícone de um lápis" 
-                />  :
-                <input 
-                  type="image" 
-                  src={heart} 
-                  alt="ícone de um coração" 
-                />
-              }
-              <img src={expresso} alt="Imagem da bebida" />
-              <Link
-
-              >
-              <h2>Expresso &gt;</h2>
-              </Link>
-
-              <p>Café cremoso feito na temperatura e pressões perfeitas.</p>
-              <span>R$ 15,97</span>
-              { isAdmin === 1 ? <div className="hide"></div> :
-                  <div className="buttons">
-                    <ButtonAddRemove/>
-                    <Button title="incluir"/>
-                  </div>          
-                }
-            </Card>
-          </SwiperSlide> 
-        </Swiper>
-      </Section>
+        <Carousel>     //!if category    
+          {
+            meals.map( meal => (
+              <Card key={String(meal.id)} > 
+                { isAdmin === 1 ? 
+                    <input type="image" src={pencil} alt="ícone de um lápis"/>  
+                  : 
+                    <input type="image" src={heart} alt="ícone de um coração" />
+                }                                
+                <img src={meal.image} alt="Imagem do prato" />  
+                <Link><h2>{meal.title} &gt;</h2></Link>
+                <p>{meal.description}</p>
+                <span>{meal.price}</span>    
+                { isAdmin === 1 ? 
+                    <div className="hide"></div> 
+                  :
+                    <div className="buttons">
+                      <ButtonAddRemove/>
+                      <Button title="incluir"/>
+                    </div>          
+                } 
+              </Card>               
+            ))
+          } 
+        </Carousel>
+    </Section>
   {/*--------------------------------------------------------*/}
       <Footer/> 
     </Container>
