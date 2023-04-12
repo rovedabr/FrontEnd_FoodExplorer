@@ -34,6 +34,13 @@ export const Container = styled.div`
     height: 7.7rem;
   }
 
+  > div .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   
 
   @media screen and (min-width: 1280px) {
@@ -64,6 +71,36 @@ export const Container = styled.div`
       padding-left: 2.4rem;
       padding-right: 2.4rem;
     }
+
+    .swiper-wrapper {
+    width: 768px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 10rem;
+    height: 51rem;
+    margin: -26rem -2rem;
+    opacity: 1;
+
+    display: flex;
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    transition: all .3s ease-in-out; 
+    transform: scale(1.5);
+  }
+
+  .swiper-button-prev {
+    background: linear-gradient(to right, rgba(0,10,15,1) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,0) 100%)
+  }
+
+  .swiper-button-next {
+    background: linear-gradient(to right, rgba(0,10,15,0) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,1) 100%);
+  }
+
 
 
 }

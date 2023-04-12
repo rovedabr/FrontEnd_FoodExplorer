@@ -1,9 +1,9 @@
+import { Container } from './styles';
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from "swiper";
 import 'swiper/css/navigation'
 import 'swiper/css'
-import { Children } from "react";
-import { Container } from './styles';
 
 
 export function Carousel({ children, ...rest }) {

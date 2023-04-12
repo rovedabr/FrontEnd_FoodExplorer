@@ -1,4 +1,6 @@
 import { Container, Form } from "./styles";
+import { useState, useEffect } from "react";
+import { useAuth } from "../../hooks/auth";
 
 import { Navbar } from "../../components/NavBar"
 import { Header } from "../../components/Header"
@@ -13,6 +15,24 @@ import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
 import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 
 export function MealDetails() {
+  const { user } = userAuth()
+
+
+
+  useEffect(() => {
+    async function fetchMeals() {
+      try {
+        const response = await api.get(`/meals`)
+        setMeals(response.data)
+        console.log(response.data)
+      } catch (error) {
+        alert("Não foi possível buscar as informações")
+      }
+    }
+    fetchMeals();
+  }, [])
+
+
   return(
     <Container>
      <Navbar/>
