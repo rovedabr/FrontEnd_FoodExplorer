@@ -11,7 +11,7 @@ export const Container = styled.div`
   }
 
   .swiper-button-next,
-  .swiper-button-prev {
+    .swiper-button-prev {
     display: none;
   }
 
@@ -25,6 +25,7 @@ export const Container = styled.div`
     width: 10rem;
     height: 51rem;
     margin: -26rem -2rem;
+    opacity: 1;
 
     display: flex;
     color: ${({theme}) => theme.LIGHT.LIGHT_100};
@@ -33,7 +34,7 @@ export const Container = styled.div`
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
     transition: all .3s ease-in-out; 
-    transform: scale(1.1);
+    transform: scale(1.5);
   }
 
   .swiper-button-prev {

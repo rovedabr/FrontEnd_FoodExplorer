@@ -26,20 +26,6 @@ import { Section } from "../../components/Section"
 import { ButtonAddRemove } from "../../components/ButtonAddRemove"
 import { Carousel } from "../../components/Carousel";
 
-import saladaRavanello from "../../assets/meals/saladaRavanello.png"
-import spaguettiGambe from "../../assets/meals/spaguettiGambe.png"
-import torradasParma from "../../assets/meals/TorradasParma.png"
-import saladaMolla from "../../assets/meals/saladaMolla.png"
-
-import peachyPastrie from "../../assets/meals/peachyPastrie.png"
-import boloDamasco from "../../assets/meals/boloDamasco.png"
-import prugnaPie from "../../assets/meals/prugnaPie.png"
-import macarrons from "../../assets/meals/macarrons.png"
-
-import sucoMaracuja from "../../assets/meals/SucoMaracuja.png"
-import pomoBourboun from "../../assets/meals/pomoBourbon.png"
-import expresso from "../../assets/meals/cafeExpresso.png"
-import teAutunno from "../../assets/meals/teAutunno.png"
 
 export function Home() {
   const { user } = useAuth();
@@ -76,16 +62,17 @@ export function Home() {
       className="mainMeal"
       title="Refeições"
     >
-        <Carousel>     //!if category    
-          {
-            meals.map( meal => (
+        <Carousel>        
+          {meals
+            .filter(meal => meal.category === "Refeições") 
+            .map( meal => (
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
                     <input type="image" src={pencil} alt="ícone de um lápis"/>  
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
-                <img src={meal.image} alt="Imagem do prato" />  
+                <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
                 <Link><h2>{meal.title} &gt;</h2></Link>
                 <p>{meal.description}</p>
                 <span>{meal.price}</span>    
@@ -107,16 +94,17 @@ export function Home() {
         className="mainMeal"
         title="Sobremesas"
       >
-        <Carousel>     //!if category    
-          {
-            meals.map( meal => (
+        <Carousel>       
+          {meals
+            .filter(meal => meal.category === "Sobremesas") 
+            .map( meal => (
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
                     <input type="image" src={pencil} alt="ícone de um lápis"/>  
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
-                <img src={meal.image} alt="Imagem do prato" />  
+                <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
                 <Link><h2>{meal.title} &gt;</h2></Link>
                 <p>{meal.description}</p>
                 <span>{meal.price}</span>    
@@ -139,16 +127,17 @@ export function Home() {
         className="mainMeal"
         title="Bebidas"
       >
-        <Carousel>     //!if category    
-          {
-            meals.map( meal => (
+        <Carousel>     
+          {meals
+            .filter(meal => meal.category === "Bebidas") 
+            .map( meal => (
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
                     <input type="image" src={pencil} alt="ícone de um lápis"/>  
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
-                <img src={meal.image} alt="Imagem do prato" />  
+                <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
                 <Link><h2>{meal.title} &gt;</h2></Link>
                 <p>{meal.description}</p>
                 <span>{meal.price}</span>    
