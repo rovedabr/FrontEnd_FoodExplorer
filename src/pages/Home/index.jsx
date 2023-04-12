@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import heart from "../../assets/Icons/heart.svg"
 import pencil from "../../assets/Icons/pencil.svg"
 
 import { useAuth } from "../../hooks/auth";
+import { api } from "../../services/api";
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from "swiper";
@@ -42,6 +43,7 @@ import teAutunno from "../../assets/meals/teAutunno.png"
 export function Home() {
   const { user } = useAuth();
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
+  const [ meals, setMeals ] = useState([])
 
   const navigate = useNavigate();
 
@@ -49,8 +51,17 @@ export function Home() {
     return navigate("/editmeal")
   }
 
+  useEffect(() => {
+    async function fetchMeals() {
+      const response = await api.get(`/meals?title`)
+      setMeals(response.data)
+      console.log(response.data)
+    }
+    fetchMeals();
+  }, [])
+
   return (
-    <Container>
+     <Container>
       { isAdmin === 1 ? <AdminNavbar/> : <Navbar/> }
       { isAdmin === 1 ? <AdminHeader/> : <Header/> }
     
@@ -87,8 +98,16 @@ export function Home() {
           }}
         >
           <SwiperSlide>
-            <Card>   
-              { isAdmin === 1 ? 
+            {meals.map(meal => 
+              (<Card
+                key={String(meal.id)}
+                id={meal.id}
+                title={meal.title}
+              />
+              ))
+            }
+{/* 
+          { isAdmin === 1 ? 
                 <input 
                   type="image" 
                   src={pencil} 
@@ -101,22 +120,28 @@ export function Home() {
                   alt="ícone de um coração" 
                 />
               }
-              <img src={saladaRavanello} alt="Imagem do prato de comida" />
-              <Link
-              
-              >
-                <h2>Salada Ravanello &gt;</h2>
-              </Link> 
+              {
+              meals.map( meal => (
+                key={meal.id}
 
-              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
-              <span>R$ 49,97</span>
+              ))
+                <img src={saladaRavanello} alt="Imagem do prato de comida" />
+                <Link
+                
+                >
+                  <h2>Salada Ravanello &gt;</h2>
+                </Link> 
+
+                <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</p>
+                <span>R$ 49,97</span>
+              }
               { isAdmin === 1 ? <div className="hide"></div> :
                 <div className="buttons">
                   <ButtonAddRemove/>
                   <Button title="incluir"/>
                 </div>          
-              }
-            </Card>
+              }  */}
+           
           </SwiperSlide>         
           </Swiper>
       </Section>

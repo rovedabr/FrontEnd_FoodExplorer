@@ -1,17 +1,38 @@
 import { Container, Content } from "./styles";
 import { Input } from "../Input";
+import { api } from "../../services/api";
 
 import { useAuth } from "../../hooks/auth"
+import { useState, useEffect } from "react";
 
-import  brand from "../../assets/brand.png"
-import logout from "../../assets/Icons/Logout.svg"
-import { HiMagnifyingGlass } from "react-icons/hi2"
 import receiptIcon from "../../assets/Icons/Receipt.svg"
+import { HiMagnifyingGlass } from "react-icons/hi2"
+import logout from "../../assets/Icons/Logout.svg"
+import  brand from "../../assets/brand.png"
 
 
 export function Header() {
   const { signOut } = useAuth();
 
+  const [ search, setSearch ] = useState("");
+  const [ data , setData ] = useState("")
+  const [ meals, setMeals ] = useState([]);
+  const [ titles, setTitles ] = useState([])
+  const [ ingredients, setIngredients ] = useState([]);
+
+
+
+  useEffect(() => {
+    async function fetchMeals() {
+      const response = await api.get(`/meals?title=${search}`);
+      setMeals(response.data)
+      
+    }
+    fetchMeals();
+  },[]);
+
+
+ 
   return(
     <Container>
       <Content>
@@ -19,11 +40,12 @@ export function Header() {
           <img src={brand} alt="Logo da empresa Food Explorer" />
         </div>
         
-        <Input
-          icon={HiMagnifyingGlass}
-          type="text"
-          placeholder="Busque por pratos ou ingredientes"
-        /> 
+          <Input            
+            type="text"
+            icon={HiMagnifyingGlass}
+            placeholder="Busque por pratos ou ingredientes"
+            onChange={e => setSearch(e.target.value)}
+          />
 
         <button className="order">
           <img src={receiptIcon} alt="" /> 

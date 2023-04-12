@@ -34,6 +34,29 @@ export const Content = styled.div`
     justify-content: center;
   }
 
+  > .search-results  ul li{
+    width: 50rem;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+
+    margin-left: 6.5rem;
+    border: 1px red solid;
+  }
+
+  > .search-results ul li:hover {
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    color: ${({theme}) => theme.COLORS.CAKE_200};
+  }
+
   > button {
     width: 21rem;
     height: 5.6rem;
