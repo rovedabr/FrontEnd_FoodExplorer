@@ -16,7 +16,7 @@ export const Container = styled.div`
     overflow-y: auto;
   }
 
-/*   > main::-webkit-scrollbar-track {
+/*   > main::-webkit-scrollbar-track { //! verificar para remover
     border: 1px solid #000;
     padding: 2px 0;
     background-color: #404040;

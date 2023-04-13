@@ -12,7 +12,7 @@ import { Button } from "../../components/Button";
 import { ButtonAddRemove } from "../../components/ButtonAddRemove";
 import { ButtonBack } from "../../components/ButtonBack";
 
-import receiptIcon from "../../assets/Icons/Receipt.svg"
+import {receiptIcon} from "../../assets/Icons/Receipt.svg"
 import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
 import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 
@@ -42,12 +42,13 @@ export function MealDetails() {
       <Navbar/> 
       <Header/>
         <main>
-          <Form>
-            <ButtonBack
-              type="button"
-              to="/"
-              title="Voltar"
-            />
+
+          <ButtonBack
+            type="button"
+            to="/"
+            title="Voltar"
+          />
+           <Form>
               <div id="menu">
                   <img 
                     src={`${api.defaults.baseURL}/files/${meal.image}`} 
@@ -76,7 +77,12 @@ export function MealDetails() {
 
                     <div className="buttons">
                       <ButtonAddRemove/>
-                      <Button title="Incluir"></Button>
+                      <Button 
+                        type="text"
+                        icon={receiptIcon}
+                        title="Incluir"
+                      
+                      />
                     </div>
 
                   </div>

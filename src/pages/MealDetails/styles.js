@@ -14,7 +14,7 @@ export const Container = styled.div`
     height: 100vh;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
   }
 
@@ -25,6 +25,31 @@ export const Container = styled.div`
 
   > header {
     display: none;
+  }
+
+  > main a {
+    width: 10.2rem;
+    height: 3.4rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    appearance: none;
+    background-color: transparent;
+    border: none;
+
+    margin-top: 1.5rem;
+    margin-left: 5.6rem;
+    gap: 1.1rem;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    font-weight: 500;
+    
+    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+    border: 1px solid blue; //! remover depois
   }
 
   @media screen and (min-width: 1280px){
@@ -44,10 +69,13 @@ export const Form = styled.div`
   height: 67.7rem;
 
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-start;
 
   margin: 1.7rem 5.2rem 3.3rem 5.2rem;
+
+  border: 2px solid pink; //! remover depois
 
   > a {
     width: 10.2rem;
@@ -70,6 +98,7 @@ export const Form = styled.div`
     font-weight: 500;
     
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
+    border: 1px solid blue;
   }
 
   > div img {
@@ -99,10 +128,6 @@ export const Form = styled.div`
     font-size: 1.6rem;
     line-height: 2.7rem;
     font-weight: 400;
-  }
-
-  > .content {
-    border: 1px red solid;
   }
 
   >#menu .content .tags {
