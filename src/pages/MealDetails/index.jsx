@@ -2,6 +2,7 @@ import { Container, Form } from "./styles";
 import { useState, useEffect } from "react";
 import { useAuth } from "../../hooks/auth";
 import { useParams } from "react-router-dom";
+import { api } from "../../services/api";
 
 import { Navbar } from "../../components/NavBar"
 import { Header } from "../../components/Header"
@@ -17,24 +18,24 @@ import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 
 export function MealDetails() {
   const { user } = useAuth()
+  const [ meal, setMeal ] = useState([])
 
-  const meal_id = useParams()
-
-  console.log(meal_id)
-
+  const params = useParams()
 
   useEffect(() => {
-    async function fetchMeals() {
+    async function fetchMeal() {
       try {
-        const response = await api.get(`/meals`)
-        setMeals(response.data)
-        console.log(response.data)
+        const response = await api.get(`/meals/${params.id}`)
+        setMeal(response.data)
+        // console.log(response.data)
       } catch (error) {
         alert("Não foi possível buscar as informações")
       }
     }
-    fetchMeals();
+    fetchMeal();
   }, [])
+
+
 
 
   return(
@@ -52,29 +53,30 @@ export function MealDetails() {
 
             <div id="menu">
                 <img 
-                  src={saladaRavanello} 
+                  src={`${api.defaults.baseURL}/files/${meal.image}`} 
                 />
                 
                 <div className="content"> 
 
                   <div className="mealData">
-                    <h2>Salada Ravanello</h2>
-                    <span>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.</span>         
+                    <h2>{meal.title}</h2>
+                    <span>{meal.description}</span>         
                   </div>   
 
                   <div className="tags">
-                    <Tag title="alface"></Tag>
-                    <Tag title="cebola"></Tag>
-                    <Tag title="pão naan"></Tag>
-                    <Tag title="pepino"></Tag>
-                    <Tag title="rabanete"></Tag>
-                    <Tag title="tomate"></Tag>
-                    <Tag title="tomate com agrião"></Tag>
-                  </div>
+                    {/* {
+                      meal.ingredients.map(ingredient => (
+                        <Tag
+                          key={String(ingredient.id)}
+                          title={ingredient.name}
+                        />
+                      ))
+                    }                  */}
+                  </div> 
 
                   <div className="buttons">
                     <ButtonAddRemove/>
-                    <Button> incluir ∙ R$ 25,00</Button>
+                    <Button title="Incluir"></Button>
                   </div>
 
                 </div>

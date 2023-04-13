@@ -30,6 +30,7 @@ import { Carousel } from "../../components/Carousel";
 export function Home() {
   const { user } = useAuth();
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
+  
   const [ meals, setMeals ] = useState([])
 
   const navigate = useNavigate();
@@ -43,7 +44,6 @@ export function Home() {
       try {
         const response = await api.get(`/meals`)
         setMeals(response.data)
-        console.log(response.data)
       } catch (error) {
         alert("Não foi possível buscar as informações")
       }
@@ -105,7 +105,7 @@ export function Home() {
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
                 <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                <Link to={`/mealdetails/:${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
+                <Link to={`/mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
                 <p>{meal.description}</p>
                 <span>{meal.price}</span>    
                 { isAdmin === 1 ? 
