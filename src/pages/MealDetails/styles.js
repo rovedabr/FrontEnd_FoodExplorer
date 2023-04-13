@@ -6,7 +6,6 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
 
   > main {
@@ -15,9 +14,9 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
-
 
   > nav {
     display: flex;
@@ -28,12 +27,13 @@ export const Container = styled.div`
   }
 
   > main a {
-    width: 10.2rem;
+    width: 100%;
     height: 3.4rem;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
 
     appearance: none;
     background-color: transparent;
@@ -49,7 +49,6 @@ export const Container = styled.div`
     font-weight: 500;
     
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
-    border: 1px solid blue; //! remover depois
   }
 
   @media screen and (min-width: 1280px){
@@ -60,6 +59,14 @@ export const Container = styled.div`
     > header {
       display: flex;
     }
+
+    > main a {
+      width: 100%;
+      height: 3.4rem;
+
+      margin-top: 3.2rem;
+      margin-left: 12.2rem;
+   }
   }
 
 `;
@@ -71,35 +78,9 @@ export const Form = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
 
-  margin: 1.7rem 5.2rem 3.3rem 5.2rem;
+  margin: 1.7rem 5.6rem 3.6rem 5.6rem;
 
-  border: 2px solid pink; //! remover depois
-
-  > a {
-    width: 10.2rem;
-    height: 3.4rem;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    appearance: none;
-    background-color: transparent;
-    border: none;
-
-    margin-top: 1.5rem;
-    gap: 1.1rem;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.4rem;
-    line-height: 3.4rem;
-    font-weight: 500;
-    
-    color: ${({theme}) => theme.LIGHT.LIGHT_300};
-    border: 1px solid blue;
-  }
 
   > div img {
     width: 26.4rem;
@@ -150,6 +131,10 @@ export const Form = styled.div`
   >#menu .content .buttons {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-bottom: 0;
   }
 
   >#menu .content .buttons button img {
@@ -164,13 +149,15 @@ export const Form = styled.div`
     line-height: 2.4rem;
   }
 
+
   @media screen and (min-width: 1280px){
-    width: 100%;
-    
-    > button {
-      position: relative;
-      left: 15.4rem;
-    }
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10rem 12rem 15rem 12rem;
 
     > #menu {
       display: flex;
@@ -180,7 +167,8 @@ export const Form = styled.div`
     > #menu img {
       width: 39rem;
       height: 39rem;
-      margin: 10rem 4.7rem auto 12rem;
+
+      margin-right: 4.7rem;
     }
 
     > #menu .content {

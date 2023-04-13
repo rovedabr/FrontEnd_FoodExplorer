@@ -12,7 +12,7 @@ import { Button } from "../../components/Button";
 import { ButtonAddRemove } from "../../components/ButtonAddRemove";
 import { ButtonBack } from "../../components/ButtonBack";
 
-import {receiptIcon} from "../../assets/Icons/Receipt.svg"
+import receiptIcon from "../../assets/Icons/Receipt.svg"
 import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
 import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 
@@ -55,7 +55,6 @@ export function MealDetails() {
                   />
                   
                   <div className="content"> 
-
                     <div className="mealData">
                       <h2>{meal.title}</h2>
                       <span>{meal.description}</span>         
