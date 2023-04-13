@@ -101,6 +101,10 @@ export const Form = styled.div`
     font-weight: 400;
   }
 
+  > .content {
+    border: 1px red solid;
+  }
+
   >#menu .content .tags {
     width: 31.6rem;
     height: 10rem;

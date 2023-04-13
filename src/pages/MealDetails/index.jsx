@@ -27,7 +27,6 @@ export function MealDetails() {
       try {
         const response = await api.get(`/meals/${params.id}`)
         setMeal(response.data)
-        // console.log(response.data)
       } catch (error) {
         alert("Não foi possível buscar as informações")
       }
@@ -36,54 +35,55 @@ export function MealDetails() {
   }, [])
 
 
-
+  console.log(meal)
 
   return(
     <Container>
-     <Navbar/>
-     <Header/>
+      <Navbar/> 
+      <Header/>
+        <main>
+          <Form>
+            <ButtonBack
+              type="button"
+              to="/"
+              title="Voltar"
+            />
+              <div id="menu">
+                  <img 
+                    src={`${api.defaults.baseURL}/files/${meal.image}`} 
+                  />
+                  
+                  <div className="content"> 
 
-      <main>
-        <Form>
-          <ButtonBack
-            type="button"
-            to="/"
-            title="Voltar"
-          />
+                    <div className="mealData">
+                      <h2>{meal.title}</h2>
+                      <span>{meal.description}</span>         
+                    </div>   
 
-            <div id="menu">
-                <img 
-                  src={`${api.defaults.baseURL}/files/${meal.image}`} 
-                />
-                
-                <div className="content"> 
+                    {
+                      meal.ingredients && 
+                        <div className="tags">
+                          {
+                            meal.ingredients.map(ingredient => (
+                              <Tag
+                                key={String(ingredient.id)}
+                                title={ingredient.name}
+                              />
+                            ))
+                          }                 
+                        </div>
+                    } 
 
-                  <div className="mealData">
-                    <h2>{meal.title}</h2>
-                    <span>{meal.description}</span>         
-                  </div>   
+                    <div className="buttons">
+                      <ButtonAddRemove/>
+                      <Button title="Incluir"></Button>
+                    </div>
 
-                  <div className="tags">
-                    {/* {
-                      meal.ingredients.map(ingredient => (
-                        <Tag
-                          key={String(ingredient.id)}
-                          title={ingredient.name}
-                        />
-                      ))
-                    }                  */}
-                  </div> 
-
-                  <div className="buttons">
-                    <ButtonAddRemove/>
-                    <Button title="Incluir"></Button>
                   </div>
-
-                </div>
-              </div>  
+            </div>  
           </Form>
         </main> 
-        <Footer/>
+      <Footer/>
     </Container>
   )
 }
