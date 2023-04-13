@@ -38,6 +38,6 @@ export function Carousel({ children, ...rest }) {
         <SwiperSlide>{children}</SwiperSlide>
       </Swiper>         
     </Container>
-    )
+  )
 
 }

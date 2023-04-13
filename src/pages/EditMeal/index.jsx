@@ -43,7 +43,7 @@ export function EditMeal() {
     setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted))
   }
 
-  function handleUpdateMeal() {
+  async function handleUpdateMeal() {
 
     if (!title) {
       return alert("Preencha o nome do prato.")

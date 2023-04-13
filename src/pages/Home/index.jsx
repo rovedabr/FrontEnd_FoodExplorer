@@ -36,7 +36,7 @@ export function Home() {
   const navigate = useNavigate();
 
   function editMeal() {
-    return navigate("/editmeal")
+    return navigate(`/editmeal/${params.id}`)
   }
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export function Home() {
             .map( meal => (
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                    <input type="image" src={pencil} alt="ícone de um lápis"/>  
+                    <input type="image" src={pencil} alt="ícone de um lápis"onClick={editMeal} />  
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                

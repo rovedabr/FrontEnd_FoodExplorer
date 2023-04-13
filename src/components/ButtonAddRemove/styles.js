@@ -21,6 +21,12 @@ justify-content: center;
   margin-right: 2.4rem;
 }
 
+> #add:hover,
+  #remove:hover {
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+  }
+
 > span {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;

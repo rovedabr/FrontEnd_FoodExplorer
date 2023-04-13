@@ -4,13 +4,20 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  display: flex;
+  display: grid;
+  grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: 11.4rem auto 7.7rem;
   flex-direction: column;
   align-items: center;
 
   > main {
     width: 100%;
     height: 100vh;
+
+    grid-area: main;
 
     display: flex;
     flex-direction: column;
@@ -20,10 +27,16 @@ export const Container = styled.div`
 
   > nav {
     display: flex;
+    grid-area: nav;
   }
 
   > header {
     display: none;
+    grid-area: header;
+  }
+
+  > footer {
+    grid-area: footer;
   }
 
   > main a {
@@ -52,20 +65,37 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: 1280px){
+
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 10.4rem auto 7.7rem;
+
     > nav {
       display: none;
     }
 
     > header {
+      grid-area: header;
       display: flex;
+    }
+
+    > main{
+      grid-area: main;
+      height: 65rem;
     }
 
     > main a {
       width: 100%;
       height: 3.4rem;
 
-      margin-top: 3.2rem;
+      margin-top: 2.4rem;
       margin-left: 12.2rem;
+   }
+
+   > footer {
+    grid-area: footer;
    }
   }
 
@@ -73,7 +103,8 @@ export const Container = styled.div`
 
 export const Form = styled.div`
   width: 31.6rem;
-  height: 67.7rem;
+  height: 70%;
+  border: 1px solid blue;
 
   display: flex;
   align-items: center;
