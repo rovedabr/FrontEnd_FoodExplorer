@@ -121,7 +121,7 @@ export function EditMeal() {
     <Container>
       <AdminNavbar/>
       <AdminHeader/> 
-  
+        { isAdmin === 1 ?
             <main>
                 <ButtonBack
                   to="/"
@@ -204,8 +204,8 @@ export function EditMeal() {
                 </div>
               </Form>
             </main>     
-
-        
+        : <strong>Acesso Negado</strong>
+      }   
       <Footer/>
     </Container>
   )

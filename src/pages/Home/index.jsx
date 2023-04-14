@@ -31,8 +31,12 @@ export function Home() {
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
   
   const [ meals, setMeals ] = useState([])
-  const params = useParams();
+  const [ amount, setAmount ] = useState(Number(0))
+  const [ title, setTitle ] = useState([])
+  const [ order, setOrder ] = useState([])
 
+
+  const params = useParams();
   const navigate = useNavigate();
 
   function editMeal() {
@@ -94,25 +98,25 @@ export function Home() {
             .filter(meal => meal.category === "Refeições") 
             .map( meal => (
               <SwiperSlide>
-              <Card key={String(meal.id)} > 
-                { isAdmin === 1 ? 
-                    <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
-                  : 
-                    <input type="image" src={heart} alt="ícone de um coração" />
-                }                                
-                <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
-                <p>{meal.description}</p>
-                <span>{meal.price}</span>    
-                { isAdmin === 1 ? 
-                    <div className="hide"></div> 
-                  :
-                    <div className="buttons">
-                      <ButtonAddRemove/>
-                      <Button title="incluir"/>
-                    </div>          
-                } 
-              </Card>
+                <Card key={String(meal.id)} id={meal.id} > 
+                  { isAdmin === 1 ? 
+                      <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
+                    : 
+                      <Link><input type="image" src={heart} alt="ícone de um coração" /></Link>
+                  }                                
+                  <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
+                  <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
+                  <p>{meal.description}</p>
+                  <span>{meal.price}</span>    
+                  { isAdmin === 1 ? 
+                      <div className="hide"></div> 
+                    :
+                      <div className="buttons">
+                        <ButtonAddRemove/>
+                        <Button title="incluir"/>
+                      </div>          
+                  } 
+                </Card>
               </SwiperSlide>               
             ))
           } 
@@ -153,25 +157,25 @@ export function Home() {
             .filter(meal => meal.category === "Sobremesas") 
             .map( meal => (
               <SwiperSlide>
-              <Card key={String(meal.id)} > 
-                { isAdmin === 1 ? 
-                    <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
-                  : 
-                    <input type="image" src={heart} alt="ícone de um coração" />
-                }                                
-                <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
-                <p>{meal.description}</p>
-                <span>{meal.price}</span>    
-                { isAdmin === 1 ? 
-                    <div className="hide"></div> 
-                  :
-                    <div className="buttons">
-                      <ButtonAddRemove/>
-                      <Button title="incluir"/>
-                    </div>          
-                } 
-              </Card>
+                <Card key={String(meal.id)} id={meal.id}> 
+                  { isAdmin === 1 ? 
+                      <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
+                    : 
+                      <Link><input type="image" src={heart} alt="ícone de um coração" /></Link>
+                  }                                
+                  <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
+                  <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
+                  <p>{meal.description}</p>
+                  <span>{meal.price}</span>    
+                  { isAdmin === 1 ? 
+                      <div className="hide"></div> 
+                    :
+                      <div className="buttons">
+                        <ButtonAddRemove/>
+                        <Button title="incluir"/>
+                      </div>          
+                  } 
+                </Card>
               </SwiperSlide>               
             ))
           } 
@@ -213,25 +217,25 @@ export function Home() {
             .filter(meal => meal.category === "Bebidas") 
             .map( meal => (
               <SwiperSlide>
-              <Card key={String(meal.id)} > 
-                { isAdmin === 1 ? 
-                    <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
-                  : 
-                    <input type="image" src={heart} alt="ícone de um coração" />
-                }                                
-                <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
-                <p>{meal.description}</p>
-                <span>{meal.price}</span>    
-                { isAdmin === 1 ? 
-                    <div className="hide"></div> 
-                  :
-                    <div className="buttons">
-                      <ButtonAddRemove/>
-                      <Button title="incluir"/>
-                    </div>          
-                } 
-              </Card>
+                <Card key={String(meal.id)} id={meal.id}> 
+                  { isAdmin === 1 ? 
+                      <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
+                    : 
+                      <Link><input type="image" src={heart} alt="ícone de um coração" /></Link>
+                  }                                
+                  <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
+                  <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
+                  <p>{meal.description}</p>
+                  <span>{meal.price}</span>    
+                  { isAdmin === 1 ? 
+                      <div className="hide"></div> 
+                    :
+                      <div className="buttons">
+                        <ButtonAddRemove/>
+                        <Button title="incluir"/>
+                      </div>          
+                  } 
+                </Card>
               </SwiperSlide>               
             ))
           } 

@@ -20,18 +20,23 @@ export function Header() {
   const [ titles, setTitles ] = useState([])
   const [ ingredients, setIngredients ] = useState([]);
 
-
+  function exit() {
+    signOut()
+    navigate("/")
 
   useEffect(() => {
-    async function fetchMeals() {
-      const response = await api.get(`/meals?title=${search}`);
+    async function fetchSearchMealsAndIngredients() {
+      const response = await api.get(`/meals?title=${search}&&/ingredients?name=${search}`);
       setMeals(response.data)
-      
+      console.log(response.data)
     }
-    fetchMeals();
+    fetchSearchMealsAndIngredients([search]);
   },[]);
 
+  console.log(search, setSearch)
 
+
+  }
  
   return(
     <Container>
@@ -53,7 +58,7 @@ export function Header() {
           <span>(0)</span>
         </button>
 
-      <button className="logout" onClick={signOut}>
+      <button className="logout" onClick={exit}>
         <img src={logout} alt="Botão de sair"/>
       </button>       
 

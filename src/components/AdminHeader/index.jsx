@@ -20,6 +20,11 @@ export function AdminHeader() {
     return navigate("/addmeal")
   }
 
+  function exit() {
+    signOut()
+    navigate("/")
+  }
+
   return(
     <Container>
       <Content>        
@@ -44,7 +49,7 @@ export function AdminHeader() {
         </Button> 
         <button 
           className="logout"
-          onClick={signOut} >
+          onClick={exit} >
             <img src={logout} alt="Botão sair" />
           </button>     
       </Content>    

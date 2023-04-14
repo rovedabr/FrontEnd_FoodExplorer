@@ -16,6 +16,12 @@ export const Container = styled.div`
     overflow-y: auto;
   }
 
+  > strong {
+    font-size: 40rem;
+    text-align: center;
+    color: ${({theme}) => theme.COLORS.TOMATO_300};
+  }
+
 /*   > main::-webkit-scrollbar-track { //! verificar para remover
     border: 1px solid #000;
     padding: 2px 0;
