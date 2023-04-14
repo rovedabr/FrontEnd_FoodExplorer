@@ -5,18 +5,15 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
+  grid-template-rows: 11.4rem auto;
   grid-template-areas: 
     "nav"
-    "main"
-    "footer";
-  grid-template-rows: 11.4rem auto 7.7rem;
+    "main";
+
   flex-direction: column;
   align-items: center;
-
+  
   > main {
-    width: 100%;
-    height: 100vh;
-
     grid-area: main;
 
     display: flex;
@@ -35,9 +32,6 @@ export const Container = styled.div`
     grid-area: header;
   }
 
-  > footer {
-    grid-area: footer;
-  }
 
   > main a {
     width: 100%;
@@ -62,17 +56,20 @@ export const Container = styled.div`
     font-weight: 500;
     
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
-  }
+  } 
+ 
 
-  @media screen and (min-width: 1280px){
-
+   @media screen and (min-width: 1280px){
+    display: grid;
+    grid-template-rows: 9.6rem auto;
     grid-template-areas: 
     "header"
-    "main"
-    "footer";
-    grid-template-rows: 10.4rem auto 7.7rem;
+    "main";
+    flex-direction: column;
+    align-items: center;
 
     > nav {
+      grid-area: nav;
       display: none;
     }
 
@@ -81,9 +78,10 @@ export const Container = styled.div`
       display: flex;
     }
 
-    > main{
+    > main {
       grid-area: main;
-      height: 65rem;
+      display: flex;
+
     }
 
     > main a {
@@ -94,16 +92,13 @@ export const Container = styled.div`
       margin-left: 12.2rem;
    }
 
-   > footer {
-    grid-area: footer;
-   }
   }
 
 `;
 
 export const Form = styled.div`
   width: 31.6rem;
-  height: 70%;
+
   border: 1px solid blue;
 
   display: flex;
@@ -243,4 +238,4 @@ export const Form = styled.div`
     }
 
   }
-`;
+`; 

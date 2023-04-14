@@ -43,50 +43,51 @@ export function MealDetails() {
       <Header/>
         <main>
 
-          <ButtonBack
-            type="button"
-            to="/"
-            title="Voltar"
-          />
-           <Form>
-              <div id="menu">
-                  <img 
-                    src={`${api.defaults.baseURL}/files/${meal.image}`} 
-                  />
-                  
-                  <div className="content"> 
-                    <div className="mealData">
-                      <h2>{meal.title}</h2>
-                      <span>{meal.description}</span>         
-                    </div>   
+            <ButtonBack
+              type="button"
+              to="/"
+              title="Voltar"
+            />
+             <Form>
+                <div id="menu">
+                    <img 
+                      src={`${api.defaults.baseURL}/files/${meal.image}`} 
+                    />
+                    
+                    <div className="content"> 
+                      <div className="mealData">
+                        <h2>{meal.title}</h2>
+                        <span>{meal.description}</span>         
+                      </div>   
 
-                    {
-                      meal.ingredients && 
-                        <div className="tags">
-                          {
-                            meal.ingredients.map(ingredient => (
-                              <Tag
-                                key={String(ingredient.id)}
-                                title={ingredient.name}
-                              />
-                            ))
-                          }                 
-                        </div>
-                    } 
+                      {
+                        meal.ingredients && 
+                          <div className="tags">
+                            {
+                              meal.ingredients.map(ingredient => (
+                                <Tag
+                                  key={String(ingredient.id)}
+                                  title={ingredient.name}
+                                />
+                              ))
+                            }                 
+                          </div>
+                      } 
 
-                    <div className="buttons">
-                      <ButtonAddRemove/>
-                      <Button 
-                        type="text"
-                        icon={receiptIcon}
-                        title="Incluir"
-                      
-                      />
+                      <div className="buttons">
+                        <ButtonAddRemove/>
+                        <Button 
+                          type="text"
+                          icon={receiptIcon}
+                          title="Incluir"
+                        
+                        />
+                      </div>
+
                     </div>
+              </div>  
+            </Form>
 
-                  </div>
-            </div>  
-          </Form>
         </main> 
       <Footer/>
     </Container>
