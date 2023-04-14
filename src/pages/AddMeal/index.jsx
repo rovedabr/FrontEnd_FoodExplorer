@@ -29,7 +29,7 @@ export function AddMeal() {
   const [ category, setCategory ] = useState("")
   const [ description, setDescription ] = useState("");
   const [ ingredients, setIngredients ] = useState([]);
-  const [ newIngredient, setNewIngredient ] = useState("");
+  const [ newIngredient, setNewIngredient ] = useState([]);
 
   function handleAddIngredient () {
     setIngredients(prevState => [...prevState, newIngredient])

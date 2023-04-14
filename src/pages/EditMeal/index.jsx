@@ -45,6 +45,18 @@ export function EditMeal() {
     setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted))
   }
 
+  async function deleteMeal() {
+    var deleteMeal = confirm("Realmente deseja excluir este prato?")
+    if( deleteMeal === true) {
+      await api.delete(`/meals/${params.id}`)
+      alert("O prato foi excluído com sucesso!")
+      navigate(-1)
+    } else {
+      alert("Você não excluiu o prato.")
+      navigate(-1)
+    }
+  }
+
   async function handleUpdateMeal() {
 
     if (!title) {
@@ -72,25 +84,26 @@ export function EditMeal() {
     formData.append("price", price)
     ingredients.map(ingredient => formData.append("ingredients", ingredient))
 
+
     await api.put(`/meals/${params.id}`, formData)
       .then(() => {
-        alert("Parto atualizado com sucesso!")
+        alert("Prato atualizado com sucesso!")
       })
       .catch(error => {
         if (error.message) {
-          alert(error.message.data.message)
+          alert(error.response.data.message)
         } else {
           alert("Não foi possível atualizar o prato")
         }
       })
-  }
+    
+    }
 
   useEffect(() => {
     async function fetchEditMeal() {
       try {
         const response = await api.get(`/meals/${params.id}`)
         setMeal(response.data)
-        console.log(response.data) //! remover depois
         const { title, category, description, price, ingredients } = response.data;
         setTitle(title)
         setCategory(category)
@@ -151,14 +164,14 @@ export function EditMeal() {
                                     <NoteItem className="ingredientsInMeal"
                                       key={String(index)}
                                       value={ingredient}
-                                      onChange={e => setNewIngredient(e.target.value)}
                                       onClick={() => handleRemoveIngredient(ingredient)}
                                     />   
                                 ))
                             }
+
                               <NoteItem className="newIngredients"
                                 isNew
-                                placeholder="new ingredient"  
+                                placeholder="ingrediente"  
                                 value={newIngredient}
                                 onChange={e => setNewIngredient(e.target.value)}
                                 onClick={handleAddIngredient}
@@ -186,7 +199,7 @@ export function EditMeal() {
                 </div>
 
                 <div className="buttons">
-                  <Button title="Excluir prato"/>
+                  <Button title="Excluir prato" onClick={deleteMeal}/>
                   <Button title="Salvar alterações" onClick={handleUpdateMeal}/>
                 </div>
               </Form>
