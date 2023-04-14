@@ -1,7 +1,9 @@
 import { Container, Form } from "./styles";
+
 import { useState, useEffect } from "react";
-import { useAuth } from "../../hooks/auth";
 import { useParams } from "react-router-dom";
+
+import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 
 import { Navbar } from "../../components/NavBar"
@@ -13,8 +15,6 @@ import { ButtonAddRemove } from "../../components/ButtonAddRemove";
 import { ButtonBack } from "../../components/ButtonBack";
 
 import receiptIcon from "../../assets/Icons/Receipt.svg"
-import caretLeftIcon from "../../assets/Icons/CaretLeft.svg"
-import saladaRavanello from "../../assets/meals/saladaRavanello.png"
 
 export function MealDetails() {
   const { user } = useAuth()
@@ -23,7 +23,7 @@ export function MealDetails() {
   const params = useParams()
 
   useEffect(() => {
-    async function fetchMeal() {
+    async function fetchMealDetail() {
       try {
         const response = await api.get(`/meals/${params.id}`)
         setMeal(response.data)
@@ -31,11 +31,8 @@ export function MealDetails() {
         alert("Não foi possível buscar as informações")
       }
     }
-    fetchMeal();
+    fetchMealDetail();
   }, [])
-
-
-  console.log(meal)
 
   return(
     <Container>

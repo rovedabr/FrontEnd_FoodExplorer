@@ -61,52 +61,53 @@ export function EditMeal() {
       return alert("Você deixou um ingrediente preenchido sem adicionar, clique (+) para adicionar ou remova o mesmo para continuar.")
     }
 
-    const formData = new FormData()
+    // const formData = new FormData()
 
-    formData.append("title", title)
-    formData.append("image", image)
-    formData.append("category", category)
-    formData.append("description", description)
-    formData.append("price", price)
-    ingredients.map(ingredient => formData.append("ingredients", ingredient))
+    // formData.append("title", title)
+    // formData.append("image", image)
+    // formData.append("category", category)
+    // formData.append("description", description)
+    // formData.append("price", price)
+    // ingredients.map(ingredient => formData.append("ingredients", ingredient))
 
-    await api.put(`/meals/${params.id}`, formData)
-      .then(() => {
-        alert("Parto atualizado com sucesso!")
-      })
-      .catch(error => {
-        if (error.message) {
-          alert(error.message.data.message)
-        } else {
-          alert("Não foi possível atualizar o prato")
-        }
-      })
+    // await api.put(`/meals/${params.id}`, formData)
+    //   .then(() => {
+    //     alert("Parto atualizado com sucesso!")
+    //   })
+    //   .catch(error => {
+    //     if (error.message) {
+    //       alert(error.message.data.message)
+    //     } else {
+    //       alert("Não foi possível atualizar o prato")
+    //     }
+    //   })
 
 
-  useEffect(() => {
-    async function fetchMeal() {
-      try {
-        const response = await api.get(`/meals/${params.id}`)
-        setMeal(response.data)
-        const { title, category, description, price, ingredients } = response.data;
-        setTitle(title)
-        setCategory(category)
-        setDescription(description)
-        setPrice(price)
-        setIngredients(ingredients.map(ingredient => ingredient.name))
-      } catch (error) {
-        alert("Não foi possível buscar as informações")
-      }
-    }
-    fetchMeal();
-  }, [])
+  // useEffect(() => {
+  //   async function fetchEditMeal() {
+  //     try {
+  //       const response = await api.get(`/meals/${params.id}`)
+  //       setMeal(response.data)
+  //       console.log(response.data)
+  //       const { title, category, description, price, ingredients } = response.data;
+  //       setTitle(title)
+  //       setCategory(category)
+  //       setDescription(description)
+  //       setPrice(price)
+  //       setIngredients(ingredients.map(ingredient => ingredient.name))
+  //     } catch (error) {
+  //       alert("Não foi possível buscar as informações")
+  //     }
+  //   }
+  //   fetchEditMeal();
+  // }, [])
 
 
   return (
     <Container>
       <AdminNavbar/>
       <AdminHeader/> 
-        { isAdmin === 1 ?        
+        {/* { isAdmin === 1 ?        
             <main>
                 <ButtonBack
                   to="/"
@@ -127,14 +128,14 @@ export function EditMeal() {
                     type="text"
                     label="Nome" 
                     placeholder="Ex.: Salada Ceasar"
-                    value={title}
+                    // value={title}
                     onChange={e => setTitle(e.target.value)}                  
                   />
                   <Select 
                     type="text"
                     label="Categoria" 
                     placeholder="Selecione uma categoria" 
-                    value={category}
+                    // value={category}
                     onChange={e => setCategory(e.target.value)}                  
                   />"text"
                 </div>
@@ -148,7 +149,7 @@ export function EditMeal() {
                           ingredients.map((ingredient, index) => (
                             <NoteItem
                               key={String(index)}
-                              value={ingredient}
+                              // value={ingredient}
                               onChange={e => setNewIngredient(e.target.value)}
                               onClick={() => handleRemoveIngredient(ingredient)}
                             />                            
@@ -161,7 +162,7 @@ export function EditMeal() {
                     id="price" 
                     label="Preço" 
                     placeholder="R$ 00,00"
-                    value={price}              
+                    // value={price}              
                     onChange={e => setPrice(e.target.value)}
                   />
                 </div>
@@ -171,7 +172,7 @@ export function EditMeal() {
                   <TextArea
                     rows="100"
                     placeholder="A salada Caesar é uma opção refrescante para o verão"
-                    value={description}
+                    // value={description}
                     onChange={e => setDescription(e.target.value)}
                   />
                 </div>
@@ -182,8 +183,8 @@ export function EditMeal() {
                 </div>
               </Form>
             </main>     
-          : <p>Acesso Negado</p>
-        } 
+          : <p>Acesso Negado</p> */}
+        {/* }  */}
       <Footer/>
     </Container>
   )

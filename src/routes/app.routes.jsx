@@ -1,7 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import { AdminMenu } from "../pages/AdminMenu";
-
 import { Home } from "../pages/Home";
 import { Menu } from "../pages/Menu";
 import { AddMeal } from "../pages/AddMeal";
@@ -16,9 +14,6 @@ export function AppRoutes() {
       <Route path="/addmeal" element={<AddMeal/>} />
       <Route path="/editmeal/:id" element={<EditMeal/>} />
       <Route path="/mealdetails/:id" element={<MealDetails/>} />
-
-
-      <Route path="/adminmenu" element={<AdminMenu/>} />
 
     </Routes>
   )

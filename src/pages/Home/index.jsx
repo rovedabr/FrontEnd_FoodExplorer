@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import heart from "../../assets/Icons/heart.svg"
 import pencil from "../../assets/Icons/pencil.svg"
@@ -24,7 +24,6 @@ import { Button } from "../../components/Button"
 import { Banner } from "../../components/Banner"
 import { Section } from "../../components/Section"
 import { ButtonAddRemove } from "../../components/ButtonAddRemove"
-import { Carousel } from "../../components/Carousel";
 
 
 export function Home() {
@@ -32,11 +31,14 @@ export function Home() {
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
   
   const [ meals, setMeals ] = useState([])
+  const params = useParams();
 
   const navigate = useNavigate();
 
   function editMeal() {
-    return navigate(`/editmeal/${params.id}`)
+    const params = useParams();
+    return alert("teste")
+    return  
   }
 
   useEffect(() => {
@@ -62,18 +64,44 @@ export function Home() {
       className="mainMeal"
       title="Refeições"
     >
-        <Carousel>        
+      <Swiper
+        className="Carousel"        
+        slidesPerView={1.6}
+        spaceBetween={10}
+        loop={false}
+        navigation={true}
+        mousewheel={true}
+        modules={[Navigation]}
+        breakpoints={{          
+          480: { 
+            width: 480,
+            slidesPerView: 2.1,
+            spaceBetween: 15
+          },          
+          768: { 
+            width: 768,
+            slidesPerView: 3.2,
+            spaceBetween: 25
+          },
+          1280: { 
+            width: 1280,
+            slidesPerView: 4,
+            spaceBetween: 350
+          },          
+        }}
+      >
           {meals
             .filter(meal => meal.category === "Refeições") 
             .map( meal => (
+              <SwiperSlide>
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                    <input type="image" src={pencil} alt="ícone de um lápis"onClick={editMeal} />  
+                    <input type="image" src={pencil} alt="ícone de um lápis" />
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
                 <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                <Link><h2>{meal.title} &gt;</h2></Link>
+                <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
                 <p>{meal.description}</p>
                 <span>{meal.price}</span>    
                 { isAdmin === 1 ? 
@@ -84,28 +112,55 @@ export function Home() {
                       <Button title="incluir"/>
                     </div>          
                 } 
-              </Card>               
+              </Card>
+              </SwiperSlide>               
             ))
           } 
-        </Carousel>
-    </Section>
-  //*--------------------------------------------------------
-    <Section
-        className="mainMeal"
-        title="Sobremesas"
+        </Swiper>
+      </Section>
+//*--------------------------------------------------------
+<Section
+      className="mainMeal"
+      title="Sobremesas"
+    >
+      <Swiper
+        className="Carousel"        
+        slidesPerView={1.6}
+        spaceBetween={10}
+        loop={false}
+        navigation={true}
+        mousewheel={true}
+        modules={[Navigation]}
+        breakpoints={{          
+          480: { 
+            width: 480,
+            slidesPerView: 2.1,
+            spaceBetween: 15
+          },          
+          768: { 
+            width: 768,
+            slidesPerView: 3.2,
+            spaceBetween: 25
+          },
+          1280: { 
+            width: 1280,
+            slidesPerView: 4,
+            spaceBetween: 350
+          },          
+        }}
       >
-        <Carousel>       
           {meals
             .filter(meal => meal.category === "Sobremesas") 
             .map( meal => (
+              <SwiperSlide>
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                    <input type="image" src={pencil} alt="ícone de um lápis"/>  
+                    <input type="image" src={pencil} alt="ícone de um lápis" />
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
                 <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                <Link to={`/mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
+                <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
                 <p>{meal.description}</p>
                 <span>{meal.price}</span>    
                 { isAdmin === 1 ? 
@@ -116,29 +171,56 @@ export function Home() {
                       <Button title="incluir"/>
                     </div>          
                 } 
-              </Card>               
+              </Card>
+              </SwiperSlide>               
             ))
           } 
-        </Carousel>
-    </Section>
-  {/*--------------------------------------------------------*/}
+        </Swiper>
+      </Section>
+  //*-------------------------------------------------------- 
   //*--------------------------------------------------------
-    <Section
-        className="mainMeal"
-        title="Bebidas"
+  <Section
+      className="mainMeal"
+      title="Bebidas"
+    >
+      <Swiper
+        className="Carousel"        
+        slidesPerView={1.6}
+        spaceBetween={10}
+        loop={false}
+        navigation={true}
+        mousewheel={true}
+        modules={[Navigation]}
+        breakpoints={{          
+          480: { 
+            width: 480,
+            slidesPerView: 2.1,
+            spaceBetween: 15
+          },          
+          768: { 
+            width: 768,
+            slidesPerView: 3.2,
+            spaceBetween: 25
+          },
+          1280: { 
+            width: 1280,
+            slidesPerView: 4,
+            spaceBetween: 350
+          },          
+        }}
       >
-        <Carousel>     
           {meals
             .filter(meal => meal.category === "Bebidas") 
             .map( meal => (
+              <SwiperSlide>
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                    <input type="image" src={pencil} alt="ícone de um lápis"/>  
+                    <input type="image" src={pencil} alt="ícone de um lápis" />
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
                 <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                <Link><h2>{meal.title} &gt;</h2></Link>
+                <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
                 <p>{meal.description}</p>
                 <span>{meal.price}</span>    
                 { isAdmin === 1 ? 
@@ -149,11 +231,12 @@ export function Home() {
                       <Button title="incluir"/>
                     </div>          
                 } 
-              </Card>               
+              </Card>
+              </SwiperSlide>               
             ))
           } 
-        </Carousel>
-    </Section>
+        </Swiper>
+      </Section>
   {/*--------------------------------------------------------*/}
       <Footer/> 
     </Container>

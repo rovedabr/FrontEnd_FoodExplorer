@@ -5,15 +5,18 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 11.4rem auto;
+  grid-template-rows: 11.4rem auto auto;
   grid-template-areas: 
     "nav"
-    "main";
+    "main"
+  ;
 
   flex-direction: column;
   align-items: center;
   
   > main {
+    width: 100%;
+    height: 100vh;
     grid-area: main;
 
     display: flex;
@@ -98,8 +101,7 @@ export const Container = styled.div`
 
 export const Form = styled.div`
   width: 31.6rem;
-
-  border: 1px solid blue;
+  height: 72.9rem;
 
   display: flex;
   align-items: center;
