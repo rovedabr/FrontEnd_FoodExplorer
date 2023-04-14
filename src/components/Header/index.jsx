@@ -26,12 +26,12 @@ export function Header() {
 
   useEffect(() => {
     async function fetchSearchMealsAndIngredients() {
-      const response = await api.get(`/meals?title=${search}&&/ingredients?name=${search}`);
+      const response = await api.get(`/meals?title=${search}`); //!&&/ingredients?name=${search}
       setMeals(response.data)
       console.log(response.data)
     }
-    fetchSearchMealsAndIngredients([search]);
-  },[]);
+    fetchSearchMealsAndIngredients();
+  },[search]);
 
   console.log(search, setSearch)
 

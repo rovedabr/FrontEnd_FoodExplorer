@@ -6,8 +6,6 @@ import { useState } from "react";
 export function ButtonAddRemove({ icon: Icon,  ...rest}) {
   const [ amount, setAmount ] = useState(Number(0))
 
-  console.log(amount)
-
   function handleUpAmount() {
     setAmount(prevState => prevState +1)
   }

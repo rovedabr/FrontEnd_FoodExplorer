@@ -35,7 +35,6 @@ export function Home() {
   const [ title, setTitle ] = useState([])
   const [ order, setOrder ] = useState([])
 
-
   const params = useParams();
   const navigate = useNavigate();
 
@@ -44,6 +43,13 @@ export function Home() {
     return alert("teste")
     return  
   }
+
+  function includeAmount() {
+    var totalOrder = 0
+    console.log(order)
+
+  }
+  console.log(setOrder)
 
   useEffect(() => {
     async function fetchMeals() {
@@ -72,7 +78,7 @@ export function Home() {
         className="Carousel"        
         slidesPerView={1.6}
         spaceBetween={10}
-        loop={false}
+        loop={true}
         navigation={true}
         mousewheel={true}
         modules={[Navigation]}
@@ -89,16 +95,16 @@ export function Home() {
           },
           1280: { 
             width: 1280,
-            slidesPerView: 4,
-            spaceBetween: 350
+            slidesPerView: 4.2,
+            spaceBetween: 250
           },          
         }}
       >
           {meals
             .filter(meal => meal.category === "Refeições") 
             .map( meal => (
-              <SwiperSlide>
-                <Card key={String(meal.id)} id={meal.id} > 
+              <SwiperSlide key={String(meal.id)} >
+                <Card id={meal.id}> 
                   { isAdmin === 1 ? 
                       <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
                     : 
@@ -107,13 +113,13 @@ export function Home() {
                   <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
                   <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
                   <p>{meal.description}</p>
-                  <span>{meal.price}</span>    
+                  <span>R$ {meal.price}</span>    
                   { isAdmin === 1 ? 
                       <div className="hide"></div> 
                     :
                       <div className="buttons">
-                        <ButtonAddRemove/>
-                        <Button title="incluir"/>
+                        <ButtonAddRemove order={setOrder}/>
+                        <Button title="incluir" onClick={includeAmount}/>
                       </div>          
                   } 
                 </Card>
@@ -131,7 +137,7 @@ export function Home() {
         className="Carousel"        
         slidesPerView={1.6}
         spaceBetween={10}
-        loop={false}
+        loop={true}
         navigation={true}
         mousewheel={true}
         modules={[Navigation]}
@@ -148,16 +154,16 @@ export function Home() {
           },
           1280: { 
             width: 1280,
-            slidesPerView: 4,
-            spaceBetween: 350
+            slidesPerView: 4.2,
+            spaceBetween: 250
           },          
         }}
       >
           {meals
             .filter(meal => meal.category === "Sobremesas") 
             .map( meal => (
-              <SwiperSlide>
-                <Card key={String(meal.id)} id={meal.id}> 
+              <SwiperSlide key={String(meal.id)} >
+                <Card id={meal.id}> 
                   { isAdmin === 1 ? 
                       <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
                     : 
@@ -166,13 +172,13 @@ export function Home() {
                   <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
                   <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
                   <p>{meal.description}</p>
-                  <span>{meal.price}</span>    
+                  <span>R$ {meal.price}</span>    
                   { isAdmin === 1 ? 
                       <div className="hide"></div> 
                     :
                       <div className="buttons">
-                        <ButtonAddRemove/>
-                        <Button title="incluir"/>
+                        <ButtonAddRemove order={setOrder}/>
+                        <Button title="incluir" onClick={includeAmount}/>
                       </div>          
                   } 
                 </Card>
@@ -191,7 +197,7 @@ export function Home() {
         className="Carousel"        
         slidesPerView={1.6}
         spaceBetween={10}
-        loop={false}
+        loop={true}
         navigation={true}
         mousewheel={true}
         modules={[Navigation]}
@@ -208,16 +214,16 @@ export function Home() {
           },
           1280: { 
             width: 1280,
-            slidesPerView: 4,
-            spaceBetween: 350
+            slidesPerView: 4.2,
+            spaceBetween: 250
           },          
         }}
       >
           {meals
             .filter(meal => meal.category === "Bebidas") 
             .map( meal => (
-              <SwiperSlide>
-                <Card key={String(meal.id)} id={meal.id}> 
+              <SwiperSlide key={String(meal.id)}>
+                <Card  id={meal.id}> 
                   { isAdmin === 1 ? 
                       <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
                     : 
@@ -226,13 +232,13 @@ export function Home() {
                   <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
                   <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
                   <p>{meal.description}</p>
-                  <span>{meal.price}</span>    
+                  <span>R$ {meal.price}</span>    
                   { isAdmin === 1 ? 
                       <div className="hide"></div> 
                     :
                       <div className="buttons">
-                        <ButtonAddRemove/>
-                        <Button title="incluir"/>
+                        <ButtonAddRemove order={setOrder}/>
+                        <Button title="incluir" onClick={includeAmount}/>
                       </div>          
                   } 
                 </Card>
