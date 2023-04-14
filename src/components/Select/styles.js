@@ -25,7 +25,7 @@ font-weight: 400;
 }
 
 > div select {
-  width: 95%;
+  width: 90%;
   height: 4.8rem;
 
   display: flex;

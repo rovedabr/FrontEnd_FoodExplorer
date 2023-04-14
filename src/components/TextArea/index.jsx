@@ -1,12 +1,13 @@
 import { Container } from "./styles";
 
-export function TextArea({ value, ...rest}) {
+export function TextArea({ value, text, ...rest}) {
   return (
     <Container
       {...rest}
       rows="100"
+      value={value}
       >
-      {value}
+      {text}
     </Container>
   )
 }

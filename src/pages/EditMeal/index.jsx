@@ -1,7 +1,7 @@
 import { Container, Form } from "./styles";
 import { useAuth } from "../../hooks/auth";
 
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { FiUpload} from "react-icons/fi";
@@ -16,11 +16,13 @@ import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
 import { Select } from "../../components/Select";
 import { Footer } from "../../components/Footer";
+
 import { api } from "../../services/api";
 
 
 export function EditMeal() {
   const { user } = useAuth()
+  const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true) 
   const [ meal, setMeal ] = useState([])
 
   const [ image, setImage ] = useState("")
@@ -60,54 +62,53 @@ export function EditMeal() {
      if (newIngredient) {
       return alert("Você deixou um ingrediente preenchido sem adicionar, clique (+) para adicionar ou remova o mesmo para continuar.")
     }
+  
+    const formData = new FormData()
 
-    // const formData = new FormData()
+    formData.append("title", title)
+    formData.append("image", image)
+    formData.append("category", category)
+    formData.append("description", description)
+    formData.append("price", price)
+    ingredients.map(ingredient => formData.append("ingredients", ingredient))
 
-    // formData.append("title", title)
-    // formData.append("image", image)
-    // formData.append("category", category)
-    // formData.append("description", description)
-    // formData.append("price", price)
-    // ingredients.map(ingredient => formData.append("ingredients", ingredient))
+    await api.put(`/meals/${params.id}`, formData)
+      .then(() => {
+        alert("Parto atualizado com sucesso!")
+      })
+      .catch(error => {
+        if (error.message) {
+          alert(error.message.data.message)
+        } else {
+          alert("Não foi possível atualizar o prato")
+        }
+      })
+  }
 
-    // await api.put(`/meals/${params.id}`, formData)
-    //   .then(() => {
-    //     alert("Parto atualizado com sucesso!")
-    //   })
-    //   .catch(error => {
-    //     if (error.message) {
-    //       alert(error.message.data.message)
-    //     } else {
-    //       alert("Não foi possível atualizar o prato")
-    //     }
-    //   })
-
-
-  // useEffect(() => {
-  //   async function fetchEditMeal() {
-  //     try {
-  //       const response = await api.get(`/meals/${params.id}`)
-  //       setMeal(response.data)
-  //       console.log(response.data)
-  //       const { title, category, description, price, ingredients } = response.data;
-  //       setTitle(title)
-  //       setCategory(category)
-  //       setDescription(description)
-  //       setPrice(price)
-  //       setIngredients(ingredients.map(ingredient => ingredient.name))
-  //     } catch (error) {
-  //       alert("Não foi possível buscar as informações")
-  //     }
-  //   }
-  //   fetchEditMeal();
-  // }, [])
-
+  useEffect(() => {
+    async function fetchEditMeal() {
+      try {
+        const response = await api.get(`/meals/${params.id}`)
+        setMeal(response.data)
+        console.log(response.data) //! remover depois
+        const { title, category, description, price, ingredients } = response.data;
+        setTitle(title)
+        setCategory(category)
+        setDescription(description)
+        setPrice(price)
+        setIngredients(ingredients.map(ingredient => ingredient.name))
+      } catch (error) {
+        alert("Não foi possível buscar as informações")
+      }
+    }
+    fetchEditMeal();
+  }, [])
 
   return (
     <Container>
       <AdminNavbar/>
       <AdminHeader/> 
-        {/* { isAdmin === 1 ?        
+  
             <main>
                 <ButtonBack
                   to="/"
@@ -128,43 +129,50 @@ export function EditMeal() {
                     type="text"
                     label="Nome" 
                     placeholder="Ex.: Salada Ceasar"
-                    // value={title}
+                    value={title}
                     onChange={e => setTitle(e.target.value)}                  
                   />
                   <Select 
                     type="text"
                     label="Categoria" 
                     placeholder="Selecione uma categoria" 
-                    // value={category}
+                    value={category}
                     onChange={e => setCategory(e.target.value)}                  
-                  />"text"
+                  />
                 </div>
 
                 <div className="form2">
                   <div className="dish">
                       <label htmlFor="noteItem">Ingredientes</label>
-                    <div className="ingredients">
-                      { 
-                        meal.ingredients && 
-                          ingredients.map((ingredient, index) => (
-                            <NoteItem
-                              key={String(index)}
-                              // value={ingredient}
-                              onChange={e => setNewIngredient(e.target.value)}
-                              onClick={() => handleRemoveIngredient(ingredient)}
-                            />                            
-                          ))
-                      }                
-                    </div>
+                        <div className="ingredients">                     
+                            {
+                              meal.ingredients && 
+                                ingredients.map((ingredient, index) => (
+                                    <NoteItem className="ingredientsInMeal"
+                                      key={String(index)}
+                                      value={ingredient}
+                                      onChange={e => setNewIngredient(e.target.value)}
+                                      onClick={() => handleRemoveIngredient(ingredient)}
+                                    />   
+                                ))
+                            }
+                              <NoteItem className="newIngredients"
+                                isNew
+                                placeholder="new ingredient"  
+                                value={newIngredient}
+                                onChange={e => setNewIngredient(e.target.value)}
+                                onClick={handleAddIngredient}
+                              />                                                
+                        </div>
                   </div>
-                  <InputLabel 
-                    type="text"
-                    id="price" 
-                    label="Preço" 
-                    placeholder="R$ 00,00"
-                    // value={price}              
-                    onChange={e => setPrice(e.target.value)}
-                  />
+                    <InputLabel 
+                      type="text"
+                      id="price" 
+                      label="Preço" 
+                      placeholder="R$ 00,00"
+                      value={price}              
+                      onChange={e => setPrice(e.target.value)}
+                    />
                 </div>
 
                 <div className="description">
@@ -172,21 +180,21 @@ export function EditMeal() {
                   <TextArea
                     rows="100"
                     placeholder="A salada Caesar é uma opção refrescante para o verão"
-                    // value={description}
+                    value={description}
                     onChange={e => setDescription(e.target.value)}
                   />
                 </div>
 
                 <div className="buttons">
                   <Button title="Excluir prato"/>
-                  <Button title="Salvar alterações"/>
+                  <Button title="Salvar alterações" onClick={handleUpdateMeal}/>
                 </div>
               </Form>
             </main>     
-          : <p>Acesso Negado</p> */}
-        {/* }  */}
+
+        
       <Footer/>
     </Container>
   )
 }
-}
+

@@ -11,6 +11,8 @@ export const Container = styled.div`
 
   margin-right: 1.6em;
 
+  border: 1px solid blue;
+
   > svg {
     position: relative;
     right: -8rem;
@@ -20,7 +22,7 @@ export const Container = styled.div`
     z-index: 1;
   }
 
-  > div input:nth-child(2) {
+  >div a:first-child {
     width: 2.4rem;
     height: 2.2rem;
 
@@ -38,13 +40,13 @@ export const Container = styled.div`
 
     margin-right: 2.7rem;
 
-    > div input:nth-child(2)  {
+    > div a:first-child  {
       width : 3.4rem;
       height: 3.4rem;
 
       position: relative;
-      right: -12rem;
-      top: -2rem; 
+      right: -12.7rem;
+      top: -1rem; 
     }
 
   }  

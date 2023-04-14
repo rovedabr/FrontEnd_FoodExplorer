@@ -96,7 +96,7 @@ export function Home() {
               <SwiperSlide>
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                    <input type="image" src={pencil} alt="ícone de um lápis" />
+                    <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
@@ -155,7 +155,7 @@ export function Home() {
               <SwiperSlide>
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                    <input type="image" src={pencil} alt="ícone de um lápis" />
+                    <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                
@@ -215,7 +215,7 @@ export function Home() {
               <SwiperSlide>
               <Card key={String(meal.id)} > 
                 { isAdmin === 1 ? 
-                    <input type="image" src={pencil} alt="ícone de um lápis" />
+                    <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
                   : 
                     <input type="image" src={heart} alt="ícone de um coração" />
                 }                                

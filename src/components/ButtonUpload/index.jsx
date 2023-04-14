@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function ButtonUpload({ label, title, input, fileImage, icon:Icon, ...rest}) {
+export function ButtonUpload({ label, title, input, value, fileImage, icon:Icon, ...rest}) {
   return(
     <Container {...rest}>
         <label htmlFor={fileImage}>
@@ -11,6 +11,7 @@ export function ButtonUpload({ label, title, input, fileImage, icon:Icon, ...res
                 type="file" 
                 name="teste"
                 id={fileImage} 
+                value={value}
               />    
             </div>
           </label>        
