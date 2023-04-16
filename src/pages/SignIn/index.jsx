@@ -44,7 +44,7 @@ export function SignIn() {
               ></Input>
             </div>
 
-            <Button title="Entrar" onClick={handleSignIn}/>
+            <Button title="Entrar" onClick={handleSignIn} onkeypress={handleSignIn}/>
             <Link to="/register"> Criar uma conta </Link>  
                   
           </Form>

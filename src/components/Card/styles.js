@@ -11,8 +11,6 @@ export const Container = styled.div`
 
   margin-right: 1.6em;
 
-  border: 1px solid blue;
-
   > svg {
     position: relative;
     right: -8rem;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import heart from "../../assets/Icons/heart.svg"
@@ -34,6 +34,24 @@ export function Home() {
   const [ amount, setAmount ] = useState(Number(0))
   const [ title, setTitle ] = useState([])
   const [ order, setOrder ] = useState([])
+
+  //*-------------------------------------------------------
+  // const [ search, setSearch ] = useState("");
+  // const [ data , setData ] = useState("")
+  // const [ ingredients, setIngredients ] = useState([]);
+
+  // useEffect(() => {
+  //   async function fetchSearchMealsAndIngredients() {
+  //     const response = await api.get(`/meals?title=${search}`); //!&/ingredients?name=${search}
+  //     setMeals(response.data)
+  //     console.log(response.data)
+  //   }
+  //   fetchSearchMealsAndIngredients();
+  // },[search]);
+
+  // // console.log(search, setSearch)
+
+  //*-------------------------------------------------------
 
   const params = useParams();
   const navigate = useNavigate();

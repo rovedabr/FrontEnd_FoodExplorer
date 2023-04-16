@@ -14,28 +14,30 @@ import  brand from "../../assets/brand.png"
 export function Header() {
   const { signOut } = useAuth();
 
-  const [ search, setSearch ] = useState("");
-  const [ data , setData ] = useState("")
-  const [ meals, setMeals ] = useState([]);
-  const [ titles, setTitles ] = useState([])
-  const [ ingredients, setIngredients ] = useState([]);
+  //*=============================================================
 
-  function exit() {
-    signOut()
-    navigate("/")
+  const [ search, setSearch ] = useState("");
+  const [ meals, setMeals ] = useState([])
+  const [ data , setData ] = useState("")
+  const [ ingredients, setIngredients ] = useState([]);
 
   useEffect(() => {
     async function fetchSearchMealsAndIngredients() {
-      const response = await api.get(`/meals?title=${search}`); //!&&/ingredients?name=${search}
+      const response = await api.get(`/meals?title${search}&&/ingredients?name${search}`); //!&/ingredients?name=${search}  meals?title=${search}&&/
       setMeals(response.data)
       console.log(response.data)
     }
     fetchSearchMealsAndIngredients();
   },[search]);
 
-  console.log(search, setSearch)
+  // console.log(search, setSearch)
+
+  //*===============================================================
 
 
+  function exit() {
+    signOut()
+    navigate("/")
   }
  
   return(
