@@ -22,15 +22,25 @@ export function Header() {
   const [ ingredients, setIngredients ] = useState([]);
 
   useEffect(() => {
-    async function fetchSearchMealsAndIngredients() {
-      const response = await api.get(`/meals?title${search}&&/ingredients?name${search}`); //!&/ingredients?name=${search}  meals?title=${search}&&/
+    async function fetchSearchMealsTitles() {
+      const response = await api.get(`/ingredients?name=${search}&/meals/title=${search}`); 
       setMeals(response.data)
       console.log(response.data)
     }
-    fetchSearchMealsAndIngredients();
+    fetchSearchMealsTitles();
   },[search]);
 
-  // console.log(search, setSearch)
+
+  // useEffect(() => {
+  //   async function fetchIngredients() {
+  //     const response = await api.get(`ingredients?name=${search}&/meals?title=${search}`) ///meals?title=${search}&
+  //     setIngredients(response.data)
+  //     console.log(response.data)
+  //   }
+  //   fetchIngredients()
+
+  // },[search])
+
 
   //*===============================================================
 

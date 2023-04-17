@@ -35,10 +35,14 @@ export function Home() {
   const [ title, setTitle ] = useState([])
   const [ order, setOrder ] = useState([])
 
+  //!===================================
+  // const [ ingredients, setIngredients ] = useState([]);
+  // console.log(meals)
+
+
   //*-------------------------------------------------------
   // const [ search, setSearch ] = useState("");
   // const [ data , setData ] = useState("")
-  // const [ ingredients, setIngredients ] = useState([]);
 
   // useEffect(() => {
   //   async function fetchSearchMealsAndIngredients() {
@@ -64,16 +68,15 @@ export function Home() {
 
   function includeAmount() {
     var totalOrder = 0
-    console.log(order)
-
   }
-  console.log(setOrder)
 
   useEffect(() => {
     async function fetchMeals() {
       try {
         const response = await api.get(`/meals`)
         setMeals(response.data)
+        console.log(response.data)
+        console.log(meals)
       } catch (error) {
         alert("Não foi possível buscar as informações")
       }
@@ -136,7 +139,12 @@ export function Home() {
                       <div className="hide"></div> 
                     :
                       <div className="buttons">
-                        <ButtonAddRemove order={setOrder}/>
+                        <ButtonAddRemove 
+                          type="button"
+                          order={setOrder}
+                          onChange={e => setOrder(e.target.value)}
+                        
+                        />
                         <Button title="incluir" onClick={includeAmount}/>
                       </div>          
                   } 
