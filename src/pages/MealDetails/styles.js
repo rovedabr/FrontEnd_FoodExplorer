@@ -5,18 +5,20 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 11.4rem auto auto;
+  grid-template-rows: 11.4rem auto 7.7rem;
   grid-template-areas: 
     "nav"
     "main"
+    "footer"
   ;
 
   flex-direction: column;
   align-items: center;
+
   
   > main {
     width: 100%;
-    height: 100vh;
+    height: 70%;
     grid-area: main;
 
     display: flex;
@@ -33,6 +35,10 @@ export const Container = styled.div`
   > header {
     display: none;
     grid-area: header;
+  }
+
+  > footer {
+    grid-area: footer;
   }
 
 
@@ -64,10 +70,11 @@ export const Container = styled.div`
 
    @media screen and (min-width: 1280px){
     display: grid;
-    grid-template-rows: 9.6rem auto;
+    grid-template-rows: 9.6rem auto 7.7rem;
     grid-template-areas: 
     "header"
-    "main";
+    "main"
+    "footer";
     flex-direction: column;
     align-items: center;
 
@@ -79,6 +86,11 @@ export const Container = styled.div`
     > header {
       grid-area: header;
       display: flex;
+    }
+
+
+    > footer {
+      grid-area: footer;
     }
 
     > main {
