@@ -1,63 +1,56 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { api } from "../services/api";
 
-export const CartContext = createContext({});
+export const CartContext = createContext({}); //https://youtu.be/jo-IV8i5Gdk   https://www.youtube.com/watch?v=tczhRdyj1nM
 
 function CartProvider({ children }) {
-  const [ cartItem, setCartItem ] = useState([]); //item = meal
-  const [ orders, setOrders ] = useState([]);
+  const [ cart, setCart ] = useState([]); //item = meal
 
-  function handleAddItem(data, quantity, image) { //ver data
-    try{
-      const { id, title, price } = data;
-      const order = {od, title, price, quantity }
+  function handleAddMealCart(id, title, image, price, quantity ) { //ver data
+    // const data = { id, title, price, quantity };
+    const newCart = [...cart]
+    const item = newCart.find(meal => meal.id === id)
 
-      const itemIsAdded = cartItem.findIndex(cartItem => cart.id === item.id) //cartItem - Array.id   const orderIndex = cart.findIndex((userOrder) => userOrder.title === order.title);
-    
-    if (itemIsAdded !== -1 ) {
-      var addItem = confirm("Item já adicionado no carrinho, comprar novamente?")
-      if (!addItem) {
-        return
-      } 
-        setCartItem( prevState => {
-          const newState = [...prevState]
-            quantity +=  newState[orderIndex].quantity
-            totalPrice = newState[orderIndex].price
-           return newState
-        })
-    } else {
-        setCartItem(precState => [...precState, order])
-      }
-      alert(`${meals.title} foi adicionado no carrinho`)
-    } catch (error){
-      alert("Não foi possível adicionar o item ao carrinho!")
-    }
+    // setCart([...cart, data])
+    // console.log(data)
 
-  function handleRemoveItemFromCart(deleted) {
-    setCartItem(prevState =>  prevState.filter(item => item.id !== deleted)) // i => i.id !== item.id
+    // const item = newMealsCart.find((meal) => meal.id === id)
+
+    // if (!item) {
+    //   newMealsCart.push({ id: id, quantity: 1})
+    // } else {
+    //   item.quantity = item.quantity + 1
+    // }
+    // setMealsCart(newMealsCart)
   }
 
-  const total = cart.reduce((value, item) => {
-    return value + item.price
-  })
+  function handleRemoveMealFromCart(deleted) {
+    const filteredCart = cart.filter(cartItem => cart.indexOf(cartItem !== deleted)
+    ) // i => i.id !== item.id
+    setCart(filteredCart)
+  }
+
+  function clearCart() {
+    localStorage.removeItem(`@foodexplorer:cart`)
+    setCart([])
+  }
+
 
   useEffect(() => {
     localStorage.setItem(`@foodexplorer:cart`, JSON.stringify(cart))
   }, [cart])
-
+  
  return(
   <CartContext.Provider value={{
     cart,
-    handleAddItem,
-    handleRemoveItemFromCart,
-    total,
-    orders,
-    setOrders
+    handleAddMealCart,
+    handleRemoveMealFromCart,
+    clearCart,
   }}>
     {children}
   </CartContext.Provider>
  )
-}}
+}
 
 function useCart() {
   const context = useContext(CartContext)

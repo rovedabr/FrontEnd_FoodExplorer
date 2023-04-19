@@ -3,19 +3,22 @@ import minusIcon from "../../assets/Icons/Minus.svg"
 import plusIcon from "../../assets/Icons/Plus.svg"
 import { useState } from "react";
 
+import { useCart } from "../../hooks/cart";
+
 export function ButtonAddRemove({ icon: Icon,  ...rest}) {
-  const [ amount, setAmount ] = useState(Number(0))
+  const [ quantity, setQuantity ] = useState(Number(0))
+  console.log(quantity)
   const [ price, setPrice] = useState(Number(""))
   
-  function handleUpAmount() {
-    setAmount(prevState => prevState +1)
+  function handleUpQuantity() {
+    setQuantity(prevState => prevState +1)
   }
 
-  function handleDownAmount() {
-    if (amount <= 0 ){
+  function handleDownQuantity() {
+    if (quantity <= 0 ){
       alert("Para remover este item é necessário já tê-lo adicionado")
     } else {
-      setAmount(prevState => prevState -1)
+      setQuantity(prevState => prevState -1)
     }
   }
 
@@ -25,14 +28,14 @@ export function ButtonAddRemove({ icon: Icon,  ...rest}) {
         type="image" 
         id="add" 
         src={minusIcon}
-        onClick={handleDownAmount}
+        onClick={handleDownQuantity}
       ></input>
-      <span>{amount}</span>
+      <span>{quantity}</span>
       <input 
         type="image" 
         id="remove"
         src={plusIcon}
-        onClick={handleUpAmount}
+        onClick={handleUpQuantity}
       />      
     </Container>
   )

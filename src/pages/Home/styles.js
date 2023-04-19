@@ -34,6 +34,27 @@ export const Container = styled.div`
     height: 7.7rem;
   }
 
+  > div .buttons #addRemove {
+  width: 2.4rem;
+  height: 2.4rem;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+
+}
+
+  > div .buttons #addRemove #add {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  margin-left: 2.4rem;
+  border: 1px solid red;
+}
+
+
   .swiper-slide {
     width: 100%;
     display: flex;
