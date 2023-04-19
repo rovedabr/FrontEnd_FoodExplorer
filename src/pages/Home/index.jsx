@@ -50,18 +50,6 @@ export function Home() {
   const [ search, setSearch ] = useState("");
   const [ price, setPrice ] = useState("")
 
-  function handleUpQuantity() {
-    setQuantity(prevState => prevState +1)
-  }
-
-  function handleDownQuantity() {
-    if (quantity <= 0 ){
-      alert("Para remover este item é necessário já tê-lo adicionado")
-    } else {
-      setQuantity(prevState => prevState -1)
-    }
-  }
-
 
   useEffect(() => {
     async function fetchSearchMealsTitles() {
@@ -96,197 +84,129 @@ export function Home() {
     
        <Banner/>
 //*--------------------------------------------------------
-        {/* <Section
-          className="mainMeal"
-          title="Refeições"
+<Section
+        className="mainMeal"
+        title="Refeições"
+      >
+        <Swiper
+          className="Carousel"        
+          slidesPerView={1.6}
+          spaceBetween={10}
+          loop={true}
+          navigation={true}
+          mousewheel={true}
+          modules={[Navigation]}
+          breakpoints={{          
+            480: { 
+              width: 480,
+              slidesPerView: 2.1,
+              spaceBetween: 15
+            },          
+            768: { 
+              width: 768,
+              slidesPerView: 3.2,
+              spaceBetween: 25
+            },
+            1280: { 
+              width: 1280,
+              slidesPerView: 4.2,
+              spaceBetween: 250
+            },          
+        }}
         >
-          {
-            meals.filter(meal => meal.category === "Refeições").length > 0 &&
-              <Swiper
-                className="Carousel"        
-                slidesPerView={1.6}
-                spaceBetween={10}
-                loop={true}
-                navigation={true}
-                mousewheel={true}
-                modules={[Navigation]}
-                breakpoints={{          
-                  480: { 
-                    width: 480,
-                    slidesPerView: 2.1,
-                    spaceBetween: 15
-                  },          
-                  768: { 
-                    width: 768,
-                    slidesPerView: 3.2,
-                    spaceBetween: 25
-                  },
-                  1280: { 
-                    width: 1280,
-                    slidesPerView: 4.2,
-                    spaceBetween: 250
-                  },          
-                }}
-              >
-                { meals
-                  .filter(meal => meal.category === "Refeições")
-                  .map( meal => (
-                    <SwiperSlide key={String(meal.id)} >
-                      <Card id={meal.id}> 
-                        { isAdmin === 1 ? 
-                            <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
-                          : 
-                            <Link><input type="image" src={heart} alt="ícone de um coração" /></Link>
-                        }                                
-                        <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                        <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
-                        <p>{meal.description}</p>
-                        <span>R$ {meal.price}</span>    
-                        { isAdmin === 1 ? 
-                            <div className="hide"></div> 
-                          :
-                            <div className="buttons">
-                              <ButtonAddRemove onChange={e => setQuantity(e.target.value)}/>
-
-                              <Button title="incluir" onClick={handleAddMealCart(quantity)}/>
-                            </div>          
-                        } 
-                      </Card>
-                  </SwiperSlide>               
-                ))
-              } 
-            </Swiper>
-
-          }
-
-        </Section> */}
+          { meals
+            .filter(meal => meal.category === "Refeições") 
+            .map( meal => (
+              <SwiperSlide key={String(meal.id)} >
+                <Card meal={meal}/> 
+              </SwiperSlide>               
+            ))
+          } 
+        </Swiper>      
+      </Section>
 //*--------------------------------------------------------
       <Section
         className="mainMeal"
         title="Sobremesas"
-      >{
+      >
         <Swiper
-            className="Carousel"        
-            slidesPerView={1.6}
-            spaceBetween={10}
-            loop={true}
-            navigation={true}
-            mousewheel={true}
-            modules={[Navigation]}
-            breakpoints={{          
-              480: { 
-                width: 480,
-                slidesPerView: 2.1,
-                spaceBetween: 15
-              },          
-              768: { 
-                width: 768,
-                slidesPerView: 3.2,
-                spaceBetween: 25
-              },
-              1280: { 
-                width: 1280,
-                slidesPerView: 4.2,
-                spaceBetween: 250
-              },          
-            }}
-          >
-            { meals
-              .filter(meal => meal.category === "Sobremesas") 
-              .map( meal => (
-                <SwiperSlide key={String(meal.id)} >
-                  <Card id={meal.id}> 
-                    { isAdmin === 1 ? 
-                        <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
-                      : 
-                        <Link><input type="image" src={heart} alt="ícone de um coração" /></Link>
-                    }                                
-                    <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                    <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
-                    <p>{meal.description}</p>
-                    <span>R$ {meal.price}</span>    
-                    { isAdmin === 1 ? 
-                        <div className="hide"></div> 
-                      :
-                        <div className="buttons">
-                          <div className="addRemoveButton">
-                            <input type="image" src={minus} alt="Símbolo de menos" id="add" onClick={handleDownQuantity}/>
-                            <span>{quantity}</span>
-                            <input type="image" src={plus} alt="Símbolo de mais" id="remove" onClick={handleUpQuantity}/>
-                          </div>
-                          <Button title="incluir" />
-                        </div>          
-                    } 
-                  </Card>
-                </SwiperSlide>               
-              ))
-            } 
-          </Swiper>
-      }
-</Section>
+          className="Carousel"        
+          slidesPerView={1.6}
+          spaceBetween={10}
+          loop={true}
+          navigation={true}
+          mousewheel={true}
+          modules={[Navigation]}
+          breakpoints={{          
+            480: { 
+              width: 480,
+              slidesPerView: 2.1,
+              spaceBetween: 15
+            },          
+            768: { 
+              width: 768,
+              slidesPerView: 3.2,
+              spaceBetween: 25
+            },
+            1280: { 
+              width: 1280,
+              slidesPerView: 4.2,
+              spaceBetween: 250
+            },          
+        }}
+        >
+          { meals
+            .filter(meal => meal.category === "Sobremesas") 
+            .map( meal => (
+              <SwiperSlide key={String(meal.id)} >
+                <Card meal={meal}/> 
+              </SwiperSlide>               
+            ))
+          } 
+        </Swiper>      
+      </Section>
  //*-------------------------------------------------------- 
 //*--------------------------------------------------------
-        {/* <Section
-            className="mainMeal"
-            title="Bebidas"
-          >
-            {
-              // meals.filter(meal => meal.category === "Bebidas").length > 0 &&
-            <Swiper
-              className="Carousel"        
-              slidesPerView={1.6}
-              spaceBetween={10}
-              loop={true}
-              navigation={true}
-              mousewheel={true}
-              modules={[Navigation]}
-              breakpoints={{          
-                480: { 
-                  width: 480,
-                  slidesPerView: 2.1,
-                  spaceBetween: 15
-                },          
-                768: { 
-                  width: 768,
-                  slidesPerView: 3.2,
-                  spaceBetween: 25
-                },
-                1280: { 
-                  width: 1280,
-                  slidesPerView: 4.2,
-                  spaceBetween: 250
-                },          
-              }}
-            >
-                {meals
-                  .filter(meal => meal.category === "Bebidas") 
-                  .map( meal => (
-                    <SwiperSlide key={String(meal.id)}>
-                      <Card  id={meal.id}> 
-                        { isAdmin === 1 ? 
-                            <Link to={`editmeal/${meal.id}`}><input type="image" src={pencil} alt="ícone de um lápis" /></Link>
-                          : 
-                            <Link><input type="image" src={heart} alt="ícone de um coração" /></Link>
-                        }                                
-                        <img src={`${api.defaults.baseURL}/files/${meal.image}`} alt="Imagem do prato" />  
-                        <Link to={`mealdetails/${meal.id}`}><h2>{meal.title} &gt;</h2></Link>
-                        <p>{meal.description}</p>
-                        <span>R$ {meal.price}</span>    
-                        { isAdmin === 1 ? 
-                            <div className="hide"></div> 
-                          :
-                            <div className="buttons">
-                              <ButtonAddRemove onChange={e => setQuantity(e.target.value)}/>
-                              <Button title="incluir" onClick={handleAddMealCart(quantity)}/>
-                            </div>          
-                        } 
-                      </Card>
-                    </SwiperSlide>               
-                  ))
-                } 
-              </Swiper>
-          }
-        </Section> */}
+<Section
+        className="mainMeal"
+        title="Bebidas"
+      >
+        <Swiper
+          className="Carousel"        
+          slidesPerView={1.6}
+          spaceBetween={10}
+          loop={true}
+          navigation={true}
+          mousewheel={true}
+          modules={[Navigation]}
+          breakpoints={{          
+            480: { 
+              width: 480,
+              slidesPerView: 2.1,
+              spaceBetween: 15
+            },          
+            768: { 
+              width: 768,
+              slidesPerView: 3.2,
+              spaceBetween: 25
+            },
+            1280: { 
+              width: 1280,
+              slidesPerView: 4.2,
+              spaceBetween: 250
+            },          
+        }}
+        >
+          { meals
+            .filter(meal => meal.category === "Bebidas") 
+            .map( meal => (
+              <SwiperSlide key={String(meal.id)} >
+                <Card meal={meal}/> 
+              </SwiperSlide>               
+            ))
+          } 
+        </Swiper>      
+      </Section>
   {/*--------------------------------------------------------*/}
       <Footer/> 
     </Container>
