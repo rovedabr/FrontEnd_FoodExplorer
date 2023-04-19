@@ -7,9 +7,9 @@ import { useCart } from "../../hooks/cart";
 
 export function ButtonAddRemove({ icon: Icon,  ...rest}) {
   const [ quantity, setQuantity ] = useState(Number(0))
-  console.log(quantity)
-  const [ price, setPrice] = useState(Number(""))
-  
+
+  const { handleAddMealCart } = useCart();
+
   function handleUpQuantity() {
     setQuantity(prevState => prevState +1)
   }

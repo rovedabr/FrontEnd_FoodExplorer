@@ -5,6 +5,7 @@ export function ButtonBack({title, onClick, icon:Icon, ...rest}) {
   return (
     <Container
       onClick={onClick}
+      icon={Icon && <Icon size={24} />}
       {...rest}
     >
       <img src={careLeft} alt="" />

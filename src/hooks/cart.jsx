@@ -5,23 +5,14 @@ export const CartContext = createContext({}); //https://youtu.be/jo-IV8i5Gdk   h
 
 function CartProvider({ children }) {
   const [ cart, setCart ] = useState([]); //item = meal
+  const [orders, setOrders] = useState([])
+  
+  function handleAddMealCart( meals, quantity, image) { 
+    const  { id, title, price }  = meals
+    const order = { id, title, price, quantity, image }
 
-  function handleAddMealCart(id, title, image, price, quantity ) { //ver data
-    // const data = { id, title, price, quantity };
-    const newCart = [...cart]
-    const item = newCart.find(meal => meal.id === id)
-
-    // setCart([...cart, data])
-    // console.log(data)
-
-    // const item = newMealsCart.find((meal) => meal.id === id)
-
-    // if (!item) {
-    //   newMealsCart.push({ id: id, quantity: 1})
-    // } else {
-    //   item.quantity = item.quantity + 1
-    // }
-    // setMealsCart(newMealsCart)
+    const carrinho = setCart(prevState => [...prevState, order])
+    // console.log(carrinho)
   }
 
   function handleRemoveMealFromCart(deleted) {
