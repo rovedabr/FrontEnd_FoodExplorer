@@ -34,27 +34,19 @@ import { Banner } from "../../components/Banner"
 import { Section } from "../../components/Section"
 
 
-
 export function Home() {
   const { user } = useAuth();
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
-  //!===================================
-  const { handleAddMealCart } = useCart();
-  //!===================================
     
   const [ meals, setMeals ] = useState([])
-  const [ quantity, setQuantity ] = useState(Number(0))
-  const [ title, setTitle ] = useState([])
   const [ order, setOrder ] = useState([])
   const [ search, setSearch ] = useState("");
-  const [ price, setPrice ] = useState("")
 
 
   useEffect(() => {
     async function fetchSearchMealsTitles() {
-      const response = await api.get(`/meals/title=${search}`); 
+      const response = await api.get(`/meals?title=${search}`);  //! const response = await api.get(`/notes?title=${search}&tags=${tagsSelected}`)
       setMeals(response.data)
-      // console.log(response.data)
     }
     fetchSearchMealsTitles();
   },[search]);
@@ -79,7 +71,7 @@ export function Home() {
   return (
      <Container>
       { isAdmin === 1 ? <AdminNavbar/> : <Navbar/> }
-      { isAdmin === 1 ? <AdminHeader/> : <Header/> }
+      { isAdmin === 1 ? <AdminHeader search={setSearch} /> : <Header search={setSearch}/> }
     
        <Banner/>
 //*--------------------------------------------------------

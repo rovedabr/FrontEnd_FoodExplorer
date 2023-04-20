@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { useAuth } from "../../hooks/auth";
+import { useCart } from "../../hooks/cart";
 import { api } from "../../services/api";
 
 import { Navbar } from "../../components/NavBar"
@@ -20,8 +21,23 @@ import plus from "../../assets/Icons/Plus.svg"
 export function MealDetails() {
   const { user } = useAuth()
   const [ meal, setMeal ] = useState([])
+  const { handleAddMealCart } = useCart();
 
   const params = useParams()
+
+  const [ quantity, setQuantity ] = useState(Number(0))
+
+  function handleUpQuantity() {
+    setQuantity(prevState => prevState +1)
+  }
+
+  function handleDownQuantity() {
+    if (quantity <= 0 ){
+      alert("Para remover este item é necessário já tê-lo adicionado")
+    } else {
+      setQuantity(prevState => prevState -1)
+    }
+  }
 
   useEffect(() => {
     async function fetchMealDetail() {
@@ -83,7 +99,8 @@ export function MealDetails() {
                         />
                         <span>{quantity}</span>
                         <input 
-                          type="image" src={plus} 
+                          type="image" 
+                          src={plus} 
                           alt="Símbolo de mais" 
                           id="remove" 
                           onClick={handleUpQuantity}                  
@@ -93,7 +110,7 @@ export function MealDetails() {
                           type="text"
                           icon={receiptIcon}
                           title="Incluir"
-                        
+                          onClick={() => handleAddMealCart(meal, quantity)}
                         />
                       </div>
 

@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { api } from "../services/api";
 
-export const CartContext = createContext({}); //https://youtu.be/jo-IV8i5Gdk   https://www.youtube.com/watch?v=tczhRdyj1nM
+export const CartContext = createContext({}); 
 
 function CartProvider({ children }) {
   const [ cart, setCart ] = useState([]); 
@@ -26,7 +26,7 @@ function CartProvider({ children }) {
               setCart(prevState => {
                   const newItem = [...prevState, order]
                   newItem[orderIndex].quantity += quantity;
-                  newItem[orderIndex].price = Math.round((newState[orderIndex].price + priceFormatted) * 100) / 100;
+                  newItem[orderIndex].price = Math.round((newItem[orderIndex].price + priceFormatted) * 100) / 100;
                   return newItem;
               });
             }
@@ -41,48 +41,10 @@ function CartProvider({ children }) {
           alert("Não foi possível adicionar este item ao carrinho!")
         }
       }
-  
-
-
-    
-    // var itemIdAlreadyAdded = [];
-  
-
-    // const newItems = [...items, order]
-    // console.log(newItems)
-    // const itemsId = newItems.map(index => index.id) 
-    // const data = newItems.map(e )
-    // console.log(itemsId)
-
-    // var itemsOnlyDifferentId = itemsId.filter(function(e, i) {
-    //     if(itemsId.indexOf(e) !== i) {
-    //       itemIdAlreadyAdded.push(e)
-    //     }
-    //     return itemsId.indexOf(e) == i;
-    // })
-
-    // const alreadyAdded = (itemsId.length === itemsOnlyDifferentId.length)
-    // if (!alreadyAdded) {
-    //   var itemAlreadyAdd = confirm("Deseja adicionar novamente o item ao carrinho?")
-    //   if( itemAlreadyAdd === true) {
-
-    //     setCart(prevState => {
-    //       const newState = [...newItems]
-    //       newState[itemsId].quantity = quantity
-    //       newState[itemsId].price = price
-    //       return newState
-    //       console.log(newState)
-    //     })
-    //   } else {
-    //     setCart(prevState => [...prevState, order])
-    //     console.log(setCart)
-    //   }
-    // }
   }
 
   function handleRemoveMealFromCart(deleted) {
-    const filteredCart = cart.filter(cartItem => cart.indexOf(cartItem !== deleted)
-    ) // i => i.id !== item.id
+    const filteredCart = cart.filter(cartItem => cart.indexOf(cartItem !== deleted))
     setCart(filteredCart)
   }
 

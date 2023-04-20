@@ -4,8 +4,11 @@ import menuIcon from "../../assets/Icons/menu.svg"
 import receiptIcon from "../../assets/Icons/Receipt.svg"
 import { useNavigate } from "react-router-dom";
 
+import { useCart } from "../../hooks/cart";
+
 export function Navbar({ img, ...rest }) {
   const navigate = useNavigate()
+  const { cart, orders } = useCart();
 
   function menu() {
     return navigate("/menu")
@@ -23,7 +26,7 @@ export function Navbar({ img, ...rest }) {
         <Brand/>
         <div className="receipt">
           <img src={receiptIcon} alt="Ícone do recibo da compra" />
-          <span>0</span>
+          <span>{cart.length}</span>
         </div>
       </Form>      
     </Container>
