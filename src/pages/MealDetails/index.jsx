@@ -11,10 +11,11 @@ import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
 import { Tag } from "../../components/Tag"
 import { Button } from "../../components/Button";
-import { ButtonAddRemove } from "../../components/ButtonAddRemove";
 import { ButtonBack } from "../../components/ButtonBack";
 
 import receiptIcon from "../../assets/Icons/Receipt.svg"
+import minus from "../../assets/Icons/Minus.svg"
+import plus from "../../assets/Icons/Plus.svg"
 
 export function MealDetails() {
   const { user } = useAuth()
@@ -72,7 +73,22 @@ export function MealDetails() {
                       } 
 
                       <div className="buttons">
-                        <ButtonAddRemove/>
+                      <div className="addRemoveButton"> //! corrigir o styles
+                        <input 
+                          type="image" 
+                          src={minus} 
+                          alt="Símbolo de menos" 
+                          id="add" 
+                          onClick={handleDownQuantity}                  
+                        />
+                        <span>{quantity}</span>
+                        <input 
+                          type="image" src={plus} 
+                          alt="Símbolo de mais" 
+                          id="remove" 
+                          onClick={handleUpQuantity}                  
+                        />
+                      </div>
                         <Button 
                           type="text"
                           icon={receiptIcon}

@@ -30,10 +30,9 @@ import { AdminHeader } from "../../components/AdminHeader"
 import { Navbar } from "../../components/NavBar"
 import { AdminNavbar } from "../../components/AdminNavbar"
 import { Footer } from "../../components/Footer"
-import { Button } from "../../components/Button"
 import { Banner } from "../../components/Banner"
 import { Section } from "../../components/Section"
-import { ButtonAddRemove } from "../../components/ButtonAddRemove"
+
 
 
 export function Home() {

@@ -8,16 +8,18 @@ import minus from "../../assets/Icons/Minus.svg"
 import plus from "../../assets/Icons/Plus.svg"
 
 import { useAuth } from "../../hooks/auth";
+import { useCart } from "../../hooks/cart";
+
 import { api } from "../../services/api";
 import { useState } from "react";
 
 
-export function Card({ meal, title, children, ...rest }) {
+export function Card({ meal, ...rest }) {
   const { user } = useAuth();
+  const { handleAddMealCart } = useCart();
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
 
   const [ quantity, setQuantity ] = useState(Number(0))
-  console.log(quantity)
 
   function handleUpQuantity() {
     setQuantity(prevState => prevState +1)
@@ -88,7 +90,7 @@ export function Card({ meal, title, children, ...rest }) {
                 <Button
                   type="button" 
                   title="incluir" 
-                
+                  onClick={() => handleAddMealCart(meal, quantity)}
                 />
               </div>          
           }  

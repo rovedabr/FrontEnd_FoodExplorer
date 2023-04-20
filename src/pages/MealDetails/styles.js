@@ -66,7 +66,32 @@ export const Container = styled.div`
     
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   } 
- 
+
+  > div .buttons .addRemoveButton {
+    width: 10rem;
+    height: 3.2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > div .buttons .addRemoveButton input:hover {
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+  }
+
+  > div .buttons .addRemoveButton span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+
+    margin: 0 1.4rem;
+  } 
 
    @media screen and (min-width: 1280px){
     display: grid;

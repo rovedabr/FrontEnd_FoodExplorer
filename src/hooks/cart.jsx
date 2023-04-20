@@ -4,15 +4,47 @@ import { api } from "../services/api";
 export const CartContext = createContext({}); //https://youtu.be/jo-IV8i5Gdk   https://www.youtube.com/watch?v=tczhRdyj1nM
 
 function CartProvider({ children }) {
-  const [ cart, setCart ] = useState([]); //item = meal
-  const [orders, setOrders] = useState([])
+  const [ cart, setCart ] = useState([]); 
+  const [ orders, setOrders ] = useState([])
+  const [ items, setItems ] = useState([]);
+  const [ total, setTotal ] = useState(0);
   
-  function handleAddMealCart( meals, quantity, image) { 
-    const  { id, title, price }  = meals
-    const order = { id, title, price, quantity, image }
+  function handleAddMealCart( meal, quantity, image) { 
+    const  { id, title, price }  = meal
+    var itemIdAlreadyAdded = [];
+    image = meal.image
 
-    const carrinho = setCart(prevState => [...prevState, order])
-    // console.log(carrinho)
+    const order = { id, title, price, quantity, image }
+    const newItems = [...items, order]
+    console.log(newItems)
+    const itemsId = newItems.map(index => index.id) 
+    const data = newItems.map(e )
+    console.log(itemsId)
+
+    var itemsOnlyDifferentId = itemsId.filter(function(e, i) {
+        if(itemsId.indexOf(e) !== i) {
+          itemIdAlreadyAdded.push(e)
+        }
+        return itemsId.indexOf(e) == i;
+    })
+
+    const alreadyAdded = (itemsId.length === itemsOnlyDifferentId.length)
+    if (!alreadyAdded) {
+      var itemAlreadyAdd = confirm("Deseja adicionar novamente o item ao carrinho?")
+      if( itemAlreadyAdd === true) {
+
+        setCart(prevState => {
+          const newState = [...newItems]
+          newState[itemsId].quantity = quantity
+          newState[itemsId].price = price
+          return newState
+          console.log(newState)
+        })
+      } else {
+        setCart(prevState => [...prevState, order])
+        console.log(setCart)
+      }
+    }
   }
 
   function handleRemoveMealFromCart(deleted) {
