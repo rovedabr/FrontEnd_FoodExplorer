@@ -41,24 +41,14 @@ export function Home() {
   const [ meals, setMeals ] = useState([])
   const [ order, setOrder ] = useState([])
   const [ search, setSearch ] = useState("");
+  const [ title, setTitle ] = useState([]);
+  const [ ingredients, setIngredients ] = useState([])
 
-
-  useEffect(() => {
-    async function fetchSearchMealsTitles() {
-      const response = await api.get(`/meals?title=${search}`);  //! const response = await api.get(`/notes?title=${search}&tags=${tagsSelected}`)
-      setMeals(response.data)
-    }
-    fetchSearchMealsTitles();
-  },[search]);
-
-  //*-------------------------------------------------------
-
-  //*-------------------------------------------------------
 
   useEffect(() => {
     async function fetchMeals() {
       try {
-        const response = await api.get(`/meals`)
+        const response = await api.get(`/meals?title=${search}&ingredients=${ingredients}`)  //"&ingredients=${search}"
         setMeals(response.data)
         console.log(response.data)
       } catch (error) {
@@ -66,7 +56,8 @@ export function Home() {
       }
     }
     fetchMeals();
-  }, [])
+  }, [search, ingredients])
+
 
   return (
      <Container>
