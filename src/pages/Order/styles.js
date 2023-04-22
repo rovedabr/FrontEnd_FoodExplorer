@@ -26,7 +26,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 30.3rem;
+  width: 50rem;
   height: 65.6rem;
 
   margin: 5.6rem 9rem 21.4rem 3.5rem;
@@ -42,8 +42,3 @@ export const Content = styled.div`
     margin-bottom: 2.7rem;
   }
 `
-export const Form = styled.div`
-  width: 4.5rem;
-  height: 5rem;
-
-`;
