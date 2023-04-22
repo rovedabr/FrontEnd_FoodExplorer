@@ -11,14 +11,15 @@ export const Container = styled.div`
     "main"
     "footer"
   ;
-
+  grid-template-columns: 100%;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
 
   
   > main {
     width: 100%;
-    height: 70%;
+
     grid-area: main;
 
     display: flex;
@@ -67,6 +68,17 @@ export const Container = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   } 
 
+  #menu {
+    height: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 5rem;
+  }
+
 
    @media screen and (min-width: 1280px){
     display: grid;
@@ -75,8 +87,10 @@ export const Container = styled.div`
     "header"
     "main"
     "footer";
+    grid-template-columns: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     > nav {
       grid-area: nav;
@@ -94,9 +108,12 @@ export const Container = styled.div`
     }
 
     > main {
+      height: 70%;
+      width: 70%;
+
       grid-area: main;
       display: flex;
-
+      align-items: center;
     }
 
     > main a {

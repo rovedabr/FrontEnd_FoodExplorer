@@ -4,27 +4,88 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  display: flex;
+  display: grid;
+  grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: 11.4rem auto 7.7rem;
+  grid-template-columns: 100%;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+
   overflow-y: auto;
 
-   > nav {
-    width: 100%;  
-    display: flex;
+  > nav {
+    width: 100%;
+    height: 11.4rem;
+    grid-area: nav;
   }
 
   > header {
+    width: 100%;
     display: none;
+    grid-area: header;
   }
 
-  > div .hide {
+  > main {
+    width: 100%;
+    grid-area: main;
+  }
+
+  > footer {
+    width: 100%;
+    height: 7.7rem;
+
+    grid-area: footer;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: grid;
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: 9.6rem auto 7.7rem;
+    grid-template-columns: 100%;
+
+    > nav {
+      display: none;
+    }
+
+    > main {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+
+      grid-area: main;
+    }
+
+    > header {
+      width: 100%;
+      height: 9.6rem;
+      display: flex;
+    }
+  }
+
+  `;
+
+  export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  .hide {
     width: 10rem;
     height: 4rem;
     margin-bottom: 6rem;
   }
 
-  > div .buttons .addRemoveButton {
+  .buttons .addRemoveButton {
     width: 10rem;
     height: 3.2rem;
 
@@ -34,12 +95,12 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-  > div .buttons .addRemoveButton input:hover {
+  .buttons .addRemoveButton input:hover {
     transform: scale(1.2);
     transition: 0.3s ease-in-out;
   }
 
-  > div .buttons .addRemoveButton span {
+  .buttons .addRemoveButton span {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6rem;
@@ -51,35 +112,28 @@ export const Container = styled.div`
   }
 
   .mainMeal {
-    width: 95%;
+    width: 100%;
     padding-left: 2.4rem;
   }
 
-  > footer {
-    width: 100%;
-    height: 7.7rem;
+  .buttons #addRemove {
+    width: 2.4rem;
+    height: 2.4rem;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
   }
 
-  > div .buttons #addRemove {
-  width: 2.4rem;
-  height: 2.4rem;
-  
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  appearance: none;
+  .buttons #addRemove #add {
+    width: 2.4rem;
+    height: 2.4rem;
 
-}
-
-  > div .buttons #addRemove #add {
-  width: 2.4rem;
-  height: 2.4rem;
-
-  margin-left: 2.4rem;
-  border: 1px solid red;
-}
-
+    margin-left: 2.4rem;
+    border: 1px solid red;
+  }
 
   .swiper-slide {
     width: 100%;
@@ -93,48 +147,44 @@ export const Container = styled.div`
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
-  .swiper-wrapper {
-    width: 768px;
+    @media screen and (min-width: 768px) {
+    .swiper-wrapper {
+      width: 768px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 10rem;
+      height: 51rem;
+      margin: -26rem -2rem;
+      opacity: 1;
+
+      display: flex;
+      color: ${({theme}) => theme.LIGHT.LIGHT_100};
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      transition: all .3s ease-in-out; 
+      transform: scale(1.5);
+    }
+
+    .swiper-button-prev {
+      background: linear-gradient(to right, rgba(0,10,15,1) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,0) 100%)
+    }
+
+    .swiper-button-next {
+      background: linear-gradient(to right, rgba(0,10,15,0) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,1) 100%);
+    }
+
   }
-
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 10rem;
-    height: 51rem;
-    margin: -26rem -2rem;
-    opacity: 1;
-
-    display: flex;
-    color: ${({theme}) => theme.LIGHT.LIGHT_100};
-  }
-
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    transition: all .3s ease-in-out; 
-    transform: scale(1.5);
-  }
-
-  .swiper-button-prev {
-    background: linear-gradient(to right, rgba(0,10,15,1) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,0) 100%)
-  }
-
-  .swiper-button-next {
-    background: linear-gradient(to right, rgba(0,10,15,0) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,1) 100%);
-  }
-
-}
 
   @media screen and (min-width: 1280px) {
-
-  > nav {
-      display: none;
-    }
-
-    > header {
-      display: flex;
-    }
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     > div .hide {
       width: 20rem;
@@ -149,14 +199,8 @@ export const Container = styled.div`
     } 
 
     > .mainMeal {
-      width: 95%;
-  
       padding-left: 2.4rem;
       padding-right: 2.4rem;
-    }
-
-    .swiper-wrapper {
-      width: 1280px;
     }
 
     .swiper-button-next,
@@ -172,9 +216,7 @@ export const Container = styled.div`
     .swiper-button-prev:hover {
       transition: all .3s ease-in-out; 
       transform: scale(1.1);
-    }
-
-
-}
+    } 
+  } 
 
 `;

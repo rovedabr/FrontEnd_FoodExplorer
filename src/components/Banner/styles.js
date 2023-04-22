@@ -16,23 +16,21 @@ justify-content: flex-start;
   flex-direction: row;
 
   margin: 4.4rem 1.6rem auto 3rem;
-
   background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
   z-index: -1;
 }
 
-> .backgroundFlavors img {
+.backgroundFlavors img {
   width: 19.1rem;
   height: 14.9rem;
 
-  margin: 1px solid blue;
   position: relative;
   bottom: 3rem;
 
   z-index: 1;
 }
 
->.backgroundFlavors .description {
+> .backgroundFlavors .description {
   width: clamp(15rem, 50%, 20rem);
   margin: .5rem 0.8rem auto 0.5rem;
 
@@ -47,7 +45,7 @@ justify-content: flex-start;
   font-size: 1.8rem;
   line-height: 2.5rem;
   font-weight: 600;
-}
+} 
 
 > .description span {
   font-size: clamp(0.5rem, 50%, 1.2rem);
@@ -57,7 +55,6 @@ justify-content: flex-start;
 
 @media screen and (min-width: 425px){
   >.backgroundFlavors .description {
-
     margin: 3.6rem 0.8rem auto 0.5rem;
   }
 }
@@ -126,4 +123,4 @@ justify-content: flex-start;
     font-weight: 400;
   }
 }
-`;
+`; 

@@ -36,6 +36,7 @@ export const Container = styled.div`
     font-weight: 400; 
     color: ${({theme})=> theme.LIGHT.LIGHT_300};
     outline-color: ${({theme}) => theme.COLORS.CAKE_100};
+    outline-width: thin;
    
     &::placeholder {
       font-size: 1.6rem;

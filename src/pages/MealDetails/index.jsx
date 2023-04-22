@@ -89,7 +89,7 @@ export function MealDetails() {
                       } 
 
                       <div className="buttons">
-                      <div className="addRemoveButton"> //! corrigir o styles
+                      <div className="addRemoveButton"> 
                         <input 
                           type="image" 
                           src={minus} 

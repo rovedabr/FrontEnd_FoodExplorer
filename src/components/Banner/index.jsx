@@ -3,8 +3,7 @@ import flavors from "../../assets/Flavors.png"
 
 export function Banner() {
   return (
-    <Container>
-        
+    <Container>        
       <div className="backgroundFlavors">
         <img 
           src={flavors} 
