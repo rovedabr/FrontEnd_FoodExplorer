@@ -24,9 +24,15 @@ export const Content = styled.div`
     main div button,
     main h1 {
       margin-bottom: 3.2rem;
-    }
+  }
 
-    > div:nth-child(1) {
+  > main div .input-wrapper input:-webkit-autofill  {
+    -webkit-box-shadow: 0 0 0 30px  ${({theme}) => theme.DARK.DARK_900} inset;
+    -webkit-text-fill-color: ${({theme}) => theme.LIGHT.LIGHT_100};
+    font-size: 1.6rem;
+  }
+
+  > div:nth-child(1) {
     width: 27.8rem;
     height: 4.4rem;
 

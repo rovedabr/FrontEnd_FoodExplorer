@@ -10,7 +10,8 @@ export const Container = styled.div`
 
   margin: 0 auto auto 3.5rem;
 
-  > .order h3, h3, p {
+
+  .order h3, h3, p {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 2rem;
@@ -23,13 +24,30 @@ export const Container = styled.div`
     padding: 1.6rem 0;
   }
 
-  > .order {
+  .order .orderData {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px red solid;
   }
+
+  .order a {
+    margin: 8.5rem;
+
+    position: relative;
+    top: -2rem;
+
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    text-decoration: none;
+    color: ${({theme}) => theme.COLORS.TOMATO_400};    
+  }
+
+  .order a:hover {
+    color: red;
+    transition: 0.2s ease-in-out;
+  }
+
 
   .order img {
     width: 7.2rem;
