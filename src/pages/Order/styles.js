@@ -128,12 +128,18 @@ export const Form2 = styled.div`
     margin: 3.4rem auto 2.7rem 3.5rem;
   }
 
+  .payForm div {
+    display: flex;
+    flex-direction: row;
+  }
+
   .payForm {
     width: 53rem;
     height: 44.5rem;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 
     border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_600};
     border-radius: 0.8rem;
@@ -147,6 +153,98 @@ export const Form2 = styled.div`
     line-height: 1.6rem;
     color: ${({theme}) => theme.LIGHT.LIGHT_100};
   }
+
+  .payForm .input-wrapper {
+    width: 35rem;
+    height: 35rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid red; //!verificar aqui
+  }
+
+  .payForm .input-wrapper {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .payForm .input-wrapper .cardNumber {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .payForm .input-wrapper .cardData {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .payForm .input-wrapper .cardNumber label,
+  .payForm .input-wrapper .cardData label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    color:  #C4C4CC;
+
+    margin-bottom: .8rem;
+  }
+
+  .payForm .input-wrapper .cardData .validity,
+  .payForm .input-wrapper .cardData .cvc {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.6rem;
+    color:  #C4C4CC;
+
+    margin-bottom: .8rem;
+    margin-top: 2rem;
+  }
+
+  .payForm .input-wrapper .cardNumber input{
+    width: 34rem;
+    height: 4.8rem;
+
+    padding: 1.2rem 1.4rem;
+    gap: 1.4rem;
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+
+    background-color: transparent;
+    border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_100};
+    border-radius: .5rem;
+
+
+    &::placeholder{
+      font-size: 1.6rem;
+    }
+  }
+
+  .payForm .input-wrapper .cardData input{
+    width: 16.6rem;
+    height: 4.8rem;
+
+    padding: 1.2rem 1.4rem;
+    gap: 1.4rem;
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+
+    background-color: transparent;
+    border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_100};
+    border-radius: .5rem;
+
+
+    &::placeholder{
+      font-size: 1.6rem;
+    }
+  }
+
+  .payForm .input-wrapper .cardData input:nth-child(2){
+    margin-inline: .4rem;
+  }
+
+
 
   .payForm .pixForm {
     width: 26.5rem;
