@@ -132,10 +132,54 @@ export const Form2 = styled.div`
     width: 53rem;
     height: 44.5rem;
 
+    display: flex;
+    flex-direction: row;
+
     border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_600};
     border-radius: 0.8rem;
     margin-left: 3.5rem;
+  }
 
+  .payForm p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: ${({theme}) => theme.LIGHT.LIGHT_100};
+  }
+
+  .payForm .pixForm {
+    width: 26.5rem;
+    height: 8.1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    background-color: ${({theme}) => theme.DARK.DARK_800};
+    border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_600};
+    border-radius: 0.8rem 0 0 0;
+  }
+
+  .payForm .pixForm input {
+    color: white;
+  }
+
+  .payForm .cardForm {
+    width: 26.5rem;
+    height: 8.1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    background-color: ${({theme}) => theme.DARK.DARK_800};
+    border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_600};
+    border-radius: 0 0.8rem 0 0;
   }
 
 `

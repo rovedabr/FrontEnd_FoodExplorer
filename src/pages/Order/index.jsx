@@ -6,8 +6,8 @@ import { Footer } from "../../components/Footer"
 import { CardOrder } from "../../components/CardOrder";
 import { Button } from "../../components/Button";
 
-import { MdPix } from "react-icons/md"
-import { BsCreditCardFill } from "react-icons/bs"
+import pixIcon from "../../assets/Icons/PIX.svg"
+import creditCardIcon from "../../assets/Icons/CreditCard.svg"
 
 export function Order() {
   return (
@@ -26,10 +26,10 @@ export function Order() {
             <h2>Pagamento</h2>
             <div className="payForm">
               <div className="pixForm">
-                <input type="image" src={MdPix} alt="" /> <p>PIX</p>
+                <input type="image" src={pixIcon} alt="" /> <p>PIX</p>
               </div>
               <div className="cardForm">
-                <input type="image" src={BsCreditCardFill} alt="" />  <p>Crédito</p>
+                <input type="image" src={creditCardIcon} alt="" />  <p>Crédito</p>
               </div>  
             </div>
           </Form2>
