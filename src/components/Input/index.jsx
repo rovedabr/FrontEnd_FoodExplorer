@@ -2,9 +2,9 @@ import { Container } from "./styles";
 
 export function Input({ icon: Icon, event, title, ...rest }) {
   return (
-    <Container>
+    <Container  {...rest}>
       {Icon && <Icon size={24} />}
-      <input id={event} {...rest}/>      
+      <input id={event}/>      
     </Container>
   )
 }

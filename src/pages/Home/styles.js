@@ -142,6 +142,11 @@ export const Container = styled.div`
     align-items: center;
   }
 
+  .swiper-slide div {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+
   .swiper-button-next,
     .swiper-button-prev {
     display: none;

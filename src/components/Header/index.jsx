@@ -14,13 +14,19 @@ import  brand from "../../assets/brand.png"
 
 
 export function Header({ search }) {
-  const { signOut } = useAuth();
+  const { user_id, signOut } = useAuth();
   const { cart, orders } = useCart();
   const navigate = useNavigate();
 
   function exit() {
     signOut()
     navigate("/")
+  }
+
+  async function handleOrder() {
+    
+    console.log(cart)
+    // await api.post("/orders", newCart)
   }
  
   return(
@@ -40,13 +46,14 @@ export function Header({ search }) {
         <button 
           type="button"
           className="order"
-          onClick={navigate("/order")}
+          // onClick={() => navigate("/order")}
+          onClick={handleOrder}
         >
           <img src={receiptIcon} alt="" /> 
           <h3>Pedidos</h3>
           <span>{cart.length}</span>
         </button>
-
+  
       <button className="logout" onClick={exit}>
         <img src={logout} alt="Botão de sair"/>
       </button>       

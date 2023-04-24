@@ -1,6 +1,7 @@
 import { Container, Content } from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/auth"
+import { useCart } from "../../hooks/cart";
 import { api } from "../../services/api"
 
 import { Input } from "../Input";
@@ -12,9 +13,10 @@ import { HiMagnifyingGlass } from "react-icons/hi2"
 import receiptIcon from "../../assets/Icons/Receipt.svg"
 
 
-export function AdminHeader() {
+export function AdminHeader({ search }) {
   const { signOut } = useAuth();
   const navigate = useNavigate();
+  const { cart, orders } = useCart();
 
   function addNewMeal() {
     return navigate("/addmeal")
@@ -37,6 +39,7 @@ export function AdminHeader() {
           icon={HiMagnifyingGlass}
           type="text"
           placeholder="Busque por pratos ou ingredientes"
+          onChange={e => search(e.target.value)}
         />
           
         <Button

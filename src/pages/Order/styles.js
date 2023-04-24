@@ -82,7 +82,17 @@ export const Form = styled.div`
   width: 21rem;
   height: 4.8rem;
 
-  margin: 3.1rem 3.7rem 13.5rem auto;  
+  margin: 3.1rem 3.7rem 13.5rem auto; 
+
+  
+  @media screen and (min-width: 1000px){
+
+    > button {
+      display: none;
+    }
+  }
+
+
 }
 
 `

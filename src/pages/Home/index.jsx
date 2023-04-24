@@ -58,10 +58,10 @@ export function Home() {
     fetchMeals();
   }, [search])
 
-
+  
   return (
      <Container>
-      { isAdmin === 1 ? <AdminNavbar/> : <Navbar/> }
+      { isAdmin === 1 ? <AdminNavbar search={setSearch} /> : <Navbar search={setSearch}/> }
       { isAdmin === 1 ? <AdminHeader search={setSearch} /> : <Header search={setSearch}/> }
         <main>
          <Content>
