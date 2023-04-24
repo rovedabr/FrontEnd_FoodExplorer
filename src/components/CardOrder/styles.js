@@ -8,16 +8,17 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  margin: 0 auto auto 3.5rem;
-
-
-  .order h3, h3, p {
+  .order h2, h3, p {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 2rem;
     line-height: 3.2rem;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
+  }
+
+  .order h2 {
+    margin: 0 1.2rem;
   }
 
   > h3 {

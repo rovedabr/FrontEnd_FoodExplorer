@@ -53,6 +53,11 @@ function CartProvider({ children }) {
     setCart([])
   }
 
+  const totalPrice = cart.reduce((value, item) => {
+    return ((value + item.price)*100)/100
+  }, 0)
+
+  const totalCart = totalPrice.toFixed(2)
 
   useEffect(() => {
     localStorage.setItem(`@foodexplorer:cart`, JSON.stringify(cart))
@@ -61,6 +66,7 @@ function CartProvider({ children }) {
  return(
   <CartContext.Provider value={{
     cart,
+    totalCart,
     handleAddMealCart,
     handleRemoveMealFromCart,
     clearCart,

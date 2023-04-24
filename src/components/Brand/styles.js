@@ -8,11 +8,16 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  > img {
+  > input {
     width: 2.5rem;
     height: 2.5rem;
     
     margin-right: .8rem;
+  }
+
+  > input:hover {
+    transform: scale(1.3);
+    transition: 0.5 ease-in-out;
   }
 
   > h1 {

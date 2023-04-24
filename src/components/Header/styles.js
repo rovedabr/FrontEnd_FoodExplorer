@@ -22,9 +22,14 @@ export const Content = styled.div`
   gap: 3.2rem;
   padding: 2.4rem 12.3rem;
 
-  > .brand img {
+  .brand input {
     width: 19.7rem;
     height: 3rem;
+  }
+
+  .brand input:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
   }
 
   > div:nth-child(2) {

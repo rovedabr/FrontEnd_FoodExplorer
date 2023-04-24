@@ -25,7 +25,7 @@ export function Navbar({ img, ...rest }) {
         /> 
         <Brand/>
         <div className="receipt">
-          <img src={receiptIcon} alt="Ícone do recibo da compra" />
+          <input type="image" src={receiptIcon} alt="Ícone do recibo da compra" onClick={() => navigate("/order")} />
           <span>{cart.length}</span>
         </div>
       </Form>      

@@ -85,32 +85,37 @@ export const Form = styled.div`
   margin: 3.1rem 3.7rem 13.5rem auto; 
 
   
-  @media screen and (min-width: 1000px){
-
-    > button {
-      display: none;
-    }
-  }
-
-
 }
 
 `
 
 export const Content = styled.div`
   width: 50rem;
-  height: 65.6rem;
+  /* height: 65.6rem; */
 
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
-  margin: 0 9rem 21.4rem 3.5rem;
+  > div {
+    margin-left: 3.5rem;
+  }
 
   > h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 3.2rem;
     line-height: 4.48rem;
+
+    color: ${({theme}) => theme.LIGHT.LIGHT_300};
+    margin: 3.4rem auto 2.7rem 3.5rem;
+  }
+
+  > h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3.2rem;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
     margin: 3.4rem auto 2.7rem 3.5rem;

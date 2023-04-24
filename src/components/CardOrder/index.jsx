@@ -3,23 +3,28 @@ import { Link } from "react-router-dom";
 
 import salada from "../../assets/meals/saladaRavanello.png"
 import { useCart } from "../../hooks/cart";
+import { api } from "../../services/api";
 
-export function CardOrder({meal}) {
-  const { handleRemoveMealFromCart } = useCart()
-  image = meal.image
+export function CardOrder({data}) {
+  const { handleRemoveMealFromCart, cart } = useCart()
+  // image = meal.image
+
   return (
 
-    <Container {...rest}>   
+    <Container>   
         <div className="order">
-          <div className="orderData">
-            <img src={image} alt="Imagem da comida/bebida" />
-            <p>{meal.quantity} x</p> 
-            <h3>{meal.title}</h3> 
-            <span>R$ {meal.price}</span> 
+
+          <div className="orderData">            
+            <img src={`${api.defaults.baseURL}/files/${data.image}`} alt="Imagem da comida/bebida" />
+            <p>{data.quantity} x </p> 
+            <h2> {data.title}</h2> 
+            <span>R$ {data.price}</span> 
           </div>
-          <Link>Excluir</Link>
-        </div>
-        <h3>Total: R$ {meal.quantity}*{meal.price}</h3> 
+
+          <Link
+            onClick={()=> handleRemoveMealFromCart(data.id)}          
+          >Excluir</Link>
+        </div>  
     
     </Container>
   )

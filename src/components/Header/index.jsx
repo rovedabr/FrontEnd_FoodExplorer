@@ -23,17 +23,15 @@ export function Header({ search }) {
     navigate("/")
   }
 
-  async function handleOrder() {
-    
-    console.log(cart)
-    // await api.post("/orders", newCart)
+  async function handleOrder(cart) {
+    navigate("/order")   
   }
  
   return(
     <Container>
       <Content>
         <div className="brand">
-          <img src={brand} alt="Logo da empresa Food Explorer" />
+          <input type="image" src={brand} alt="Logo da empresa Food Explorer" onClick={() => navigate("/")}/>
         </div>        
     
           <Input            
@@ -46,8 +44,7 @@ export function Header({ search }) {
         <button 
           type="button"
           className="order"
-          // onClick={() => navigate("/order")}
-          onClick={handleOrder}
+          onClick={() => navigate("/order")}          
         >
           <img src={receiptIcon} alt="" /> 
           <h3>Pedidos</h3>

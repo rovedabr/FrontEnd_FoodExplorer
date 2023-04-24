@@ -132,7 +132,6 @@ export const Container = styled.div`
     height: 2.4rem;
 
     margin-left: 2.4rem;
-    border: 1px solid red;
   }
 
   .swiper-slide {
@@ -140,11 +139,6 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .swiper-slide div {
-    margin-left: 20rem;
-    margin-right: 20rem;
   }
 
   .swiper-button-next,

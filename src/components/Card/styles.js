@@ -36,7 +36,7 @@ export const Container = styled.div`
   
   @media screen and (min-width: 1280px) {
 
-    margin-right: 2.7rem;
+    margin-right: -27rem;
 
     > div a:first-child  {
       width : 3.4rem;

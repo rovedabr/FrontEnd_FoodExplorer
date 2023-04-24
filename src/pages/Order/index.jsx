@@ -13,17 +13,35 @@ import qrCode from "../../assets/qrCode.svg"
 
 import { useAuth } from "../../hooks/auth";
 import { useCart } from "../../hooks/cart";
+import { api } from "../../services/api";
 
 export function Order() {
-  const { user } = useAuth()
-  const { cart, clearCart } = useCart()
+  const { cart, clearCart, totalCart } = useCart()
 
-  async function handleOrder(cart) {
-    const newCart = handleNewCart(cart)
 
-    await api.post("/orders", newCart)
+  function handleNewCart(cart) {
+    const user_id  = useAuth(user.id)    
+    return{
+      cart: cart.map(item => (
+        {
+          user_id: user_id,
+          meals_id: item.id,
+          title: item.title,
+          image: item.image,
+          price: item.price,
+          quantity: item.quantity
+        }
+      ))
+    }
   }
 
+  async function handleCreateOrder(cart) { 
+    const newCart = handleNewCart(cart)
+    console.log(newCart)
+
+    await api.post("/mealsOrder", newCart)
+  }  
+ 
   return (
     <Container>
       <Navbar/>
@@ -40,8 +58,9 @@ export function Order() {
                       />
                     ))
                 }
+              <h3>Total: R$ {totalCart}</h3> 
               </Content>
-            <Button title="Avançar" className="goPay" />
+            <Button title="Avançar" className="goPay" onClick={() => handleCreateOrder(cart)}/>
           </Form>
           <Form2 className="form2" >
             <h2>Pagamento</h2>
@@ -71,7 +90,7 @@ export function Order() {
                     <input id="cvc" type="text"  placeholder="0000"/>
                   </div>
                 </div>  
-                <Button title="Finalizar pagamento"/>
+                <Button title="Finalizar pagamento" onClick={handleCreateOrder(cart)}/>
               </div>
               {/* <div className="codeInput-wrapper">
                 <div className="code">
