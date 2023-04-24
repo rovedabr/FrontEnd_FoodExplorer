@@ -2,6 +2,7 @@ import { Container, Content } from "./styles";
 import { Input } from "../Input";
 
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "../../hooks/auth"
 import { useCart } from "../../hooks/cart";
@@ -15,6 +16,7 @@ import  brand from "../../assets/brand.png"
 export function Header({ search }) {
   const { signOut } = useAuth();
   const { cart, orders } = useCart();
+  const navigate = useNavigate();
 
   function exit() {
     signOut()
@@ -35,7 +37,11 @@ export function Header({ search }) {
             onChange={e => search(e.target.value)}
           /> 
       
-        <button className="order">
+        <button 
+          type="button"
+          className="order"
+          onClick={navigate("/order")}
+        >
           <img src={receiptIcon} alt="" /> 
           <h3>Pedidos</h3>
           <span>{cart.length}</span>

@@ -36,6 +36,7 @@ export const Container = styled.div`
     justify-content: center;
   }
 
+
   @media screen and (min-width: 1280px){
     width: 100%;
     height: 100vh;
@@ -76,7 +77,6 @@ export const Container = styled.div`
 export const Form = styled.div`
   width: 50rem;
   grid-area: form;
-  border: 1px solid blue;
 
 > button {
   width: 21rem;
@@ -115,8 +115,6 @@ export const Form2 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px red solid;
-
 
   > h2 {
     font-family: 'Poppins', sans-serif;
@@ -162,13 +160,13 @@ export const Form2 = styled.div`
     align-items: center;
     justify-content: center;
 
-    border: 1px solid red; //!verificar aqui
   }
 
   .payForm .input-wrapper {
     width: 35rem;
     display: flex;
     flex-direction: column;
+    margin-top: 5.7rem;
   }
 
   .payForm .input-wrapper .cardNumber {
@@ -189,7 +187,7 @@ export const Form2 = styled.div`
     font-size: 1.6rem;
     color:  #C4C4CC;
 
-    margin-bottom: .8rem;
+    margin-bottom: .8rem;    
   }
 
   .payForm .input-wrapper .cardData .validity,
@@ -215,7 +213,6 @@ export const Form2 = styled.div`
     background-color: transparent;
     border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_100};
     border-radius: .5rem;
-
 
     &::placeholder{
       font-size: 1.6rem;
@@ -244,7 +241,11 @@ export const Form2 = styled.div`
     margin-inline: .4rem;
   }
 
+  > div button {
+    width: 34rem;
 
+    margin: 3.7rem auto 5.6rem;
+  }
 
   .payForm .pixForm {
     width: 26.5rem;
@@ -278,6 +279,10 @@ export const Form2 = styled.div`
     background-color: ${({theme}) => theme.DARK.DARK_800};
     border: 1px solid ${({theme}) => theme.LIGHT.LIGHT_600};
     border-radius: 0 0.8rem 0 0;
+  }
+
+  .codeInput-wrapper {
+    margin: 3.1rem 8.5rem;
   }
 
 `

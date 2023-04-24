@@ -12,19 +12,20 @@ import creditCardIcon from "../../assets/Icons/CreditCard.svg"
 import qrCode from "../../assets/qrCode.svg"
 
 export function Order() {
+
   return (
     <Container>
       <Navbar/>
       <Header/>
         <main>
-          <Form>
+          <Form className="form1" >
               <Content>
                 <h2>Meu pedido</h2>
                   <CardOrder/>
               </Content>
-            <Button title="Avançar"/>
+            <Button title="Avançar" className="goPay" />
           </Form>
-          <Form2>
+          <Form2 className="form2" >
             <h2>Pagamento</h2>
             <div className="payForm">
               <div>
@@ -36,7 +37,6 @@ export function Order() {
                 </div>
               </div>
                <div className="input-wrapper">
-
                 <div className="cardNumber">
                   <label for="cardNumber">Número do Cartão</label>
                   <input id="cardNumber" type="text"  placeholder="0000 0000 0000 0000"/>
@@ -52,12 +52,14 @@ export function Order() {
                     <label for="cvc">CVC</label>
                     <input id="cvc" type="text"  placeholder="0000"/>
                   </div>
-                </div>
-  
-                {/* <div className="code">
-                    <img src={qrCode} alt="" />
-                </div> */}
+                </div>  
+                <Button title="Finalizar pagamento"/>
               </div>
+              {/* <div className="codeInput-wrapper">
+                <div className="code">
+                    <img src={qrCode} alt="" />
+                </div>
+              </div> */}
             </div>
           </Form2>
         </main>

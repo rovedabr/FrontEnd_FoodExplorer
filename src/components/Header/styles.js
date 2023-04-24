@@ -22,7 +22,7 @@ export const Content = styled.div`
   gap: 3.2rem;
   padding: 2.4rem 12.3rem;
 
-  > .brand img{
+  > .brand img {
     width: 19.7rem;
     height: 3rem;
   }
