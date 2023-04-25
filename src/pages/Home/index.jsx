@@ -3,17 +3,6 @@ import { Container, Content } from "./styles"
 import  { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import heart from "../../assets/Icons/heart.svg"
-import pencil from "../../assets/Icons/pencil.svg"
-
-import { HiMinus } from "react-icons/hi2";
-import { HiPlus } from "react-icons/hi2";
-
-import minus from "../../assets/Icons/Minus.svg"
-import plus from "../../assets/Icons/Plus.svg"
-
-
-
 import { useAuth } from "../../hooks/auth";
 import { useCart } from "../../hooks/cart";
 import { api } from "../../services/api";
@@ -41,10 +30,11 @@ export function Home() {
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
     
   const [ meals, setMeals ] = useState([])
-  const [ order, setOrder ] = useState([])
   const [ search, setSearch ] = useState("");
-  const [ title, setTitle ] = useState([]);
-  const [ ingredients, setIngredients ] = useState([])
+
+  // const [ order, setOrder ] = useState([])
+  // const [ title, setTitle ] = useState([]);
+  // const [ ingredients, setIngredients ] = useState([])
 
   useEffect(() => {
     async function fetchMeals() {

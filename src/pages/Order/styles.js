@@ -70,28 +70,12 @@ export const Container = styled.div`
     > footer {
       grid-area: footer;
     }
-
   }
 `;
 
-export const Form = styled.div`
-  width: 50rem;
-  grid-area: form;
-
-> button {
-  width: 21rem;
-  height: 4.8rem;
-
-  margin: 3.1rem 3.7rem 13.5rem auto; 
-
-  
-}
-
-`
 
 export const Content = styled.div`
   width: 50rem;
-  /* height: 65.6rem; */
 
   display: flex;
   flex-direction: column;
@@ -146,6 +130,10 @@ export const Form2 = styled.div`
     flex-direction: row;
   }
 
+  .payForm .hide {
+    border: 1px red solid;
+  }
+
   .payForm {
     width: 53rem;
     height: 44.5rem;
@@ -167,7 +155,7 @@ export const Form2 = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_100};
   }
 
-  .payForm .input-wrapper {
+  .payForm .cardInput-wrapper {
     width: 35rem;
     height: 35rem;
 
@@ -177,26 +165,26 @@ export const Form2 = styled.div`
 
   }
 
-  .payForm .input-wrapper {
+  .payForm .cardInput-wrapper {
     width: 35rem;
     display: flex;
     flex-direction: column;
-    margin-top: 5.7rem;
+    margin-top: 1rem;
   }
 
-  .payForm .input-wrapper .cardNumber {
+  .payForm .cardInput-wrapper .cardNumber {
     display: flex;
     flex-direction: column;
   }
 
-  .payForm .input-wrapper .cardData {
+  .payForm .cardInput-wrapper .cardData {
     display: flex;
     flex-direction: row;
   }
 
 
-  .payForm .input-wrapper .cardNumber label,
-  .payForm .input-wrapper .cardData label {
+  .payForm .cardInput-wrapper .cardNumber label,
+  .payForm .cardInput-wrapper .cardData label {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
@@ -205,8 +193,8 @@ export const Form2 = styled.div`
     margin-bottom: .8rem;    
   }
 
-  .payForm .input-wrapper .cardData .validity,
-  .payForm .input-wrapper .cardData .cvc {
+  .payForm .cardInput-wrapper .cardData .validity,
+  .payForm .cardInput-wrapper .cardData .cvc {
     display: flex;
     flex-direction: column;
 
@@ -217,7 +205,7 @@ export const Form2 = styled.div`
     margin-top: 2rem;
   }
 
-  .payForm .input-wrapper .cardNumber input{
+  .payForm .cardInput-wrapper .cardNumber input{
     width: 34rem;
     height: 4.8rem;
 
@@ -234,7 +222,7 @@ export const Form2 = styled.div`
     }
   }
 
-  .payForm .input-wrapper .cardData input{
+  .payForm .cardInput-wrapper .cardData input{
     width: 16.6rem;
     height: 4.8rem;
 
@@ -252,14 +240,14 @@ export const Form2 = styled.div`
     }
   }
 
-  .payForm .input-wrapper .cardData input:nth-child(2){
+  .payForm .cardInput-wrapper .cardData input:nth-child(2){
     margin-inline: .4rem;
   }
 
   > div button {
     width: 34rem;
 
-    margin: 3.7rem auto 5.6rem;
+    margin: .5rem auto 2rem;
   }
 
   .payForm .pixForm {
@@ -296,8 +284,12 @@ export const Form2 = styled.div`
     border-radius: 0 0.8rem 0 0;
   }
 
-  .codeInput-wrapper {
-    margin: 3.1rem 8.5rem;
+  .pixInput-wrapper {
+    margin: 2rem 5rem;
+  }
+
+  .pixInput-wrapper img {
+    width: 25rem;
   }
 
 `

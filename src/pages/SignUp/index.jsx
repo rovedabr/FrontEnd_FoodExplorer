@@ -66,6 +66,7 @@ export function SignUp() {
               <div className="input-wrapper">
               <label>Senha</label>
                 <Input
+                  className="password"
                   required
                   type="password"
                   minlength="6"

@@ -2,10 +2,12 @@ import { Container, Content } from "./styles";
 import { Link } from "react-router-dom";
 import { Button } from "../Button";
 
+import heartFill from "../../assets/Icons/HeartFill.svg"
 import pencil from "../../assets/Icons/pencil.svg"
-import heart from "../../assets/Icons/heart.svg"
+import heart from "../../assets/Icons/Heart.svg"
 import minus from "../../assets/Icons/Minus.svg"
 import plus from "../../assets/Icons/Plus.svg"
+
 
 import { useAuth } from "../../hooks/auth";
 import { useCart } from "../../hooks/cart";
@@ -20,9 +22,14 @@ export function Card({ meal, ...rest }) {
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true)  
 
   const [ quantity, setQuantity ] = useState(Number(0))
+  const [ favorite, setFavorite ] = useState(heart)
 
   function handleUpQuantity() {
     setQuantity(prevState => prevState +1)
+  }
+
+  const handleFavorite = () => {
+    setFavorite(state => state === heart ? heartFill : heart)
   }
 
   function handleDownQuantity() {
@@ -50,10 +57,12 @@ export function Card({ meal, ...rest }) {
               </Link>
             : 
               <Link>
-                <input 
+                <input
+                  id="heart"
                   type="image" 
-                  src={heart} 
-                  alt="ícone de um coração"                
+                  src={[favorite]} 
+                  alt="ícone de um coração"  
+                  onClick={() => handleFavorite()}              
                 />              
               </Link>
           }                                

@@ -32,6 +32,10 @@ export const Content = styled.div`
     font-size: 1.6rem;
   }
 
+  > main div .input-wrapper .password {
+    -webkit-text-security: disc;
+  }
+
   > div:nth-child(1) {
     width: 27.8rem;
     height: 4.4rem;

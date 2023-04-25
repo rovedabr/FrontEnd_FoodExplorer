@@ -41,10 +41,12 @@ export function SignIn() {
             <div className="input-wrapper">
              <label>Senha</label>
               <Input
+                className="password"
                 required
                 placeholder="No mínimo 6 caracteres"
                 type="password"
                 minlength="6"
+                secureTextEntry={true}
                 onChange={e => setPassword(e.target.value)}
               ></Input>
             </div>

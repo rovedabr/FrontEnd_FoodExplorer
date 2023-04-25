@@ -8,19 +8,21 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  > input {
+  > img {
     width: 2.5rem;
     height: 2.5rem;
     
     margin-right: .8rem;
   }
 
-  > input:hover {
-    transform: scale(1.3);
-    transition: 0.5 ease-in-out;
+  > a:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    color: ${({theme}) => theme.COLORS.CAKE_200};
   }
 
-  > h1 {
+  > a {
+    text-decoration: none;
     font-size: 2.1rem;
     line-height: 2.4rem;
     font-weight: 700;
