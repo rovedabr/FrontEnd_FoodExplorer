@@ -1,6 +1,7 @@
 import { Container, MenuBar, Form } from "./styles";
 
 import { useAuth } from "../../hooks/auth"
+import { useState } from "react";
 
 import { Input } from "../../components/Input"
 import { Footer } from "../../components/Footer";
@@ -14,6 +15,8 @@ import { Link, useNavigate } from "react-router-dom";
 export function Menu() {
   const { signOut, user } = useAuth();
   const navigate = useNavigate();
+
+  const [ search, setSearch ] = useState("");
 
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true) 
 
@@ -39,6 +42,7 @@ export function Menu() {
           type="text"
           icon={HiMagnifyingGlass}
           placeholder="Busque por pratos ou ingredientes"
+          search={setSearch}
         >          
         </Input>
         {

@@ -13,7 +13,6 @@ import 'swiper/css/navigation'
 import 'swiper/css'
 
 
-
 import { Card } from "../../components/Card"
 import { Header } from "../../components/Header"
 
@@ -31,10 +30,6 @@ export function Home() {
     
   const [ meals, setMeals ] = useState([])
   const [ search, setSearch ] = useState("");
-
-  // const [ order, setOrder ] = useState([])
-  // const [ title, setTitle ] = useState([]);
-  // const [ ingredients, setIngredients ] = useState([])
 
   useEffect(() => {
     async function fetchMeals() {
