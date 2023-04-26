@@ -29,7 +29,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 
 ## Tecnologias (VER AINDA BUDGETS)
-	https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+![image](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 - Javascript
 - Reactjs 
 - Knex
