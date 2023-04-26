@@ -20,7 +20,7 @@ export function Order() {
   const { cart, clearCart, totalCart } = useCart()
   const  { user }  = useAuth() 
 
-  const [ showPix, setShowPix ] = useState(false)
+  const [ showPix, setShowPix ] = useState(true)
   const [ showCard, setShowCard ] = useState(false)
 
   function pixPaymentForm () {

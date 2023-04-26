@@ -40,26 +40,29 @@ export const Form = styled.div`
     height: 2.2rem;
   }
 
-  //*===============================================================
-
   .menu {
     width: 30rem;
     height: 25rem;
 
-    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
 
-    border: 1px red solid; //!!remover depois
+    border-radius: .8rem;
+    border: 1px solid ${({theme}) => theme.DARK.DARK_500}; 
     background-color: ${({theme}) => theme.DARK.DARK_300};
+    box-shadow: rgba(0, 80, 100, 1) 0px 0px 5px 2px;
+
     opacity: 0.9;
 
     position: fixed;
     top: 5rem;
-    left: 1.5rem;
+    left: 2rem;
 
-    z-index: 1;
+    z-index: 99999;
   }
 
-  .menu div {
+  .menu div:first-child {
+    height: 5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -68,18 +71,21 @@ export const Form = styled.div`
     background-color: ${({theme}) => theme.DARK.DARK_700};
   }
 
-  .menu input {
-    /* width: 2rem; */
-    opacity: 1;
 
-    margin: 1rem 2rem auto 1rem;
+  .menu input {
+    width: 2rem;
+
+    margin: 1.5rem 2rem auto 1rem;
+    outline: none;
   }
 
   .menu h1 {
-    font-size: 2.8rem;
-    color: white;
-    opacity: 1;   
-    
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+
+    color: ${({ theme }) => theme.LIGHT.LIGHT_100};    
   }
 
   .menu .search {
@@ -87,29 +93,52 @@ export const Form = styled.div`
     height: 4.8rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+
+    background-color: ${({theme}) => theme.DARK.DARK_900};
 
     margin-top: 3rem;
-    font-size: 2.8rem;
-    border: 1px solid blue;
-    color: white;
-    opacity: 1;  
+    margin-bottom: 3rem;
+
+    border-radius: 0.5rem;
+    border: 1px solid ${({theme}) => theme.DARK.DARK_1000}; 
+  }
+
+  .menu .search img {
+    height: 2.4rem;
+    margin: 0.5rem;
   }
 
   .menu .search input {
     width: 100%;
-    height: 2.4rem;
+    height: 4.5rem;
     background: transparent;
     border: none;
+    margin-top: 0;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: ${({ theme }) => theme.LIGHT.LIGHT_300};
   }
 
   .menu a {
-    font-size: 2.8rem;
-    color: white;
-    opacity: 1;   
-    
-  }
+    width: 80%;
 
-  //*===============================================================
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    font-weight: 300;
+
+    text-decoration: none;
+
+    color:  ${({ theme }) => theme.LIGHT.LIGHT_300}; 
+
+    border-bottom: 0.1rem solid ${({theme}) => theme.DARK.DARK_1000};
+    margin-left: 2rem;
+  }
 
   >div span {
     font-family: 'Poppins', sans-serif;
