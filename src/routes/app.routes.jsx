@@ -6,7 +6,6 @@ import { AddMeal } from "../pages/AddMeal";
 import { EditMeal } from "../pages/EditMeal";
 import { MealDetails } from "../pages/MealDetails";
 
-
 export function AppRoutes() {
   return (
     <Routes>
