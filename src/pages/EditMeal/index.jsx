@@ -7,8 +7,8 @@ import { useState, useEffect } from "react";
 import { FiUpload} from "react-icons/fi";
 
 import { ButtonUpload } from "../../components/ButtonUpload";
-import { AdminHeader } from "../../components/AdminHeader";
-import { AdminNavbar } from "../../components/AdminNavbar";
+import { Header } from "../../components/Header";
+import { Navbar } from "../../components/NavBar";
 import { ButtonBack } from "../../components/ButtonBack";
 import { InputLabel } from "../../components/InputLabel";
 import { NoteItem } from "../../components/NoteItem";
@@ -119,8 +119,8 @@ export function EditMeal() {
 
   return (
     <Container>
-      <AdminNavbar/>
-      <AdminHeader/> 
+      <Navbar/>
+      <Header/> 
         { isAdmin === 1 ?
             <main>
                 <ButtonBack

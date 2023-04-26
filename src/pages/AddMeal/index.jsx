@@ -7,8 +7,8 @@ import { useState } from "react";
 
 import { FiUpload} from "react-icons/fi"
 
-import { AdminHeader } from "../../components/AdminHeader"
-import { AdminNavbar } from "../../components/AdminNavbar"
+import { Header } from "../../components/Header"
+import { Navbar } from "../../components/NavBar";
 import { ButtonUpload } from "../../components/ButtonUpload"
 import { ButtonBack } from "../../components/ButtonBack"
 import { InputLabel } from "../../components/InputLabel"
@@ -83,8 +83,8 @@ export function AddMeal() {
     
   return (
     <Container>
-        <AdminNavbar/>
-        <AdminHeader/> 
+        <Navbar/>
+        <Header/> 
         <main>
             <ButtonBack
               id="buttonBack"

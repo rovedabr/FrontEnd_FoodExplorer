@@ -15,10 +15,7 @@ import 'swiper/css'
 
 import { Card } from "../../components/Card"
 import { Header } from "../../components/Header"
-
-import { AdminHeader } from "../../components/AdminHeader"
 import { Navbar } from "../../components/NavBar"
-import { AdminNavbar } from "../../components/AdminNavbar"
 import { Footer } from "../../components/Footer"
 import { Banner } from "../../components/Banner"
 import { Section } from "../../components/Section"
@@ -46,8 +43,8 @@ export function Home() {
   
   return (
      <Container>
-      { isAdmin === 1 ? <AdminNavbar search={setSearch} /> : <Navbar search={setSearch}/> }
-      { isAdmin === 1 ? <AdminHeader search={setSearch} /> : <Header search={setSearch}/> }
+       <Navbar search={setSearch}/>
+       <Header search={setSearch}/> 
         <main>
          <Content>
            <Banner className="banner"/>

@@ -2,11 +2,12 @@ import { Container, Content, Form } from "./styles";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import brand from "../../assets/brand.png"
 
 import { useAuth } from "../../hooks/auth"
 
 import { Input } from "../../components/Input";
-import { Brand } from "../../components/Brand";
+
 import { Button } from "../../components/Button";
 
 export function SignIn() {
@@ -23,7 +24,7 @@ export function SignIn() {
   return(
     <Container>
       <Content>
-      <Brand/>
+      <img src={brand} alt="" />
         <main>
           <Form>
             <h1>Faça login</h1>
