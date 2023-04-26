@@ -166,9 +166,15 @@ export const Form = styled.div`
     font-weight: 400;
   }
 
+  > div button {
+    width: 31.6rem;
+    height: 4.8rem;
+
+    margin-top: 4.8rem;
+  }
+
   #menu .content .tags {
     width: 31.6rem;
-    height: 10rem;
 
     text-align: center;
 
@@ -301,6 +307,11 @@ export const Form = styled.div`
       align-items: center;
 
       margin: 0;
+    }
+
+    > div button {
+      width: 13.1rem;
+      height: 4.8rem;
     }
 
   }

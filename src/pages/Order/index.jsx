@@ -10,7 +10,6 @@ import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
 import { Button } from "../../components/Button";
 
-
 import { useAuth } from "../../hooks/auth";
 import { useCart } from "../../hooks/cart";
 
@@ -98,11 +97,11 @@ export function Order() {
                     <div className="cardData">
                       <div className="validity">
                         <label htmlFor="validity">Validade</label>
-                        <input id="validity" type="text"  placeholder="00/00/0000"/>
+                        <input id="validity" type="text"  placeholder="00/00"/>
                       </div>
                       <div className="cvc">
                         <label htmlFor="cvc">CVC</label>
-                        <input id="cvc" type="text"  placeholder="0000"/>
+                        <input id="cvc" type="text"  placeholder="000"/>
                       </div>
                     </div>  
                   </div>

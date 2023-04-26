@@ -6,6 +6,7 @@ export function Select({ label, value, title, category, placeholder, icon:Icon, 
         <label htmlFor={category}>{label}</label>
         <div>
           <select name="Food" id={category} value={value}>
+            <option value=""></option>
             <option value="Refeições">Refeições</option>
             <option value="Sobremesas">Sobremesas</option>
             <option value="Bebidas">Bebidas</option>              

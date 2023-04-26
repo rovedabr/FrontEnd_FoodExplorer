@@ -2,6 +2,7 @@ import { Container, Form } from "./styles";
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "../../hooks/auth";
 import { useCart } from "../../hooks/cart";
@@ -23,9 +24,16 @@ export function MealDetails() {
   const [ meal, setMeal ] = useState([])
   const { handleAddMealCart } = useCart();
 
+  const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true) 
+
   const params = useParams()
+  const navigate = useNavigate()
 
   const [ quantity, setQuantity ] = useState(Number(0))
+
+  function editMeal() {
+    return navigate(`/editmeal/${meal.id}`)
+  }
 
   function handleUpQuantity() {
     setQuantity(prevState => prevState +1)
@@ -87,37 +95,42 @@ export function MealDetails() {
                             }                 
                           </div>
                       } 
-
-                      <div className="buttons">
-                      <div className="addRemoveButton"> 
-                        <input 
-                          type="image" 
-                          src={minus} 
-                          alt="Símbolo de menos" 
-                          id="add" 
-                          onClick={handleDownQuantity}                  
-                        />
-                        <span>{quantity}</span>
-                        <input 
-                          type="image" 
-                          src={plus} 
-                          alt="Símbolo de mais" 
-                          id="remove" 
-                          onClick={handleUpQuantity}                  
-                        />
-                      </div>
+                      { isAdmin === 1 ?
                         <Button 
-                          type="text"
-                          icon={receiptIcon}
-                          title="Incluir"
-                          onClick={() => handleAddMealCart(meal, quantity)}
+                          type="button"
+                          title="Editar" 
+                          onClick={() => editMeal()}                        
                         />
-                      </div>
-
+                      :
+                        <div className="buttons">
+                          <div className="addRemoveButton"> 
+                            <input 
+                              type="image" 
+                              src={minus} 
+                              alt="Símbolo de menos" 
+                              id="add" 
+                              onClick={handleDownQuantity}                  
+                            />
+                          <span>{quantity}</span>
+                            <input 
+                              type="image" 
+                              src={plus} 
+                              alt="Símbolo de mais" 
+                              id="remove" 
+                              onClick={handleUpQuantity}                  
+                            />
+                          </div>
+                            <Button 
+                              type="text"
+                              icon={receiptIcon}
+                              title="Incluir"
+                              onClick={() => handleAddMealCart(meal, quantity)}
+                            />
+                          </div>
+                      }
                     </div>
               </div>  
             </Form>
-
         </main> 
       <Footer/>
     </Container>
