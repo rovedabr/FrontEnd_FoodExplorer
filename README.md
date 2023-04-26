@@ -1,4 +1,4 @@
-  <img src="./src/assets/brandGit.png"/>
+ <img src="./src/assets/brandGit.png"/>
 
 # Food Explorer
 ## Front-End / Back-end
@@ -32,6 +32,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 ## Tecnologias (VER AINDA BUDGETS)
 ![image](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+1[image](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 - Javascript
 - Reactjs 
 - Knex
