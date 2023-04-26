@@ -1,24 +1,29 @@
 import { Container, Content, Form2 } from "./styles";
 
+import creditCardIcon from "../../assets/Icons/CreditCard.svg"
+import pixIcon from "../../assets/Icons/PIX.svg"
+import qrCode from "../../assets/qrCode.svg"
+
+import { CardOrder } from "../../components/CardOrder";
 import { Navbar } from "../../components/NavBar"
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
-import { CardOrder } from "../../components/CardOrder";
 import { Button } from "../../components/Button";
-import { InputLabel } from "../../components/InputLabel"
 
-import pixIcon from "../../assets/Icons/PIX.svg"
-import creditCardIcon from "../../assets/Icons/CreditCard.svg"
-import qrCode from "../../assets/qrCode.svg"
 
 import { useAuth } from "../../hooks/auth";
 import { useCart } from "../../hooks/cart";
+
 import { api } from "../../services/api";
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function Order() {
   const { cart, clearCart, totalCart } = useCart()
   const  { user }  = useAuth() 
+
+  const navigate = useNavigate()
 
   const [ showPix, setShowPix ] = useState(true)
   const [ showCard, setShowCard ] = useState(false)
@@ -51,7 +56,9 @@ export function Order() {
   async function handleCreateOrder(cart) { 
     const newCart = handleNewCart(cart)
     await api.post("/mealsOrder", newCart)
+    alert("Pedido realizado com sucesso!")
     clearCart()
+    navigate("/")
   }  
  
   return (

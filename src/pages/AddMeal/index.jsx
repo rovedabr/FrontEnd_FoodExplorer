@@ -164,7 +164,7 @@ export function AddMeal() {
                   <Button 
                     type="button"
                     title="Salvar alterações"
-                    onClick={handleNewMeal}
+                    onClick={() => handleNewMeal()}
                   />
                 </div>
               </Form>

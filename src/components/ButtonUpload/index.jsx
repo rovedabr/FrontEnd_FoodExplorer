@@ -9,7 +9,7 @@ export function ButtonUpload({ label, title, input, value, fileImage, icon:Icon,
               {Icon && <Icon size={24}/>}{title}
               <input 
                 type="file" 
-                name="teste"
+                name="buttonUpload"
                 id={fileImage} 
                 value={value}
               />    

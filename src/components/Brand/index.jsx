@@ -16,7 +16,12 @@ export function Brand({ img, name, ...rest}) {
   return(   
     <Container>
       <div>
-        <input type="image" src={logo} alt="Logo da aplicação" onClick={() => goHome()}/>
+        <input 
+          type="image" 
+          src={logo} 
+          alt="Logo da aplicação" 
+          onClick={() => goHome()}
+        />
         <h1>food explorer</h1>
       </div>
       { isAdmin === 1 ? <p>admin</p> : "" }

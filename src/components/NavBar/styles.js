@@ -140,6 +140,10 @@ export const Form = styled.div`
     margin-left: 2rem;
   }
 
+  .menu a:hover {
+    color: ${({theme}) => theme.COLORS.CAKE_200};
+  }
+
   >div span {
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;

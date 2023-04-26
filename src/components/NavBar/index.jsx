@@ -23,8 +23,8 @@ export function Navbar({ search }) {
 
   const [ popoverOpen,  setPopoverOpen] = useState(false)
 
-  function menu() {
-    return navigate("/menu")
+  function goOrder() {
+    return navigate("/order")
   }
 
   function closePopover () {
@@ -76,14 +76,14 @@ export function Navbar({ search }) {
                 <Link
                   type="button"
                   title="Novo Prato"
-                  onClick={navigate("/addmeal")}
+                  to={"/addmeal"}
                 >Novo Prato</Link> 
                 : <div></div>
               }          
               <Link
                 type="button"
                 title="Sair"
-                onClick={signOut}
+                onClick={() => signOut()}
               >Sair</Link>   
             </div>
           : null }
@@ -93,7 +93,7 @@ export function Navbar({ search }) {
             type="image" 
             src={receiptIcon} 
             alt="Ícone do recibo da compra" 
-            onClick={() => navigate("/order")}           
+            onClick={() => goOrder()}           
           />
           <span>{cart.length}</span>
         </div>

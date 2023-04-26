@@ -2,6 +2,7 @@ import { Container, Content } from "./styles";
 
 import { Input } from "../Input";
 import { Brand } from "../Brand";
+import { Button } from "../Button";
 
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../hooks/cart";
