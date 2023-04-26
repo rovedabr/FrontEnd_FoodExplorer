@@ -1,4 +1,4 @@
-<img src="./src/assets/brand.png"/>
+<img src="./src/assets/brandGit.png"/>
 
 # Food Explorer
 ## Front-End / Back-end
