@@ -19,7 +19,7 @@ export const Container = styled.div`
   
   > main {
     width: 100%;
-
+    height: 70%;
     grid-area: main;
 
     display: flex;
@@ -68,9 +68,6 @@ export const Container = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   } 
 
-  #menu {
-    height: 100%;
-  }
 
   .buttons {
     display: flex;
@@ -108,12 +105,13 @@ export const Container = styled.div`
     }
 
     > main {
-      height: 70%;
-      width: 70%;
+      width: 100%;
+      height: 80%;
 
       grid-area: main;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
     > main a {
@@ -135,10 +133,10 @@ export const Form = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  margin: 1.7rem 5.6rem 3.6rem 5.6rem;
-
-
+  
   > div img {
     width: 26.4rem;
     height: 26.4rem;
@@ -168,7 +166,7 @@ export const Form = styled.div`
     font-weight: 400;
   }
 
-  >#menu .content .tags {
+  #menu .content .tags {
     width: 31.6rem;
     height: 10rem;
 
@@ -213,7 +211,14 @@ export const Form = styled.div`
     margin: 0 1.4rem;
   } 
 
-  >#menu .content .buttons {
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #menu .content .buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -222,55 +227,57 @@ export const Form = styled.div`
     margin-bottom: 0;
   }
 
-  >#menu .content .buttons button img {
+  #menu .content .buttons button img {
     width: 1.8rem;
     height: 1.5rem;
 
     margin: 0;
   }
 
-  >#menu .content .buttons button {
+  #menu .content .buttons button {
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
 
 
   @media screen and (min-width: 1280px){
-    width: 80%;
+    width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 10rem 12rem 15rem 12rem;
-
-    > #menu {
+    #menu {
+      width: 100%;
+      height: 80%;
       display: flex;
       flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
     
-    > #menu img {
+    #menu img {
       width: 39rem;
       height: 39rem;
 
       margin-right: 4.7rem;
     }
 
-    > #menu .content {
+    #menu .content {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
     }
 
-    > #menu .content .mealData {
+    #menu .content .mealData {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
     }
 
-   > #menu .content .mealData h2 {
+    #menu .content .mealData h2 {
       font-size: 4rem;
       line-height: 5.6rem;
       font-weight: 500;
@@ -278,7 +285,7 @@ export const Form = styled.div`
       text-align: left;
     }
 
-    > #menu .content .mealData span {
+    #menu .content .mealData span {
       font-size: 2.4rem;
       line-height: 3.3rem;
       font-weight: 400;
@@ -286,7 +293,7 @@ export const Form = styled.div`
       text-align: left;
     }
 
-    > #menu .content .tags {
+    #menu .content .tags {
       width: 100%;
       display: flex;
       flex-direction: row;

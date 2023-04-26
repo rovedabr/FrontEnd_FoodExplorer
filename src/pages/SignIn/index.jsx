@@ -24,7 +24,10 @@ export function SignIn() {
   return(
     <Container>
       <Content>
-      <img src={brand} alt="" />
+       <img 
+        src={brand} 
+        alt="Logo da empresa"        
+       />
         <main>
           <Form>
             <h1>Faça login</h1>

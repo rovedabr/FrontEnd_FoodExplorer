@@ -14,14 +14,20 @@ export const Container = styled.div`
     align-items: center;
   }
 
-  > div img {
+  > div input {
     width: 2.4rem;
     height: 2.4rem;
     
     margin-right: .8rem;
   }
 
-  > div a h1 {
+  > div input:hover {
+    filter: brightness(.8);
+    transform: rotate(180deg) scale(1.5);
+    transition: 0.5s ease-in-out;
+  }
+
+  > div h1 {
     font-size: 2.1rem;
     line-height: 2.4rem;
     font-weight: 700;
@@ -29,15 +35,6 @@ export const Container = styled.div`
     color: ${({theme}) => theme.LIGHT.LIGHT_100};
   }
 
-  >div a h1:hover {
-    transform: scale(1.05);
-    transition: 0.5s ease-in-out;
-    color: ${({theme}) => theme.COLORS.CAKE_200};
-  }
-
-  >div a {
-    text-decoration: none;
-  }
 
   > p {
     font-size: 1.2rem;
@@ -53,7 +50,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: flex-end;
   
-    >div img {
+    > div input {
       width: 3rem;
       height: 3rem;
       

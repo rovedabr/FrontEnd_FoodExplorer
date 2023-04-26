@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import { useState } from "react";
 
-import { Brand } from "../../components/Brand";
+import brand from "../../assets/brand.png"
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
@@ -37,10 +37,12 @@ export function SignUp() {
   return(
     <Container>
       <Content>
-        <Brand/>
+       <img 
+        src={brand} 
+        alt="Logo da empresa"        
+       />
           <main>
             <Form>
-
               <h1>Crie sua conta</h1>
 
               <div className="input-wrapper">

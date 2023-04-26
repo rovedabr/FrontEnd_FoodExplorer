@@ -20,6 +20,13 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
 
+  > img {
+    width: 27rem;
+    height: 4.4rem;
+
+    margin-bottom: 7.3rem;
+  }
+
   > main div .input-wrapper,
     main div button,
     main h1 {
@@ -36,27 +43,6 @@ export const Content = styled.div`
     -webkit-text-security: disc;
   }
 
-  > div:nth-child(1) {
-    width: 27.8rem;
-    height: 4.4rem;
-
-    margin-bottom: 7.3rem;
-  }
-
-  > div:nth-child(1) img {
-    width: 4.3rem;
-    height: 4.3rem;
-  }
-
-  > div:nth-child(1) h1 {
-    font-size: 3.7rem;
-    line-height: 4.3rem;
-  }
-
-  > main h1 {
-    display: none;
-    color: red;
-  }
 
   > main .input-wrapper label {
     font-size: 1.6rem;
@@ -76,44 +62,12 @@ export const Content = styled.div`
     display: flex;
     align-content: space-between;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row;  
 
-    > main h1 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      font-size: 3.2rem;
-      font-weight: 500;
-      line-height: 4.5rem;
-
-      text-align: center;
-
-      color: ${({theme}) => theme.LIGHT.LIGHT_400};
+    > img {
+      margin-right: 30rem;
     }
-    
    
-    > div:nth-child(1) {
-      width: 32.4rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      margin: 25rem 30.6rem 32rem 0;
-    }
-
-    > div:nth-child(1) img {
-      width: 4.9rem;
-      height: 4.8rem;
-
-      margin-right: 1.9rem;
-    }
-
-    > div:nth-child(1) h1 {
-      font-size: 4.2rem;
-      line-height: 4.9rem;
-    }
   }
 `;
 
@@ -123,7 +77,11 @@ export const Form = styled.div`
   
   background: transparent;
 
-   > a {
+  > h1 {
+    display: none;
+  }
+
+  > a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -147,6 +105,20 @@ export const Form = styled.div`
     gap: 1.5rem;
 
     background-color: ${({theme}) => theme.DARK.DARK_700};
+
+    > h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      font-size: 3.2rem;
+      font-weight: 500;
+      line-height: 4.5rem;
+
+      text-align: center;
+
+      color: ${({theme}) => theme.LIGHT.LIGHT_400};
+    }
   }
 `;
 
