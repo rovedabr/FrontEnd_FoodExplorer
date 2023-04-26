@@ -1,3 +1,5 @@
+<img src="./src/assets/brand.png"/>
+
 # Food Explorer
 ## Front-End / Back-end
 
