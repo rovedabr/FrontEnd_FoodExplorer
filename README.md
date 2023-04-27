@@ -1,6 +1,7 @@
- <img align="center" src="./src/assets/brandGit.png"/>
+ <p align="center">
+ <img src="./src/assets/brandGit.png"/>
+ </p>
 
-# Food Explorer
 ## Front-End / Back-end
 
 O Food Explorer é uma aplicação completa desenvolvida como projeto final da trilha Explorer da Rocketseat.
@@ -11,7 +12,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 - Site:  (VERIFICAR)
 
-## Screenshots
+## Imagens
 
 
 ## Características
@@ -30,11 +31,25 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 - OBS.: o Back-end possui algumas APIs desenvolvidas além dos requisitos do projeto mas que ainda não aplicadas
 
 
-## Tecnologias (VER AINDA BUDGETS)
+## Tecnologias empregadas
 ![image](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+![image](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![image](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![image](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![image](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![image](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
+
+- HTML
+- CSS in JS
 - Javascript
 - Reactjs 
+- JQuery
+- Express
+- Bcrypt
 - Knex
 - SQlite
 - Styled Components 
@@ -42,13 +57,20 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 - Axios 
 - Vite 
 - Node 
+- Jest
 - Git
 
 ## Instalação e clone do projeto
 
+ **Front-end**
 ```bash
-git clone https://github.com/
+git clone https://github.com/rovedabr/FrontEnd_FoodExplorer
 ```
+**Back-end**
+```bash
+git clone https://github.com/rovedabr/BackEnd_FoodExplorer
+```
+
 Acessar a pasta e instale as dependências
 
 ```bash
@@ -68,10 +90,20 @@ Acessar o endereço fornecido pelo terminal via Browser.
 - e-mail: admin@email.com
 - senha: 123456
 
+### Contato
+**Ivan Roveda**
+- [Linkedin](https://www.linkedin.com/in/ivan-roveda-952827b8/)
+- [E-mail](ivan.roveda76@gmail.com)
 
-### Agradecimento (VERIFICAR)
+### Links uteis
+- [Rockeseat](https://www.rocketseat.com.br/)
+- [Netlify](https://www.netlify.com/)
+- [Heroku](https://www.heroku.com/)
+-
 
-Please make sure to update tests as appropriate.
+### Agradecimento 
+
+Agradeço a toda equipe da Rocketseat pelo apoio e ensinamentos prestados. Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
 
 ## License
 
