@@ -44,8 +44,12 @@ function CartProvider({ children }) {
   }
 
   function handleRemoveMealFromCart(deleted) {
-    const filteredCart = cart.filter(cartItem => cart.indexOf(cartItem !== deleted))
-    setCart(filteredCart)
+    const confirmDeleted = confirm("deseja realmente excluir este item?")
+    if (!confirmDeleted) {
+      return
+    } else {
+      setCart(prevState => prevState.filter(item => item.id !== deleted))
+    }
   }
 
   function clearCart() {

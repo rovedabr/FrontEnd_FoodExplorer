@@ -1,13 +1,10 @@
 import { Container } from "./styles";
-import { Link } from "react-router-dom";
 
-import salada from "../../assets/meals/saladaRavanello.png"
 import { useCart } from "../../hooks/cart";
 import { api } from "../../services/api";
 
 export function CardOrder({data}) {
   const { handleRemoveMealFromCart, cart } = useCart()
-  // image = meal.image
 
   return (
 
@@ -20,10 +17,11 @@ export function CardOrder({data}) {
             <h2> {data.title}</h2> 
             <span>R$ {data.price}</span> 
           </div>
-
-          <Link
-            onClick={()=> handleRemoveMealFromCart(data.id)}          
-          >Excluir</Link>
+          
+          <button
+            type="button"
+            onClick={() => handleRemoveMealFromCart(data.id)}
+          >Excluir</button>
         </div>  
     
     </Container>

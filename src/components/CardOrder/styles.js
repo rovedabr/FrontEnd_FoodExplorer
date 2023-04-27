@@ -32,20 +32,22 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-  .order a {
-    margin: 8.5rem;
+  .order button {
+    border: none;
+    background: transparent;
 
+    margin-left: 8rem;
     position: relative;
     top: -2rem;
 
     font-size: 1.2rem;
     line-height: 1.9rem;
-    text-decoration: none;
-    color: ${({theme}) => theme.COLORS.TOMATO_400};    
+    color: ${({theme}) => theme.COLORS.TOMATO_400};
   }
 
-  .order a:hover {
+  .order button:hover {
     color: red;
+    font-weight: bold;
     transition: 0.2s ease-in-out;
   }
 
