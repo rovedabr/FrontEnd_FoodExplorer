@@ -32,6 +32,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 
 ## Tecnologias empregadas
+<p align="center">
 ![image](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -42,6 +43,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 ![image](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![image](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![image](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
+</p>
 
 - HTML
 - CSS in JS
@@ -99,12 +101,13 @@ Acessar o endereço fornecido pelo terminal via Browser.
 - [Rockeseat](https://www.rocketseat.com.br/)
 - [Netlify](https://www.netlify.com/)
 - [Heroku](https://www.heroku.com/)
--
-
-### Agradecimento 
-
-Agradeço a toda equipe da Rocketseat pelo apoio e ensinamentos prestados. Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+### Agradecimento 
+
+[¹]A toda equipe da Rocketseat pelo apoio e ensinamentos prestados. 
+[²]Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
+
