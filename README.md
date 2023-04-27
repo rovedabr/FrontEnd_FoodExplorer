@@ -107,6 +107,6 @@ Acessar o endereço fornecido pelo terminal via Browser.
 
 ### Agradecimento 
 
-[¹]A toda equipe da Rocketseat pelo apoio e ensinamentos prestados. 
-[²]Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
+- A toda equipe da Rocketseat pelo apoio e ensinamentos prestados. 
+- Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
 
