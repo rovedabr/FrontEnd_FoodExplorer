@@ -8,9 +8,11 @@ O Food Explorer é uma aplicação completa desenvolvida como projeto final da t
 Para criação da aplicação foram utilizadas todas as tecnologias aprendidas durante o curso, criando a página de um restaurante fictício utilizando o conceito  de layout responsivo (Mobile first).
 Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Figma e os critérios obrigatórios a serem atendidos, desde a concepção do front-end, back-end, APIs próprias e deploy do projeto.
 
+
 ## Deploy
 
 - Site:  https://rvdfoodexplorer.netlify.app/
+
 
 ## Imagens
 
@@ -20,21 +22,23 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 ![página2](https://user-images.githubusercontent.com/118762335/235223836-0f27c5d6-d579-4ae1-a094-7edb81a13f13.png)
 ![página3](https://user-images.githubusercontent.com/118762335/235223847-9deea233-062a-4eaf-b4cb-e69db3a95845.png)
 
+
 ## Características
+
 - Todos os dados são armazenados em um banco de dados relacional.
 - Poderão ser criados novos usuários através da tela de SingUp. Por padrão todos os usuários criados serão "consumidores".  
-- Os consumidores poderão inserir itens no carrinho e selecionar o tipo de pagamento. 
-- O consumidor poderá revisar os itens do carrinho antes de realizar o pagamento.
-- Ao realizar o pagamento o pedido é efetuado cadas tradando no banco de dados.
-- Administradores poderão inserir novos pratos, excluir ou alterar pratos existentes (incluindo todos os detalhes, como preços, nome, valor e categoria dentre outros).
-- Poderão ser real ziadas pesqusias pelos pratos cadastrados.
-- A autenticação será por JWT e validada por senha a qual será criptografada no banco de dados.
-- Layout responsivo (Mobile First).
-- As APIs desenvolvidas são próprias da aplicação (não foram utilizadas APIs de terceiros).
+- Os consumidores poderão pesquisar por pratos, inserir itens no carrinho, remover itens, selecionar o tipo de pagamento e realizar o pedido. 
+- O consumidor também poderá revisar os itens do carrinho antes de realizar o pagamento, removendo os itens caso queira.
+- Ao realizar o pagamento o pedido é efetuado realizando o cadastramento do pedido no banco de dados.
+- Administradores poderão inserir novos pratos, fazer upload da imagem, selecionar categoria, definir o preço, nome do prato e descrição.
+- Os administradores também poderão excluir ou alterar pratos já existentes.
+- Poderão ser realizadas pesquisas pelos pratos cadastrados.
+- A autenticação dos usuários será por JWT, com validação por senha a qual será criptografada no banco de dados.
+- O layout desenvolvido é do tipo responsivo (Mobile First), funcionando perfeitamente em vários tamanhos de telas.
+- As APIs utilizadas foram desenvolvidas para esta aplicação (não foram utilizadas APIs de terceiros).
 - Foi aplicado o conceito de Inversão de dependência na API do usuário.
 - Adicionada a função de marcar "favoritos" mas sem adição ao banco de dados (milha extra).
-- OBS.: o Back-end possui algumas APIs desenvolvidas além dos requisitos do projeto mas que ainda não aplicadas
-
+- OBS.: o Back-end possui algumas APIs desenvolvidas além dos requisitos do projeto mas que ainda não aplicadas (para desenvolvimento futuro).
 
 ## Tecnologias empregadas
 
@@ -67,6 +71,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 - PM2
 - Git
 
+
 ## Instalação e clone do projeto
 
  **Front-end**
@@ -79,39 +84,48 @@ git clone https://github.com/rovedabr/BackEnd_FoodExplorer
 ```
 
 Acessar a pasta e instale as dependências
-
 ```bash
 npm install
 ```
-Iniciar o servidor local (back-end / front-end)
 
+Iniciar o servidor local (back-end / front-end)
 ```bash
 npm run dev
 ```
 
 Acessar o endereço fornecido pelo terminal via Browser.
-#### Consumidor:
+```bash
+Local:   http://localhost:5173/
+```
+
+### Consumidor:
 - e-mail: user@email.com
 - senha : 123456
 #### Administrador: 
 - e-mail: admin@email.com
 - senha: 123456
 
-### Contato
+
+## Contato
+
 **Ivan Roveda**
 - [Linkedin](https://www.linkedin.com/in/ivan-roveda-952827b8/)
 - E-mail : ivan.roveda76@gmail.com
 
-### Links uteis
+
+## Links uteis
+
 - [Rockeseat](https://www.rocketseat.com.br/)
 - [Netlify](https://www.netlify.com/)
 - [Heroku](https://www.heroku.com/)
+
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-### Agradecimento 
+
+## Agradecimento 
 
 - A toda equipe da Rocketseat pelo apoio e ensinamentos prestados. 
 - Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.

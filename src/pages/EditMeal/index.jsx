@@ -29,7 +29,7 @@ export function EditMeal() {
 
   const [ meal, setMeal ] = useState([])
   const [ price, setPrice ] = useState("")
-  const [ image, setImage ] = useState("")
+  const [ image, setImage ] = useState(null)
   const [ title, setTitle ] = useState("")
   const [ category, setCategory] = useState("")
   const [ ingredients, setIngredients ] = useState("")
@@ -84,6 +84,14 @@ export function EditMeal() {
     formData.append("description", description)
     formData.append("price", price)
     ingredients.map(ingredient => formData.append("ingredients", ingredient))
+
+    const config = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    };
+
+    await api.patch(`/meals/image/${params.id}`, formData, config)
 
     await api.put(`/meals/${params.id}`, formData)
       .then(() => {
