@@ -14,17 +14,12 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 ## Imagens
 
-<img
-  src="../FrontEnd_FoodExplorer/src/assets/Screenshots/página1.png"
-  alt="Página principal"
-  title="Página principal"
-  style="display: inline-block; margin: 0 auto; max-width: 100%">
+![página1](https://user-images.githubusercontent.com/118762335/235221680-9b3f9f7e-b189-48b3-9d34-491084ec5507.png)
+![página2](https://user-images.githubusercontent.com/118762335/235221707-35d0c39d-666e-4c12-8505-0b21df907e9a.png)
+![página5](https://user-images.githubusercontent.com/118762335/235221735-8669adaa-9db8-43c6-8f0d-ee990b93806b.png)
+![página4](https://user-images.githubusercontent.com/118762335/235221744-49b2d5c4-abdb-4f22-9c7e-f48bec569252.png)
+![página3](https://user-images.githubusercontent.com/118762335/235221755-273db20b-f748-417a-9c05-bcba7587d20a.png)
 
-![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página1.png")
-![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página2.png")
-![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página5.png")
-![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página4.png")
-![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página3.png")
 
 ## Características
 - Todos os dados são armazenados em um banco de dados relacional.
