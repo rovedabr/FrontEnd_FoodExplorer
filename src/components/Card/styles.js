@@ -26,8 +26,8 @@ export const Container = styled.div`
 
     position: relative;
     right: -8.5rem;
-    top: -.3rem;
-    
+    top: 1rem;
+     
     color: ${({ theme }) => theme.LIGHT.LIGHT_100};
 
     z-index: 1;
@@ -43,8 +43,8 @@ export const Container = styled.div`
       height: 3.4rem;
 
       position: relative;
-      right: -12.7rem;
-      top: -1rem; 
+      right: -12rem;
+      top: 1rem; 
     }
 
   }  

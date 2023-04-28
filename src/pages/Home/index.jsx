@@ -12,7 +12,6 @@ import { Navigation } from "swiper";
 import 'swiper/css/navigation'
 import 'swiper/css'
 
-
 import { Card } from "../../components/Card"
 import { Header } from "../../components/Header"
 import { Navbar } from "../../components/NavBar"
@@ -53,14 +52,14 @@ export function Home() {
                 className="mainMeal"
                 title="Refeições"
               >
-                <Swiper
+                <Swiper 
                   className="Carousel"        
                   slidesPerView={1.6}
                   spaceBetween={10}
                   loop={true}
-                  navigation={true}
                   mousewheel={true}
                   modules={[Navigation]}
+                  navigation={true}
                   breakpoints={{          
                     480: { 
                       width: 480,
@@ -87,7 +86,8 @@ export function Home() {
                       </SwiperSlide>               
                     ))
                   } 
-                </Swiper>      
+                  
+                </Swiper>
               </Section>
         //*--------------------------------------------------------
               <Section

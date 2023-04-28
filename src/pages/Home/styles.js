@@ -39,6 +39,7 @@ export const Container = styled.div`
     height: 7.7rem;
 
     grid-area: footer;
+    margin-top: 10rem;
   }
 
   @media screen and (min-width: 1280px) {
@@ -142,9 +143,16 @@ export const Container = styled.div`
   }
 
   .swiper-button-next,
-    .swiper-button-prev {
-    display: none;
+  .swiper-button-prev {
+      width: 5rem;
+      height: 51rem;
+      margin: -26rem -2rem;
+      opacity: 0;
+
+      display: flex;
+      color: transparent;
   }
+
 
     @media screen and (min-width: 768px) {
     .swiper-wrapper {
@@ -174,7 +182,7 @@ export const Container = styled.div`
 
     .swiper-button-next {
       background: linear-gradient(to right, rgba(0,10,15,0) 0%,rgba(0,10,15,1) 50%,rgba(0,10,15,1) 100%);
-    }
+    } 
 
   }
 
@@ -201,21 +209,6 @@ export const Container = styled.div`
       padding-left: 2.4rem;
       padding-right: 2.4rem;
     }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 10rem;
-      height: 51rem;
-      margin: -26rem -2rem;
-      
-      color: ${({ theme }) => theme.LIGHT.LIGHT_100};
-    }
-
-    .swiper-button-next:hover,
-    .swiper-button-prev:hover {
-      transition: all .3s ease-in-out; 
-      transform: scale(1.1);
-    } 
-  } 
+  }
 
 `;

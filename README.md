@@ -14,6 +14,13 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 ## Imagens
 
+![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página1.png")
+![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página2.png")
+![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página5.png")
+![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página4.png")
+![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página3.png")
+
+
 
 ## Características
 - Todos os dados são armazenados em um banco de dados relacional.
@@ -109,4 +116,7 @@ Acessar o endereço fornecido pelo terminal via Browser.
 
 - A toda equipe da Rocketseat pelo apoio e ensinamentos prestados. 
 - Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
+
+
+
 

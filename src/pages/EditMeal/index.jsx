@@ -23,18 +23,19 @@ import { api } from "../../services/api";
 export function EditMeal() {
   const { user } = useAuth()
   const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true) 
-  const [ meal, setMeal ] = useState([])
 
+  const params = useParams()
+  const navigate = useNavigate()
+
+  const [ meal, setMeal ] = useState([])
+  const [ price, setPrice ] = useState("")
   const [ image, setImage ] = useState("")
   const [ title, setTitle ] = useState("")
   const [ category, setCategory] = useState("")
   const [ ingredients, setIngredients ] = useState("")
-  const [ price, setPrice ] = useState("")
   const [ description, setDescription ] = useState("")
   const [ newIngredient, setNewIngredient ] = useState("");
 
-  const params = useParams()
-  const navigate = useNavigate()
 
   function handleAddIngredient() {
     setIngredients(prevState => [...prevState, newIngredient])
@@ -84,7 +85,6 @@ export function EditMeal() {
     formData.append("price", price)
     ingredients.map(ingredient => formData.append("ingredients", ingredient))
 
-
     await api.put(`/meals/${params.id}`, formData)
       .then(() => {
         alert("Prato atualizado com sucesso!")
@@ -104,11 +104,12 @@ export function EditMeal() {
       try {
         const response = await api.get(`/meals/${params.id}`)
         setMeal(response.data)
-        const { title, category, description, price, ingredients } = response.data;
+        const { title, category, description, price, ingredients, image } = response.data;
         setTitle(title)
         setCategory(category)
         setDescription(description)
         setPrice(price)
+        setImage(image)
         setIngredients(ingredients.map(ingredient => ingredient.name))
       } catch (error) {
         alert("Não foi possível buscar as informações")
@@ -136,7 +137,7 @@ export function EditMeal() {
                     label="Imagem do prato" 
                     icon={FiUpload} 
                     title="Selecione imagem para alterá-la" 
-                    onChange={e => setImage(e.target.value)}
+                    onChange={e => setImage(e.target.files[0])} 
                   />
                   <InputLabel 
                     type="text"
@@ -174,7 +175,7 @@ export function EditMeal() {
                                 placeholder="ingrediente"  
                                 value={newIngredient}
                                 onChange={e => setNewIngredient(e.target.value)}
-                                onClick={handleAddIngredient}
+                                onClick={() => handleAddIngredient()}
                               />                                                
                         </div>
                   </div>
@@ -199,8 +200,8 @@ export function EditMeal() {
                 </div>
 
                 <div className="buttons">
-                  <Button title="Excluir prato" onClick={deleteMeal}/>
-                  <Button title="Salvar alterações" onClick={handleUpdateMeal}/>
+                  <Button title="Excluir prato" onClick={() => deleteMeal()}/>
+                  <Button title="Salvar alterações" onClick={() => handleUpdateMeal()}/>
                 </div>
               </Form>
             </main>     
