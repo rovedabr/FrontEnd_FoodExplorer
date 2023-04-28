@@ -25,8 +25,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 ## Características
 - Todos os dados são armazenados em um banco de dados relacional.
 - Poderão ser criados novos usuários através da tela de SingUp. Por padrão todos os usuários criados serão "consumidores".  
-- Os consumidores poderão inserir itens no carrinho e selecionar o tip![Uploading página2.png…]()
-o de pagamento. 
+- Os consumidores poderão inserir itens no carrinho e selecionar o tipo de pagamento. 
 - O consumidor poderá revisar os itens do carrinho antes de realizar o pagamento.
 - Ao realizar o pagamento o pedido é efetuado cadas tradando no banco de dados.
 - Administradores poderão inserir novos pratos, excluir ou alterar pratos existentes (incluindo todos os detalhes, como preços, nome, valor e categoria dentre outros).
@@ -117,7 +116,3 @@ Acessar o endereço fornecido pelo terminal via Browser.
 
 - A toda equipe da Rocketseat pelo apoio e ensinamentos prestados. 
 - Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
-
-
-
-
