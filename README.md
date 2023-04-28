@@ -15,16 +15,17 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 ## Imagens
 
 ![página1](https://user-images.githubusercontent.com/118762335/235221680-9b3f9f7e-b189-48b3-9d34-491084ec5507.png)
-![página2](https://user-images.githubusercontent.com/118762335/235221707-35d0c39d-666e-4c12-8505-0b21df907e9a.png)
 ![página5](https://user-images.githubusercontent.com/118762335/235221735-8669adaa-9db8-43c6-8f0d-ee990b93806b.png)
 ![página4](https://user-images.githubusercontent.com/118762335/235221744-49b2d5c4-abdb-4f22-9c7e-f48bec569252.png)
 ![página3](https://user-images.githubusercontent.com/118762335/235221755-273db20b-f748-417a-9c05-bcba7587d20a.png)
+![página2](https://user-images.githubusercontent.com/118762335/235222435-5d9304da-5c90-4351-9834-ec56eec3e112.png)
 
 
 ## Características
 - Todos os dados são armazenados em um banco de dados relacional.
 - Poderão ser criados novos usuários através da tela de SingUp. Por padrão todos os usuários criados serão "consumidores".  
-- Os consumidores poderão inserir itens no carrinho e selecionar o tipo de pagamento. 
+- Os consumidores poderão inserir itens no carrinho e selecionar o tip![Uploading página2.png…]()
+o de pagamento. 
 - O consumidor poderá revisar os itens do carrinho antes de realizar o pagamento.
 - Ao realizar o pagamento o pedido é efetuado cadas tradando no banco de dados.
 - Administradores poderão inserir novos pratos, excluir ou alterar pratos existentes (incluindo todos os detalhes, como preços, nome, valor e categoria dentre outros).
