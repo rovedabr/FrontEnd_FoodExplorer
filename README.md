@@ -117,7 +117,7 @@ Local:   http://localhost:5173/
 
 - [Rockeseat](https://www.rocketseat.com.br/)
 - [Netlify](https://www.netlify.com/)
-- [Heroku](https://www.heroku.com/)
+- [render](https://render.com/)
 
 
 ## License
