@@ -93,7 +93,7 @@ Iniciar o servidor local (back-end / front-end)
 npm run dev
 ```
 
-Acessar o endereço fornecido pelo terminal via Browser (__exemplo abaixo__)
+Acessar o endereço fornecido pelo terminal via Browser (_exemplo abaixo_)
 ```bash
 Local:   http://localhost:5173/
 ```
