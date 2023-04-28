@@ -17,8 +17,8 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 ![página1](https://user-images.githubusercontent.com/118762335/235221680-9b3f9f7e-b189-48b3-9d34-491084ec5507.png)
 ![página5](https://user-images.githubusercontent.com/118762335/235221735-8669adaa-9db8-43c6-8f0d-ee990b93806b.png)
 ![página4](https://user-images.githubusercontent.com/118762335/235221744-49b2d5c4-abdb-4f22-9c7e-f48bec569252.png)
-![página3](https://user-images.githubusercontent.com/118762335/235221755-273db20b-f748-417a-9c05-bcba7587d20a.png)
-![página2](https://user-images.githubusercontent.com/118762335/235222435-5d9304da-5c90-4351-9834-ec56eec3e112.png)
+![página2](https://user-images.githubusercontent.com/118762335/235223344-911acd30-94be-4ebd-a054-b8737e05bfe9.png)
+![página3](https://user-images.githubusercontent.com/118762335/235223368-b52beff6-d190-4bc9-8a53-a188e5245a17.png)
 
 
 ## Características
