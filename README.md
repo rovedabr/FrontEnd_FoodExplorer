@@ -14,6 +14,12 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 ## Imagens
 
+<img
+  src="../FrontEnd_FoodExplorer/src/assets/Screenshots/página1.png"
+  alt="Página principal"
+  title="Página principal"
+  style="display: inline-block; margin: 0 auto; max-width: 100%">
+
 ![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página1.png")
 ![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página2.png")
 ![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página5.png")
