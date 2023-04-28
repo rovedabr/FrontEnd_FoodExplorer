@@ -10,7 +10,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 
 ## Deploy
 
-- Site:  (VERIFICAR)
+- Site:  https://rvdfoodexplorer.netlify.app/
 
 ## Imagens
 
@@ -19,8 +19,6 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 ![página4](https://user-images.githubusercontent.com/118762335/235221744-49b2d5c4-abdb-4f22-9c7e-f48bec569252.png)
 ![página2](https://user-images.githubusercontent.com/118762335/235223836-0f27c5d6-d579-4ae1-a094-7edb81a13f13.png)
 ![página3](https://user-images.githubusercontent.com/118762335/235223847-9deea233-062a-4eaf-b4cb-e69db3a95845.png)
-
-
 
 ## Características
 - Todos os dados são armazenados em um banco de dados relacional.
@@ -66,6 +64,7 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 - Vite 
 - Node 
 - Jest
+- PM2
 - Git
 
 ## Instalação e clone do projeto
