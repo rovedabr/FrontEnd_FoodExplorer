@@ -20,8 +20,6 @@ Para desenvolvimento da solução do desafio foi disponibilizado o modelo do Fig
 ![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página4.png")
 ![image]("../FrontEnd_FoodExplorer/src/assets/Screenshots/página3.png")
 
-
-
 ## Características
 - Todos os dados são armazenados em um banco de dados relacional.
 - Poderão ser criados novos usuários através da tela de SingUp. Por padrão todos os usuários criados serão "consumidores".  
