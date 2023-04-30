@@ -304,6 +304,7 @@ export const Form = styled.div`
 
       margin: 0;
       margin-top: 1rem;
+      margin-bottom: 3.4rem;
     }
 
     > div button {
