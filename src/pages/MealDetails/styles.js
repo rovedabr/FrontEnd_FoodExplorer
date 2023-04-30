@@ -165,10 +165,8 @@ export const Form = styled.div`
   }
 
   > div button {
-    width: 31.6rem;
+    width: 25rem;
     height: 4.8rem;
-
-    margin-top: 4.8rem;
   }
 
   #menu .content .tags {
@@ -309,7 +307,7 @@ export const Form = styled.div`
     }
 
     > div button {
-      width: 13.1rem;
+      width: 18rem;
       height: 4.8rem;
     }
 

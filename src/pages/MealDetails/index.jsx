@@ -123,7 +123,7 @@ export function MealDetails() {
                             <Button 
                               type="text"
                               icon={receiptIcon}
-                              title="Incluir"
+                              title={`Incluir R$ ${meal.price}`}
                               onClick={() => handleAddMealCart(meal, quantity)}
                             />
                           </div>
