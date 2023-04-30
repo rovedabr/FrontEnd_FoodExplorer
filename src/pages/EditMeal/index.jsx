@@ -27,15 +27,16 @@ export function EditMeal() {
   const params = useParams()
   const navigate = useNavigate()
 
-  const [ meal, setMeal ] = useState([])
-  const [ price, setPrice ] = useState("")
-  const [ image, setImage ] = useState(null)
-  const [ title, setTitle ] = useState("")
-  const [ category, setCategory] = useState("")
-  const [ ingredients, setIngredients ] = useState("")
-  const [ description, setDescription ] = useState("")
+  const [ meal, setMeal ] = useState("")
+  const [ price, setPrice ] = useState(meal.price)
+  const [ title, setTitle ] = useState(meal.title)
+  const [ category, setCategory] = useState(meal.category)
+  const [ ingredients, setIngredients ] = useState(meal.ingredients)
+  const [ description, setDescription ] = useState(meal.description)
   const [ newIngredient, setNewIngredient ] = useState("");
-
+  
+  const [ image, setImage ] = useState(meal.image);
+  const [ imageFile, setImageFile ] = useState(null);
 
   function handleAddIngredient() {
     setIngredients(prevState => [...prevState, newIngredient])
@@ -44,6 +45,13 @@ export function EditMeal() {
 
   function handleRemoveIngredient(deleted) {
     setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted))
+  }
+
+  function handleMealImage(event) {
+    const file = event.target.files[0]
+      setImageFile(file)
+      const imagePreview = URL.createObjectURL(file)
+      setImage(imagePreview)
   }
 
   async function deleteMeal() {
@@ -75,37 +83,34 @@ export function EditMeal() {
      if (newIngredient) {
       return alert("Você deixou um ingrediente preenchido sem adicionar, clique (+) para adicionar ou remova o mesmo para continuar.")
     }
-  
+
     const formData = new FormData()
 
     formData.append("title", title)
-    formData.append("image", image)
     formData.append("category", category)
     formData.append("description", description)
     formData.append("price", price)
     ingredients.map(ingredient => formData.append("ingredients", ingredient))
 
-    const config = {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    };
-
-    await api.patch(`/meals/image/${params.id}`, formData, config)
-
-    await api.put(`/meals/${params.id}`, formData)
-      .then(() => {
+    try {
+      if (imageFile == null) {
+        await api.put(`/meals/${params.id}`, formData)
         alert("Prato atualizado com sucesso!")
-      })
-      .catch(error => {
-        if (error.message) {
+      } else {
+        formData.append("image", imageFile)
+        await api.put(`/meals/${params.id}`, formData)
+        await api.patch(`/meals/${params.id}`, formData)
+        alert("Prato atualizado com sucesso!")
+      }
+    } catch (error) {
+      if (error.message) {
           alert(error.response.data.message)
         } else {
           alert("Não foi possível atualizar o prato")
         }
-      })
-    
-    }
+      }
+   
+  }
 
   useEffect(() => {
     async function fetchEditMeal() {
@@ -145,7 +150,7 @@ export function EditMeal() {
                     label="Imagem do prato" 
                     icon={FiUpload} 
                     title="Selecione imagem para alterá-la" 
-                    onChange={e => setImage(e.target.files[0])} 
+                    onChange={handleMealImage} 
                   />
                   <InputLabel 
                     type="text"
