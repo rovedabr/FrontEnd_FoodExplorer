@@ -22,13 +22,6 @@ export const Container = styled.div`
     color: ${({theme}) => theme.COLORS.TOMATO_300};
   }
 
-/*   > main::-webkit-scrollbar-track { //! verificar para remover
-    border: 1px solid #000;
-    padding: 2px 0;
-    background-color: #404040;
-  } 
- */
-
   > main #buttonBack {
     display: flex;
     align-items: flex-start;
@@ -254,7 +247,5 @@ export const Form = styled.div`
     }
     
   }
-
-
 
 `;

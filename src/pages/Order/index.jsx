@@ -1,13 +1,13 @@
 import { Container, Content, Form2 } from "./styles";
 
-import creditCardIcon from "../../assets/Icons/CreditCard.svg"
-import pixIcon from "../../assets/Icons/PIX.svg"
-import qrCode from "../../assets/qrCode.svg"
+import creditCardIcon from "../../assets/Icons/CreditCard.svg";
+import pixIcon from "../../assets/Icons/PIX.svg";
+import qrCode from "../../assets/qrCode.svg";
 
 import { CardOrder } from "../../components/CardOrder";
-import { Navbar } from "../../components/NavBar"
-import { Header } from "../../components/Header"
-import { Footer } from "../../components/Footer"
+import { Navbar } from "../../components/NavBar";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button";
 
 import { useAuth } from "../../hooks/auth";
@@ -19,13 +19,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function Order() {
-  const { cart, clearCart, totalCart } = useCart()
-  const  { user }  = useAuth() 
+  const { cart, clearCart, totalCart } = useCart();
+  const  { user }  = useAuth();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const [ showPix, setShowPix ] = useState(true)
-  const [ showCard, setShowCard ] = useState(false)
+  const [ showPix, setShowPix ] = useState(true);
+  const [ showCard, setShowCard ] = useState(false);
 
   function pixPaymentForm () {
     setShowPix(true)
@@ -82,26 +82,50 @@ export function Order() {
             <div className="payForm">
               <div>
                 <div className="pixForm">
-                  <input type="image" src={pixIcon} alt=""  onClick={() => pixPaymentForm()}/> <p>PIX</p>
+                  <input 
+                    type="image" 
+                    src={pixIcon} 
+                    alt="ícone do código pix"  
+                    onClick={() => pixPaymentForm()}
+                  />
+                  <p>PIX</p>
                 </div>
                 <div className="cardForm">
-                  <input type="image" src={creditCardIcon} alt="" onClick={() => cardPaymentForm()} /> <p>Crédito</p>
+                  <input 
+                    type="image" 
+                    src={creditCardIcon} 
+                    alt="ícone do código do cartão" 
+                    onClick={() => cardPaymentForm()}                
+                  />
+                  <p>Crédito</p>
                 </div>
               </div>
                 { showCard ? 
                   <div className="cardInput-wrapper">
                     <div className="cardNumber">
                       <label htmlFor="cardNumber">Número do Cartão</label>
-                      <input id="cardNumber" type="text"  placeholder="0000 0000 0000 0000"/>
+                      <input 
+                        id="cardNumber" 
+                        type="text"  
+                        placeholder="0000 0000 0000 0000"                      
+                      />
                     </div>
                     <div className="cardData">
                       <div className="validity">
                         <label htmlFor="validity">Validade</label>
-                        <input id="validity" type="text"  placeholder="00/00"/>
+                        <input 
+                          id="validity" 
+                          type="text"  
+                          placeholder="00/00"                        
+                        />
                       </div>
                       <div className="cvc">
                         <label htmlFor="cvc">CVC</label>
-                        <input id="cvc" type="text"  placeholder="000"/>
+                        <input 
+                          id="cvc" 
+                          type="text"  
+                          placeholder="000"                        
+                        />
                       </div>
                     </div>  
                   </div>
@@ -111,13 +135,16 @@ export function Order() {
                   showPix ?
                   <div className="pixInput-wrapper">
                     <div className="pix">
-                    <img src={qrCode} alt="" />
+                    <img src={qrCode} alt="qr code de pagamento" />
                     </div>
                   </div>
                   : null
                 }
-
-              <Button title="Finalizar pedido" onClick={() => handleCreateOrder(cart)}/>
+              <Button 
+                type="button"
+                title="Finalizar pedido" 
+                onClick={() => handleCreateOrder(cart)}              
+              />
             </div>
           </Form2>
         </main>

@@ -1,14 +1,13 @@
 import { Container, Content, Form } from "./styles";
 
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import brand from "../../assets/brand.png"
-
-import { useAuth } from "../../hooks/auth"
+import brand from "../../assets/brand.png";
 
 import { Input } from "../../components/Input";
-
 import { Button } from "../../components/Button";
+
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
 

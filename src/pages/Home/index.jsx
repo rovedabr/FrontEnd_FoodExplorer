@@ -30,7 +30,7 @@ export function Home() {
   useEffect(() => {
     async function fetchMeals() {
       try {
-        const response = await api.get(`/meals?title=${search}`)  //"&ingredients=${search}"
+        const response = await api.get(`/meals?title=${search}`)  
         setMeals(response.data)
       } catch (error) {
         alert("Não foi possível buscar as informações")
@@ -45,9 +45,8 @@ export function Home() {
        <Navbar search={setSearch}/>
        <Header search={setSearch}/> 
         <main>
-         <Content>
+          <Content>
            <Banner className="banner"/>
-      //*--------------------------------------------------------
               <Section
                 className="mainMeal"
                 title="Refeições"
@@ -89,7 +88,6 @@ export function Home() {
                   
                 </Swiper>
               </Section>
-        //*--------------------------------------------------------
               <Section
                 className="mainMeal"
                 title="Sobremesas"
@@ -130,8 +128,6 @@ export function Home() {
                   } 
                 </Swiper>      
               </Section>
-        //*-------------------------------------------------------- 
-        //*--------------------------------------------------------
               <Section
                 className="mainMeal"
                 title="Bebidas"
@@ -173,9 +169,8 @@ export function Home() {
                 </Swiper>      
               </Section> 
 
-        </Content>
-      </main>
-    {/*--------------------------------------------------------*/}
+          </Content>
+        </main>
       <Footer/> 
     </Container>
   )

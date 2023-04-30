@@ -155,13 +155,6 @@ export const Form = styled.div`
       justify-content: center;
       flex-direction: row;
     }
-/* 
-    > .form1 input[type-file] {
-      width: 23rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    } */
 
     > .form1 input {
       width: 46.3rem;

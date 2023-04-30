@@ -19,21 +19,20 @@ import { Footer } from "../../components/Footer";
 
 import { api } from "../../services/api";
 
-
 export function EditMeal() {
-  const { user } = useAuth()
-  const isAdmin = user.admin //IsAdmin = 0 (false) | isAdmin = 1 (true) 
+  const { user } = useAuth();
+  const isAdmin = user.admin; //IsAdmin = 0 (false) | isAdmin = 1 (true) 
 
-  const params = useParams()
-  const navigate = useNavigate()
+  const params = useParams();
+  const navigate = useNavigate();
 
-  const [ meal, setMeal ] = useState("")
-  const [ price, setPrice ] = useState(meal.price)
-  const [ title, setTitle ] = useState(meal.title)
-  const [ category, setCategory] = useState(meal.category)
-  const [ ingredients, setIngredients ] = useState(meal.ingredients)
-  const [ description, setDescription ] = useState(meal.description)
+  const [ meal, setMeal ] = useState("");
+  const [ price, setPrice ] = useState(meal.price);
+  const [ title, setTitle ] = useState(meal.title);
+  const [ category, setCategory] = useState(meal.category);
   const [ newIngredient, setNewIngredient ] = useState("");
+  const [ ingredients, setIngredients ] = useState(meal.ingredients);
+  const [ description, setDescription ] = useState(meal.description);
   
   const [ image, setImage ] = useState(meal.image);
   const [ imageFile, setImageFile ] = useState(null);
@@ -213,8 +212,16 @@ export function EditMeal() {
                 </div>
 
                 <div className="buttons">
-                  <Button title="Excluir prato" onClick={() => deleteMeal()}/>
-                  <Button title="Salvar alterações" onClick={() => handleUpdateMeal()}/>
+                  <Button 
+                    type="button"
+                    title="Excluir prato" 
+                    onClick={() => deleteMeal()}
+                  />
+                  <Button 
+                    type="button"
+                    title="Salvar alterações" 
+                    onClick={() => handleUpdateMeal()}
+                  />
                 </div>
               </Form>
             </main>     

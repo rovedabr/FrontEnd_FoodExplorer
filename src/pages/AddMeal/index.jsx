@@ -5,19 +5,18 @@ import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 import { useState } from "react";
 
-import { FiUpload} from "react-icons/fi"
+import { FiUpload} from "react-icons/fi";
 
-import { Header } from "../../components/Header"
+import { ButtonUpload } from "../../components/ButtonUpload";
+import { ButtonBack } from "../../components/ButtonBack";
+import { InputLabel } from "../../components/InputLabel";
+import { NoteItem } from "../../components/NoteItem";
+import { TextArea } from "../../components/TextArea";
 import { Navbar } from "../../components/NavBar";
-import { ButtonUpload } from "../../components/ButtonUpload"
-import { ButtonBack } from "../../components/ButtonBack"
-import { InputLabel } from "../../components/InputLabel"
-import { NoteItem } from "../../components/NoteItem"
-import { TextArea } from "../../components/TextArea"
-import { Select } from "../../components/Select"
-import { Button } from "../../components/Button"
-import { Footer } from "../../components/Footer"
-
+import { Select } from "../../components/Select";
+import { Button } from "../../components/Button";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
 
 export function AddMeal() {
   const { user } = useAuth();
@@ -101,8 +100,7 @@ export function AddMeal() {
                     title="Selecione imagem" 
                     src={image}
                     onChange={e => setImage(e.target.files[0])}
-                  /> 
-                  
+                  />                   
                   <InputLabel 
                     label="Nome" 
                     placeholder="Ex.: Salada Ceasar"

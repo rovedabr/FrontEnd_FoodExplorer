@@ -121,9 +121,7 @@ export const Container = styled.div`
       margin-top: 2.4rem;
       margin-left: 12.2rem;
    }
-
   }
-
 `;
 
 export const Form = styled.div`
@@ -307,6 +305,7 @@ export const Form = styled.div`
       align-items: center;
 
       margin: 0;
+      margin-top: 1rem;
     }
 
     > div button {
