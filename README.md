@@ -128,4 +128,4 @@ Local:   http://localhost:5173/
 ## Agradecimento 
 
 - A toda equipe da Rocketseat pelo apoio e ensinamentos prestados. 
-- Ao meu companheiro de vida Juscelino, a meus amigos em especial o Bruno, pela paciência e apoio durante o curso.
+- Ao meu companheiro de vida Juscelino, a minha família, a meus amigos que me apoiaram nesta transição, em especial o Bruno, pela paciência e apoio durante o curso.
