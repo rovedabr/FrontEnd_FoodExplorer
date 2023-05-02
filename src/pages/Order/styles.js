@@ -79,7 +79,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px red solid;
 
   > div {
     margin-left: 3.5rem;
