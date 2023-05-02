@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   .order h2, h3, p {
     font-family: 'Poppins', sans-serif;
@@ -36,7 +36,7 @@ export const Container = styled.div`
     border: none;
     background: transparent;
 
-    margin-left: 8rem;
+    margin-left: 9rem;
     position: relative;
     top: -2rem;
 
@@ -57,6 +57,7 @@ export const Container = styled.div`
     height: 7.2rem;
 
     margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   .order span {
