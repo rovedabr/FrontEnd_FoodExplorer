@@ -84,7 +84,7 @@ export function Navbar({ search }) {
                 type="button"
                 title="Sair"
                 onClick={() => signOut()}
-              >Sair</Link>   
+              >Sair</Link>    
             </div>
           : null }
         <Brand/>
