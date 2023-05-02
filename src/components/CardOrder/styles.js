@@ -6,13 +6,13 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
   .order h2, h3, p {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 2rem;
-    line-height: 3.2rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
   }
@@ -56,7 +56,7 @@ export const Container = styled.div`
     width: 7.2rem;
     height: 7.2rem;
 
-    margin-right: 1.3rem;
+    margin-right: 1rem;
   }
 
   .order span {

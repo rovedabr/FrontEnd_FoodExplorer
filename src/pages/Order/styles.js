@@ -36,7 +36,6 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-
   @media screen and (min-width: 1280px){
     width: 100%;
     height: 100vh;
@@ -75,11 +74,12 @@ export const Container = styled.div`
 
 
 export const Content = styled.div`
-  width: 50rem;
+  width: 45rem;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  border: 1px red solid;
 
   > div {
     margin-left: 3.5rem;
@@ -107,13 +107,13 @@ export const Content = styled.div`
 `
 
 export const Form2 = styled.div`
-  width: 60rem;
+  width: 50rem;
   height: 60rem;
   grid-area: form2;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
   > h2 {
     font-family: 'Poppins', sans-serif;
@@ -122,7 +122,7 @@ export const Form2 = styled.div`
     line-height: 4.48rem;
 
     color: ${({theme}) => theme.LIGHT.LIGHT_300};
-    margin: 3.4rem auto 2.7rem 3.5rem;
+    margin: 3.4rem auto 2.7rem 6rem;
   }
 
   .payForm div {
@@ -130,13 +130,9 @@ export const Form2 = styled.div`
     flex-direction: row;
   }
 
-  .payForm .hide {
-    border: 1px red solid;
-  }
-
   .payForm {
-    width: 53rem;
-    height: 44.5rem;
+    width: 40rem;
+    height: 45rem;
 
     display: flex;
     flex-direction: column;
@@ -162,7 +158,6 @@ export const Form2 = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   .payForm .cardInput-wrapper {
@@ -251,8 +246,8 @@ export const Form2 = styled.div`
   }
 
   .payForm .pixForm {
-    width: 26.5rem;
-    height: 8.1rem;
+    width: 20rem;
+    height: 7rem;
 
     display: flex;
     flex-direction: row;
@@ -270,8 +265,8 @@ export const Form2 = styled.div`
   }
 
   .payForm .cardForm {
-    width: 26.5rem;
-    height: 8.1rem;
+    width: 20rem;
+    height: 7rem;
 
     display: flex;
     flex-direction: row;
